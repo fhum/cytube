@@ -1,330 +1,125 @@
-/* ----- Smoothing default CyTube CSS (works without JS) ----- */
-
-
-
-
-	/* -- body -- */
-
-
-    body {overflow-x:hidden}
-
-
-	/* -- buttons -- */
-
-
-.btn {text-shadow:none}
-
-
-	/* -- modal windows -- */
-
-
-@media screen and (min-width: 768px) {
-	.modal-dialog {max-width:950px !important; margin-top:10px}
+.username::before{
+	content:"AA";
+	background:url('https://media.discordapp.net/attachments/926181552805777558/1140120983936712774/image.png');
+	background-size:16px !important;
+	background-repeat:no-repeat !important;
+	color:rgba(0,0,0,0);
+	text-shadow: none !important;
 }
 
+#chatwrap{padding:0;margin:0;}
+#videowrap{padding-bottom:10px; padding-top:0; padding-right:0; padding-left:0; margin:0;}
+#motdwrap{display: none! important;}
 
-	/* -- brand -- */
-
-
-.navbar-brand {cursor:default}
-
-
-	/* -- MOTD -- */
-
-
-#motdwrap {padding:10px; border-color:white; box-shadow:none}
-#togglemotd {margin-top:-5px}
-
-
-	/* -- superadmin icon -- */
-
-
-.glyphicon-globe {margin-right:3px}
-
-
-	/* -- playlist row panes -- */
-
-
-#rightpane, #leftpane {margin-top:5px !important; margin-bottom:5px !important}
-
-
-	/* -- left pane wells -- */
-
-
-#leftpane .well {margin-bottom:5px}
-
-
-	/* -- queue titles -- */
-
-
-.qe_title {margin-left:4px}
-
-
-	/* -- footer -- */
-
-
-#footer {padding-bottom:5px; height:auto}
-
-
-
-
-/* ----- Patching CSS after loading JS (comments only here, actual patches in the JS) ----- */
-
-
-
-
-/*
-#mainpage {padding-top:52px}
-#motdrow, #announcements, #main, #playlistrow {border:solid 2px transparent; margin-bottom:5px}
-#main > div, #playlistrow > div {
-	padding-left:5px; padding-right:5px; margin-top:5px; margin-bottom:5px;
-}
-#motdwrap {margin:5px -10px}
-#announcements .alert {margin:0px -10px 5px}
-#drinkcount {margin:0px}
-*/
-
-
-
-
-/* ----- CyTube Plus created elements CSS ----- */
-
-
-
-
-	/* -- channel avatar -- */
-
-
-#chanavatar {margin-right:10px}
-
-
-	/* -- azuki row (user top logo) -- */
-
-
-#azukirow {
-	padding-left:5px; padding-right:5px; border-left:solid 2px transparent; border-right:solid 2px transparent;
-	background:transparent; background-repeat:no-repeat !important; background-position:center center !important;
-	margin:0px -8px; min-height:5px;
+.spoiler a {
+    color: #000000;
+    background-color: #000000;
+    opacity: 0;
 }
 
-
-	/* -- MOTD elements -- */
-
-
-#motdlogo {margin-bottom:8px}
-#motdtabswrap {margin-top:8px}
-.motdtabs-btn {margin-right:5px}
-#motdtabscontent {padding:10px 5px}
-
-
-	/* -- rules button and panel -- */
-
-
-#rulesbtnwrap {text-align:center}
-#rules-btn {margin-top:10px; margin-bottom:5px}
-#rulespanel-outer {width:100%; padding:0px}
-#rulespanel {
-	max-width:700px; margin:0 auto; margin-top:0px; padding:4px; border:solid 2px white; text-align:left;
-	border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px;
+.spoiler:hover a {
+    color: #ffffff;
+    opacity: 1;
 }
 
-
-	/* -- attention bar -- */
-
-
-#attbarrow-outer {padding:0px 5px}
-#attbar {height:22px; background-color:white}
-
-
-	/* -- full-sized title row -- */
-
-
-#titlerow {
-	background-color:white;
-	background-image:linear-gradient(to right, #cccccc, #cccccc);
-	background-position:0px center;
-	background-size:0% 100%; background-repeat:no-repeat;
-	margin:-5px -8px 5px;
-	border-radius:4px;
+/*CSS pretty much complete now, anyone should be able to edit it. Backup at http://pastebin.com/FcpGvxi6 and http://pastebin.com/5Jz6980X*/
+/*Try to adhere to the formatting if you're going to add new code*/
+/*Backup of emotes is in the javascript section*/
+/*Limits the size of the image from the picture embeds*/
+#messagebuffer.linewrap img, #messagebuffer.linewrap video{max-width: 300px; max-height: 300px;}
+.profile-image { width:125px; height:auto; max-height:300px;}
+.profile-box {max-width: 137px; max-height: 500px !important;}
+.modal-dialog{
+width: 90%;}
+ 
+.panel-primary {
+border-color: white !important;
 }
-#titlerow-outer {
-	padding:3px 5px; text-align:center; font-size:16pt; color:black;
-	text-shadow: 0px 0px 10px #666666, 0px 0px 10px #666666;
+ 
+.panel-primary > .panel-heading {
+    background-color:black !important;
+    border-color: white !important;
 }
-#titlerow #currenttitle {border:none; background:transparent}
-
-
-	/* -- media info bar -- */
-
-
-#mediainfo {
-	background:transparent; margin-bottom:0px; border-width: 1px 1px 0px; border-style:solid solid none;
-	border-color:#CCC #CCC -moz-use-text-color; border-radius:5px 5px 0px 0px;
+/*Adds image to the user list window*/
+#userlist {
+            font-size: 7.61pt;
+            background-color: #1C1E22;
+            background-image: url(https://media.discordapp.net/attachments/944043842456395837/1140113458742972567/smug_teio2_50.png);
+            background-position: bottom center;
+            background-repeat: no-repeat;}
+ 
+/*Wallpaper*/
+/*Kud: http://i.imgur.com/ncl4gby.jpg*/
+/*Miku: http://i.imgur.com/ivMqyoM.jpg, http://i.imgur.com/Au1bWKb.jpg*/
+/*Original Paper: http://puu.sh/7QUn8.png*/
+/*Komori: http://i.imgur.com/X5CH02Y.jpg*/
+/*Oranges: http://www.nectarcafenj.com/files/oranges.jpg)*/
+/*Botes: http://puu.sh/aHrs6/2e36260f66.jpg*/
+/* halloween cuteness http://puu.sh/c2Uxe.png */
+body {
+background-image:url(https://media.discordapp.net/attachments/941880564665958441/1139390926486241452/SsReCYNJ.png);
+ background-position: bottom right; background-attachment: fixed; background-size: cover;            
+/*background-position: bottom left;*/
+            /*background-attachment: fixed;*/
+            /*background-size: fit;*/
+            /*-webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;*/
 }
-
-
-	/* -- player alert (if hidden video after loading) -- */
-
-
-#ytapiplayer .alert {text-align:left; margin:0px -15px}
-
-
-	/* -- player covering layer -- */
-
-
-#coverpl {
-	position:absolute; left:5px; top:0px; background-color:white;
-	background-repeat:no-repeat; background-position:center center;
+ 
+/*Changes the color of the textA1FBFF*/
+body, header, p, a, #mainpage {color:#A1C5FF !important;}
+ 
+/*Orenji*/
+/*body, header, p {color:#ffa500;}*/
+ 
+/*Footer*/
+P.text-muted.credit {font-size: 0px;} /*This part removes the previous text*/
+P.text-muted.credit:after {content: "In Memorial of: 2Wide4Me , PingPongYeti, ThuglyFegg, MassiveFaggot, FucknoBackup"; font-size: 14px;} /*Footer Text*/
+FOOTER#footer {opacity: 0.9;}
+ 
+/*Adds suffix to messages*/
+/*#messagebuffer div:after{content: "~de arimasu";}*/
+ 
+/*Alternate message backgrounds*/
+/*Alternate message backgrounds*/
+#messagebuffer {background-color: #272B30;}
+#messagebuffer div:nth-child(even) {background-color: #444444;}
+#messagebuffer div:nth-child(odd) {background-color: #272B30;}
+#messagebuffer div.nick-hover{ background-color: #111122;}
+#messagebuffer div.nick-highlight, #messagebuffer div.nick-highlight > a{ color: #FFFFFF;}
+ 
+/*Cursors */
+body a:hover{cursor:url(http://i.imgur.com/G9Q7JW4.png), auto;}
+ 
+/*Background for easier reading of some shit*/
+DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E22;}
+#currenttitle, #chatheader, #messagebuffer, #userlist, #guestlogin, #chatline, #plmeta {border-color:#444444;}
+ 
+/*For the spinning images*/
+.spin, .spintext{
+            -webkit-animation: spin 5ms linear infinite;
+            -moz-animation: spin 5ms linear infinite;
+            animation: spin 5ms linear infinite;}
+@-webkit-keyframes spin {100% {-webkit-transform: rotate(360deg); transform:rotate(360deg);}}
+@-moz-keyframes spin {100% {-moz-transform: rotate(360deg); transform:rotate(360deg);}}
+@keyframes spin {100% {-webkit-transform: rotate(360deg); transform:rotate(360deg);}}
+ 
+/*Flip images*/
+.hflip {
+display: inline-block;
+-moz-transform: scale(-1, 1);
+-webkit-transform: scale(-1, 1);
+-o-transform: scale(-1, 1);
+-ms-transform: scale(-1, 1);
+transform: scale(-1, 1);
 }
-
-
-	/* -- sounds and admin panels GUI layers -- */
-
-
-#sounds-dropdown, #chatfunc-dropdown {
-	position:absolute; top:22px; display:block; z-index:10000; padding:5px;
-	overflow:auto; margin-right:5px;
-}
-#muteall-btn, #spamclear-btn, #antiafk-btn {width:100%}
-
-
-	/* -- chat controls buttons group -- */
-
-
-#chatcontrols {margin-top:4px}
-
-
-	/* -- chat elements -- */
-
-
-.squavatar {width:24px; height:24px; margin-right:3px; border:solid 6px; vertical-align:middle; display:inline-block}
-.avatar {margin-right:3px}
-.server-whisper + .squavatar {display:none}
-.globalmod {margin-right:2px}
-.embedimg {max-width:200px; max-height:300px}
-.embedvid {max-width:200px; max-height:300px; border:0px; vertical-align:middle}
-
-
-	/* -- main fonts and emotes GUI layer -- */
-
-
-#chatpanel {margin-top:0px; margin-bottom:0px}
-#fontspanel, #emotespanel {
-	text-align:center; max-width:700px; margin:0px auto 5px auto; border:solid 2px white; border-radius:6px
-}
-.fluidpanel {max-width:1200px !important}
-
-
-	/* -- fonts panel -- */
-
-
-#fontsbtnwrap {margin-top:5px; margin-bottom:5px}
-#unibtnwrap {margin:5px 45px 2px}
-@media (max-width:767px) {
-	#unibtnwrap {margin:5px 25px 2px}
-}
-#fontsbtnwrap .btn, #unibtnwrap .btn {margin:0px 3px 3px 3px}
-
-
-	/* -- emotes panel -- */
-
-
-#emotespanel img {margin:5px; max-height:35px; cursor:pointer}
-#emotesbtnwrap {text-align:center; margin:5px}
-#emotespanel .alert {text-align:left; margin:5px -10px}
-
-
-	/* -- advanced playlist controls -- */
-
-
-#advplcontrols {width:100%; padding-top:10px}
-#advplcontrols button {width:25%}
-
-
-	/* -- database and galleries buttons gruoup -- */
-
-
-#leftpanecontrols {margin-right:5px}
-
-
-	/* -- layout configuration box toggling button -- */
-
-
-#layout-btn {margin-left:5px}
-
-
-	/* -- various configuration box elements -- */
-
-
-#configbtnwrap, #modewrap, #themewrap, #funcbtnwrap, #cleardbwrap, #gallery-well, #hidewrap, #embedwrap {
-	text-align:center;
-}
-.conf-cap {padding-top:9px}
-#mode-sel, #theme-sel, #gal-sel {width:80%; margin:0px auto}
-.theme-header {text-align:center; font-size:9pt; font-style:italic}
-#embed-help {cursor:pointer; margin-left:7px}
-
-
-	/* -- channel database -- */
-
-
-.db-cat {overflow:auto; max-height:400px}
-.db-break {width:100%}
-.db-title {margin-left:4px}
-.db-link {margin-left:5px}
-#previewFrame {margin:0 auto; display:block}
-
-
-	/* -- channel galleries -- */
-
-
-#galleryFrame {margin-bottom:10px}
-#gal-sel {margin-bottom:20px}
-
-
-	/* -- custom footer -- */
-
-
-#leftfooter {font-size:10pt}
-div[id="leftfooter"] {text-align:center; margin-bottom:5px}
-#rightfooter {float:right; margin:0px 0px 15px 15px}
-
-
-
-
-/* ----- Additional JS classes ----- */
-
-
-
-
-.relative {position:relative}
-
-
-.covered {visibility:hidden; opacity:0}
-
-
-.dist {background-color:gold; color:red; font-size:12pt; font-family:times new roman; padding:3px}
-
-
-.mX {
-	-webkit-transform:scaleX(-1); -moz-transform:scaleX(-1); transform:scaleX(-1);
-	-ms-transform:scaleX(-1); -o-transform:scaleX(-1);
-}
-
-
-.mY {
-	-webkit-transform:scaleY(-1); -moz-transform:scaleY(-1); transform:scaleY(-1);
-	-ms-transform:scaleY(-1); -o-transform:scaleY(-1);
-}
-
-
-.rotate {
-	-webkit-transform:rotate(180deg); -moz-transform:rotate(180deg); transform:rotate(180deg);
-	-ms-transform:rotate(180deg); -o-transform:rotate(180deg);
-}
-
-
-.vertical {
-	-webkit-transform:rotate(270deg); -moz-transform:rotate(270deg); transform:rotate(270deg);
-	-ms-transform:rotate(270deg); -o-transform:rotate(270deg);
+.vflip {
+display: inline-block;
+-moz-transform: scale(1, -1);
+-webkit-transform: scale(1, -1);
+-o-transform: scale(1, -1);
+-ms-transform: scale(1, -1);
+transform: scale(1, -1);
 }

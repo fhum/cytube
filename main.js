@@ -1,841 +1,1588 @@
-UI_DefaultSynchtube = 1;	// default old Synchtube layout (player and playlist on the left)
-UI_Favicon = 1;			// [&] channel favicon
-UI_MiniLogo = 1;		// [&] small channel logo/avatar in the top navbar
-UI_ChannelName = 1;		// [&] channel custom brand name
-UI_HeaderDropMenu = 1;		// [&] additional header dropdown menu
-UI_RemoveLayoutMenu = 1;	// removing 'Layout' menu from the header
-UI_MOTDAutoLogo = 1;		// [&] big channel logo inserted into MOTD
-UI_MOTDTabs = 1;		// [&] switchable MOTD tabs application for homepage-like channel header
-UI_MOTDDelete = 1;		// deleting previous MOTD after accepting/loading script
-UI_RulesBtn = 1;		// [&] button displaying channel rules
-UI_AttentionBar = 0;		// [&] imageboard-style attention bar (requires external application)
-UI_ChannelAnnouncement = 0;	// [&] additional custom channel announcement
-UI_FullTitleBar = 1;		// full-width video title bar
-UI_ProgressBar = 1;		// YouTube/Dailymotion progress bar
-				// [ REQUIRE: UI_FullTitleBar enabled ]
-UI_TitleIcon = 1;		// [&] full-width title bar icon
-				// [ REQUIRE: UI_FullTitleBar enabled ]
-UI_TitleBarDescription = 1;	// [&] custom title bar description (default "Currently Playing:")
-UI_JoinText = 1;		// [&] chat message after user joining
-UI_LeaveText = 1;		// [&] chat message after user leaving
-UI_UserCommands = 1;		// [&] additional commands in the chat window
-UI_UserMarks = 1;		// [&] special signs/avatars before every message for defined users
-UI_Squavatars = 1;		// automatic squavatars (2-colored square avatars) before every message
-				// [ REQUIRE: UI_UserMarks enabled ]
-UI_UsernameMark = 1;		// [&] custom mark after username (default ":")
-UI_MessagesSuffix = 1;		// [&] text added to random chat messages
-UI_CustomPingSound = 1;		// [&] custom sound for chat notifications
-UI_SoundFilters = 1;		// [&] chat sounds played after sending certain words
-UI_ChatSpeak = 1;		// text speaking after '!say' and '!mow' commands (english and polish)
-UI_IndependentEmotes = 1;	// [&] additional settings-independent emotes
-UI_IndependentFilters = 1;	// [&] additional settings-independent filters
-UI_FontsBtn = 1;		// button displaying box with clickable chat fonts
-				// [ REQUIRE: INSTALLATION (see above) ]
-UI_UnicodeChars = 1;		// [&] additional buttons in the fonts panel with unicode characters
-				// [ REQUIRE: UI_FontsBtn enabled ]
-UI_EmotesBtn = 1;		// button displaying box with clickable chat emotes
-UI_GroupEmotes = 1;		// [&] emotes panel pagination, display limited number of emotes at one time
-				// [ REQUIRE: UI_EmotesBtn enabled ]
-UI_CommandsBtn = 1;		// button displaying modal window with chat commands help
-UI_ModPanel = 1;		// [&] panel with messages and help for moderators
-UI_CustomCaptions = 1;		// [&] custom captions for add, refresh, voteskip buttons, and welcome text
-UI_PlayerOptions = 1;		// [&] additional player options
-UI_TransformationBtns = 1;	// player transformation buttons
-UI_ChannelDatabase = 1;		// [&] box with embed additional media database
-UI_ChannelGalleries = 1;	// [&] box with embed galleries
-UI_DisplayModeSel = 1;		// selector with player display modes
-UI_ChannelTheme = 1;		// [&] additional default channel theme
-UI_EmbeddingMedia = 1;		// [&] possibility to embedding (displaying) images and .webm videos on the chat
-UI_MediaControls = 1;		// embedded video preloaded controls
-				// [ REQUIRE: UI_EmbeddingMedia enabled ]
-UI_QuickCommandsBtns = 1;	// buttons with '/clear' and '/afk' functions
-UI_VolumeBtns = 1;		// additional volume buttons for YouTube player
-UI_EmptyCornerBackground = 1;	// [&] random background image for empty playlist row corner
-UI_ExtendedGetURLs = 1;		// extended 'Get URLs' function
-UI_DefaultNonTemp = 1;		// default unchecking "Add as temporary" checkbox after loading for registered users
-UI_CustomFooter = 1;		// [&] custom channel footer
-UI_CustomRightFooter = 0;	// [&] right-sided footer box
-UI_UserStatistics = 1;		// displaying in the footer user visits number and current online time
-UI_ExternalScript = 0;		// [&] additional external script file
-UI_ChannelCache = 1;		// caching script emotes, additional media database and default gallery
+/* ----- STARTING CONFIGURATION - USER INTERFACE (UI) ----- */
 
+var UI_Favicon = 1;				// [&] channel favicon
+var UI_MiniLogo = 0;			// [&] small channel logo/avatar in the top navbar
+var UI_ChannelName = 1;			// [&] channel custom brand name
+var UI_HeaderDropMenu = 1;		// [&] additional header dropdown menu
+var UI_RemoveHomeMenu = 1;		// removing 'Home' menu from the header
+var UI_TitleBarDescription = 1;	// [&] custom title bar description
+var UI_UserCommands = 1;		// [&] additional commands in the chat window
+var UI_Func = 1;				// anti-AFK and auto chat clearing panel
+var UI_AutoScroll = 1;			// auto scroll chat
+var UI_WC = 1;					// [&] random background image for empty playlist row corner
+					// [ REQUIRES: UI_Pixel enabled ]
+var UI_Pixel = 1;				// [&] special signs preceding messages in the chat window for selected users
+var UI_PixelChange = 1;			// [&] change img link when a certain img link is posted
+var UI_Lottery = 1;				// [&] text added to random chat messages
+var UI_JoinText = 1;			// [&] chat message after user joining
+var UI_LeaveText = 1;			// [&] chat message after user leaving
+var UI_PlayerOptions = 1;		// [&] additional player options
+var UI_TransformationBtns = 1;	// player transformation buttons
+var UI_FontsBtn = 1;			// button displaying box with clickable chat fonts
+					// [ REQUIRES: INSTALLATION (see above) ]
+var UI_UnicodeChars = 1;		// [&] additional buttons in the fonts panel with unicode characters
+					// [ REQUIRES: UI_FontsBtn enabled ]
+var UI_EmotesBtn = 1;			// button displaying box with clickable chat emotes
+var UI_CommandsBtn = 1;			// button displaying modal window with chat commands help
+var UI_ExtendedGetURLs = 1;		// extended 'Get URLs' function
+var UI_DisplayModeSel = 1;		// selector with player display modes
+var UI_QuickCommandsBtns = 1;	// buttons with '/clear' and '/afk' functions
+var UI_FlagCounter = 1;			// [&] channel right-sided footer box
+var UI_UserStatistics = 1;		// displaying in the footer user visits number and current online time
+var UI_EmbeddingMedia = 1;		// [&] possibility to embedding (displaying) images and .webm videos on the chat
+var UI_MediaControls = 1;		// embedded video preloaded controls
+					// [ REQUIRES: UI_EmbeddingMedia enabled ]
+var UI_ColorAdmins = 1;			// [&] change the color of admin names
+var UI_Schedule = 1;			// [&] add schedule to MOTD
+var UI_OpenPlaylist = 1;		// [&] change playlist permissions on toggle
+var UI_Shortcuts = 1;			// [&] keyboard shortcuts to insert text
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 /* ----- DETAILED BASIC CONFIGURATION ----- */
 
+var Usercount_Text = "dead emote";
 
-// NOTES:
-// a) values for 'MOTDAutoLogo_Mode': 1 = first logo; 2 = random logo; 3 = logo rotation; 7 = weekdays logos
-// b) in 'SoundFilters_Array' use .ogg or .wav files, some browsers has problems with embedded .mp3
-// c) in 'ModPanel_Array' item leave empty first (username) field to make a message to all moderators
-// d) in 'EmbeddingMedia_Images' and 'EmbeddingMedia_Videos' you can define acceptable file extensions
-//    use CSS syntax: e.g. 'a[href$=""]' defines acceptable end of an URL (file extension)
-//    you can also define URL fragments: 'a[href*=""]', or add excluding clause: '.not(\'a[href*=""]\'), etc.
+var Grape_HexColor = '#A623CF';
 
+var Blueberry_HexColor = '#6D68D8';
 
-	/* -- single variables -- */
+var FruitBowl = {		// FORMAT: 'NAME':'HEXCOLOR',
+	'Happy': Grape_HexColor,
+	'tsukarin': Grape_HexColor,
+	'Mio-chi': Grape_HexColor,
+	'Smiff': Grape_HexColor,
+	'Pyro': Grape_HexColor,
+	'micher': Blueberry_HexColor};
 
+var SpoilerImg = 'http://i.imgur.com/xzD4vqc.png';
 
-Favicon_URL = 'https://dl.dropboxusercontent.com/s/xgefazzyhs8xncp/icon.png';
+var Favicon_URL = 'http://i.imgur.com/OzAC4l0.png';
 
+var MiniLogo_URL = 'http://i.imgur.com/OCidf8n.gif';
 
-MiniLogo_URL = 'https://dl.dropboxusercontent.com/s/xgefazzyhs8xncp/icon.png';
+var ChannelName_Caption = 'BestKeyTube';
 
+var HeaderDropMenu_Title = 'Stuff';
 
-ChannelName_Caption = 'CyTube Plus';
-
-
-HeaderDropMenu_Title = 'Synch';
-
-
-MOTDAutoLogo_Mode = 1;
-
-
-MOTDAutoLogo_Interval = 20;
-
-
-RulesBtn_Caption = 'Read Channel Rules';
-
-
-AttentionBar_URL = '';
-
-
-ChannelAnnouncement_Title = 'Administration Message';
-
-
-TitleIcon_URL = 'https://dl.dropboxusercontent.com/s/xgefazzyhs8xncp/icon.png';
-
-
-TitleBarDescription_Caption = 'Now Playing:';
-
-
-JoinText_Message = 'joined';
-
-
-LeaveText_Message = 'left';
-
-
-UsernameMark_Char = '>';
-
-
-MessagesSuffix_Text = '~xD';
-
-
-MessagesSuffix_Percentage = 10;
-
-
-CustomPingSound_URL = 'https://dl.dropboxusercontent.com/s/0qtsttblgmkewnv/beep.wav';
-
-
-PlayerHiding_URL = 'https://dl.dropboxusercontent.com/s/xz2o99scw5i7aai/stop.png';
-
-
-GroupEmotes_Number = 100;
-
-
-ExternalScript_URL = '';
-
-
-	/* -- arrays -- */
-
-
-HeaderDropMenu_Array = [
-['CyTube Servers', ''],
-['Calzoneman CyTube', 'http://cytu.be/'],
-['6irc Synchtube', 'http://synchtube.6irc.net/'],
-['CyTube Stuff', ''],
-['Source code', 'https://github.com/calzoneman/sync'],
-['FAQ', 'https://github.com/calzoneman/sync/wiki/Beginner%27s-Guide-and-FAQ'],
-['IRC', 'http://webchat.6irc.net/?channels=chat,synchtube'],
-['CyTube Plus', 'https://github.com/zimny-lech/CyTube-Plus'],
+var HeaderDropMenu_Items = [		// FORMAT: ['NAME','LINK'],
+	['Feedback','http://goo.gl/forms/BYWXgWEZkY'],
+	['Stream Schedule', 'https://docs.google.com/spreadsheets/d/1Ye0mzOVODl2IAo3MWjvZOtqSXq-KK_JR5RYbzjUmOY4/edit#gid=9190525'],
+	['Emotes', 'https://drive.google.com/folderview?id=0ByZgrUw4okC-STQyNUE0UXh5UU0&usp=drive_web'],
 ];
 
-
-MOTDAutoLogo_Array = [
-'https://dl.dropboxusercontent.com/s/7mrz85gl29eiiks/logo.png',
+var ScheduleTabs_Array = [
+	['Compact Schedule', 'If you see this, Google has probably shat itself or it\'s still loading.'],
+	['Full Schedule', '<iframe id="scheduleBox" src="https://docs.google.com/spreadsheets/d/1Ye0mzOVODl2IAo3MWjvZOtqSXq-KK_JR5RYbzjUmOY4/pubhtml?gid=9190525&single=true" width="100%" height="' + $(window).height() + '"></iframe>']
 ];
 
+var TitleBarDescription_Caption = '>Streaming:';
 
-MOTDTabs_Array = [
-['Home',	'Welcome to our channel!'],
-['Playlist',	'Playlist tab.<br /><br />We watched this, that and this.'],
-['Schedule',	'Schedule:<br /><br /><ul><li>Monday: ...</li><li>Tuesday: ...</li><li>Wendesday: ...</li><li>Thursday: ...</li><li>Friday: ...</li><li>Saturday: ...</li><li>Sunday: ...</li></ul>'],
-['Contact',	'Contact:<br /><br />Email - ...<br />Skype - ...'],
+var RandomQuotes = [
+	'tsukarin is (not) a lolicon.', 'Pyro and Kolt OTP. ', 'Dicks are a marvelous thing.', 
+	'TTGL, not so good.', 'Kill La Kill is best anime.', 
+	'We suffer together.', 'Anyone can love anyone they want.',
+	'Love knows no age.', 'Girls can\'t love girls', 'league','Your taste is shit!',
+	'30 MinutE NaP', 'StreaminG', 'But Toradora is a terrible series to stream. I vote we skip it.',
+	'You\'re famous. My quotes all suck. They wouldn\'t put one of mine up.',
+	'You could set a nuclear clock to the movement of my hips?', 'I\'m a pedo. -Edes 2015',
+	'Ecchi nano wa ikenai to omoimasu!', 'I dun geddit...', 'We should just watch more .hack!', 
+	'Sayonara Rosifica.', 'KLK, not so good', 'Do you know Oyashiro-sama', 'Oarz ;_;',
+	'It feels like an endless ejaculation', 'Thanks #anime-supreme', 'DUN MISSIT', 'OMOCHIKAERI'
+];
+RandomQuotes = [
+	'I should', 'What did you just feet?', 'KLK, not so good', 'Sayonara Rosifica', 'We should just watch more .hack!', 'I dun geddit...', 'Ecchi nano wa ikenai to omoimasu!', 'Do you know Oyashiro-sama', 'Oarz ;_;',
+	'It feels like an endless ejaculation', 'Thanks #anime-supreme', 'DUN MISSIT', 'OMOCHIKAERI'
 ];
 
-
-RandomQuotes_Array = [
-'I like the Pope dancing', 'No quotes today', 'O rly?', 
-'People have the right to be stupid. You abuse that privilege', 'Don\'t play stupid with me', 
-'Roses are red violets are blue, God made me pretty, what happened to you?', 
-'Please don\'t interrupt me while I\'m ignoring you', 
-'Are you always this stupid, or are you making a special effort today?', 
-'I like you. You remind me of when I was young and stupid.', 'Go and buy me a beer', 
-'The door of this channel is always open for you... so feel free to leave!', 
+var AskAnswers = [
+	'100% for sure.', 'Definitely yes.', 'Yes.', 'Probably.', 'Not any chance.', 'Definitely no.', 
+	'A little chance.', 'No.', '50/50', 'Fairy is tired and will not answer.', 'I refuse to answer.', 'Your question is so stupid that you should just leave.',
+	'...', 'What was the question?', 'Fuck you.'
 ];
 
-
-AskAnswers_Array = [
-'100% for sure', 'definitely yes', 'yes', 'probably', 'not any chance', 'definitely no', 
-'a little chance', 'no', '50/50', 'fairy is tired and will not answer', 'I refuse to answer',
+AskAnswers = [
+	'100% for sure.', 'Definitely yes.', 'Yes.', 'Probably.', 'Not any chance.', 'Definitely no.', 
+	'A little chance.', 'No.', '50/50', 'Fairy is tired and will not answer.', 'I refuse to answer.', 'Your question is so stupid that you should just leave.',
+	'...', 'What was the question?', ':Fuck you.'
 ];
 
+var Lottery = {
+	click:'http://www.downloadmoreram.com/',
+	image:'http://i.imgur.com/BS1Eehd.gif',
+	text:"আৡঊসঠচঈ",
+	chance:0.01
+};
 
-Memes_Array = [
-'>', 'fb', 'omfg', 'u mad',
+var JoinText_Message = 'has made contact with the server.';
+
+var LeaveText_Message = 'has tried the restarting.';
+
+var PlayerHiding_URL = [
+	'http://i.imgur.com/mWv1dsg.jpg',
+	'http://i.imgur.com/oJ0zCJa.jpg',
+	'http://i.imgur.com/sKjK5g4.png',
+	'http://i.imgur.com/W84l9q1.jpg',
+	'http://i.imgur.com/NxpzQpA.jpg',
+	'http://i.imgur.com/pKPPKyY.jpg',
+	'http://i.imgur.com/YscblPs.jpg',
+	'http://i.imgur.com/idLmUhF.jpg',
+	'http://i.imgur.com/QPZZZxW.jpg',
+	'http://i.imgur.com/9G3Emgo.png',
+	'http://i.imgur.com/e01noAv.jpg',
+	'http://i.imgur.com/NSGoG5n.jpg',
+	'http://i.imgur.com/MOLi0X0.jpg',
+	'https://files.catbox.moe/w3zsp1.png'
 ];
 
-
-UserMarks_Array = {
-'ZimnyLech':	'<img src="https://dl.dropboxusercontent.com/s/89gv8fvyr49vnev/kobato-icon-small.jpg" height="25">', 
-'calzoneman':	'♠',
-}
-
-
-SoundFilters_Array = {
-'habemus':	'https://dl.dropboxusercontent.com/s/3w1jahgffowjltz/hp.ogg',
-'lol':		'https://dl.dropboxusercontent.com/s/9aqa1buu3phvpss/laugh.ogg',
-}
-
-
-ModPanel_Array = [
-['', 'Welcome to the moderators panel. You can find here messages, news and help for all channel moderators, edited by script admin.'],
-['', 'To temporary insert to the playlist any website instead of media files, click "Embed a custom frame" button in the playlist controls section. Then paste example code to the textarea: <i>&lt;iframe src="URL_of_your_page"&gt;&lt;/iframe&gt;</i>, and add.'],
+var Memes_Array = [
+	'pmff', 'smug', 'ffmp', 'ayy lmao', 'mug4', 'smig4', '!stat', '[@]', 'untz', ':@', '[m'
 ];
 
-
-CustomCaptions_Array = {
-'add':		'Add here',
-'refresh':	'Refresh player',
-'voteskip':	'Voteskip',
-'welcome':	'Hi',
-}
-
-
-UnicodeChars_Array = [
-'★', '☆', '▲', '▼', '♥', '♪', '♿', '⚒', '♕', '✉', '☏', '♠', '→', 
-'☑', '☒', '✡', '☪', '✝', '☭', '☯', 'Ⓐ', '☕', '♨', '¥', '©', '∞',
+var UnicodeChars_Array = [
+	'★', '☆', '▲', '▼', '♥', '♪', '♕', '✉', '☏', '♠', '→', 
+	'☑', '☒', '✡', '☪', '✝', '☭', '☯', 'Ⓐ', '☕', '♨', '¥', '©', '∞', '™',
+	'⊂二( ^ω^)二⊃', '♂', '♀', '👽', '🌀', '🔯', 'ῷ'
 ];
 
+var FlagCounter_HTML = '<a href="http://info.flagcounter.com/U8NQ" target="_blank"><img src="http://s09.flagcounter.com/count/U8NQ/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_12/viewers_0/labels_0/pageviews_0/flags_0/" alt="Flag Counter" border="0"></a>';
 
-ChannelGalleries_Array = [
-['Anime pictures', 'http://imgur.com/a/SjwJb/embed'],
-['Historical photos', 'http://imgur.com/a/vnwC2/embed'],
+var PCL = getOrDefault(CHANNEL.name + "_PCL", {});
+
+var RedditChange_Links = {		// FORMAT:	'NAME':['LINK ONE','LINK TWO']}
+	'fuckno':[
+			'http://kudo.moe/fuckno.jpg',
+			'http://i.imgur.com/Ud4cJUq.jpg'],	
+};
+
+var Shortcuts = {		// FORMAT: Keycode:'INSERT TEXT',	http://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes
+	ctrl:{
+		49:'[m1]',		// 1
+		50:'[@]',		// 2
+		51:'[float]',	// 3
+		52:'[lf]',		// 4
+		53:'[hflip]',	// 5
+		54:'[vflip]',	// 6
+		66:'[b]',		// b
+		73:'[i]',		// i
+		83:'[sp]',		// s
+		85:'[u]'		// u
+	}, 
+	alt:{
+		83:'[/]'		// s
+	},
+	ctrlshift:{},
+	ctrlalt:{},
+	altshift:{}
+};
+
+var ThemesCSS = [
+	['Kobato', 'https://dl.dropboxusercontent.com/s/1r3twlb0loipybw/kobato.css']
 ];
 
+var TopUserLogo = [
+	['anime girl', 'https://dl.dropboxusercontent.com/s/knxd7dpup1u8lm3/azuki.png', 200],
+	['cosmos', 'https://dl.dropboxusercontent.com/s/v6dx49yqk5e3i2d/cosmos.jpg', 200],
+	['disco ball', 'https://dl.dropboxusercontent.com/s/ahpfm25pglc8j01/disco.jpg', 162],
+	['japanese landscape', 'https://dl.dropboxusercontent.com/s/llylt832evxrp6e/japan.jpg', 200]
+];
 
-	/* -- HTML/CSS -- */
+var WC = getOrDefault(CHANNEL.name + "_WC", {});
 
+var UnlockedPlaylistPermissions = {
+	oplaylistadd: 0,
+	oplaylistnext: 0,
+	oplaylistmove: 1,
+	oplaylistdelete: 2,
+	oplaylistjump: 2,
+	oplaylistaddlist: 1.5,
 
-MOTDTabs_CSS = {
-'padding':		'20px',
-'color':		'white',
-'background-color':	'black',
-}
+	seeplaylist: -1,
+	playlistadd: 1,
+	playlistnext: 1.5,
+	playlistmove: 1.5,
+	playlistdelete: 1.5,
+	playlistjump: 2,
+	playlistaddlist: 1.5,
+	playlistaddlive: 1,
+	playlistaddcustom: 0,
+	playlistaddrawfile: 0,
+	exceedmaxlength: 1,
+	exceedmaxitems: 1,
+	addnontemp: 2,
+	settemp: 2,
+	playlistlock: 2,
+	playlistshuffle: 3,
+	playlistclear: 3,
 
+	pollctl: 1.5,
+	pollvote: 0,
+	viewhiddenpoll: 1000000,
+	voteskip: 1,
+	viewvoteskip: 1.5,
 
-RulesBtn_HTML = '<ol><li>You want to write on the chat? Enter temporary nickname into <b>Guest Login</b> input and click enter.</li><li>You want to register a nick? Click <b>Account -> Profile</b> on the top of the channel, and fill the registration form. You don\'t need an email to register.</li><li>Do not spam.</li><li>You want to have this application on your own channel? Go to <a href="https://github.com/zimny-lech/CyTube-Plus">https://github.com/zimny-lech/CyTube-Plus</a>.</li></ol>';
+	leaderctl: 2,
+	mute: 1.5,
+	kick: 1.5,
+	ban: 2,
+	motdedit: 3,
+	filteredit: 3,
+	filterimport: 3,
+	emoteedit: 3,
+	emoteimport: 3,
 
+	drink: 1.5,
+	chat: 0,
+	chatclear: 2,
+};
 
-ChannelAnnouncement_HTML = 'This channel has been created with <a href="https://github.com/zimny-lech/CyTube-Plus" target="_blank">CyTube Plus 4.5</a>.';
+var LockedPlaylistPermissions = {
+	oplaylistadd: 1.5,
+	oplaylistnext: 1.5,
+	oplaylistmove: 1.5,
+	oplaylistdelete: 2,
+	oplaylistjump: 2,
+	oplaylistaddlist: 1.5,
 
+	seeplaylist: -1,
+	playlistadd: 0,
+	playlistnext: 1.5,
+	playlistmove: 1.5,
+	playlistdelete: 1.5,
+	playlistjump: 2,
+	playlistaddlist: 1.5,
+	playlistaddlive: 1.5,
+	playlistaddcustom: 1.5,
+	playlistaddrawfile: 1.5,
+	exceedmaxlength: 1,
+	exceedmaxitems: 1,
+	addnontemp: 2,
+	settemp: 2,
+	playlistlock: 2,
+	playlistshuffle: 3,
+	playlistclear: 3,
 
-EmbeddingMedia_Images = 'a[href$=".jpg"], a[href$=".jpg:large"], a[href$=".jpeg"], a[href$=".JPG"], a[href$=".png"], a[href$=".tiff"], a[href$=".gif"]';
+	pollctl: 1.5,
+	pollvote: 0,
+	viewhiddenpoll: 1000000,
+	voteskip: 1,
+	viewvoteskip: 1.5,
 
+	leaderctl: 2,
+	mute: 1.5,
+	kick: 1.5,
+	ban: 2,
+	motdedit: 3,
+	filteredit: 3,
+	filterimport: 3,
+	emoteedit: 3,
+	emoteimport: 3,
 
-EmbeddingMedia_Videos = 'a[href$=".webm"]';
-
-
-CustomFooter_HTML = 'This is custom footer.';
-
-
-CustomRightFooter_HTML = '';
-
+	drink: 1.5,
+	chat: 0,
+	chatclear: 2,
+};
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-/* ----- THEMES CONFIGURATION ----- */
-
-
-// NOTES:
-// a) TopUserLogo item has 3 attributes: name, URL, maximum height.
-//    Those images can be selected by user in Layout Configuration panel, and will be displayed on the channel top.
-
-
-ChannelThemeURL = 'https://dl.dropboxusercontent.com/s/l1qoep4su4xn5qz/chinska.css';
-
-
-ThemesCSS = [
-['Kobato', 'https://dl.dropboxusercontent.com/s/1r3twlb0loipybw/kobato.css'],
-['Celadon', 'https://dl.dropboxusercontent.com/s/iwarwhhph1ti2ek/celadon.css'],
-];
-
-
-TopUserLogo = [
-['cytube plus', 'https://dl.dropboxusercontent.com/s/7mrz85gl29eiiks/logo.png', 90],
-['anime girl', 'https://dl.dropboxusercontent.com/s/knxd7dpup1u8lm3/azuki.png', 200],
-['cosmos', 'https://dl.dropboxusercontent.com/s/v6dx49yqk5e3i2d/cosmos.jpg', 200],
-['disco ball', 'https://dl.dropboxusercontent.com/s/ahpfm25pglc8j01/disco.jpg', 162],
-['japanese landscape', 'https://dl.dropboxusercontent.com/s/llylt832evxrp6e/japan.jpg', 200],
-['korean collage', 'https://dl.dropboxusercontent.com/s/qud9adhs183dq30/korea.jpg', 160],
-['my little pony', 'https://dl.dropboxusercontent.com/s/r4ozo8oj8lmerec/mlp.jpg', 190],
-];
-
-
-EmptyCornerBackground = [
-'https://dl.dropboxusercontent.com/s/xa32t6jh68lor6p/kirino.png',
-'https://dl.dropboxusercontent.com/s/xbz6j5vjqs34ihm/kobato0.png',
-'https://dl.dropboxusercontent.com/s/sj67s6u5vwe6i7s/kuroneko.png',
-'https://dl.dropboxusercontent.com/s/y9nnwvbrcbjm0fm/tsukiko.png',
-'https://dl.dropboxusercontent.com/s/7bigihfi4ho0d29/moetan.png',
-'https://dl.dropboxusercontent.com/s/0cg72kjsnt4p63g/azuki.png',
-'https://dl.dropboxusercontent.com/s/va28xkaoz1co3ah/sakura.png',
-];
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-/* ----- INDEPENDENT EMOTES AND FILTERS CONFIGURATION ----- */
-
-
-// NOTES ABOUT INDEPENDENT EMOTES:
-// Every item has 4 attributes, respectively: chat code, image URL, image width, image height.
-// Warning: due to conflict with RegExp, do not use square brackets or use proper "\\[" and "\\]" codes.
-
-
-IndependentEmotes = [
-[':awesome:', 'https://dl.dropboxusercontent.com/s/gz1k8oto90n16v6/awesome.png', 35, 35],
-[':love:', 'https://dl.dropboxusercontent.com/s/fr9131zgnai0kix/heart.png', 35, 35],
-];
-
-
-// NOTES AND DEFAULT FILTERS EXAMPLES:
-// If you use regular expression, you must put it between // signs with /g flag to change all occurences
-// a) [mq]text[/mq] - fast scrolling text
-// b) [mq0]text[/mq0] - slow scrolling text
-// c) [imgur]suok1xr.jpg[/imgur] - imgur picture
-// d) [drop]7mrz85gl29eiiks/logo.png[/drop] - dropbox picture
-// e) [minus/i5]ig0qs6fvWvgBu.jpg[/minus] - minus.com picture
-// f) [vi/b]1r8ih4t1.vichan.png[/vi] - vichan /b/ imageboard picture (you can use other boards too)
-
-
-IndependentFilters=[
-{
-before:/\[mq\](.*?)\[\/mq\]/g,
-after:'<marquee scrollamount="10" behavior="alternate">$1</marquee>'
-},
-{
-before:/\[mq0\](.*?)\[\/(mq0|mq)\]/g,
-after:'<marquee scrollamount="5" behavior="alternate">$1</marquee>'
-},
-{
-before:/\[imgur\](.*?)\[\/(i|imgur)\]/g, 
-after:'<a href="http://i.imgur.com/$1" target="_blank"><img src="http://i.imgur.com/$1" style="max-width:160px"></a>'
-},
-{
-before:/\[drop\](.*?)\[\/(d|drop)\]/g, 
-after:'<a href="https://dl.dropboxusercontent.com/s/$1" target="_blank">'
-  + '<img src="https://dl.dropboxusercontent.com/s/$1" style="max-width:160px"></a>'
-},
-{
-before:/\[minus\/(.*?)\](.*?)\[\/(m|minus)\]/g, 
-after:'<a href="http://$1.minus.com/$2" target="_blank">'
-  + '<img src="http://$1.minus.com/$2" style="max-width:160px"></a>'
-},
-{
-before:/\[vi\/(.*?)\](.*?)\[\/(v|vi)\]/g, 
-after:'<a href="https://pl.vichan.net/$1/src/$2" target="_blank">'
-  + '<img src="https://pl.vichan.net/$1/src/$2" style="max-width:160px"></a>'
-},
-];
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-/* ----- MEDIA DATABASE CONFIGURATION ----- */
-
-
-// NOTES:
-// Leave empty URL field to create category button.
-// WARNING! Use ChannelDatabase_URL only if you want to use external database file, it overwrites database below.
-// If so, copy and configure 'https://raw.github.com/zimny-lech/CyTube-Plus/master/external-db.js' file.
-
-
-ChannelDatabase=[
-['', 'Japanese'],
-['http://www.youtube.com/watch?v=Q3y-80HBM6Q', 'An Cafe - Smile Ichiban Ii Onna'],
-['http://www.youtube.com/watch?v=nDqaTXqCN-Q', 'Babymetal - Ijime, Dame, Zettai'],
-['http://www.youtube.com/watch?v=aNlkiymcT1Q', 'Hinoi Team - Ike Ike'],
-['http://www.youtube.com/watch?v=JbQYK0mwLss', 'Morning Musume - Onna Ni Sachi Are'],
-['http://www.youtube.com/watch?v=VZKMaFR2mtU', 'Perfume - Fake It'],
-['http://www.youtube.com/watch?v=OYEHfWb1b4M', 'Shoko Nakagawa - Yuzurenai Negai'],
-['http://www.youtube.com/watch?v=jvhI576M6so', 'Yuu Kikkawa - Bokarisuto?'],
-['', 'Korean'],
-['http://www.youtube.com/watch?v=M-XXJJFZcXg', '4Minute - Heart To Heart (jap.)'],
-['http://www.youtube.com/watch?v=HchHZkkBOoE', 'As One - Catch Me Up'],
-['http://www.youtube.com/watch?v=UVeTI4v24M0', 'C-REAL - No No No No No'],
-['http://www.youtube.com/watch?v=04FdisNU3vw', 'Girl\'s Day - Oh! My God'],
-['http://www.youtube.com/watch?v=ysnUHXksic8', 'NS Yoon-G - Reason To Become A Witch'],
-['http://www.youtube.com/watch?v=mZUZdGCyLmw', 'Orange Caramel - Bangkok City'],
-['http://www.youtube.com/watch?v=r-MXLmNnarQ', 'TINY-G - Minimanimo'],
-['', 'Chinese'],
-['http://www.youtube.com/watch?v=Bi0tjyVfHOg', 'Amber Ann - Lian Ai Yingyuan Tuan'],
-['http://www.youtube.com/watch?v=dsU0Vu6aJhw', 'By2 - Love You Love You'],
-['http://www.youtube.com/watch?v=ovPhJim1EUc', 'Momo - One Hundred Girlfriends '],
-['http://www.youtube.com/watch?v=lxa2KqERBZE', 'S.H.E. - Shero'],
-['http://www.youtube.com/watch?v=jd2-Nf86jvA', 'Weather Girls - Koi No Tenki Yohou'],
-['', 'Anime songs'],
-['http://www.youtube.com/watch?v=fJ_DH7jzoxQ', 'Ai No Tenshi (Perfect Blue)'],
-['http://www.youtube.com/watch?v=ZNu_NV5PEM8', 'Chu☆ - Miko Miko Naasu - Ai No Teema'],
-['http://www.youtube.com/watch?v=l65_QPNZ_k8', 'Hommarju feat. MAKI - Yamato Nadeshiko Education (Seitokai Yakuindomo OP)'],
-['http://www.youtube.com/watch?v=dQbaJquz_jo', 'Kayo Sakata - Shoujo Q (Pani Poni Dash! OP)'],
-['http://www.youtube.com/watch?v=nLSFxQijz6U', 'Kotoko - Princess Bride'],
-['http://www.youtube.com/watch?v=QK-37CnYTpg', 'Princess Party Camelia OP'],
-['http://www.youtube.com/watch?v=jehMXrY1q5I', 'Yui Makino - Yume No Tsubasa'],
-];
-
-
-ChannelDatabase_URL='';
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 /* ----- END OF CONFIGURATION, DO NOT CHANGE ANYTHING BELOW ----- */
 
-
 /* ----- Initial channel options ----- */
 
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+/* ----- getting channel options ----- */
 
-// reload script after unexpected re-connection or script URL change
+var defplayer = "right";
+var defuserlist = "left";
+var defqueue = "right";
 
-
-var LOADED = (typeof LOADED==="undefined") ? false : true;
-LOADED ? location.reload() : '';
-
-
-/* ----- getting and setting channel options ----- */
-
-
-if (UI_DefaultSynchtube=="1") {
-	defplayer="left"; defuserlist="right"; defqueue="left";
-} else {
-	defplayer="right"; defuserlist="left"; defqueue="right";
-}
-
-
-var DEFTHEME = (UI_ChannelTheme=="1" && ChannelThemeURL!="") ? ChannelThemeURL : "/css/themes/slate.css";
-
-
-var USERCONFIG = {
-	"player":getOrDefault(CHANNEL.name+"_player", defplayer),
-	"userlist":getOrDefault(CHANNEL.name+"_userlist", defuserlist),
-	"queue":getOrDefault(CHANNEL.name+"_queue", defqueue),
-	"qsize":getOrDefault(CHANNEL.name+"_qsize", "wide"),
-	"main":getOrDefault(CHANNEL.name+"_main", "top"),
-	"motd":getOrDefault(CHANNEL.name+"_motd", "top"),
-	"logo":getOrDefault(CHANNEL.name+"_logo", "no"),
-	"logourl":getOrDefault(CHANNEL.name+"_logourl", ""),
-	"logoht":getOrDefault(CHANNEL.name+"_logoht", 250),
-	"header":getOrDefault(CHANNEL.name+"_header", "detached"),
-	"css":getOrDefault(CHANNEL.name+"_css", "no"),
-	"csscode":getOrDefault(CHANNEL.name+"_csscode", ""),
-	"modhash":getOrDefault(CHANNEL.name+"_modhash", ""),
-}
-var USERTHEME = getOrDefault(CHANNEL.name+"_theme", DEFTHEME);
-var FLUID = getOrDefault(CHANNEL.name+"_fluid", false);
-var LAYOUTBOX = getOrDefault(CHANNEL.name+"_layoutbox", true);
-var SOUNDSLVL = getOrDefault(CHANNEL.name+"_soundslvl", 3);
-var EMBEDIMG = getOrDefault(CHANNEL.name+"_embedimg", true);
-var EMBEDVID = getOrDefault(CHANNEL.name+"_embedvid", true);
-var AUTOVID = getOrDefault(CHANNEL.name+"_autovid", true);
-var USERVISITS = getOrDefault(CHANNEL.name+"_visits", 0);
-
-
-var DEFDESCR = true;		// standard item description in the player header
-var NOPLAYER = false;		// removed player in silent mode
-var CHATFUNC = false;		// admin chat functions panel visibility
-var COMMAND = false;		// aditional command occuring in the chat message
-var VOICES = false;		// chat sounds not disabled by user
-var EMOTES = false;		// emotes have been loaded into emotes panel
-var CLEARING = false;		// auto clearing messages window
-var ANTIAFK = false;		// enabled anti-AFK function
-var SOUNDSPANEL = false;	// chat sounds panel visibility
-var PINNED = false;		// playlist pinned to player
-var FULLPL = false;		// expanded playlist view
-var MINIMIZED = false;		// minimized layout
-var CHANDB = false;		// channel database has been loaded
-var GALLERY = false;		// channel galleries have been loaded
-var GALLVIS = false;		// channel galleries have been viewed by user
-var ALTERCHATFORMAT = false;	// using altered 'formatChatMessage' built-in function
-
-
-var PREVTIME = 0;		// previous read of a current item time for the progress bar
-var LASTADD = 0;		// timestamp of the last adding random item from the channel database
-var USERONLINE = 0;		// user minutes online
-var BGCHANGE = 0;		// number of background changes for the easter egg function
-
-
-var MUTEDVOICES = new Array();		// list of users with muted chat sounds by user
-var CHATSTAT = {"n":0, "l":0, "m":[]};	// array with user messages statistics
-var ADDEDLINKS = new Array();		// array of links added from channel database by user
-
-
-var HASH = '';			// simple hash for comparing if the new messages have appeared in the mod panel
-
-
-WEBKIT="webkitRequestAnimationFrame" in window;
-SOUNDSVALUES=new Array(0, 0.1, 0.2, 0.4, 0.7, 1);
-SPEAKLINK='http://webanywhere.cs.washington.edu/cgi-bin/espeak/getsound.pl';
-IMBA=new Audio("https://dl.dropboxusercontent.com/s/xdnpynq643ziq9o/inba.ogg");
-CHATSOUND.volume=0.6;
-
+var UCONF = {
+	"player":getOrDefault(CHANNEL.name + "_player", defplayer),
+	"userlist":getOrDefault(CHANNEL.name + "_userlist", defuserlist),
+	"queue":getOrDefault(CHANNEL.name + "_queue", defqueue),
+	"qsize":getOrDefault(CHANNEL.name + "_qsize", "wide"),
+	"main":getOrDefault(CHANNEL.name + "_main", "top"),
+	"motd":getOrDefault(CHANNEL.name + "_motd", "top"),
+	"logo":getOrDefault(CHANNEL.name + "_logo", "no"),
+	"logourl":getOrDefault(CHANNEL.name + "_logourl", ""),
+	"logoht":getOrDefault(CHANNEL.name + "_logoht", "200"),
+	"header":getOrDefault(CHANNEL.name + "_header", "detached"),
+	"css":getOrDefault(CHANNEL.name + "_css", "no"),
+	"csscode":getOrDefault(CHANNEL.name + "_csscode", ""),
+	"showname":getOrDefault(CHANNEL.name + "_showname", "no"),
+	"pixl":getOrDefault(CHANNEL.name + "_pixl", "before"),
+	"pixh":getOrDefault(CHANNEL.name + "_pixh", 16),
+	"upti":getOrDefault(CHANNEL.name + "_upti", 60),
+	"ltim":getOrDefault(CHANNEL.name + "_ltim",getTZ())
+};
+var LOADED = false;
+var STIMEZONE = getOrDefault(CHANNEL.name + "_STIMEZONE", (new Date().getMonth() > 2 && new Date().getMonth() < 11) ? -4 : -5);
+var CTIMEZONE = getOrDefault(CHANNEL.name + "_CTIMEZONE", getTZ());
+var USERTHEME = getOrDefault(CHANNEL.name + "_theme", "/css/themes/slate.css");
+var USERVISITS = getOrDefault(CHANNEL.name + "_visits", 0);
+var USERONLINE = 0;
+var NOPLAYER = false;
+var COMMAND = false;
+var CHATSTAT = {"n":0, "l":0, "m":[]};
+var FULLPL = false;
+var FLUID = getOrDefault(CHANNEL.name + "_FLUID", true);
+var LAYOUTBOX = getOrDefault(CHANNEL.name + "_LAYOUTBOX", true);
+var MINIMIZED = false;
+var PINNED = false;
+var RELOADED = false;
+var WEBKIT = "webkitRequestAnimationFrame" in window;
+var MAXH = getOrDefault(CHANNEL.name + "_MAXH", "300");
+var MAXW = getOrDefault(CHANNEL.name + "_MAXW", "300");
+var PIXEL = getOrDefault(CHANNEL.name + "_PIXEL", true);
+var HIDEBG = getOrDefault(CHANNEL.name + "_HIDEBG", false);
+var HIDEHF = getOrDefault(CHANNEL.name + "_HIDEHF", false);
+var HIDEPL = getOrDefault(CHANNEL.name + "_HIDEPL", false);
+var HIDEANN = getOrDefault(CHANNEL.name + "_HIDEANN", false);
+var HIDEMOTD = getOrDefault(CHANNEL.name + "_HIDEMOTD", false);
+var HIDEPLAYER = getOrDefault(CHANNEL.name + "_HIDEPLAYER", false);
+var HIDEIMG = getOrDefault(CHANNEL.name + "_HIDEIMG", false);
+var UNTZ = getOrDefault(CHANNEL.name + "_UNTZ", true);
+var EMBEDVID = getOrDefault(CHANNEL.name + "_EMBEDVID", true);
+var AUTOVID = getOrDefault(CHANNEL.name + "_AUTOVID", true);
+var LOOPWEBM = getOrDefault(CHANNEL.name + "_LOOPWEBM", true);
+var TEMPORARY = true;
+var CHATFUNC = false;		
+var CLEARING = false;		
+var ANTIAFK = false;		
+var SPINTOG = true;
+var MQTOG = true;
+var ADDONESECOND = '';
+var BLLINK = false;
+var SPLITMSG = [];
+var FAILEDEMOTES = ['The following 0 emotes failed to download: \n'];
+var DOWNLOADING = false;
+var LEFT = false;
+var UPNEXT = '';
+var SHORTLINK = '';
+var UNTZINT = '';
+var SPOILER = false;
+var BGREMOVED = false;
+var STREAMER = {name:"NONE",link:"",css:""};
+var UPDATEOFFSET = -1;
+var EMOTEBL = getOrDefault(CHANNEL.name + "_EMOTEBL", []);
+var USEREMOTEBL = getOrDefault(CHANNEL.name + "_USEREMOTEBL", []);
+var PLAYERHTML = '';
+var JOINED = false;
+var PINGLINK = getOrDefault(CHANNEL.name + "_PINGLINK", "");
+var PINGVOL = getOrDefault(CHANNEL.name + "_PINGVOL", 1);
+var UPDTOUT = '';
+var MICHER = false;
+var SHTML = '';
+var RANDEMOTE = getOrDefault(CHANNEL.name + "_RANDEMOTE", 0);
+var RANDDATE = getOrDefault(CHANNEL.name + "_RANDDATE", (new Date()).setDate((new Date()).getDate()+1));
+var SHOWPROF = getOrDefault(CHANNEL.name + "_SHOWPROF", false);
+var SHOWING = false;
+var NEWREQUESTS = getOrDefault(CHANNEL.name + "_NEWREQUESTS", 0);
+var ADDEDEPLINK = "";
+var EVENT = {a:new Audio("http://kudo.moe/fairy_tail_wow_sound.mp3"),date:getOrDefault(CHANNEL.name + "_EVENT",0)};
+var SUBCHAN = 3;
+var SCNAMES = ["Shows","Off-topic","Regular"];
+var MOTDCACHE = getOrDefault(CHANNEL.name + "_MOTDCACHE", "");
+CHATMAXSIZE = getOrDefault(CHANNEL.name + "_CHATMAXSIZE", 150);	// Override Cytube's default limit
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 /* ----- Global functions ----- */
 
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+Callbacks.usercount = function(count) {
+	CHANNEL.usercount = count;
+	var text = count + " " + Usercount_Text;
+	if(count != 1) {
+		text += "s";
+	}
+	$("#usercount").text(text);
+}
+Callbacks.usercount(CHANNEL.usercount);
 
-// toggle elements visibility
-
-
-function toggleDiv(div) {
-	$(div).css('display')=="none" ? $(div).show() : $(div).hide();
+function getTZ() {
+	return new Date().getTimezoneOffset()/-60;
+}
+if (getTZ() !== CTIMEZONE) {
+	var ctz = getTZ();
+	if (confirm("The current local time zone is set to GMT" + (UCONF.ltim < 0 ? "" : "+") + UCONF.ltim + ".\n\nWould you like to set it to GMT" + (ctz < 0 ? "" : "+") + ctz + "?")) {
+		UCONF.ltim = ctz;
+		setOpt(CHANNEL.name + "_ltim",ctz);
+	}
+	setOpt(CHANNEL.name + "_CTIMEZONE", ctz);
 }
 
+//--------------------------------------------------------------
 
-// refresh player
-
-
-function refreshPlayer() {
-	PLAYER.type="";
-	PLAYER.id="";
-	socket.emit("playerReady");
+jQuery.loadScript = function (url, callback) {
+    jQuery.ajax({
+        url: url,
+        dataType: 'script',
+        success: callback,
+        async: true,
+        defer:true
+    });
 }
+$.loadScript("https://apis.google.com/js/api.js", handleClientLoad);
 
+function initClient() {
+	var CLIENT_ID = "285352011800-obnsbp1gvnpljog3ljg936l43dsci57p.apps.googleusercontent.com";
+	var API_KEY = "AIzaSyAMabOeS09Ll-T8AFgkF2QSFo_1HQrhv9I";
+	var SCOPE = "https://www.googleapis.com/auth/spreadsheets.readonly";
 
-// add link to playlist
-
-
-function addToPlaylist(link, stand) {
-	parsed=parseMediaLink(link);
-	parsed["id"]!=null ? socket.emit("queue", {id:parsed["id"], pos:stand, type:parsed["type"]}) : '';
-}
-
-
-// get text content from inner HTML
-
-
-function getText(html) {
-	div=document.createElement("div");
-	div.innerHTML=html;
-	return div.textContent||div.innerText;
-}
-
-
-// create modal window
-
-
-function createModal(title) {
-	hidePlayer();
-	outer = $('<div class="modal fade" />').appendTo($("body"));
-	modal = $('<div class="modal-dialog" />').appendTo(outer);
-	modal = $('<div class="modal-content" />').appendTo(modal);
-	head = $('<div class="modal-header" />').appendTo(modal);
-	$('<button class="close" data-dismiss="modal" aria-hidden="true" />').html('&times;').appendTo(head);
-	$('<h3 />').text(title).appendTo(head);
-	body = $('<div class="modal-body" />').appendTo(modal);
-	footer = $('<div class="modal-footer" />').appendTo(modal);
-	outer.on("hidden", function() {
-		outer.remove();
-		unhidePlayer();
+	gapi.client.init({
+		'apiKey': API_KEY,
+		'clientId': CLIENT_ID,
+		'scope': SCOPE,
+		'discoveryDocs': ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
 	});
-	outer.modal();
 }
 
+function handleClientLoad() {
+	gapi.load('client:auth2', initClient);
+}
 
-// layout elements settings
+function makeApiCallforJSON(updateRange) {
+	var params = {
+		// The ID of the spreadsheet to retrieve data from.
+		spreadsheetId: '1Ye0mzOVODl2IAo3MWjvZOtqSXq-KK_JR5RYbzjUmOY4',  // TODO: Update placeholder value.
 
+		// The A1 notation of the values to retrieve.
+		range: updateRange,  // TODO: Update placeholder value.
 
-function playerLocation(a) {
-	$("#pinup-btn").show();
-	if (a=="left") {
-		$("#videowrap").after($("#chatwrap").detach());
-		normalPlayer();
-		normalChat();
-	} else if (a=="right") {
-		$("#videowrap").before($("#chatwrap").detach());
-		normalPlayer();
-		normalChat();
-	} else if (a=="center") {
-		$("#videowrap").after($("#chatwrap").detach());
-    		$("#videowrap, #chatwrap").removeClass().addClass("col-lg-8 col-lg-offset-2 col-md-12");
-		fitPlayer();
-		fitChat(200);
-		$("#pinup-btn").hide();
+		// How values should be represented in the output.
+		// The default render option is ValueRenderOption.FORMATTED_VALUE.
+		valueRenderOption: 'FORMATTED_VALUE',  // TODO: Update placeholder value.
+
+		// How dates, times, and durations should be represented in the output.
+		// This is ignored if value_render_option is
+		// FORMATTED_VALUE.
+		// The default dateTime render option is [DateTimeRenderOption.SERIAL_NUMBER].
+		dateTimeRenderOption: 'SERIAL_NUMBER',  // TODO: Update placeholder value.
+	};
+
+	return gapi.client.sheets.spreadsheets.values.get(params);
+}
+
+var JSONValue = [];
+
+function updateCurrentlyAiring() {
+	//updateEMOTEBL();
+	if (UPDATEOFFSET*UCONF.upti > 300 || UPDATEOFFSET === -1) {
+		updateWC();
+		updatePixels();
+		UPDATEOFFSET = 0;
+	}
+	UPDATEOFFSET++;
+	var randdate = new Date();
+	if (RANDDATE < randdate) {
+		RANDEMOTE = 0;
+		setOpt(CHANNEL.name + "_RANDEMOTE", RANDEMOTE);
+		RANDDATE = randdate.setDate(randdate.getDate()+1);
+		setOpt(CHANNEL.name + "_RANDDATE", RANDDATE);
+	}
+	// https://spreadsheets.google.com/feeds/worksheets/YOUR_SPREADSHEET_ID/private/full
+	/*var url = "https://spreadsheets.google.com/feeds/cells/1ATO8oxAsWc9KlpTTBfBLL_hz5Zym6oFwtyMfVfCQJG8/o20mnpl/public/basic?alt=json";
+	$.ajax({
+		url:url,
+		dataType:"jsonp",
+		success:function(data) {
+			$("#currentlyStreaming").html(data.feed.entry[0].content.$t);
+			UPNEXT = data.feed.entry[1].content.$t;
+			ScheduleTabs_Array[0][1] = data.feed.entry[2].content.$t;
+			$("#streamtime").text(data.feed.entry[3].content.$t);
+			STIMEZONE = data.feed.entry[5].content.$t === "EDT" ? -4 : -5;
+			setOpt(CHANNEL.name + "_STIMEZONE", STIMEZONE);
+			(function runBG() {
+				if (Object.keys(WC).length > 0) {
+					streamer = data.feed.entry[4].content.$t;
+					if (streamer !== "NONE" && !HIDEBG && (STREAMER.name !== streamer || STREAMER.link !== WC[streamer].bg || STREAMER.css !== WC[streamer].css)) {
+						if (WC[streamer] !== undefined && WC[streamer].bg !== "") {
+							var bcss = 'background-image:url(' + WC[streamer].bg + ');' + WC[streamer].css;
+							$("body").attr("style",bcss);
+							STREAMER.link = WC[streamer].bg;
+							STREAMER.css = WC[streamer].css;
+							BGREMOVED = false;
+						} else {
+							$("body").removeAttr("style");
+							STREAMER.link = "";
+						}
+					} else if (!BGREMOVED && !HIDEBG && streamer === "NONE") {
+						$("body").removeAttr("style");
+						STREAMER.link = "";
+						BGREMOVED = true;
+					}
+					if (STREAMER.name !== streamer) {
+						STREAMER.name = streamer;
+						showProfiles();
+					}
+				} else {
+					setTimeout(runBG,125);
+				}
+			})();
+		}
+	});
+	autoMod();*/
+	
+	updateJSON();
+	
+	var checkInterval = setInterval(function () {
+		//console.log("checking...");
+		if (JSONValue.length !== 0) {
+			clearInterval(checkInterval);
+			
+			$("#currentlyStreaming").html(JSONValue[0][0]);
+			UPNEXT = JSONValue[1][0];
+			ScheduleTabs_Array[0][1] = JSONValue[2][0];
+			$("#streamtime").text(JSONValue[3][0]);
+			STIMEZONE = JSONValue[5][0] === "EDT" ? -4 : -5;
+			setOpt(CHANNEL.name + "_STIMEZONE", STIMEZONE);
+			(function runBG() {
+				if (Object.keys(WC).length > 0) {
+					streamer = JSONValue[4][0];
+					if (streamer !== "NONE" && !HIDEBG && (STREAMER.name !== streamer || STREAMER.link !== WC[streamer].bg || STREAMER.css !== WC[streamer].css)) {
+						if (WC[streamer] !== undefined && WC[streamer].bg !== "") {
+							var bcss = 'background-image:url(' + WC[streamer].bg + ');' + WC[streamer].css;
+							$("body").attr("style",bcss);
+							STREAMER.link = WC[streamer].bg;
+							STREAMER.css = WC[streamer].css;
+							BGREMOVED = false;
+						} else {
+							$("body").removeAttr("style");
+							STREAMER.link = "";
+						}
+					} else if (!BGREMOVED && !HIDEBG && streamer === "NONE") {
+						$("body").removeAttr("style");
+						STREAMER.link = "";
+						BGREMOVED = true;
+					}
+					if (STREAMER.name !== streamer) {
+						STREAMER.name = streamer;
+						showProfiles();
+					}
+				} else {
+					setTimeout(runBG, 125);
+				}
+			})();
+			
+			UPDTOUT = setTimeout(updateCurrentlyAiring, UCONF.upti*1000);
+		}
+	}, 125);
+}
+
+var checkGAPI = setInterval(function () {
+	if (typeof gapi !== "undefined") {
+		if (typeof gapi.client !== "undefined") {
+			if (typeof gapi.client.sheets !== "undefined") {
+				clearInterval(checkGAPI);
+				updateCurrentlyAiring();
+			}
+		}
+	}
+}, 25);
+
+function updateJSON() {
+	JSONValue = [];
+	makeApiCallforJSON("JSON!A1:A6").then(function(response) {
+	// TODO: Change code below to process the `response` object:
+		JSONValue = response.result.values;
+	}, function(reason) {
+		console.error('error: ' + reason.result.error.message);
+		JSONValue = ["ERROR","ERROR","ERROR","ERROR","ERROR","ERROR"];
+	});
+}
+
+function updateWC() {
+	/*var url = "https://spreadsheets.google.com/feeds/cells/1ATO8oxAsWc9KlpTTBfBLL_hz5Zym6oFwtyMfVfCQJG8/o8a98v8/public/basic?alt=json";
+	$.ajax({
+		url:url,
+		dataType:"jsonp",
+		success:function(data) {
+			WC = JSON && JSON.parse(data.feed.entry[0].content.$t) || $.parseJSON(data.feed.entry[0].content.$t);
+			PCL = JSON && JSON.parse(data.feed.entry[1].content.$t) || $.parseJSON(data.feed.entry[1].content.$t);
+			setOpt(CHANNEL.name + "_WC", WC);
+			setOpt(CHANNEL.name + "_PCL", PCL);
+			updateStreamTitles();
+		}
+	});*/
+	
+	makeApiCallforJSON("JSON-WC!A1:A2").then(function(response) {
+		WC = JSON && JSON.parse(response.result.values[0][0]) || $.parseJSON(response.result.values[0][0]);
+		PCL = JSON && JSON.parse(response.result.values[1][0]) || $.parseJSON(response.result.values[1][0]);
+		setOpt(CHANNEL.name + "_WC", WC);
+		setOpt(CHANNEL.name + "_PCL", PCL);
+		updateStreamTitles();
+	}, function(reason) {
+		console.error('error: ' + reason.result.error.message);
+	});
+}
+
+/*function updateEMOTEBL() {
+	var url = "https://spreadsheets.google.com/feeds/cells/1K90qG-BKgZ2oCu_ZCLpifTE1maubrDWYmpn54LzoIBo/ovyrtj0/public/basic?alt=json";
+	$.ajax({
+		url:url,
+		dataType:"jsonp",
+		success:function(data) {
+			EMOTEBL = data.feed.entry[0].content.$t.split(",");
+			setOpt(CHANNEL.name + "_EMOTEBL", EMOTEBL);
+			removeImages();
+			var requests = parseInt(data.feed.entry[1].content.$t);
+			if (CLIENT.rank > 3) {
+				if (requests < NEWREQUESTS) {
+					NEWREQUESTS = requests;
+					setOpt(CHANNEL.name + "_NEWREQUESTS", NEWREQUESTS);
+				} else if (requests > NEWREQUESTS) {
+					HIDEANN ? hideannbtn.click() : '';
+					$("#sRequest").parent().parent().remove();
+					makeAlert("New request/issue", '<a id="sRequest" href="https://docs.google.com/spreadsheets/d/1K90qG-BKgZ2oCu_ZCLpifTE1maubrDWYmpn54LzoIBo/edit#gid=991675752" target="_blank">There is currently a new request/issue.</a>').appendTo("#announcements")
+					$("#sRequest").unbind("click").click(function() {
+						NEWREQUESTS = requests;
+						setOpt(CHANNEL.name + "_NEWREQUESTS", NEWREQUESTS);
+						$(this).parent().parent().remove();
+					});
+				}
+			}
+		}
+	});
+}
+
+function hereOrNot() {
+	var slice3 = Array.prototype.slice;
+	var list3 = slice3.call($("#userlist .userlist_item"));
+	var checklist = Object.keys(FruitBowl);
+	for (item2 in checklist) {
+		for (item in list3) {
+			NAME = $(list3[item]).data("name");
+			RANK = $(list3[item]).data("rank");
+			if (NAME === checklist[item2] && RANK > 3) {
+				return NAME;
+			}
+		}
+	}
+	return "No one";
+}
+
+function autoMod() {
+	if (CLIENT.rank > 3 && 1 == 2) {
+		here = hereOrNot();
+		console.log(here + " is the bot.");
+		if (CLIENT.name === here && CHANNEL.js.indexOf("redirectToToradora(false)") > -1) {
+			var json2 = "https://spreadsheets.google.com/feeds/cells/1ATO8oxAsWc9KlpTTBfBLL_hz5Zym6oFwtyMfVfCQJG8/o5faxkf/public/basic?alt=json";
+			$.ajax({
+				url:json2,
+				dataType:"jsonp",
+				success:function(data) {
+					console.log(data);
+					pixlked = data.feed.entry[2].content.$t;
+					console.log(data.feed.entry[1].content.$t);
+					checkRank(data.feed.entry[0].content.$t, data.feed.entry[1].content.$t, data.feed.entry[3].content.$t, data.feed.entry[4].content.$t);
+					if (pixlked === "OPEN" && $("#qlockbtn").hasClass("btn-danger")) {
+						$("#qlockbtn").click();
+					} else if (pixlked === "LOCKED" && $("#qlockbtn").hasClass("btn-success")) {
+						$("#qlockbtn").click();
+					}
+					(function autoAddEp() {
+						if ($("#streamtime").text() !== "") {
+							var eplink = data.feed.entry[5].content.$t;
+							var timedif = parseInt($("#streamtime").text().split(":")[1].split(" ")[0])%30;
+							if (ADDEDEPLINK !== eplink && eplink !== "NONE" && !$('a[href="' + eplink + '"]').hasClass("qe_title") && timedif < 5) {
+								var parsed = parseMediaLink(eplink);
+								ADDEDEPLINK = eplink;
+								socket.emit("queue", {id:parsed.id, pos:"next", type:parsed.type, temp:true});
+							}
+						} else {
+							setTimeout(autoAddEp,125);
+						}
+					})();
+				}
+			});
+		}
+	}
+}*/
+
+//------------------------------------------------------------------------
+
+var q240480 = $('li[title="240"],li[title="480"]');
+socket.on("mediaUpdate", function(data) {
+	if (Math.abs(data.currentTime - CurrentVideoTime) > 5.1) {
+		updateEndTimes(Math.floor(data.currentTime));
+	}
+	CurrentVideoTime = data.currentTime;
+	if (PLAYER.mediaType == "gd") {
+		q240480.hide();
+	} else if (q240480.css("display") == "none") {
+		q240480.show();
+	}
+});
+socket.on("changeMedia", function(data) {
+    updateEndTimes(Math.floor(data.currentTime));
+	videoLength = data.seconds;
+	changeTitle();
+	setModeAfterVideoChange();
+	$("#findtime").text() !== 'Video Time' ? $("#findtime").click() : '';
+	if (!$("#videowrap").length) {
+		TitleBarDescription_Caption.length < 1 ? TitleBarDescription_Caption = 'Currently Playing:' : '';
+		$("#currenttitle").text(TitleBarDescription_Caption + " " + data.title);
+	}
+});
+function getCurrentPlayerTime() {
+	try {
+		if (typeof PLAYER.player !== "undefined") {
+			return PLAYER.player.currentTime(); // "FilePlayer, Vimeo"
+		} else if (typeof PLAYER.yt !== "undefined") { // "YouTube"
+			return PLAYER.yt.getCurrentTime(); // "YouTube"
+		} else if (typeof PLAYER.dm !== "undefined") {
+			return PLAYER.dm.currentTime; // "Daily Motion"
+		}
+	} catch {
+		return CurrentVideoTime;
 	}
 }
+var CurrentVideoTime = 0;
+socket.on("delete", function() {
+	setTimeout(function() {
+		updateEndTimes(getCurrentPlayerTime());
+	}, 750); // hopefully this fixes the issue..
+});
 
+socket.on("moveVideo", function() {
+	setTimeout(function() {
+		updateEndTimes(getCurrentPlayerTime());
+	}, 750);
+});
+function makeQueueEntry(item, addbtns) {
+    var video = item.media;
+    var li = $("<li/>");
+    li.addClass("queue_entry");
+    li.addClass("pluid-" + item.uid);
+    li.data("uid", item.uid);
+    li.data("media", video);
+    li.data("temp", item.temp);
+    if(video.thumb) {
+        $("<img/>").attr("src", video.thumb.url)
+            .css("float", "left")
+            .css("clear", "both")
+            .appendTo(li);
+    }
+    var title = $("<a/>").addClass("qe_title").appendTo(li)
+        .text(video.title)
+        .attr("href", formatURL(video))
+        .attr("target", "_blank");
+    var time = $("<span/>").addClass("qe_time").appendTo(li);
+    time.text(video.duration);
+    var userAdded = $("<span/>").addClass("qe_user").appendTo(li);
+    userAdded.text(item.queueby + " | ");
+	var endTime = $("<span/>").addClass("qe_endTime").appendTo(li);
+    var clear = $("<div/>").addClass("qe_clear").appendTo(li);
+    if(item.temp) {
+        li.addClass("queue_temp");
+    }
 
-function userlistLocation(a) {
-	a=="left" ? $("#userlist").css('float', 'left') : $("#userlist").css('float', 'right');
+    if(addbtns)
+        addQueueButtons(li);
+
+	setTimeout(function() {
+		updateEndTimes(getCurrentPlayerTime());
+	}, 100);
+    return li;
 }
 
+function updateEndTimesOnLoad() {
+    var PLTimeList = Array.from(document.getElementsByClassName("qe_time")).forEach(function (PLCurrElement) {
+        var qeEndTime = document.createElement("span");
+        qeEndTime.classList.add('qe_endTime');
 
-function queueLocation(a) {
-	$("#pinup-btn").show();
-	if (a=="right") {
-		$("#rightpane").before($("#leftpane").detach());
-	} else if (a=="left") {
-		$("#rightpane").after($("#leftpane").detach());
-	} else if (a=="center") {
-		$("#rightpane").after($("#leftpane").detach())
-		  .removeClass().addClass('col-md-8 col-md-offset-2 col-md-12');
-		$("#leftpane").removeClass().addClass('col-md-8 col-md-offset-2 col-md-12');
-		$("#pinup-btn").hide();
-	}
-	b = (a=="right") ? "left" : "right";
-	$("#playlistrow").css('background-position', b+' bottom');
+        PLCurrElement.parentElement.insertBefore(qeEndTime, PLCurrElement.nextSibling);
+
+        var qeuser = document.createElement("span");
+        qeuser.classList.add('qe_user');
+        qeuser.textContent = PLCurrElement.parentElement.getAttribute("title").replace("Added by: ", "") + " | ";
+
+        PLCurrElement.parentElement.insertBefore(qeuser, PLCurrElement.nextSibling);
+    });
 }
 
+function updateEndTimes(CurrentVideoTime) {
+    var currentTime = new Date().getTime();
+    var activeItemPosition = Array.from(document.getElementById("queue").children).indexOf(document.getElementsByClassName("queue_active")[0]);
 
-function queueSize(a) {
-	if (USERCONFIG.queue!="center") {
-		if (a=="wide") {
-			$("#leftpane").removeClass().addClass('col-lg-5 col-md-5');
-			$("#rightpane").removeClass().addClass('col-lg-7 col-md-7');
-		} else if (a=="narrow") {
-			$("#leftpane").removeClass().addClass('col-lg-7 col-md-7');
-			$("#rightpane").removeClass().addClass('col-lg-5 col-md-5');
+	if (activeItemPosition === -1) {
+		setTimeout(function() {
+			updateEndTimes(CurrentVideoTime);
+		}, 250);
+	} else {
+		var PLTimeList = document.querySelectorAll("#queue .qe_time");
+		var PLEndTimeList = document.getElementsByClassName("qe_endTime") || false;
+		var PLSeconds = 0;
+
+		if (PLTimeList.length !== 0) {
+			if (PLEndTimeList.length === 0) {
+				updateEndTimesOnLoad();
+			}
+
+			if (activeItemPosition > 0) {
+				for (var j = 0; j < activeItemPosition; j++) {
+					PLEndTimeList[j].textContent = "";
+				}
+			}
+
+			var maxItems = 50;
+			var maxPosition = 0;
+
+			if (PLTimeList.length < activeItemPosition + maxItems) {
+				maxPosition = PLTimeList.length;
+			} else {
+				maxPosition = activeItemPosition + maxItems;
+				for (var j = maxPosition; j < PLTimeList.length; j++) {
+					PLEndTimeList[j].textContent = "";
+				}
+			}
+
+			var noTime = false;
+
+			for (var i = activeItemPosition; i < maxPosition; i++) {
+				var currSplitTime = PLTimeList[i].textContent.split(":");
+
+				if (currSplitTime[0] !== "--" && !noTime) {
+					if (currSplitTime.length === 3) {
+						PLSeconds += parseInt(currSplitTime[0]) * 60 * 60;
+					}
+					PLSeconds += parseInt(currSplitTime[currSplitTime.length-2]) * 60;
+					PLSeconds += parseInt(currSplitTime[currSplitTime.length-1]);
+					PLSeconds += 3; //video player delay
+
+					if (i === activeItemPosition) {
+						PLSeconds = PLSeconds - CurrentVideoTime;
+					}
+
+					var updatedTime = new Date(currentTime + PLSeconds * 1000);
+					var isPM = updatedTime.getHours() >= 12;
+					var isMidday = updatedTime.getHours() == 12;
+
+					var updatedHours = updatedTime.getHours() - (isPM && !isMidday ? 12 : 0);
+					if (updatedHours === 0) {
+						updatedHours = 12;
+					}
+
+					var updatedMins = updatedTime.getMinutes().toString();
+					if (updatedMins.length === 1) {
+						updatedMins = "0" + updatedMins;
+					}
+					var updatedSecs = updatedTime.getSeconds().toString();
+					if (updatedSecs.length === 1) {
+						updatedSecs = "0" + updatedSecs;
+					}
+
+					PLEndTimeList[i].textContent = "Ends at " + updatedHours + ":" + updatedMins + ":" + updatedSecs + (isPM ? ' PM' : ' AM') + " | ";
+				} else {
+					if (!noTime) {
+						PLEndTimeList[i].textContent = "Never ends | ";
+					} else {
+						PLEndTimeList[i].textContent = "";
+					}
+					noTime = true;
+				}
+			}
 		}
 	}
 }
 
 
-function mainLocation(a) {
-	if (a=="top") {
-		$("#main").before($("#titlerow").detach()).after($("#playlistrow").detach());
-	} else if (a=="bottom") {
-		$("#main").before($("#playlistrow").detach()).before($("#titlerow").detach());
-	}
-	$("#main").after($("#chatpanel").detach());
-}
-
-
-function motdLocation(a) {
-	if (a=="top") {
-		$("#zerorow").after($("#announcements").detach()).after($("#motdrow").detach());
-	} else if (a=="bottom") {
-		$("#resizewrap").before($("#motdrow").detach()).before($("#announcements").detach());
+function trimChatBuffer() {
+	var maxSize = window.CHATMAXSIZE;
+	if (!maxSize || typeof maxSize !== "number")
+		maxSize = parseInt(maxSize || 100, 10) || 100;
+	var buffer = document.getElementById("messagebuffer");
+	var count = ($("#messagebuffer.linewrap div:visible").length - 1) - maxSize;
+	
+	for (var i = 0; i < count; i++) {
+		buffer.firstChild.remove();
 	}
 }
 
-
-function logoInsert(a) {
-	if (a!="no") {
-		link = (a!="user") ? TopUserLogo[a][1] : USERCONFIG.logourl;
-		ht = (a!="user") ? TopUserLogo[a][2] : USERCONFIG.logoht;
-		azukirow.css({'min-height':ht+'px', 'background-image':'url("'+link+'")'});
-	} else if (a=="no") {
-		azukirow.css({'min-height':'5px', 'background-image':''});
-	}
+// unbind queue lock button and add a permission changer
+if (UI_OpenPlaylist === 1) {
+	$("#qlockbtn").unbind("click").on("click", function() {
+		socket.emit("togglePlaylistLock");
+		$("#qlockbtn").hasClass('btn-danger') ? socket.emit("setPermissions", UnlockedPlaylistPermissions): socket.emit("setPermissions", LockedPlaylistPermissions);
+	});
 }
 
-
-function headerMode(a) {
-	$(".navbar-fixed-top").unbind();
-	if (a=="fixed") {
-		$(".navbar-fixed-top").css({'position': 'fixed', 'top':'0px'});
-		$("#mainpage").css('margin-top', '0px');
-	} else if (a=="detached") {
-		$(".navbar-fixed-top").css('position', 'inherit');
-		$("#mainpage").css('margin-top', '-72px');
-	} else if (a=="mouseover") {
-		$(".navbar-fixed-top").css({'position':'fixed', 'top':'-40px'})
-		  .on("mouseover", function() {
-			$(".navbar-fixed-top").css('top', '0px');
-		  })
-		  .on("mouseout", function() {
-			$(".navbar-fixed-top").css('top', '-40px');
-		  });
-		$("#mainpage").css('margin-top', '-40px');
-	}
+// check if temporary box is checked
+function checktemporary() {
+	$('.add-temp').is(':checked') ? TEMPORARY = true : TEMPORARY = false;
 }
 
-
-function customCSS(a) {
-	$("#usercss").remove();
-	a=="yes" ? $("head").append('<style id="usercss" type="text/css">'+USERCONFIG.csscode+'</style>') : '';
+// toggle elements visibility
+function toggleDiv(a) {
+	$(a).css('display') == "none" ? $(a).show() : $(a).hide();
 }
 
-
-// set global layout according to user preferences
-
-
-function setLayout() {
-	playerLocation(USERCONFIG.player);
-	userlistLocation(USERCONFIG.userlist);
-	queueLocation(USERCONFIG.queue);
-	queueSize(USERCONFIG.qsize);
-	mainLocation(USERCONFIG.main);
-	motdLocation(USERCONFIG.motd);
-	logoInsert(USERCONFIG.logo);
-	headerMode(USERCONFIG.header);
-	customCSS(USERCONFIG.css);
+// add link to playlist
+function addToPlaylist(link,position) {
+	parsed = parseMediaLink(link);
+	checktemporary();
+	parsed["id"] != null ? socket.emit("queue", {id:parsed["id"], pos:position, temp:TEMPORARY, type:parsed["type"]}) : '';
 }
 
+// create modal window
+function createModal(title) {
+	//hidePlayer();
+	outer=$('<div />').addClass('modal fade').appendTo($("body"));
+	modal=$('<div />').addClass('modal-dialog').appendTo(outer);
+	modal=$('<div />').addClass('modal-content').appendTo(modal);
+	head=$('<div />').addClass('modal-header').appendTo(modal);
+	$('<button />').addClass('close').attr('data-dismiss', 'modal').attr('aria-hidden', 'true').html('&times;')
+		.appendTo(head);
+	$('<h3 />').text(title).appendTo(head);
+	body=$('<div />').addClass('modal-body').appendTo(modal);
+	footer=$('<div />').addClass('modal-footer').appendTo(modal);
+	outer.on("hidden.bs.modal", function() {
+		//unhidePlayer();
+		outer.remove();
+	});
+	outer.modal();
+}
+$.fn.insertAtCaret = function(text) {
+	return this.each(function() {
+		if (document.selection && this.tagName == 'TEXTAREA') {
+			//IE textarea support
+			this.focus();
+			sel = document.selection.createRange();
+			sel.text = text;
+			this.focus();
+		} else if (this.selectionStart || this.selectionStart == '0') {
+			//MOZILLA/NETSCAPE support
+			startPos = this.selectionStart;
+			endPos = this.selectionEnd;
+			scrollTop = this.scrollTop;
+			this.value = this.value.substring(0, startPos) + text + this.value.substring(endPos, this.value.length);
+			this.focus();
+			this.selectionStart = startPos + text.length;
+			this.selectionEnd = startPos + text.length;
+			this.scrollTop = scrollTop;
+		} else {
+			// IE input[type=text] and other browsers
+			this.value += text;
+			this.focus();
+			this.value = this.value;	// forces cursor to end
+		}
+	});
+};
+// insert code into chatline
+function insertText(a) {
+	$("#chatline").insertAtCaret(a);
+}
 
 // fit player height
-
-
 function fitPlayer() {
-	VW=$("#videowrap").width()+'';
-	VH=Math.floor(parseInt(VW)*9/16+1)+'';
-	$("#ytapiplayer").width(VW).height(VH);
+	VWIDTH = $("#videowrap-header").width();
+	VHEIGHT = Math.floor(VWIDTH * 9 / 16 + 1);
+	$("#ytapiplayer").width(VWIDTH).height(VHEIGHT);
 }
 
-
 // fit chat height
-
-
 function fitChat(a) {
-	if (a=="auto") {
-		VW=$("#messagebuffer").width();
-		VH=Math.floor(parseInt(VW)*9/16+1);
+	if (a === "auto") {
+		VW = $("#messagebuffer").width();
+		VH = (window.innerHeight * .75) - $("#chatheader").height() - $("#chatline").height();
 	} else {
-		VH=a;
+		VH = a;
 	}
 	$("#messagebuffer").height(VH);
 	$("#userlist").height(VH);
 }
 
+function waaai(url, lastitem) {
+	url = decodeURIComponent(url);
+	url = encodeURIComponent(url);
+	apiRequest = new XMLHttpRequest();
+	apiRequest.onreadystatechange = function () {
+		if (apiRequest.readyState === 4) { // request is done
+			var serverResponse = JSON && JSON.parse(apiRequest.responseText) || $.parseJSON(apiRequest.responseText);
+			if (apiRequest.status === 200) { // successfully response
+				SHORTLINK += serverResponse.data.url + ';';
+				if (lastitem === true) {
+					links = SHORTLINK.split(';');
+					links.pop();
+					for (i in SPLITMSG) {
+						if (SPLITMSG[i].indexOf("BLACKLISTED") > -1) {
+							number = parseInt(SPLITMSG[i].slice(-1), 10);
+							SPLITMSG[i] = links[number];
+						}
+						msg += SPLITMSG[i] + ' ';
+					}
+					socket.emit("chatMsg", {msg:msg});
+				}
+			}
+		}
+	};
+	apiRequest.open("GET", "http://api.waa.ai/shorten?url=" + url);
+	apiRequest.send();
+}
+
+// format chat messages
+function prepareMessage(msg) {
+	msg.indexOf(Lottery.text) > -1 ? msg = msg.replace(Lottery.text,"") : '';
+	if (msg.search(new RegExp('http(.+?)\/r\/' + CHANNEL.name + '(.+?|):sp','gi')) > -1) {
+		document.location.reload(true);
+		return "";
+	}
+	if (UI_Lottery === 1) {
+		if ((typeof Lottery.chance !== "number") || Lottery.chance < 0) {
+			Lottery.chance = 10;
+		}
+		Math.random() < (Lottery.chance / 100) ? msg += ' ' + Lottery.text : '';
+	}
+	if (msg.toLowerCase().indexOf("fc2.com") > -1) {
+		SHORTLINK = '';
+		semicolonnum = (msg.match(/fc2\.com/gi) || []).length - 1;
+		blnum = 0;
+		SPLITMSG = msg.split(" ");
+		msg = '';
+		lastInArray = false;
+		for (i in SPLITMSG) {
+			if (SPLITMSG[i].indexOf("fc2.com") > -1) {
+				lastInArray = true;
+				waaai(SPLITMSG[i], lastInArray);
+				SPLITMSG[i] = 'BLACKLISTED' + blnum;
+				blnum++;
+			}
+		}
+	}
+	while (msg.search(/\.gifv|\[r\]/gi) > -1) {
+		msg = msg.replace(/\[r\]/i, "[" + getRandomColor() + "]").replace(/\.gifv/gi, ".webm");
+	}
+	if (UI_UserCommands === 1 && msg.indexOf("!") === 0) {
+		COMMAND = true;
+		cmdcheck = msg.split(" ");
+		cmdcheck[0] = cmdcheck[0].toLowerCase();
+		cmdcheck[1] = cmdcheck.slice(1).join(' ');
+		if (cmdcheck[0] === "!hpoll") {
+			if (hasPermission("pollctl")) {
+				polltitle = msg.split('"');
+				duration = polltitle[2].split(";");
+				duration[1] === undefined ? duration[1] = 600 : duration[1] = parseInt(duration[1], 10);
+				realpoll = duration[0].split(",");
+				choice = [];
+				for (i = 0; i < 4; i++) {
+					a = Math.round(Math.random() * (realpoll.length - 1));
+					if (realpoll.length < 1) {
+						break;
+					} else if (realpoll[a].trim() === "") {
+						i--;
+					} else {
+						choice[i] = realpoll[a].trim();
+					}
+					realpoll.splice(a, 1);
+				}
+				socket.emit("newPoll", {title: polltitle[1].trim(), opts: choice, obscured: true, timeout: duration[1]});
+			}
+			COMMAND = false;
+		} else if (cmdcheck[0] === "!stat") {
+			num = CHATSTAT['n'];
+			len = CHATSTAT['l'];
+			mem = 0;
+			for (i = 0; i < num; i++) {
+				for (j = 0; j < Memes_Array.length; j++) {
+					CHATSTAT['m'][i].indexOf(Memes_Array[j]) > -1 ? occurences = CHATSTAT['m'][i].split(Memes_Array[j]).length - 1 : occurences = 0;
+					occurences > -1 ? mem += occurences : '';
+				}
+			}
+			d = (num !== 1) ? 's' : '';
+			e = (mem !== 1) ? 's' : '';
+			if (num > 0) {
+				a = Math.round(Math.random() * (CHATSTAT['m'].length - 1));
+				avg = Math.round(len / num * 10) / 10;
+			} else {
+				a = 0;
+				avg = 0;
+			}
+			msg = CLIENT.name + ' has sent ' + num + ' message' + d + ' and used ' + mem + ' meme' + e + '. '
+				+ 'Total length is ' + len + ' characters (' + avg + ' per message). '
+				+ 'Random message: ' + CHATSTAT['m'][a];
+		} else if (cmdcheck[0] === "!pick" && cmdcheck[1].length > 0) {
+			arr = cmdcheck[1].split(",");
+			a = Math.round(Math.random() * (arr.length - 1));
+			msg = arr[a].trim();
+		} else if (cmdcheck[0] === "!ask" && cmdcheck[1].length > 0) {
+			AskAnswers.length < 1 ? AskAnswers = ['Yes', 'No'] : '';
+			a = Math.round(Math.random() * (AskAnswers.length - 1));
+			msg = AskAnswers[a];
+		} else if (cmdcheck[0] === "!time") {
+			var D = new Date();
+			if (cmdcheck[1].length < 1) {
+				timezone = D.getTimezoneOffset()/60 * -1;
+				hour = D.getHours();
+				minute = D.getMinutes();
+				minute < 10 ? minute = '0' + minute : false;
+			} else {
+				timezone = parseFloat(cmdcheck[1]);
+				isNaN(timezone) ? timezone = -5 : '';
+				D.setMinutes(D.getUTCMinutes() + timezone * 60);
+				hour = D.getUTCHours();
+				minute = D.getMinutes();
+				minute < 10 ? minute = '0' + minute : false;
+			}
+			if (hour > 12) {
+				hour %= 12;
+				AP = 'PM';
+			} else {
+				hour === 0 ? hour = 12 : '';
+				AP = 'AM';
+			}
+			timezone >= 0 ? timezone = "+" + timezone : '';
+			msg = 'Current time for UTC' + timezone + ': ' + hour + ':' + minute + ' ' + AP;
+		} else if (cmdcheck[0] === "!dice") {
+			a = Math.floor(Math.random() * 6) + 1;
+			b = Math.floor(Math.random() * 6) + 1;
+			msg = a + ' ' + b;
+		} else if (cmdcheck[0] === "!roll") {
+			cmdcheck[1] = cmdcheck[1].replace(/ /g,"");
+			d6 = cmdcheck[1].toLowerCase().indexOf("d");
+			psign = cmdcheck[1].indexOf("+");
+			msign = cmdcheck[1].indexOf("*");
+			ssign = cmdcheck[1].indexOf("-");
+			dsign = cmdcheck[1].indexOf("/");
+			xroll = xdice = xplus = xsub = max = a = roll = 0;
+			xmulti = xdiv = 1;
+			if (d6 > -1) {
+				xdice = parseInt(cmdcheck[1].substr(0,d6));
+				xroll = parseInt(cmdcheck[1].substr(d6 + 1,(psign > -1 ? psign : cmdcheck[1].length)));
+				isNaN(xdice) ? xdice = 1 : "";
+				isNaN(xroll) ? xroll = 6 : "";
+				if (psign > -1) {
+					for (var i = psign + 1; i <= cmdcheck[1].length; i++) {
+						if (isNaN(cmdcheck[1][i])) {
+							xplus = parseInt(cmdcheck[1].substr(psign + 1,i));
+							break;
+						}
+					}
+					isNaN(xplus) ? xplus = 0 : "";
+				}
+				if (ssign > -1) {
+					for (var i = ssign + 1; i <= cmdcheck[1].length; i++) {
+						if (isNaN(cmdcheck[1][i])) {
+							xsub = parseInt(cmdcheck[1].substr(ssign + 1,i));
+							break;
+						}
+					}
+					isNaN(xsub) ? xsub = 0 : "";
+				}
+				if (msign > -1) {
+					for (var i = msign + 1; i <= cmdcheck[1].length; i++) {
+						if (isNaN(cmdcheck[1][i])) {
+							xmulti = parseInt(cmdcheck[1].substr(msign + 1,i));
+							break;
+						}
+					}
+					isNaN(xmulti) ? xmulti = 1 : "";
+				}
+				if (dsign > -1) {
+					for (var i = dsign + 1; i <= cmdcheck[1].length; i++) {
+						if (isNaN(cmdcheck[1][i])) {
+							xdiv = parseInt(cmdcheck[1].substr(dsign + 1,i));
+							break;
+						}
+					}
+					isNaN(xdiv) ? xdiv = 1 : "";
+				}
+			}
+			d6test = d6 > -1 && !isNaN(xdice) && !isNaN(xroll);
+			drolls = "";
+			if (d6test) {
+				for (var i = 0;i < xdice;i++) {
+					roll = Math.ceil(Math.random() * xroll);
+					a += roll;
+					drolls += (drolls.length > 0 ? " + " : "") + roll;
+				}
+				a = a * xmulti / xdiv + xplus - xsub;
+				max = xdice * xroll * xmulti / xdiv + xplus - xsub;
+			} else {
+				max = parseInt(cmdcheck[1]);
+				isNaN(max) ? max = 100 : '';
+				a = Math.ceil(Math.random() * max);
+			}
+			
+			msg = a + ' out of ' + max + (!isNaN(cmdcheck[1]) ? "" : " (Rolled: " + drolls + ")");
+		} else if (cmdcheck[0] === "!q") {
+			RandomQuotes.length < 1 ? RandomQuotes = ['Error: No quotes available.'] : '';
+			a = Math.round(Math.random() * (RandomQuotes.length - 1));
+			msg = RandomQuotes[a];
+		} else if (cmdcheck[0] === "!calc" && cmdcheck[1].length > 0) {
+			try {
+				msg = '' + eval(cmdcheck[1]);
+			} catch (e) {
+				msg = 'Please use a valid equation.'
+			}
+		} else if (cmdcheck[0] === "!vskip" && hasPermission("voteskip") && !$("#voteskip").is(':disabled')) {
+			socket.emit("voteskip");
+			msg = 'Voteskip sent for ' + $("#currenttitle").text().replace(new RegExp("(^Currently Playing: )|(^" + TitleBarDescription_Caption + " )", "g"), '');
+		} else if (cmdcheck[0] === "!skip" && hasPermission("playlistjump")) {
+			socket.once("changeMedia", function(data) {
+				socket.emit("chatMsg", {msg: '➥ Skipped to ' + data.title});
+			});
+			socket.emit("playNext");
+			COMMAND = false;
+		} else if (cmdcheck[0] === "!bump" && hasPermission("playlistmove")) {
+			a = $("#queue").children().length;
+			b = $("#queue .queue_entry:nth-child(" + a + ")").data("uid");
+			c = $("#queue .queue_entry:nth-child(" + a + ") .qe_title").html();
+			socket.emit("moveMedia", {from:b, after:PL_CURRENT});
+			msg = 'Bumped ' + c;
+		} else if (cmdcheck[0] === "!add" && hasPermission("playlistadd") && cmdcheck[1].length > 0) {
+			parsed = parseMediaLink(cmdcheck[1]);
+			if (parsed["id"] === null) {
+				msg = 'Error: Invalid video link.';
+			} else {	
+				checktemporary();
+				socket.emit("queue", {id: parsed["id"], pos: "end", temp: TEMPORARY, type: parsed["type"]});
+				msg = 'Video has been added.';
+			}
+		} else if (cmdcheck[0] === "!now") {
+			TitleBarDescription_Caption.length < 1 ? TitleBarDescription_Caption = 'Currently Playing:' : '';
+			msg = TitleBarDescription_Caption + ' ' + $(".queue_active a").html();
+		} else if (cmdcheck[0] === "!next") {
+			msg = UPNEXT;
+		} else {
+			COMMAND = false;
+		}
+	}
+	if (EMOTEBL.indexOf(CLIENT.name) > -1) {
+		msg = msg.replace(/http(.+?):(pic|webm|sp|@|lf|float|\d+|-\d+)/gi,"http$1").split(" ");
+		for (ebl in msg) {
+			if (msg[ebl].indexOf(":") > -1 && arrayObjectIndexOf(CHANNEL.emotes, msg[ebl], "name") > -1) {
+				msg[ebl] += "[/]";
+			}
+		}
+		msg = msg.join(" ");
+	}
+	if (msg.search(/ :|: |^:/g) > -1) {
+		msg = msg.split(" ");
+		for (w in msg) {
+			if (msg[w].indexOf(":") > -1 && arrayObjectIndexOf(CHANNEL.emotes, msg[w], "name") > -1) {
+				Math.random() < Math.pow(RANDEMOTE++ / 10,2)/100 ? msg[w] = CHANNEL.emotes[Math.ceil(Math.random() * CHANNEL.emotes.length) - 1].name : '';
+				setOpt(CHANNEL.name + "_RANDEMOTE",RANDEMOTE);
+			}
+		}
+		msg = msg.join(" ");
+	}
+	for (iR in RedditChange_Links) {
+		if (msg.search(iR) > -1) {
+			msg = msg.split(" ");
+			for (iRM in msg) {
+				if (msg[iRM].search(iR) > -1) {
+					Math.random() < .01 ? msg[iRM] = RedditChange_Links[iR][Math.ceil(Math.random() * RedditChange_Links[iR].length) - 1] + ":pic" : '';
+				}
+			}
+			msg = msg.join(" ");
+		}
+	}
+	/*if (msg.search(/\/|>/) === 0) { //SUBCHANNEL
+		var sspace = msg.length > 50 ? 25 : msg.indexOf(" ");
+		if (sspace === -1) {
+			msg = msg += " [CH" + SUBCHAN + "]";
+		} else {
+			msg = msg.substring(0,sspace) + " [CH" + SUBCHAN + "]" + msg.substring(sspace+1,msg.length);
+		}
+	} else {
+		msg = "[CH" + SUBCHAN + "] " + msg;
+	}
+	console.log(msg);*/
+	return msg;
+}
+
+function emoteMuteBtns() {
+	$(".user-dropdown").each(function() {
+		var emutedname = $(this).children("strong").text();
+		if ($(this).text().search(/Unmute Emotes|Mute Emotes/gi) < 0) {
+			$('<button class="btn btn-xs btn-default"/>')
+				.text((USEREMOTEBL.indexOf(emutedname) < 0 ? "Mute Emotes" : "Unmute Emotes"))
+				.appendTo($(this).children(".btn-group-vertical"))
+				.on("click", function() {
+					if (USEREMOTEBL.indexOf(emutedname) < 0) {
+						USEREMOTEBL[USEREMOTEBL.length] = emutedname;
+						$(this).text("Unmute Emotes");
+						removeImages();
+					} else {
+						USEREMOTEBL.splice(USEREMOTEBL.indexOf(emutedname),1);
+						$(this).text("Mute Emotes");
+						showImages();
+					}
+					setOpt(CHANNEL.name + "_USEREMOTEBL", USEREMOTEBL);
+				});
+		}
+	});
+}
+emoteMuteBtns();
+
+function arrayObjectIndexOf(myArray, searchTerm, property) {
+	for(var i = 0, len = myArray.length; i < len; i++) {
+		if (myArray[i][property] === searchTerm) return i;
+	}
+	return -1;
+}
+
+// refresh user chat statistics
+function userChatStats(a) {
+	if (a.trim().indexOf("!stat") !== 0) {
+		CHATSTAT['n']++;
+		CHATSTAT['l'] = CHATSTAT['l'] + a.length;
+		CHATSTAT['m'].push(a);
+	}
+}
+
+// get playlist helper functions
+function formatRawList() {
+	a = $("#queue .queue_entry").length + 1;
+	list = [];
+	for (i = 1; i < a; i++) {
+		item = $("#queue .queue_entry:nth-child(" + i + ")").data("media");
+		list.push(formatURL(item));
+	}
+	return list.join(",");
+}
+
+// format links from the get playlist link button
+function formatPlainTextList() {
+	a = $("#queue .queue_entry").length + 1;
+	list = [];
+	for (i = 1; i < a; i++) {
+		item=$("#queue .queue_entry:nth-child(" + i + ")").data("media");
+		list.push(i + '. ' + formatURL(item) + ' ' + item.title + ' [' + item.duration + ']');
+	}
+	return list.join('\n');
+}
+function formatHTMLList() {
+	a = $("#queue .queue_entry").length + 1;
+	list = [];
+	for (i = 1; i < a; i++) {
+		item = $("#queue .queue_entry:nth-child(" + i + ")").data("media");
+		title = item.title;
+		duration = item.duration;
+		link = formatURL(item);
+		list.push('<li>' + title + ' [' + duration + '] - <a href="' + link + '" target="_blank">' + link + '</a></li>');
+	}
+	return list.join('\n');
+}
+function formatOrderedList() {
+	len = $("#queue .queue_entry").length + 1;
+	var list = [];
+	for (i = 1; i < len; i++) {
+		item = $("#queue .queue_entry:nth-child("+i+")").data("media");
+		link = formatURL(item);
+		list.push(item.title + ' ■■  ' + link + ' ■■  [' + item.duration + ']');
+		list.sort();
+	}
+	return list.join('\n');
+}
+function formatDBList() {
+	len = $("#queue .queue_entry").length+1;
+	var list = [];
+	for (i = 1; i < len; i++) {
+		item = $("#queue .queue_entry:nth-child("+i+")").data("media");
+		re1 = new RegExp('\\\\', 'g');
+		re2 = new RegExp('\'', 'g');
+		title = item.title.replace(re1, '\\\\').replace(re2, '\\\'');
+		list.push('[\'' + formatURL(item) + '\', \'' + title + '\'],');
+	}
+	return list.join('\n');
+}
+
+// toggle "/clear" button depends on rank
+function toggleClearBtn() {
+	!hasPermission("chatclear") ? $("#clear-btn, #spamclear").hide() : $("#clear-btn, #spamclear").show();
+}
+
+// layout elements settings
+function playerLocation(a) {
+	$("#pinup-btn").show();
+	if (a === "left") {
+		$("#videowrap").after($("#chatwrap").detach());
+		normalPlayer();
+		normalChat();
+	} else if (a === "right") {
+		$("#videowrap").before($("#chatwrap").detach());
+		normalPlayer();
+		normalChat();
+	}
+}
+
+function userlistLocation(a) {
+	a === "left" ? $("#userlist").css('float', 'left') : $("#userlist").css('float', 'right');
+}
+
+function queueLocation(a) {
+	$("#pinup-btn").show();
+	if (a === "right") {
+		$("#rightpane").before($("#leftpane").detach());
+	} else if (a === "left") {
+		$("#rightpane").after($("#leftpane").detach());
+	}
+	b = (a === "right") ? "left" : "right";
+	$("#playlistrow").css('background-position', b + ' bottom');
+}
+
+function queueSize(a) {
+	if (a === "wide") {
+		$("#leftpane").removeClass().addClass('col-lg-5 col-md-5');
+		$("#rightpane").removeClass().addClass('col-lg-7 col-md-7');
+	} else if (a === "narrow") {
+		$("#leftpane").removeClass().addClass('col-lg-7 col-md-7');
+		$("#rightpane").removeClass().addClass('col-lg-5 col-md-5');
+	}
+}
+
+function mainLocation(a) {
+	if (a === "top") {
+		$("#main").before($("#titlerow").detach()).after($("#playlistrow").detach());
+	} else if (a === "bottom") {
+		$("#main").before($("#playlistrow").detach()).before($("#titlerow").detach());
+	}
+	$("#main").after($("#chatpanel").detach());
+}
+
+function motdLocation(a) {
+	if (a === "top") {
+		$("#zerorow").after($("#announcements").detach()).after($("#motdrow").detach());
+	} else if (a === "bottom") {
+		$("#resizewrap").before($("#motdrow").detach()).before($("#announcements").detach());
+	}
+}
+
+function logoInsert(a) {
+	if (a != "no") {
+		link = (a != "user") ? TopUserLogo[a][1] : UCONF.logourl;
+		ht = (a != "user") ? TopUserLogo[a][2] : UCONF.logoht;
+		azukirow.css('min-height', ht + 'px').css('background-image', 'url(' + link + ')');
+	} else if (a === "no") {
+		azukirow.css('min-height', '5px').css('background-image', '');
+	}
+}
+
+function headerMode(a) {
+	$(".navbar-fixed-top").unbind();
+	if (a === "fixed") {
+		$(".navbar-fixed-top").css('position', 'fixed').css('top', '0px');
+		$("#mainpage").css('margin-top', '0px');
+	} else if (a === "detached") {
+		$(".navbar-fixed-top").css('position', 'inherit');
+		$("#mainpage").css('margin-top', '-72px');
+	} else if (a === "mouseover") {
+		$(".navbar-fixed-top").css('position', 'fixed').css('top', '-40px')
+			.on("mouseover", function() {
+				$(".navbar-fixed-top").css('top', '0px');
+			})
+			.on("mouseout", function() {
+				$(".navbar-fixed-top").css('top', '-40px');
+			});
+		$("#mainpage").css('margin-top', '-40px');
+
+	}
+}
+
+function customCSS(a) {
+	$("#usercss").remove();
+	a === "yes" ? $("head").append('<style id="usercss" type="text/css">' + UCONF.csscode + '</style>') : '';
+}
+
+// set global layout according to user preferences
+function setLayout() {
+	playerLocation(UCONF.player);
+	userlistLocation(UCONF.userlist);
+	queueLocation(UCONF.queue);
+	queueSize(UCONF.qsize);
+	mainLocation(UCONF.main);
+	motdLocation(UCONF.motd);
+	logoInsert(UCONF.logo);
+	headerMode(UCONF.header);
+	customCSS(UCONF.css);
+	$("#queue").css("width","100%");
+}
 
 // display mode helper functions
-
-
 function bigPlayer() {
 	$("#videowrap").removeClass().addClass("col-lg-12 col-md-12");
 	fitPlayer();
 }
-
 
 function bigChat() {
 	$("#chatwrap").removeClass().addClass('col-lg-12 col-md-12');
 	fitChat("auto");
 }
 
-
 function normalPlayer() {
 	$("#videowrap").removeClass().addClass("col-lg-7 col-md-7");
 	fitPlayer();
 }
 
-
 function normalChat() {
-	c = (PINNED && USERCONFIG.qsize=="wide") ? 'col-lg-7 col-md-7' : 'col-lg-5 col-md-5';
+	c = (PINNED && UCONF.qsize=="wide") ? 'col-lg-7 col-md-7' : 'col-lg-5 col-md-5';
 	$("#chatwrap").removeClass().addClass(c);
-	fitChat(338);
+	VWIDTH = $("#videowrap").width();
+	VHEIGHT = Math.floor(VWIDTH * 9 / 16 + 1);
+	fitChat(VHEIGHT - $("#chatline").outerHeight() - 1);
 }
 
-
 // set display mode
-
-
 function setMode(a) {
 	if (NOPLAYER) {
 		$("#videowrap").show();
-		ytapiplayer = $('<div id="ytapiplayer" />')
-		  .insertBefore("#playercontrols");
-		refreshPlayer();
+		ytapiplayer = $('<div id="ytapiplayer" />').insertBefore("#playercontrols");
+		$("#mediarefresh").click();
 		NOPLAYER = false;
 	}
 
-
 	$("#main").show();
 	pinupbtn.hide();
+	expandbtn.hide();
+	scrollbtn.hide();
 	modesel.find("option[value='chMode'], option[value='rMode']").show();
 	PINNED ? modesel.find("option[value='chMode']").hide() : '';
 
-
-	if (a=="syMode") {
-
-
+	switch (a) {
+		case "syMode":
 		$("#videowrap, #videowrap p, #videowrap div, #chatwrap, #rightpane, #pinup-btn").show();
 		$("#config-btn, #configbtnwrap br, #pinup-btn").show();
 		$("#min-layout").parent().show();
-
-
 		normalPlayer();
-
-
-		c = (PINNED && USERCONFIG.qsize=="wide") ? 'col-lg-7 col-md-7' : 'col-lg-5 col-md-5';
-		$("#chatwrap").removeClass().addClass(c);
-		H=parseInt(VH)-$("#chatline").outerHeight()-1;
-		$("#messagebuffer").height(H);
-		$("#userlist").height(H);
-
-
-		USERCONFIG.player=="center" ? playerLocation("center") : '';
+		normalChat();
+		playerLocation(UCONF.player);
 		PINNED ? pinUp() : '';
+		handleWindowResize();
+		break;
 
-
-	} else if (a=="kMode") {
-
-
+		case "kMode":
 		$("#videowrap").show();
 		PINNED ? $("#rightpane").hide() : $("#chatwrap").hide();
-		$("#fontspanel, #emotespanel").hide();
-
-
 		bigPlayer();
+		$("#fontspanel, #emotespanel").hide();
+		break;
 
-
-	} else if (a=="chMode") {
-
-
+		case "chMode":
 		$("#chatwrap").show();
-
-
 		if (WEBKIT) {
 			$("#videowrap").hide();
 		} else {
 			$("#videowrap div, #videowrap p").hide();
 			$("#ytapiplayer").width(1).height(1);
 		}
-
-
 		bigChat();
+		break;
 
-
-	} else if (a=="sMode") {
-
-
+		case "sMode":
 		$("#chatwrap").show();
 		$("#videowrap").hide();
 		$("#ytapiplayer").remove();
-		$("#fontspanel, #emotespanel").hide();
-		modesel.find("option[value='chMode'], option[value='rMode']").hide();
-		NOPLAYER = true;
-
-
 		bigChat();
+		modesel.find("option[value='chMode'], option[value='rMode']").hide();
+		$("#fontspanel, #emotespanel").hide();
+		NOPLAYER = true;
+		break;
 
-
-	} else if (a=="rMode") {
-
-
+		case "rMode":
 		if (WEBKIT) {
 			$("#main").hide();
 		} else {
@@ -843,1595 +1590,192 @@ function setMode(a) {
 			$("#videowrap div, #videowrap p").hide();
 			$("#ytapiplayer").width(1).height(1);
 		}
-
-
 		!PINNED ? $("#min-layout").parent().show() : '';
-
-
+		break;
 	}
 }
 
-
-// fix layout after changing media
-
-
+// fix setting mode after video change for chatroom/radio modes
 function setModeAfterVideoChange() {
-	m=modesel.val();
-	(m=="syMode" || m=="chMode" || m=="rMode") ? setMode(m) : '';
+	a = modesel.val();
+	(a === "chMode" || a === "rMode") ? setMode(a) : '';
 }
-
-
-// change welcome text
-
-
-function changeWelcomeText() {
-	if (CLIENT.rank>0) {
-		$("#welcome").html($("#welcome").html().replace(/Welcome/, CustomCaptions_Array['welcome']));
-	}
-}
-
-
-// set MOTD
-
-
-function changeMOTD() {
-	if (UI_MOTDTabs=="1" && MOTDTabs_Array.length>0) {
-		// adding tabs application
-
-
-		motdtabswrap = $('<div id="motdtabswrap" />')
-		  .appendTo("#motd");
-		for (i in MOTDTabs_Array) {
-			btn = $('<button class="btn btn-default motdtabs-btn" tab="'+i+'">')
-			  .text(MOTDTabs_Array[i][0])
-			  .appendTo(motdtabswrap)
-			  .on("click", function() {
-				$(".motdtabs-btn").removeClass('btn-success');
-				$(this).addClass('btn-success');
-				nr=$(this).attr('tab');
-				motdtabscontent.html(MOTDTabs_Array[nr][1]);
-			  });
-		}
-		motdtabscontent = $('<div id="motdtabscontent">'+MOTDTabs_Array[0][1]+'</div>')
-		  .css(MOTDTabs_CSS)
-		  .appendTo("#motd");
-		$(".motdtabs-btn:nth-child(1)").addClass('btn-success');
-	}
-	if (UI_MOTDAutoLogo=="1") {
-		// adding logo
-
-
-		var logo = 0;
-		var len = MOTDAutoLogo_Array.length;
-		if (len<1) {
-			MOTDAutoLogo_Array=['https://dl.dropboxusercontent.com/s/7mrz85gl29eiiks/logo.png'];
-			len=1;
-		}
-		if (MOTDAutoLogo_Mode=="2" || MOTDAutoLogo_Mode=="3") {
-			logo=Math.floor(Math.random()*len);
-		} else if (MOTDAutoLogo_Mode=="7") {
-			logo=new Date().getDay();
-			typeof MOTDAutoLogo_Array[logo]==="undefined" ? logo=0 : '';
-		}
-		$('<center><img id="motdlogo" src="'+MOTDAutoLogo_Array[logo]+'" /></center>').prependTo("#motd");
-	}
-	if (UI_RulesBtn=="1") {
-		// adding rules button
-
-
-		RulesBtn_Caption=="" ? RulesBtn_Caption='Read Channel Rules' : '';
-		RulesBtn_HTML=="" ? RulesBtn_HTML='No rules.' : '';
-		rulesbtnwrap = $('<div id="rulesbtnwrap" />').appendTo("#motd");
-		rulesbtn = $('<button id="rules-btn" class="btn btn-default btn-sm" />')
-		  .text(RulesBtn_Caption+' ▸')
-		  .appendTo(rulesbtnwrap)
-		  .on("click", function() {
-			toggleDiv(rulespanel);
-		  });
-		rulespanelouter = $('<div id="rulespanel-outer" />').appendTo("#motd");
-		rulespanel = $('<div id="rulespanel" style="display:none" />')
-		  .html(RulesBtn_HTML)
-		  .appendTo(rulespanelouter);
-	}
-}
-
-
-// change title bar description
-
-
-function changeTitle() {
-	title=$("#currenttitle").text();
-	$("#currenttitle").text(title.replace(/Currently Playing:/, TitleBarDescription_Caption));
-}
-
-
-// YouTube/Dailymotion progress bar
-
-
-function progressBar() {
-	var a = 0;
-	if (PLAYER.type=="yt") {
-		b=PLAYER.player.getCurrentTime();
-		b!=PREVTIME ? a=b/PLAYER.player.getDuration()*100 : '';
-		PREVTIME=b;
-	} else if (PLAYER.type=="dm") {
-		b=PLAYER.player.currentTime;
-		b!=PREVTIME ? a=b/PLAYER.player.duration*100 : '';
-		PREVTIME=b;
-	}
-	titlerow.css('background-size', a+'% 100%');
-}
-
-
-// toggle additional chat functions
-
-
-function toggleChatFunctions() {
-	CLIENT.rank>2 ? chatflair.show() : chatflair.hide();
-}
-
-
-// set chat side panel properties
-
-
-function setPanelProperties(div) {
-	bgcolor=$("body").css('background-color');
-	color=$("body").css('color');
-	height=$("#userlist").height();
-	width=$("#userlist").width();
-	$(div).css({'background-color':bgcolor, 'color':color, 'height':height+'px', 'width':width+'px'});
-}
-
-
-// refresh user chat statistics
-
-
-function userChatStats(str) {
-	CHATSTAT['n']++;
-	CHATSTAT['l']=CHATSTAT['l']+str.length;
-	CHATSTAT['m'].push(str);
-}
-
-
-// create squavatar
-
-
-function createSquavatar(str) {
-	for (i=0, hash=0; i<str.length; hash=str.charCodeAt(i++)+((hash<<5)-hash));
-	for (i=0, col=''; i<3; col+=('00'+((hash>>i++*8)&0xFF).toString(16)).slice(-2));
-	r=parseInt(col.substring(0,2), 16);
-	g=parseInt(col.substring(2,4), 16);
-	b=parseInt(col.substring(4,6), 16);
-	r2=255-r;
-	g2=255-g;
-	b2=255-b;
-	html='<span class="squavatar" style="background-color:rgb('+r+','+g+','+b+'); '
-	  + 'border-color:rgb('+r2+','+g2+','+b2+')"></span>';
-	return html;
-}
-
-
-// format chat messages before sending and execute commands
-
-
-function prepareMessage(msg) {
-	if (UI_MessagesSuffix=="1") {
-		if ((typeof MessagesSuffix_Percentage!=="number") || MessagesSuffix_Percentage<0) {
-			MessagesSuffix_Percentage='10';
-		}
-		Math.random()<(MessagesSuffix_Percentage/100) ? msg+=' '+MessagesSuffix_Text : '';
-	}
-
-
-	if (UI_UserCommands=="1" && msg.indexOf("!")==0) {
-		COMMAND=true;
-		if (msg.indexOf("!stat")==0) {
-
-
-			num=CHATSTAT['n'];
-			len=CHATSTAT['l'];
-			if (num>0) {
-				rnd=Math.round(Math.random()*(CHATSTAT['m'].length-1));
-				avg=Math.round(len/num*10)/10;
-			} else {
-				rnd=0;
-				avg=0;
-			}
-			a = (num!=1) ? 's' : '';
-			b = (avg!=1) ? 's' : '';
-			msg='you have sent '+num+' message'+a+', '
-			  +'total length is '+len+' character'+b+' ('+avg+' per message), '
-			  +'random message: '+CHATSTAT['m'][rnd];
-
-
-		} else if (msg.indexOf("!memestats")==0) {
-
-
-			num=CHATSTAT['n'];
-			len=Memes_Array.length;
-			mem=0;
-			for (i=0; i<num; i++) {
-				for (j=0; j<len; j++) {
-					CHATSTAT['m'][i].indexOf(Memes_Array[j])>-1 ? mem++ : '';
-				}
-			}
-			a = (num!=1) ? 's' : '';
-			b = (mem!=1) ? 's' : '';
-			if (len>0) {
-				msg='in '+num+' message'+a+' you have used '+mem+' meme'+b;
-			} else {
-				msg='error: no defined memes';
-			}
-
-
-		} else if (msg.indexOf("!pick ")==0) {
-
-
-			arr=msg.split("!pick ")[1].split(",");
-			rnd=Math.round(Math.random()*(arr.length-1));
-			msg=arr[rnd];
-
-
-		} else if (msg.indexOf("!ask ")==0) {
-
-
-			AskAnswers_Array.length<1 ? AskAnswers_Array=['yes', 'no'] : '';
-			rnd=a=Math.round(Math.random()*(AskAnswers_Array.length-1));
-			msg=AskAnswers_Array[rnd];
-
-
-		} else if (msg.indexOf("!time")==0) {
-
-
-			var h = new Date().getHours();
-			h<10 ? h='0'+h : '';
-			var m = new Date().getMinutes();
-			m<10 ? m='0'+m : '';
-			msg='current time: '+h+':'+m;
-
-
-		} else if (msg.indexOf("!dice")==0) {
-
-
-			rnd=Math.round(Math.random()*5)+1;
-			msg=''+rnd;
-
-
-		} else if (msg.indexOf("!roll")==0) {
-
-
-			var rnd = Math.round(Math.random()*999);
-			rnd<100 ? rnd="0"+rnd : '';
-			rnd<10 ? rnd="0"+rnd : '';
-			msg=''+rnd;
-
-
-		} else if (msg.indexOf("!q")==0) {
-
-
-			RandomQuotes_Array.length<1 ? RandomQuotes_Array=['error: no quotes available'] : '';
-			rnd=Math.round(Math.random()*(RandomQuotes_Array.length-1));
-			msg=RandomQuotes_Array[rnd];
-
-
-		} else if (msg.indexOf("!random")==0 && hasPermission("playlistadd")) {
-
-
-			if (UI_ChannelDatabase=="1") {
-				var link="";
-				while (link=="") {
-				rnd=Math.round(Math.random()*(ChannelDatabase.length-1));
-					link=ChannelDatabase[rnd][0];
-					title=ChannelDatabase[rnd][1];
-				}
-				addToPlaylist(link, "end");
-				msg='random media adding attempt: '+title;
-			}
-
-
-		} else if (msg.indexOf("!calc ")==0) {
-
-
-			func=msg.split("!calc ");
-			msg=''+eval(func[1]);
-
-
-		} else if (msg.indexOf("!skip")==0 && hasPermission("voteskip")) {
-
-
-			socket.emit("voteskip");
-			msg='current item has been voteskipped';
-
-
-		} else if (msg.indexOf("!next")==0 && hasPermission("playlistjump")) {
-
-
-			socket.emit("playNext");
-			msg='start playing next item';
-
-
-		} else if (msg.indexOf("!bump")==0 && hasPermission("playlistmove")) {
-
-
-			last=$("#queue").children().length;
-			uid=$("#queue .queue_entry:nth-child("+last+")").data("uid");
-			title=$("#queue .queue_entry:nth-child("+last+") .qe_title").html();
-			socket.emit("moveMedia", {from:uid, after:PL_CURRENT});
-			msg='last item bumped as next: '+title;
-
-
-		} else if (msg.indexOf("!add ")==0 && hasPermission("playlistadd")) {
-
-
-			parsed=parseMediaLink(msg.split("!add ")[1]);
-			if (parsed["id"]===null) {
-				msg='error: wrong link, item has not been added';
-			} else {
-				socket.emit("queue", {id:parsed["id"], pos:"end", type:parsed["type"]});
-				msg='video has been added';
-			}
-
-
-		} else if (msg.indexOf("!now")==0) {
-
-
-			msg='Now playing: '+$(".queue_active a").html();
-
-
-		} else if (msg.indexOf("!CO ZJE TEH?")==0) {
-
-
-			msg='TEH ZJE HUJ';
-
-
-		} else if (msg.indexOf("!inba")==0) {
-
-
-			IMBA.volume=0.6;
-			IMBA.play();
-			mutePlayer();
-			inbix=setInterval(function() {
-				inba();
-			}, 200);
-			setTimeout(function() {
-				unmutePlayer();
-				BGCHANGE=0;
-				clearInterval(inbix);
-				$("body").css({'background-image':'', 'background-color':''});
-				setUserCSS();
-			}, 12000);
-			msg='JP2GMD';
-
-
-		} else {
-			COMMAND=false;
-		}
-	}
-	return msg;
-}
-
-
-// insert code into chatline
-
-
-function insertText(str) {
-	$("#chatline").val($("#chatline").val()+str).focus();
-}
-
-
-// toggle YT mute button
-
-
-function toggleMuteBtn() {
-	(PLAYER && PLAYER.type=="yt") ? muteplayerbtn.show() : muteplayerbtn.hide();
-}
-
-
-// toggle mod panel button
-function toggleModPanel() {
-	if (CLIENT.rank<2) {
-		modbtn.hide();
-	} else {
-		modbtn.show();
-		HASH='';
-		for (i in ModPanel_Array) {
-			name=ModPanel_Array[i][0];
-			(name=="" || name==CLIENT.name) ? HASH+=''+ModPanel_Array[i][1].length : '';
-		}
-		if (HASH!=USERCONFIG.modhash) {
-			modbtn.addClass('btn-danger').html(modbtn.html()+' (New Mess.)');
-		}
-	}
-}
-
-
-// create media database
-
-
-function createDatabase() {
-	html='<button id="la1" class="btn btn-default btn-sm db-break" onclick="toggleCat(1)">'
-	  + ChannelDatabase[0][1]
-	  + '</button>'
-	  + '<ul id="l1" class="videolist db-cat">';
-
-
-	len=ChannelDatabase.length;
-	for (i=1; i<ChannelDatabase.length; i++) {
-		if (ChannelDatabase[i][0]=="") {
-			item_count[layer_nr-1]=count_nr;
-			opening[layer_nr-1]=0;
-			layer_nr++;
-			count_nr=0;
-
-
-			html+='</ul>'
-			  + '<button id="la'+layer_nr+'" class="btn btn-default btn-sm db-break" '
-			  + 'onclick="toggleCat('+layer_nr+')">'
-			  + ChannelDatabase[i][1]
-			  + '</button>'
-			  + '<ul id="l'+layer_nr+'" class="videolist db-cat">';
-		} else {
-			item_nr++;
-			count_nr++;
-			link=ChannelDatabase[i][0];
-
-
-			html+='<li class="queue_entry">'
-			  + '<button class="btn btn-default btn-xs pull-right" onclick="addVideo(\''+link+'\')">'
-			  + 'End'
-			  + '</button>';
-
-
-			parsed=parseMediaLink(link);
-			if (parsed["type"]=="yt") {
-				a=parsed["id"];
-				html+='<button class="btn btn-default btn-xs pull-right" '
-				  + 'onclick="prevVideo(\''+a+'\')">'
-				  + '<i class="glyphicon glyphicon-film"></i>'
-				  + '</button>';
-			}
-			html+='<span class="badge db-badge">'
-			  + item_nr
-			  + '</span><span class="db-title">'
-			  + ChannelDatabase[i][1]
-			  + '</span><br /><span class="db-link">'
-			  + link
-			  + '</span>';
-		}
-	}
-
-
-	html+='</ul><br /><br /><div id="cleardbwrap">'
-	  + '<button id="cleardb-btn" class="btn btn-default btn-sm">'
-	  + 'Reload Data (if channel seems working slow)</button>'
-	  + '</div>';
-
-
-	item_count[layer_nr-1]=count_nr;
-	opening[layer_nr-1]=0;
-	dbwell.html(html);
-	html='';
-
-
-	len=item_count.length;
-	for(i=1; i<=len; i++) {
-		$("#la"+i).append(' ['+item_count[i-1]+']');
-	}
-
-
-	cleardbbtn = $("#cleardb-btn")
-	  .on("click", function() {
-		toggleDiv(dbwrap);
-		dbwell.html('');
-		CHANDB=false;
-	  });
-
-
-	for (i in opening) {
-		opening[i]=0;
-	}
-	dbcat = $(".db-cat").hide();
-	CHANDB=true;
-}
-
-
-// toggle database sections
-
-
-function toggleCat(a) {
-	b=a-1;
-	if (opening[b]==0) {
-		dbcat.hide();
-		for (i in opening) {
-			opening[i]=0;
-		}
-		$("#l"+a).show();
-		opening[b]=1;
-	} else {
-		$("#l"+a).hide();
-		opening[b]=0;
-	}
-}
-
 
 // patch layout for guest logins
-
-
 function patchWrap() {
 	setTimeout(function() {
 		$("#playlistmanagerwrap").show();
 	}, 1500);
 }
 
-
-// create channel gallery
-
-
-function createGallery() {
-	galleryframe = $('<iframe id="galleryFrame" src='+ChannelGalleries_Array[0][1]+' width="100%" />')
-	  .attr({'frameborder':'0', 'scrolling':'no', 'height':'415px'})
-	  .appendTo(gallerywell);
-	galtitle = $('<span id="galtitle" class="conf-opt">Select Gallery</span>').appendTo(gallerywell);
-	galsel = $('<select id="gal-sel" class="form-control" />')
-	  .appendTo(gallerywell)
-	  .on("change", function() {
-		galleryframe.attr('src', galsel.val());
-	  });
-
-
-	for (i in ChannelGalleries_Array) {
-		$('<option value="'+ChannelGalleries_Array[i][1]+'" />')
-		  .html(ChannelGalleries_Array[i][0])
-		  .appendTo(galsel);
-	}
-
-
-	text='Reload Galleries (if problems or slow channel)';
-	cleargallerybtn = $('<button id="cleargallery-btn" class="btn btn-default btn-sm">'+text+'</button>')
-	  .appendTo(gallerywell)
-	  .on("click", function() {
-		toggleDiv(gallerywrap);
-		gallerywell.html('');
-		GALLERY=false;
-	  });
-	GALLERY=true;
-}
-
-
-// toggle "/clear" button depends on rank
-
-
-function toggleClearBtn() {
-	hasPermission("chatclear") ? clearbtn.show() : 'clearbtn.hide()';
-}
-
-
-// toggle YT volume buttons depends on player type
-
-
-function toggleVolBtn() {
-	if (PLAYER && PLAYER.type=="yt") {
-		voldownbtn.show();
-		volupbtn.show();
-	} else {
-		voldownbtn.hide();
-		volupbtn.hide();
-	}
-}
-
-
-// toggle advanced playlist options buttons
-
-
-function toggleAdvancedPl() {
-	CLIENT.rank<2 ? advplaylist.hide() : advplaylist.show();
-	hasPermission("playlistjump") ? playnextbtn.show() : playnextbtn.hide();
-	(hasPermission("playlistadd") && UI_ChannelDatabase=="1") ? addrandombtn.show() : addrandombtn.hide();
-	hasPermission("playlistmove") ? bumplastbtn.show() : bumplastbtn.hide();
-	hasPermission("playlistdelete") ? deletelastbtn.show() : deletelastbtn.hide();
-}
-
-
-// get playlist helper functions
-
-
-function formatRawList() {
-	len=$("#queue .queue_entry").length+1;
-	list = new Array();
-	for (i=1; i<len; i++) {
-		item=$("#queue .queue_entry:nth-child("+i+")").data("media");
-		list.push(formatURL(item));
-	}
-	return list.join(",");
-}
-
-
-function formatPlainTextList() {
-	len=$("#queue .queue_entry").length+1;
-	var list = new Array();
-	for (i=1; i<len; i++) {
-		item=$("#queue .queue_entry:nth-child("+i+")").data("media");
-		list.push(i+'. '+formatURL(item)+' \/\/ '+item.title+' ['+item.duration+']');
-	}
-	return list.join('\n');
-}
-
-
-function formatHTMLList() {
-	len=$("#queue .queue_entry").length+1;
-	var list = new Array();
-	for (i=1; i<len; i++) {
-		item=$("#queue .queue_entry:nth-child("+i+")").data("media");
-		title=item.title;
-		duration=item.duration;
-		link=formatURL(item);
-		list.push('<li>'+title+' ['+duration+'] - <a href="'+link+'" target="_blank">'+link+'</a></li>');
-	}
-	return list.join('\n');
-}
-
-
-function formatOrderedList() {
-	len=$("#queue .queue_entry").length+1;
-	var list = new Array();
-	for (i=1; i<len; i++) {
-		item=$("#queue .queue_entry:nth-child("+i+")").data("media");
-		link=formatURL(item);
-		list.push(item.title+' ■■ '+link+' ■■ ['+item.duration+']');
-		list.sort();
-	}
-	return list.join('\n');
-}
-
-
-function formatDBList() {
-	len=$("#queue .queue_entry").length+1;
-	var list = new Array();
-	for (i=1; i<len; i++) {
-		item=$("#queue .queue_entry:nth-child("+i+")").data("media");
-		re1=new RegExp('\\\\', 'g');
-		re2=new RegExp('\'', 'g');
-		title=item.title.replace(re1, '\\\\').replace(re2, '\\\'');
-		list.push('[\''+formatURL(item)+'\', \''+title+'\'],');
-	}
-	return list.join('\n');
-}
-
-
-// change voteskip caption
-
-
-function changeSkipText() {
-	$("#voteskip").text(CustomCaptions_Array['voteskip']+' '+$("#voteskip").text());
-}
-
-
-// add database link to playlist
-
-
-function addVideo(link) {
-	parsed=parseMediaLink(link);
-	idp=parsed["id"];
-	if (idp!=null) {
-		time=(new Date()).getTime();
-		if (!hasPermission("playlistadd")) {
-			alert('You have no permission to add a link.');
-		} else if (ADDEDLINKS[idp]!=undefined && time-ADDEDLINKS[idp]<120000) {
-			alert('You have just added this link.');
-		} else {
-			socket.emit("queue", {id:idp, pos:"end", type:parsed["type"]});
-			ADDEDLINKS[idp]=time;
-		}
-	}
-}
-
-
 // set user online time
-
-
 function onlineTime() {
 	USERONLINE++;
-	var h = Math.floor(USERONLINE/60);
-	var m = USERONLINE-h*60;
-	m<10 ? m="0"+m : '';
-	onlinetime.html(h+":"+m);
+	hours = Math.floor(USERONLINE / 60);
+	minutes = USERONLINE-hours * 60;
+	minutes < 10 ? minutes = '0' + minutes : '';
+	$("#onlinetime").html(hours + ":" + minutes);
 }
 
-
 // set user CSS
-
-
 function setUserCSS() {
-	$("#chanexternalcss").detach().appendTo("head");
-	$("#chanexternalcss-fix").remove();
-
-
-	cssfix = '#mainpage {padding-top:52px}\n'
-	  + '#motdrow, #announcements, #main, #playlistrow {border:solid 2px transparent; margin-bottom:5px}\n'
-	  + '#main > div, #playlistrow > div {\n'
-	  + '  padding-left:5px; padding-right:5px; margin-top:5px; margin-bottom:5px;\n'
-	  + '}\n'
-	  + '#motdwrap {margin:5px -10px}\n'
-	  + '#announcements .alert {margin:0px -10px 5px}\n'
-	  + '#drinkcount {margin:0px}\n';
-
-
-	$("head").append('<style id="chanexternalcss-fix" type="text/css">'+cssfix+'</style>');
 	$("#usertheme").attr('href', '/css/themes/slate.css');
 	$("#usertheme-fix").remove();
 	if (USERTHEME.indexOf("/css/themes/")>-1) {
 		$("#usertheme").attr('href', USERTHEME);
 	} else {
-		$('<link id="usertheme-fix" rel="stylesheet" type="text/css" href="'+USERTHEME+'"></link>')
-		  .appendTo("head");
+		$('<link id="usertheme-fix" rel="stylesheet" type="text/css" href="' + USERTHEME + '"></link>')
+			.appendTo("head");
 	}
 	$("#usercss").remove();
-	if (USERCONFIG.css!="no") {
-		$("head").append('<style id="usercss" type="text/css">'+USERCONFIG.csscode+'</style>');
+	if (UCONF.css != "no") {
+		$("head").append('<style id="usercss" type="text/css">' + UCONF.csscode + '</style>');
 	}
 }
 
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 /* ----- UI events functions ----- */
 
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
 function prepareFilters() {
-	str='{"name":"white color","source":"\\\\[white\\\\]","flags":"g",'
-	  + '"replace":"<span style=\\"color:white\\">","active":true,"filterlinks":false},'
-	  + '{"name":"yellow color","source":"\\\\[yellow\\\\]","flags":"g",'
-	  + '"replace":"<span style=\\"color:gold\\">","active":true,"filterlinks":false},'
-	  + '{"name":"orange color","source":"\\\\[orange\\\\]","flags":"g",'
-	  + '"replace":"<span style=\\"color:orange\\">","active":true,"filterlinks":false},'
-	  + '{"name":"pink color","source":"\\\\[pink\\\\]","flags":"g",'
-	  + '"replace":"<span style=\\"color:#FFBBFF\\">","active":true,"filterlinks":false},'
-	  + '{"name":"red color","source":"\\\\[red\\\\]","flags":"g",'
-	  + '"replace":"<span style=\\"color:red\\">","active":true,"filterlinks":false},'
-	  + '{"name":"limegreen color","source":"\\\\[lime\\\\]","flags":"g",'
-	  + '"replace":"<span style=\\"color:limegreen\\">","active":true,"filterlinks":false},'
-	  + '{"name":"green color","source":"\\\\[green\\\\]","flags":"g",'
-	  + '"replace":"<span style=\\"color:green\\">","active":true,"filterlinks":false},'
-	  + '{"name":"aqua color","source":"\\\\[aqua\\\\]","flags":"g",'
-	  + '"replace":"<span style=\\"color:aqua\\">","active":true,"filterlinks":false},'
-	  + '{"name":"blue color","source":"\\\\[blue\\\\]","flags":"g",'
-	  + '"replace":"<span style=\\"color:blue\\">","active":true,"filterlinks":false},'
-	  + '{"name":"violet color","source":"\\\\[violet\\\\]","flags":"g",'
-	  + '"replace":"<span style=\\"color:#660099\\">","active":true,"filterlinks":false},'
-	  + '{"name":"brown color","source":"\\\\[brown\\\\]","flags":"g",'
-	  + '"replace":"<span style=\\"color:#660000\\">","active":true,"filterlinks":false},'
-	  + '{"name":"silver color","source":"\\\\[silver\\\\]","flags":"g",'
-	  + '"replace":"<span style=\\"color:silver\\">","active":true,"filterlinks":false},'
-	  + '{"name":"black color","source":"\\\\[black\\\\]","flags":"g",'
-	  + '"replace":"<span style=\\"color:black\\">","active":true,"filterlinks":false},'
-	  + '{"name":"white color on black","source":"\\\\[bw\\\\]","flags":"g",'
-	  + '"replace":"<span style=\\"color:white; background-color:black\\">","active":true,"filterlinks":false},'
-	  + '{"name":"bold text","source":"\\\\[b\\\\]","flags":"g",'
-	  + '"replace":"<span style=\\"font-weight:bold\\">","active":true,"filterlinks":false},'
-	  + '{"name":"italic text","source":"\\\\[i\\\\]","flags":"g",'
-	  + '"replace":"<span style=\\"font-style:italic\\">","active":true,"filterlinks":false},'
-	  + '{"name":"underlined text","source":"\\\\[u\\\\]","flags":"g",'
-	  + '"replace":"<span style=\\"text-decoration:underline\\">","active":true,"filterlinks":false},'
-	  + '{"name":"striked text","source":"\\\\[s\\\\]","flags":"g",'
-	  + '"replace":"<span style=\\"text-decoration:line-through\\">","active":true,"filterlinks":false},'
-	  + '{"name":"distinguished text","source":"\\\\[d\\\\]","flags":"g",'
-	  + '"replace":"<span class=\\"dist\\">","active":true,"filterlinks":false},'
-	  + '{"name":"fire text","source":"\\\\[f\\\\]","flags":"g",'
-	  + '"replace":"<span style=\\"color:#FFFFFF; font-family:impact, sans-serif; padding-top:20px; '
-	  + 'text-shadow:0px 0px 4px #000000, 0px -5px 4px #FFFF33, 2px -8px 6px #FFDD33, -2px -15px 10px #FF8800, '
-	  + '2px -20px 18px #FF2200; letter-spacing:2px\\">","active":true,"filterlinks":false},'
-	  + '{"name":"short spoiler","source":"\\\\[sp\\\\]","flags":"g",'
-	  + '"replace":"<span class=\\"spoiler\\">","active":true,"filterlinks":false},'
-	  + '{"name":"closing font style","source":"\\\\[\\\\/\\\\]","flags":"g",'
-	  + '"replace":"</span>","active":true,"filterlinks":false}]';
-
+	str = '{"name":"Display webm","source":"http(.+?):webm","flags":"gi",'
+		+ '"replace":"<a class=\\"webm\\" href=\\"http$1\\" target=\\"_blank\\">http$1</a>","active":true,"filterlinks":true},'
+		+ '{"name":"Image","source":"http(.+?):pic","flags":"i",'
+		+ '"replace":"<a class=\\"picturelink\\" href=\\"http$1\\" target=\\"_blank\\"><img src=\\"http$1\\" style=\\"max-width:300px; max-height:300px\\"></a>","active":true,"filterlinks":true},'
+		+ '{"name":"Right float image","source":"http(.+?):float","flags":"gi",'
+		+ '"replace":"<a class=\\"rightfloatpic\\" href=\\"http$1\\" target=\\"_blank\\"><img src=\\"http$1\\" style=\\"float:right; max-width:300px; max-height:300px\\"></a>","active":true,"filterlinks":true},'
+		+ '{"name":"Left float image","source":"http(.+?):lf","flags":"gi",'
+		+ '"replace":"<a class=\\"leftfloatpic\\" href=\\"http$1\\" target=\\"_blank\\"><img src=\\"http$1\\" style=\\"float:left; max-width:300px; max-height:300px\\"></a>","active":true,"filterlinks":true},'
+		+ '{"name":"Spin image","source":"http(.+?):@","flags":"gi",' 
+		+ '"replace":"<a class=\\"spinpic\\" href=\\"http$1\\" target=\\"_blank\\"><img class=\\"spin\\" src=\\"http$1\\" style=\\"max-width:300px; max-height:300px\\"></a>","active":true,"filterlinks":true},'
+		+ '{"name":"Spoiler image","source":"http(.+?):sp","flags":"gi",'
+		+ '"replace":"<a class=\\"spoilerpic\\" href=\\"http$1\\" target=\\"_blank\\"><img class=\\"spoilerpic\\" src=\\"'+SpoilerImg+'\\"></a>","active":true,"filterlinks":true},'
+		+ '{"name":"Admin","source":"\\\\[admin\\\\]","flags":"gi",'
+		+ '"replace":"<span style=\\"color:'+Grape_HexColor+'\\">","active":true,"filterlinks":false},'
+		+ '{"name":"Spin Text","source":"\\\\[@\\\\]","flags":"gi",'
+		+ '"replace":"<span class=\\"spin\\">","active":true,"filterlinks":false},'
+		+ '{"name":"Untz color","source":"\\\\[untz\\\\]","flags":"gi",'
+		+ '"replace":"<span class=\\"untz\\">","active":true,"filterlinks":false},'
+		+ '{"name":"Colors","source":"\\\\[(orange|maroon|teal|olive|navy|purple|fuchsia|gray|black|silver|gold|aqua|blue|violet|yellow|green|pink|red|lime|brown|white)\\\\]","flags":"gi",'
+		+ '"replace":"<span style=\\"color:$1\\">","active":true,"filterlinks":false},'
+		+ '{"name":"> color","source":"\\\\[g\\\\]","flags":"gi",'
+		+ '"replace":"<span style=\\"color:#789922\\">","active":true,"filterlinks":false},'
+		+ '{"name":"White color on black","source":"\\\\[bw\\\\]","flags":"gi",'
+		+ '"replace":"<span style=\\"color:white; background-color:black\\">","active":true,"filterlinks":false},'
+		+ '{"name":"Right float text","source":"\\\\[float\\\\]","flags":"gi",'
+		+ '"replace":"<span style=\\"float:right\\">","active":true,"filterlinks":false},'
+		+ '{"name":"Left float text","source":"\\\\[lf\\\\]","flags":"gi",'
+		+ '"replace":"<span style=\\"float:left\\">","active":true,"filterlinks":false},'
+		+ '{"name":"Moving text","source":"\\\\[m(\\\\d+)\\\\]","flags":"gi",'
+		+ '"replace":"<marquee scrollamount=\\"$1\\" behavior=\\"alternate\\">","active":true,"filterlinks":false},'
+		+ '{"name":"Bold text","source":"\\\\[b\\\\]","flags":"gi",'
+		+ '"replace":"<span style=\\"font-weight:bold\\">","active":true,"filterlinks":false},'
+		+ '{"name":"Italics text","source":"\\\\[i\\\\]","flags":"gi",'
+		+ '"replace":"<span style=\\"font-style:italic\\">","active":true,"filterlinks":false},'
+		+ '{"name":"Underlined text","source":"\\\\[u\\\\]","flags":"gi",'
+		+ '"replace":"<span style=\\"text-decoration:underline\\">","active":true,"filterlinks":false},'
+		+ '{"name":"Striked text","source":"\\\\[s\\\\]","flags":"gi",'
+		+ '"replace":"<span style=\\"text-decoration:line-through\\">","active":true,"filterlinks":false},'
+		+ '{"name":"Distinguished text","source":"\\\\[d\\\\]","flags":"gi",'
+		+ '"replace":"<span class=\\"dist\\">","active":true,"filterlinks":false},'
+		+ '{"name":"Fire text","source":"\\\\[f\\\\]","flags":"gi",'
+		+ '"replace":"<span style=\\"color:#FFFFFF; font-family:impact, sans-serif; padding-top:20px; '
+		+ 'text-shadow:0px 0px 4px #000000, 0px -5px 4px #FFFF33, 2px -8px 6px #FFDD33, -2px -15px 10px #FF8800, '
+		+ '2px -20px 18px #FF2200; letter-spacing:2px\\">","active":true,"filterlinks":false},'
+		+ '{"name":"Shit text","source":"\\\\[shit\\\\]","flags":"gi",'
+		+ '"replace":"<span style=\\"color:#691227; font-family:impact, sans-serif; padding-top:20px; '
+		+ 'text-shadow:0px 0px 4px #000000, 0px -5px 4px #8FFF33, 2px -8px 6px #49BF2C, -2px -15px 10px #14730B, '
+		+ '2px -20px 18px #204006; letter-spacing:2px\\">","active":true,"filterlinks":false},'
+		+ '{"name":"Short spoiler","source":"\\\\[sp\\\\]","flags":"gi",'
+		+ '"replace":"<span class=\\"spoiler\\">","active":true,"filterlinks":false},'
+		+ '{"name":"Closing font style","source":"\\\\[\\\\/\\\\]","flags":"gi",'
+		+ '"replace":"</span></marquee>","active":true,"filterlinks":false},'
+		+ '{"name":"30 minute nap","source":"30 MinutE NaP","flags":"g",'
+		+ '"replace":"<font color=\\"#789922\\">>30 minute nap</font>","active":true,"filterlinks":false},'
+		+ '{"name":"Streaming","source":"StreaminG","flags":"g",'
+		+ '"replace":"<font color=\\"#789922\\">>streaming</font>","active":true,"filterlinks":false},'
+		+ '{"name":"Lottery","source":"'+Lottery.text+'","flags":"g",'
+		+ '"replace":"<a class=\\"lotterypic\\" href=\\"'+Lottery.click+'\\" target=\\"_blank\\"><img class=\\"lotterypic\\" src=\\"'+Lottery.image+'\\"></a>","active":true,"filterlinks":false}]';
 
 	callback = function(data) {
 		socket.listeners("chatFilters").splice(
 			socket.listeners("chatFilters").indexOf(callback)
 		);
-		json=JSON.stringify(data);
-		comma = (json.length!="2") ? ',' : '';
-		$("#cs-chatfilters-exporttext").val(json.substring(0, json.length-1)+comma+str);
+		temp = JSON.stringify(data);
+		comma = (temp.length!="2") ? ',' : '';
+		$("#cs-chatfilters-exporttext").val(temp.substring(0, temp.length-1) + comma + str);
 	};
 
-
-	socket.on("chatFilters", callback);
+	socket.once("chatFilters", callback);
 	socket.emit("requestChatFilters");
-
-
-	txt = 'This option does NOT affect your current filters, all of them will be saved.\n'
-	  + 'Click "Import filter list" button if you\'ll decide to install.';
-	alert(txt);
 }
 
-
-// show chat additional functions
-
-
-function showChatFunctions() {
-	$("#userlist").append('<div id="chatfunc-dropdown" />');
-	setPanelProperties("#chatfunc-dropdown");
-
-
-	$("#chatfunc-dropdown").append('<div>Prevent room freezing if spam:</div>');
-
-
-	spamclearbtn = $('<button id="spamclear-btn" class="btn btn-xs btn-default">Auto Clear</button>')
-	  .appendTo("#chatfunc-dropdown")
-	  .on("click", function() {
-		if (!CLEARING) {
-			$(this).text('Stop Clearing').addClass('btn-danger');
-			CLEARING=setInterval(function() {
-				socket.emit("chatMsg", {msg: '/clear'});
-			}, 500);
-		} else {
-			$(this).text('Auto Clear').removeClass('btn-danger');
-			clearInterval(CLEARING);
-			CLEARING=false;
-		}
-	  });
-	CLEARING ? $("#spamclear-btn").text('Stop Clearing').addClass('btn-danger') : '';
-
-
-	$("#chatfunc-dropdown").append('<div>Prevent me from AFK:</div>');
-
-
-	antiafkbtn = $('<button id="antiafk-btn" class="btn btn-xs btn-default">Anti AFK</button>')
-	  .appendTo("#chatfunc-dropdown")
-	  .on("click", function() {
-		if (!ANTIAFK) {
-			$(this).addClass('btn-danger');
-			ANTIAFK=setInterval(function() {
-				$("#userlist").find('span[class^=userlist]').each(function() {
-					if ($(this).html()==CLIENT.name && $(this).css('font-style')=="italic") {
-						socket.emit("chatMsg", {msg: '/afk'});
-						return;
-					}
-				});
-			}, 4000);
-		} else {
-			$(this).removeClass('btn-danger');
-			clearInterval(ANTIAFK);
-			ANTIAFK=false;
-		}
-	  });
-	ANTIAFK ? $("#antiafk-btn").addClass('btn-danger') : '';
+// change title bar description
+function changeTitle() {
+	title = $("#currenttitle").text();
+	$("#currenttitle").text(title.replace(/^Currently Playing:/, TitleBarDescription_Caption));
 }
-
-
-// display list of emotes
-
-
-function showEmotes() {
-	if (typeof GroupEmotes_Number!=="number" || GroupEmotes_Number<1) {
-		GroupEmotes_Number=100;
-	}
-	len=CHANNEL.emotes.length;
-	if (len<1) {
-		emotespanel.addClass('row');
-		makeAlert("No emotes available", "Ask channel administrator.").appendTo(emotespanel);
-	} else if (UI_GroupEmotes!="1" || len<=GroupEmotes_Number) {
-		for (i in CHANNEL.emotes) {
-			$('<img onclick="insertText(\''+CHANNEL.emotes[i].name+' \')" />')
-		 	 .attr({'src':CHANNEL.emotes[i].image, 'title':CHANNEL.emotes[i].name})
-		  	.appendTo(emotespanel);
-		}
-	} else {
-		var arr = new Array();
-		stop=GroupEmotes_Number-1;
-		gr=Math.ceil(CHANNEL.emotes.length/GroupEmotes_Number);
-		html='';
-
-
-		for (i=0; i<len; i++) {
-			html += '<img src="'+CHANNEL.emotes[i].image+'" '
-			  + 'onclick="insertText(\''+CHANNEL.emotes[i].name+' \')" />';
-			if (i%GroupEmotes_Number==stop) {
-				arr.push(html);
-				html='';
-			}
-		}
-		len%GroupEmotes_Number!=0 ? arr.push(html) : '';
-
-
-		for (i=0; i<gr; i++) {
-			div = $('<div id="emotes-'+i+'" class="groupemotes" style="display:none" />')
-			  .html(arr[i])
-			  .appendTo(emotespanel);
-		}
-		arr='';
-
-
-		emotesbtnwrap = $('<div id="emotesbtnwrap" />').appendTo(emotespanel);
-		emotesbtngroup = $('<div id="emotescontrols" class="btn-group">').appendTo(emotesbtnwrap);
-
-
-		for (i=0; i<gr; i++) {
-			btn = $('<button class="btn btn-sm btn-default emotesbtn" group="'+i+'">'+(i+1)+'</button>')
-			  .appendTo(emotesbtngroup)
-			  .on("click", function() {
-				$(".emotesbtn").removeClass('active');
-				$(this).addClass('active');
-				$(".groupemotes").hide();
-				nr=$(this).attr('group');
-				$("#emotes-"+nr).show();
-		  	});
-		}
-		$("#emotes-0").show();
-		$("#emotescontrols button:nth-child(1)").addClass('active');
-	}
-	EMOTES=true;
-}
-
-
-// show chat commands modal window
-
-
-function showChatHelp() {
-	createModal('Chat Commands');
-	if (UI_FontsBtn=="1") {
-		body.append('<strong>Fonts commands</strong><br /><br />');
-		html='<li><code>[white]</code>, <code>[yellow]</code>, <code>[orange]</code>, <code>[pink]</code>, '
-		  + '<code>[red]</code>, <code>[lime]</code>, <code>[green]</code>, <code>[aqua]</code>, '
-		  + '<code>[blue]</code>, <code>[violet]</code>, <code>[brown]</code>, <code>[silver]</code>, '
-		  + '<code>[black]</code> - begin of colored text</li>'
-		  + '<li><code>[bw]</code> - begin of white text on the black background</li>'
-		  + '<li><code>[b]</code>, <code>[i]</code>, <code>[u]</code>, <code>[s]</code> - '
-		  + 'begin of bold, italic, underlined, striked or underlined text</li>'
-		  + '<li><code>[d]</code> - begin of a distinguished text (red on yelllow background)</li>'
-		  + '<li><code>[f]</code> - begin of a text with a fire effect</li>'
-		  + '<li><code>[sp]</code> - begin of an inline spoiler</li>'
-		  + '<li><code>[/]</code> - <b>end of any color, style or spoiler</b></li><br />'
-		  + 'If fonts commands don\'t work, ask script administrator about proper filters installation.';
-		$('<ul />').html(html).appendTo(body);
-	}
-	if (UI_UserCommands=="1") {
-		arr = {
-			'pick':'choosing a random option from a list separated by commas '
-			  + '(e.g. <i>!pick japan,korea,china</i>)',
-			'ask':'asking a question with yes/no type answer '
-			  + '(e.g. <i>!ask Will this channel be popular?</i>)',
-			'q':'displaying random quote (<i>!q</i>)',
-			'dice':'rolling dice (<i>!dice</i>)',
-			'roll':'rolling 3-digit number (<i>!roll</i>)',
-			'time':'displaying current time (<i>!time</i>)',
-			'now':'displaying current playing title (<i>!now</i>)',
-			'calc':'calculating a math operation '
-			  + '(all JavaScript Math methods and constants allowed, e.g. <i>!calc Math.PI*10</i>)',
-			'skip':'skip current item (<i>!skip</i>)',
-			'add':'adding a link to the end of playlist '
-			  + '(e.g. <i>!add https://www.youtube.com/watch?v=29FFHC2D12Q</i>)',
-			'stat': 'displaying user chat statistics in current session (<i>!stat</i>)',
-			'memestats': 'displaying number memes used by user in all messages (<i>!memestats</i>)'
-		}
-		if (UI_ChannelDatabase=="1") {
-			arr['random']='adding random link from database (<i>!random</i>)';
-		}
-		body.append('<strong>New chat commands</strong><br /><br />');
-		ul = $('<ul />').appendTo(body);
-		for (cmd in arr) {
-			ul.append('<li><code>!'+cmd+'</code> - '+arr[cmd]+'</li>');
-		}
-	}
-	if (UI_ChatSpeak=="1") {
-		body.append('<strong>Voice commands</strong><br /><br />');
-		html='<li><code>!say</code> - text speaking in english (<i>!say Hello!</i>)</li>'
-		  + '<li><code>!mow</code> - text speaking in polish (<i>!mow Chrząszcz brzmi w trzcinie.</i>)';
-		$('<ul />').html(html).appendTo(body);
-	}
-	arr = {
-		'me':'showing an action-style message (username does something, e.g. <i>/me is dancing</i>)',
-		'sp':'hiding a message in a hover-to-show spoiler box (e.g. <i>/sp This message is hidden</i>)',
-		'afk':'toggling your AFK (away from keyboard) status (<i>/afk</i>)',
-	}
-	body.append('<br /><strong>Default CyTube commands</strong><br /><br />');
-	ul = $('<ul />').appendTo(body);
-	for (cmd in arr) {
-		ul.append('<li><code>/'+cmd+'</code> - '+arr[cmd]+'</li>');
-	}
-}
-
-
-// show chat sounds panel
-
-
-function showSoundsPanel() {
-	$("#userlist").append('<div id="sounds-dropdown" />');
-	setPanelProperties("#sounds-dropdown");
-
-
-	muteallbtn = $('<button id="muteall-btn" class="btn btn-xs btn-default">Mute All</button>')
-	  .appendTo("#sounds-dropdown")
-	  .on("click", function() {
-		if (VOICES) {
-			$(this).text('Unmute All').addClass('btn-danger');
-			voicesbtn.addClass('btn-danger').attr('title', 'Unmute chat voices');
-			VOICES = false;
-			SOUNDSPANEL = false;
-			$("#sounds-dropdown").remove();
-		} else {
-			$(this).text('Mute All').removeClass('btn-danger');
-			voicesbtn.removeClass('btn-danger').attr('title', 'Mute chat voices');
-			VOICES = true;
-		}
-	  });
-	!VOICES ? muteallbtn.text('Unmute All').addClass('btn-danger') : '';
-
-
-	$("#sounds-dropdown").append('<div>Sounds level:</div>');
-
-
-	lvlgroup = $('<div id="lvlgroup" class="btn-group"></div>')
-	  .appendTo("#sounds-dropdown");
-
-
-	for (i=1; i<=5; i++) {
-		btn=$('<button class="btn btn-xs btn-default" id="lvlvol'+i+'" level="'+i+'" />')
-		  .html(i)
-		  .appendTo(lvlgroup)
-		  .on("click", function() {
-			$("#lvlvol"+SOUNDSLVL).removeClass('btn-success');
-			SOUNDSLVL=$(this).attr('level');
-			setOpt(CHANNEL.name+"_soundslvl", SOUNDSLVL);
-			$(this).addClass('btn-success');
-		  });
-	}
-	$("#lvlvol"+SOUNDSLVL).addClass('btn-success');
-
-
-	$("#sounds-dropdown").append('<div>Select users to mute sounds:</div>');
-
-
-	mutegroup = $('<div id="mutegroup" class="btn-group-vertical"></div>').appendTo("#sounds-dropdown");
-
-
-	$(".userlist_item").each(function() {
-		user=$(this).find("span:nth-child(2)").html();
-		btn=$('<button class="btn btn-xs btn-default" name="'+user+'" />')
-		  .html(user)
-		  .appendTo(mutegroup)
-		  .on("click", function() {
-			name=$(this).attr('name');
-			if (name in MUTEDVOICES && MUTEDVOICES[name]=="1") {
-				$(this).removeClass('btn-danger');
-				MUTEDVOICES[name]=0;
-			} else {
-				$(this).addClass('btn-danger');
-				MUTEDVOICES[name]=1;
-			}
-	 	   });
-		(user in MUTEDVOICES && MUTEDVOICES[user]=="1") ? btn.addClass('btn-danger') : '';
-	});
-}
-
-
-// show moderators panel
-
-
-function showModPanel() {
-	createModal("Moderators panel");
-
-
-	html='';
-	for (i in ModPanel_Array) {
-		name=ModPanel_Array[i][0];
-		mess=ModPanel_Array[i][1];
-		if (name=="") {
-			html+='<i class="glyphicon glyphicon-comment"></i> '
-			  + mess
-			  + '<br /><br />';
-		} else if (name==CLIENT.name) {
-			html+='<i class="glyphicon glyphicon-comment"></i> '
-			  + '<i class="glyphicon glyphicon-user"></i> '
-			  + '(to: '+CLIENT.name+') → '+mess
-			  + '<br /><br />';
-		}
-	}
-	body.append(html);
-	$("#mod-btn").removeClass('btn-danger').html('<i class="glyphicon glyphicon-tasks"></i>');
-	setOpt(CHANNEL.name+"_modhash", HASH);
-}
-
-
-// show info about current or next media
-
-
-function showInfo() {
-	if (DEFDESCR) {
-		contr=$(".queue_active").attr("title");
-		if (typeof contr==="undefined") {
-			text='Nothing Playing';
-		} else {
-			duration=$(".queue_active .qe_time").html();
-			text=contr+' ['+duration+']';
-		}
-		mediainfo.html(text);	
-	} else {
-		var arr=new Array();
-		text='Playing Next:';
-		li1=$(".queue_active").next();
-		li2=li1.next();
-		li3=li2.next();
-		li1.length>0 ? arr.push(' 1▸ '+li1.children("a").html()) : '';
-		li2.length>0 ? arr.push(' // 2▸ '+li2.children("a").html()) : '';
-		li3.length>0 ? arr.push(' // 3▸ '+li3.children("a").html()) : '';
-		text+=arr.join("");
-		arr.length<3 ? text+=' // END OF PLAYLIST //' : '';
-		mediainfo.html('<marquee scrollamount="5">'+text+'</marquee>');
-	}	
-}
-
 
 // hide and show player with covering image
-
-
 function coverPlayer() {
-	PlayerHiding_URL=="" ? PlayerHiding_URL='https://dl.dropboxusercontent.com/s/xz2o99scw5i7aai/stop.png' : '';
+	n = Math.floor(Math.random() * PlayerHiding_URL.length);
+	PlayerHiding_URL[n] === "" ? PlayerHiding_URL[n] = 'https://dl.dropboxusercontent.com/s/xz2o99scw5i7aai/stop.png' : '';
 	$("#videowrap").addClass('relative');
-	w=$("#ytapiplayer").css('width');
-	h=$("#videowrap").css('height').replace('px', '')-31;
+	w = $("#videowrap-header").width() + 5;
+	h = $("#videowrap").height() - $("#videowrap-header").height() - $("#playercontrols").height() - 1;
+	coverpltempimg = $('<img id="coverpltempimg" src="' + PlayerHiding_URL[n] +'"/>')
+		.insertAfter($("#ytapiplayer")).hide();
 	coverpl = $('<div id="coverpl" />')
-	  .css({'width':w, 'height':h+'px', 'background-image':'url('+PlayerHiding_URL+')'})
-	  .appendTo($("#videowrap"));
-	hideplayerbtn.addClass('btn-danger').attr('title', 'Show player');
+		.css({'margin-left':'-2px', 'width':w + 'px', 'height':h + 'px', 'background-image':'url(' + PlayerHiding_URL[n] + ')'})
+		.insertAfter($("#ytapiplayer"));
+	stopinterval = 0;
+	fixsize = setInterval(function() {
+		stopinterval++;
+		imgw = coverpltempimg.width();
+		imgh = coverpltempimg.height();
+		imgratio = imgw/w*h;
+		if (imgw !== 0 && imgh !== 0) {
+			if (imgw > w && imgh > h && (imgratio > imgh || imgratio === imgh)) {
+				coverpl.css('background-size', w + 'px auto');
+			} else if (imgw > w && imgh > h && imgratio < imgh) {
+				coverpl.css('background-size', 'auto ' + h + 'px');
+			} else if (imgw > w && imgh < h) {
+				coverpl.css('background-size', '100% auto');
+			} else if (imgw < w && imgh > h) {
+				coverpl.css('background-size', 'auto 100%');
+			}
+			stopinterval = 401;
+		}
+		if (stopinterval > 400) {
+			$("#coverpltempimg").remove();
+			clearInterval(fixsize);
+		}
+	}, 25);
+	hideplayer.addClass('btn-danger').attr('title', 'Show player');
 }
-
 
 function showPlayer() {
 	coverpl.remove();
-	hideplayerbtn.removeClass('btn-danger').attr('title', 'Hide player');
+	hideplayer.removeClass('btn-danger').attr('title', 'Hide player');
 	$("#videowrap").removeClass('relative');
 }
 
-
-// mute YT player
-
-
-function mutePlayer() {
-	(PLAYER && PLAYER.type=="yt") ? PLAYER.player.mute() : '';
-}
-
-
-// unmute YT player
-
-
-function unmutePlayer() {
-	(PLAYER && PLAYER.type=="yt") ? PLAYER.player.unMute() : '';
-}
-
-
-// download current item
-
-
-function downloadCurrentItem() {
-	uid=$(".pluid-"+PL_CURRENT).data("media");
-	arr={
-		'yt':'http://youtube.com/watch?v=',
-		'vi':'http://vimeo.com/',
-		'dm':'http://dailymotion.com/video/',
-		'sc':''
-	}
-	link = (uid.type in arr ? arr[uid.type]+''+uid.id : '');
-	if (link=="") {
-		alert('This link is not supported. Try YouTube, Vimeo, Dailymotion or SoundCloud.');
-	}
-	else {
-		createModal("Download current item");
-
-
-		$('<a href="http://keepvid.com/?url='+link+'" target="_blank">Click here to download</a>')
-		  .appendTo(body)
-		  .on("click", function() {
-			outer.modal('hide');
-		  });
-	}
-}
-
-
-// preview YT video in modal window
-
-
-function prevVideo(a) {
-	createModal('Preview Video');
-
-
-	player=$('<iframe id="previewFrame" width="558" height="314" frameborder="0" />')
-	  .attr('src', 'http://www.youtube.com/embed/'+a+'?wmode=transparent&enablejsapi')
-	  .appendTo(body);
-}
-
-
-// toggle configuration panel
-
-
-function toggleConfigPanel() {
-	if (MINIMIZED) {
-		$("#rightpane-inner").show();
-		$("#azukirow, #leftpane-inner").show();
-		!$("#hide-motd").prop('checked') ? $("#motdrow").show() : '';
-		!$("#hide-ann").prop('checked') ? $("#announcements").show() : '';
-		!$("#hide-hf").prop('checked') ? $("footer").show() : '';
-		pinupbtn.show();
-		layoutbtn.removeClass('btn-danger').addClass('btn-success')
-		  .html('<span class="glyphicon glyphicon-cog"></span> Layout');
-		$("#min-layout").prop('checked', false);
-		$("#plcontrol button, #db-btn, #gallery-btn, #newpollbtn").removeAttr('disabled');
-		MINIMIZED=false;
-		// patch: giving back 15px additional space on the top
-		$("#mainpage").css('margin-top', $("#mainpage").css('margin-top').replace('px', '')*1-15+'px');
-	} else {
-		toggleDiv(configwrap);
-		if (configwrap.css('display')=="none") {
-			layoutbtn.removeClass('btn-success');
-		} else {
-			layoutbtn.addClass('btn-success');
-		}
-		LAYOUTBOX = !LAYOUTBOX;
-		setOpt(CHANNEL.name+"_layoutbox", LAYOUTBOX);
-	}
-}
-
-
-// show layout configuration modal window
-
-
-function showConfig() {
-	createModal("Layout Configuration");
-
-
-	form = $('<form class="form-horizontal" />').appendTo(body);
-
-
-	function addOption(txt, elem) {
-		g = $('<div class="form-group" />').appendTo(form);
-		$('<label class="control-label col-sm-4" />').text(txt).appendTo(g);
-		c = $('<div class="col-sm-8" />').appendTo(g);
-		elem.appendTo(c);
-	}
-
-
-	playerlocation = $('<select />').addClass('form-control');
-	$('<option />').attr('value', 'left').text('left').appendTo(playerlocation);
-	$('<option />').attr('value', 'right').text('right').appendTo(playerlocation);
-	$('<option />').attr('value', 'center').text('center').appendTo(playerlocation);
-	playerlocation.val(USERCONFIG.player);
-	addOption('Player location', playerlocation);
-
-
-	userlistlocation = $('<select />').addClass('form-control');
-	$('<option />').attr('value', 'left').text('left').appendTo(userlistlocation);
-	$('<option />').attr('value', 'right').text('right').appendTo(userlistlocation);
-	userlistlocation.val(USERCONFIG.userlist);
-	addOption('Userlist location', userlistlocation);
-
-
-	queuelocation = $('<select />').addClass('form-control');
-	$('<option />').attr('value', 'left').text('left').appendTo(queuelocation);
-	$('<option />').attr('value', 'right').text('right').appendTo(queuelocation);
-	$('<option />').attr('value', 'center').text('center').appendTo(queuelocation);
-	queuelocation.val(USERCONFIG.queue);
-	addOption('Queue location', queuelocation);
-
-
-	queuesize = $('<select />').addClass('form-control');
-	$('<option />').attr('value', 'wide').text('wide').appendTo(queuesize);
-	$('<option />').attr('value', 'narrow').text('narrow').appendTo(queuesize);
-	queuesize.val(USERCONFIG.qsize);
-	addOption('Queue column size', queuesize);
-
-
-	mainlocation = $('<select />').addClass('form-control');
-	$('<option />').attr('value', 'top').text('above playlist').appendTo(mainlocation);
-	$('<option />').attr('value', 'bottom').text('below playlist').appendTo(mainlocation);
-	mainlocation.val(USERCONFIG.main);
-	addOption('Player & chat', mainlocation);
-
-
-	motdlocation = $('<select />').addClass('form-control');
-	$('<option />').attr('value', 'top').text('channel top').appendTo(motdlocation);
-	$('<option />').attr('value', 'bottom').text('channel bottom').appendTo(motdlocation);
-	motdlocation.val(USERCONFIG.motd);
-	addOption('MOTD & announcements', motdlocation);
-
-
-	logoinsert = $('<select />').addClass('form-control');
-	$('<option />').attr('value', 'no').text('no image').appendTo(logoinsert);
-	$('<option />').attr('value', 'user').text('user image').appendTo(logoinsert);
-	for (i in TopUserLogo) {
-		$("<option />").attr('value', i).text(TopUserLogo[i][0]).appendTo(logoinsert);
-	}
-	logoinsert.val(USERCONFIG.logo);
-	addOption('Top logo', logoinsert);
-
-
-	userlogo = $('<input />').addClass('form-control').attr('type', 'text')
-	  .attr('placeholder', 'Image URL');
-	userlogo.val('');
-	addOption('User logo URL', userlogo);
-
-
-	userlogoht = $('<input />').addClass('form-control').attr('type', 'text')
-	  .attr('placeholder', 'Image Height (in px)');
-	userlogoht.val('');
-	addOption('User logo height', userlogoht);
-
-
-	if (USERCONFIG.logo!="user") {
-		userlogo.parent().parent().hide();
-		userlogoht.parent().parent().hide();
-	} else {
-		userlogo.val(USERCONFIG.logourl);
-		userlogoht.val(USERCONFIG.logoht);
-	}
-
-
-	headermode = $('<select />').addClass('form-control')
-	$('<option />').attr('value', 'fixed').text('fixed').appendTo(headermode);
-	$('<option />').attr('value', 'detached').text('detached').appendTo(headermode);
-	$('<option />').attr('value', 'mouseover').text('mouseover').appendTo(headermode);
-	headermode.val(USERCONFIG.header);
-	addOption('Header menu', headermode);
-
-
-	customcss = $('<select />').addClass('form-control');
-	$('<option />').attr('value', 'no').text('no').appendTo(customcss);
-	$('<option />').attr('value', 'yes').text('yes').appendTo(customcss);
-	customcss.val(USERCONFIG.css);
-	addOption('Custom CSS', customcss);
-
-
-	usercss = $('<textarea rows="8" />').addClass('form-control')
-	  .attr('placeholder', 'Insert CSS code');
-	usercss.val(USERCONFIG.csscode);
-	addOption('CSS code', usercss);
-
-
-	if (USERCONFIG.css=="no") {
-		usercss.parent().parent().hide();
-	}
-
-
-	submit = $('<button class="btn btn-default btn-success" />').text("Save changes").appendTo(footer);
-	reset = $('<button class="btn btn-default pull-left" />').text('Default').appendTo(footer);
-	column = $('<button class="btn btn-default pull-left" />').text('One column').appendTo(footer);
-
-
-	logoinsert.on("change", function() {
-		if (logoinsert.val()=="user") {
-			userlogo.parent().parent().show();
-			userlogoht.parent().parent().show();
-			userlogo.val(USERCONFIG.logourl);
-			userlogoht.val(USERCONFIG.logoht);
-		} else {
-			userlogo.parent().parent().hide();
-			userlogoht.parent().parent().hide();
-		}
-	});
-
-
-	customcss.on("change", function() {
-		if (customcss.val()=="yes") {
-			usercss.parent().parent().show();
-		} else {
-			usercss.parent().parent().hide();
-		}
-	});
-
-
-	submit.on("click", function() {
-		outer.modal('hide');
-
-
-		USERCONFIG.player=playerlocation.val();
-		setOpt(CHANNEL.name+"_player",playerlocation.val());
-
-
-		USERCONFIG.userlist=userlistlocation.val();
-		setOpt(CHANNEL.name+"_userlist",userlistlocation.val());
-
-
-		USERCONFIG.queue=queuelocation.val();
-		setOpt(CHANNEL.name+"_queue",queuelocation.val());
-
-
-		USERCONFIG.qsize=queuesize.val();
-		setOpt(CHANNEL.name+"_qsize",queuesize.val());
-
-
-		USERCONFIG.main=mainlocation.val();
-		setOpt(CHANNEL.name+"_main",mainlocation.val());
-
-
-		USERCONFIG.motd=motdlocation.val();
-		setOpt(CHANNEL.name+"_motd",motdlocation.val());
-
-
-		if (logoinsert.val()=="user") {
-			if (userlogo.val()=="") {
-				logoinsert.val("no");
-			} else if (userlogoht.val()=="") {
-				userlogoht.val('200');
-			} else {
-				a=userlogoht.val()*1;
-				if (isNaN(a) || a<1) {
-					userlogoht.val('200');
-				}
-			}
-			USERCONFIG.logourl=userlogo.val();
-			USERCONFIG.logoht=userlogoht.val();
-			setOpt(CHANNEL.name+"_logourl",userlogo.val());
-			setOpt(CHANNEL.name+"_logoht",userlogoht.val());
-		}
-
-
-		USERCONFIG.logo=logoinsert.val();
-		setOpt(CHANNEL.name+"_logo",logoinsert.val());
-
-
-		USERCONFIG.header=headermode.val();
-		setOpt(CHANNEL.name+"_header",headermode.val());
-
-
-		if (customcss.val()=="yes") {
-			USERCONFIG.csscode=usercss.val();
-			setOpt(CHANNEL.name+"_csscode",usercss.val());
-		}
-
-
-		USERCONFIG.css=customcss.val();
-		setOpt(CHANNEL.name+"_css",customcss.val());
-
-
-		setLayout();
-		scrollChat();
-		scrollQueue();
-	});
-
-
-	reset.on("click", function() {
-		outer.modal("hide");
-
-
-		USERCONFIG.player=defplayer;
-		setOpt(CHANNEL.name+"_player",defplayer);
-
-
-		USERCONFIG.userlist=defuserlist;
-		setOpt(CHANNEL.name+"_userlist",defuserlist);
-
-
-		USERCONFIG.queue=defqueue;
-		setOpt(CHANNEL.name+"_queue",defqueue);
-
-
-		USERCONFIG.qsize="wide";
-		setOpt(CHANNEL.name+"_qsize","wide");
-
-
-		USERCONFIG.main="top";
-		setOpt(CHANNEL.name+"_main","top");
-
-
-		USERCONFIG.motd="top";
-		setOpt(CHANNEL.name+"_motd","top");
-
-
-		USERCONFIG.logo="no";
-		setOpt(CHANNEL.name+"_logo","no");
-
-
-		USERCONFIG.header="detached";
-		setOpt(CHANNEL.name+"_header","detached");
-
-
-		USERCONFIG.css="no";
-		setOpt(CHANNEL.name+"_css","no");
-
-
-		setLayout();
-		scrollChat();
-		scrollQueue();
-	});
-
-
-	column.on("click", function() {
-		outer.modal("hide");
-
-
-		USERCONFIG.player="center";
-		setOpt(CHANNEL.name+"_player","center");
-
-
-		USERCONFIG.userlist="left";
-		setOpt(CHANNEL.name+"_userlist","left");
-
-
-		USERCONFIG.queue="center";
-		setOpt(CHANNEL.name+"_queue","center");
-
-
-		USERCONFIG.main="top";
-		setOpt(CHANNEL.name+"_main","top");
-
-
-		USERCONFIG.motd="bottom";
-		setOpt(CHANNEL.name+"_motd","bottom");
-
-
-		USERCONFIG.logo="no";
-		setOpt(CHANNEL.name+"_logo","no");
-
-
-		USERCONFIG.header="detached";
-		setOpt(CHANNEL.name+"_header","detached");
-
-
-		setLayout();
-		scrollChat();
-		scrollQueue();
-	});
-}
-
-
-// toggle fluid layout
-
-
-function toggleFluidLayout() {
-	if (FLUID) {
-		$("body").removeClass('fullscreen');
-		$(".container-fluid").removeClass('container-fluid').addClass('container');
-		$("#fontspanel, #emotespanel").removeClass('fluidpanel');
-	} else {
-		$("body").addClass('fullscreen');
-		$(".container").removeClass('container').addClass('container-fluid');
-		$("footer .container-fluid").removeClass('container-fluid').addClass('container');
-		$("#fontspanel, #emotespanel").addClass('fluidpanel');
-	}
-	UI_DisplayModeSel=="1" ? setMode(modesel.val()) : '';
-	FLUID=!FLUID;
-	setOpt(CHANNEL.name+"_fluid", FLUID);
-	scrollChat();
-}
-
-
-// toggle minimized layout
-
-
-function toggleMinLayout() {
-	if (!MINIMIZED) {
-		$("#rightpane-inner").hide();
-		$("#azukirow, #motdrow, #announcements, #leftpane-inner, footer").hide();
-		pinupbtn.hide();
-		layoutbtn.removeClass('btn-success').addClass('btn-danger').html('Maximize');
-		$("#plcontrol button, #db-btn, #gallery-btn, #newpollbtn").attr('disabled', 'disabled');
-		MINIMIZED=true;
-		// patch for 15px more space on the top
-		$("#mainpage").css('margin-top', $("#mainpage").css('margin-top').replace('px', '')*1+15+'px');
-	}
-}
-
-
 // pin-up playlist to player
-
-
 function pinUp() {
-	if (USERCONFIG.player=="left") {
+	if (UCONF.player=="left") {
 		$("#videowrap").after($("#rightpane").detach());
-	} else if (USERCONFIG.player=="right") {
+	} else if (UCONF.player=="right") {
 		$("#videowrap").before($("#rightpane").detach());
 	}
-	if (USERCONFIG.queue=="left") {
+	if (UCONF.queue=="left") {
 		$("#leftpane").before($("#chatwrap").detach());
-	} else if (USERCONFIG.queue=="right") {
+	} else if (UCONF.queue=="right") {
 		$("#leftpane").after($("#chatwrap").detach());
 	}
 	$("#rightpane").removeClass().addClass('col-lg-5 col-md-5');
-	if (USERCONFIG.qsize=="wide") {
+	if (UCONF.qsize=="wide") {
 		$("#chatwrap").removeClass().addClass('col-lg-7 col-md-7');
 	} else {
 		$("#chatwrap").removeClass().addClass('col-lg-5 col-md-5');
@@ -2443,23 +1787,20 @@ function pinUp() {
 	PINNED=true;
 }
 
-
 // un-pin playlist from player
-
-
 function unPin() {
-	if (USERCONFIG.queue=="left") {
+	if (UCONF.queue=="left") {
 		$("#leftpane").before($("#rightpane").detach());
-	} else if (USERCONFIG.queue=="right") {
+	} else if (UCONF.queue=="right") {
 		$("#leftpane").after($("#rightpane").detach());
 	}
-	if (USERCONFIG.player=="left") {
+	if (UCONF.player=="left") {
 		$("#videowrap").after($("#chatwrap").detach());
-	} else if (USERCONFIG.player=="right") {
+	} else if (UCONF.player=="right") {
 		$("#videowrap").before($("#chatwrap").detach());
 	}
 	$("#chatwrap").removeClass().addClass('col-lg-5 col-md-5');
-	if (USERCONFIG.qsize=="wide") {
+	if (UCONF.qsize=="wide") {
 		$("#rightpane").removeClass().addClass('col-lg-7 col-md-7');
 	} else {
 		$("#rightpane").removeClass().addClass('col-lg-5 col-md-5');
@@ -2471,69 +1812,111 @@ function unPin() {
 	PINNED=false;
 }
 
+// show chat commands modal window
+function showChatHelp() {
+	createModal('Chat Commands');
+	if (UI_FontsBtn === 1) {
+		body.append('<strong>Fonts commands</strong><br /><br />');
+		html='<li><code>[untz]</code>, <code>[white]</code>, <code>[yellow]</code>, <code>[orange]</code>, <code>[pink]</code>, '
+			+ '<code>[red]</code>, <code>[lime]</code>, <code>[g]</code>, <code>[green]</code>, <code>[aqua]</code>, '
+			+ '<code>[blue]</code>, <code>[violet]</code>, <code>[brown]</code>, <code>[silver]</code>, '
+			+ '<code>[black]</code> - Colored text.</li>'
+			+ '<li><code>[bw]</code> - White text on a black background.</li>'
+			+ '<li><code>[b]</code>, <code>[i]</code>, <code>[u]</code>, <code>[s]</code> - '
+			+ 'Starts bold, italic, underlined, underlined or striked text.</li>'
+			+ '<li><code>[d]</code> - Distinguished text. (red on yelllow background)</li>'
+			+ '<li><code>[f]</code> - Text with a fire effect.</li>'
+			+ '<li><code>[shit]</code> - Text with a shit effect.</li>'
+			+ '<li><code>[sp]</code> - An inline spoiler.</li>'
+			+ '<li><code>[float]</code> - Float text to the right.</li>'
+			+ '<li><code>[lf]</code> - Float text to the left.</li>'
+			+ '<li><code>[m<span style="background-color:yellow">#</span>]</code> - Move text side to side. Speed dependent on the number after <code>[m</code>.</li>'
+			+ '<li><code>[@]</code> - Spin text.</li>'
+			+ '<li><code>[hflip]</code> - Horizontally flip text.</li>'
+			+ '<li><code>[vflip]</code> - Vertically flip text.</li>'
+			+ '<li><code>[/]</code> - <b>Ends any color, style, float or spoiler.</b></li>';
+		$('<ul />').html(html).appendTo(body);
+	}
+	if (UI_UserCommands === 1) {
+		scrcmd = {
+			'add':'Adds a link to the end of playlist. (e.g. <i>!add http://www.youtube.com/watch?v=YLNH_Fqj4DE</i>)',
+			'ask':'Asks a question with a yes/no type answer. (e.g. <i>!ask Will this channel be popular?</i>)',
+			'calc':'Calculates a math operation. (all JavaScript Math methods and constants allowed, e.g. <i>!calc Math.PI*10</i>)',
+			'dice':'Rolls dice. (<i>!dice</i>)',
+			'now':'Shows currently playing title. (<i>!now</i>)',
+			'pick':'Chooses a random item from a list separated by commas. (e.g. <i>!pick japan,korea,china</i>)',
+			'q':'Provides a random quote. (<i>!q</i>)',
+			'roll':'Rolls a number. (<i>!roll</i>)',
+			'stat': 'Displays user chat statistics for the current session. (<i>!stat</i>)',
+			'time':'Displays current local time. (<i>!time</i>)',
+			'vskip':'Voteskips the current item. (<i>!skip</i>)'
+		};
+		body.append('<br /><strong>New chat commands</strong><br /><br />');
+		cmdlist = $('<ul />').appendTo(body);
+		for (cmd in scrcmd) {
+			cmdlist.append('<li><code>!' + cmd + '</code> - ' + scrcmd[cmd] + '</li>');
+		}
+	}
+	defcmd = {
+		'me':'Shows an action-style message. (username does something, e.g. <i>/me is dancing</i>)',
+		'sp':'Hides a message in a hover-to-show spoiler box. (e.g. <i>/sp This message is hidden</i>)',
+		'afk':'Toggles AFK (Away From Keyboard) status. (<i>/afk</i>)'
+	};
+	body.append('<br /><strong>Default CyTube commands</strong><br /><br />');
+	cmdlist2=$('<ul />').appendTo(body);
+	for (cmd in defcmd) {
+		cmdlist2.append('<li><code>/' + cmd + '</code> - ' + defcmd[cmd] + '</li>');
+	}
+}
 
 // show contributors list
-
-
 function showContributors() {
 	createModal("Contributors List");
-
-
-	len=$("#queue li").length+1;
-	var list = [];
-	for (i=1; i<len; i++) {
-		item=$("#queue li:nth-child("+i+")").attr('title');
-		user=item.split("by: ")[1];
-		user in list ? list[user]++ : list[user]=1;
+	a = $("#queue li").length + 1;
+	var list=[];
+	for (i = 1; i < a; i++) {
+		item = $("#queue li:nth-child(" + i + ")").attr('title');
+		user = item.split("by: ")[1];
+		user in list ? list[user]++ : list[user] = 1;
 	}
 	var list2 = [];
 	for (key in list) {
 		list2.push([key, list[key]]);
 	}
-	list2.sort(function(a,b) {return a[1]-b[1]});
+	list2.sort(function(a,b) {return a[1] - b[1]});
 	list2.reverse();
 	var list3 = [];
 	for (i in list2) {
-		list3.push((i*1+1)+". "+list2[i].join(": "));
+		j = i * 1 + 1;
+		list3.push(j + ". " + list2[i].join(": "));
 	}
-	html='<strong>Number of added playlist items:</strong>'
-	  + '<br /><br />'+list3.join("<br />");
+	html = '<strong>Number of added playlist items:</strong>'
+		+ '<br /><br />' + list3.join("<br />");
 	body.append(html);
 }
 
-
 // expand/collapse queue
-
-
 function expandQueue() {
 	if (!FULLPL) {
 		$("#queue").css('max-height', '100000px');
-		expandbtn.attr('title', 'Collapse playlist');
-		FULLPL=true;
+		expandbtn.addClass('btn-success');
 	} else {
 		$("#queue").css('max-height', '500px');
-		expandbtn.attr('title', 'Expand playlist');
-		FULLPL=false;
+		expandbtn.removeClass('btn-success');
 		scrollQueue();
 	}
+	FULLPL = !FULLPL;
 }
 
-
 // get playlist URLS
-
-
 function getPlaylistURLs() {
 	createModal('Playlist URLs');
-
-
-	data=$('<textarea rows="10" class="form-control" />').val(formatRawList()).appendTo(body);
-	rlist=$('<button class="btn btn-default pull-left">Raw Links</button>').appendTo(footer);
-	tlist=$('<button class="btn btn-default pull-left">Plain Text</button>').appendTo(footer);
-	hlist=$('<button class="btn btn-default pull-left">HTML Code</button>').appendTo(footer);
-	olist=$('<button class="btn btn-default pull-left">Ordered List</button>').appendTo(footer);
-	dlist=$('<button class="btn btn-default pull-left">Database Format</button>').appendTo(footer);
-
-
+	data = $('<textarea rows="10" class="form-control" />').val(formatRawList()).appendTo(body);
+	rlist = $('<button class="btn btn-default pull-left">Raw Links</button>').appendTo(footer);
+	tlist = $('<button class="btn btn-default pull-left">Plain Text</button>').appendTo(footer);
+	hlist = $('<button class="btn btn-default pull-left">HTML Code</button>').appendTo(footer);
+	olist = $('<button class="btn btn-default pull-left">Ordered List</button>').appendTo(footer);
+	dlist = $('<button class="btn btn-default pull-left">Database Format</button>').appendTo(footer);
 	rlist.on("click", function() {
 		data.val(formatRawList());
 	});
@@ -2551,1647 +1934,2742 @@ function getPlaylistURLs() {
 	});
 }
 
-
-// add random item from channel database
-
-
-function addRandomItem() {
-	time=(new Date()).getTime();
-	if ((time-LASTADD)<120000) {
-		alert('You can add random video every 2 minutes.');
-	} else {
-		var link="";
-		while (link=="") {
-			rnd=Math.round(Math.random()*(ChannelDatabase.length-1));
-			link=ChannelDatabase[rnd][0];
+// toggle configuration panel
+function toggleConfigPanel() {
+	if (MINIMIZED) {
+		if (!PINNED) {
+			$("#rightpane-inner").show();
+		} else {
+			$("#chatwrap").show();
 		}
-		addToPlaylist(link, "end");
-		LASTADD=time;
+		$("#azukirow, #leftpane-inner").show();
+		!$("#hidemotd-btn").hasClass('btn-danger') ? $("#motdrow").show() : '';
+		!$("#hideann-btn").hasClass('btn-danger') ? $("#announcements").show() : '';
+		!$("#hidehf-btn").hasClass('btn-danger') ? $("footer").show() : '';
+		pinupbtn.show();
+		expandbtn.show();
+		scrollbtn.show();
+		layoutbtn.removeClass('btn-danger').addClass('btn-success')
+			.html('<span class="glyphicon glyphicon-cog"></span> Layout');
+		$("#min-layout").prop('checked', false);
+		$("#plcontrol button, #db-btn, #newpollbtn").removeAttr('disabled');
+		MINIMIZED=false;
+	} else {
+		toggleDiv(configwrap);
+		if (configwrap.css('display')=="none") {
+			layoutbtn.removeClass('btn-success');
+		} else {
+			layoutbtn.addClass('btn-success');
+		}
+		LAYOUTBOX = !LAYOUTBOX;
+		setOpt(CHANNEL.name + "_LAYOUTBOX", LAYOUTBOX);
 	}
 }
 
+// show layout configuration modal window
+function showConfig() {
+	createModal("Layout Configuration");
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	form=$('<form />').addClass('form-horizontal').appendTo(body);
 
+	function addOption(lbl, thing) {
+		g=$('<div />').addClass('form-group').appendTo(form);
+		$('<label />').addClass('control-label col-sm-4').text(lbl).appendTo(g);
+		c=$('<div />').addClass('col-sm-8').appendTo(g);
+		thing.appendTo(c);
+	}
 
-/* ----- User Interface ----- */
+	playerlocation=$('<select />').addClass('form-control');
+	$('<option />').attr('value', 'left').text('left').appendTo(playerlocation);
+	$('<option />').attr('value', 'right').text('right').appendTo(playerlocation);
+	playerlocation.val(UCONF.player);
+	addOption('Player location', playerlocation);
 
+	userlistlocation=$('<select />').addClass('form-control');
+	$('<option />').attr('value', 'left').text('left').appendTo(userlistlocation);
+	$('<option />').attr('value', 'right').text('right').appendTo(userlistlocation);
+	userlistlocation.val(UCONF.userlist);
+	addOption('Userlist location', userlistlocation);
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	queuelocation=$('<select />').addClass('form-control');
+	$('<option />').attr('value', 'left').text('left').appendTo(queuelocation);
+	$('<option />').attr('value', 'right').text('right').appendTo(queuelocation);
+	queuelocation.val(UCONF.queue);
+	addOption('Playlist location', queuelocation);
 
+	queuesize=$('<select />').addClass('form-control');
+	$('<option />').attr('value', 'wide').text('wide').appendTo(queuesize);
+	$('<option />').attr('value', 'narrow').text('narrow').appendTo(queuesize);
+	queuesize.val(UCONF.qsize);
+	addOption('Playlist column size', queuesize);
 
-// adding important hidden reference row
+	mainlocation=$('<select />').addClass('form-control');
+	$('<option />').attr('value', 'top').text('above playlist').appendTo(mainlocation);
+	$('<option />').attr('value', 'bottom').text('below playlist').appendTo(mainlocation);
+	mainlocation.val(UCONF.main);
+	addOption('Player & chat', mainlocation);
 
+	motdlocation=$('<select />').addClass('form-control');
+	$('<option />').attr('value', 'top').text('channel top').appendTo(motdlocation);
+	$('<option />').attr('value', 'bottom').text('channel bottom').appendTo(motdlocation);
+	motdlocation.val(UCONF.motd);
+	addOption('MOTD & announcements', motdlocation);
 
-zerorow = $('<div id="zerorow" class="row" />').insertBefore("#motdrow");
+	logoinsert=$('<select />').addClass('form-control');
+	$('<option />').attr('value', 'no').text('no image').appendTo(logoinsert);
+	$('<option />').attr('value', 'user').text('user image').appendTo(logoinsert);
+	for (i in TopUserLogo) {
+		$("<option />").attr('value', i).text(TopUserLogo[i][0]).appendTo(logoinsert);
+	}
+	logoinsert.val(UCONF.logo);
+	addOption('Top logo', logoinsert);
 
+	userlogo=$('<input />').addClass('form-control').attr('type', 'text')
+		.attr('placeholder', 'Image URL');
+	userlogo.val('');
+	addOption('User logo URL', userlogo);
 
-// adding top logo row
+	userlogoht=$('<input />').addClass('form-control').attr('type', 'text')
+		.attr('placeholder', 'Image Height (in px)');
+	userlogoht.val('');
+	addOption('User logo height', userlogoht);
 
+	if (UCONF.logo!="user") {
+		userlogo.parent().parent().hide();
+		userlogoht.parent().parent().hide();
+	} else {
+		userlogo.val(UCONF.logourl);
+		userlogoht.val(UCONF.logoht);
+	}
 
-azukirow = $('<div id="azukirow" class="row" />').insertBefore(zerorow);
+	headermode=$('<select />').addClass('form-control')
+	$('<option />').attr('value', 'fixed').text('fixed').appendTo(headermode);
+	$('<option />').attr('value', 'detached').text('detached').appendTo(headermode);
+	$('<option />').attr('value', 'mouseover').text('mouseover').appendTo(headermode);
+	headermode.val(UCONF.header);
+	addOption('Header menu', headermode);
 
+	customcss=$('<select />').addClass('form-control');
+	$('<option />').attr('value', 'no').text('no').appendTo(customcss);
+	$('<option />').attr('value', 'yes').text('yes').appendTo(customcss);
+	customcss.val(UCONF.css);
+	addOption('Custom CSS', customcss);
 
-// adding video wrap if user has enabled "Hide Player" option
+	usercss=$('<textarea rows="8" />').addClass('form-control')
+		.attr('placeholder', 'Insert CSS code');
+	usercss.val(UCONF.csscode);
+	addOption('CSS code', usercss);
 
+	if (UCONF.css=="no") {
+		usercss.parent().parent().hide();
+	}
+	if (UI_Pixel === 1) {
+		pixl=$('<select />').addClass('form-control');
+		$('<option />').attr('value', 'before').text('before username').appendTo(pixl);
+		$('<option />').attr('value', 'after').text('after username').appendTo(pixl);
+		pixl.val(UCONF.pixl);
+		addOption('Chat pixel location', pixl);
 
-if (USEROPTS.hidevid) {
-	$("#chatwrap, #chatline").removeClass('col-lg-12 col-md-12').addClass('col-lg-5 col-md-5');
-	videowrap = $('<div id="videowrap" class="col-lg-7 col-md-7" />')
-	  .insertBefore("#chatwrap");
-	currenttitle = $('<p id="currenttitle" />')
-	  .html('Currently Playing: '+$(".queue_active a").html())
-	  .appendTo(videowrap);
-	ytapiplayer = $('<div id="ytapiplayer" />')
-	  .appendTo(videowrap);
+		pixh=$('<input type="text" placeholder="Default height is 16" />').addClass('form-control');
+		pixh.val(UCONF.pixh);
+		addOption('Chat pixel height', pixh);
+	}
+	showname=$('<select />').addClass('form-control');
+	$('<option />').attr('value', 'yes').text('yes').appendTo(showname);
+	$('<option />').attr('value', 'no').text('no').appendTo(showname);
+	showname.val(UCONF.showname);
+	addOption('Always show username in chat', showname);
+	
+	upti=$('<input type="text" placeholder="Default interval is 60 seconds." />').addClass('form-control');
+	upti.val(UCONF.upti);
+	addOption('Update data interval', upti);
+	
+	ltim=$('<input type="text" placeholder="Default timezone is GMT' + (getTZ() < 0 ? getTZ() : "+" + getTZ()) + '." />').addClass('form-control');
+	ltim.val(UCONF.ltim);
+	addOption('Set timezone for schedule', ltim);
+	
+	chatlines=$('<input type="text" placeholder="Default chat lines is 150." />').addClass('form-control');
+	chatlines.val(CHATMAXSIZE);
+	addOption('Show x lines of chat before deleting', chatlines);
 
+	submit=$('<button />').addClass('btn btn-default btn-success').text("Save changes").appendTo(footer);
+	reset=$('<button />').addClass('btn btn-default pull-left').text('Default').appendTo(footer);
 
-	html='According to your User Preferences, video player is hidden. '
-	  + 'Click a button below to continue hiding player. '
-	  + 'Click default "Reload" icon to show player in this session. '
-	  + 'If you\'ll stay in "Chat Only" mode, functionality of this channel will be limited.<br /><br />';
-	makeAlert("No Player", html).appendTo(ytapiplayer);
+	logoinsert.on("change", function() {
+		if (logoinsert.val()=="user") {
+			userlogo.parent().parent().show();
+			userlogoht.parent().parent().show();
+			userlogo.val(UCONF.logourl);
+			userlogoht.val(UCONF.logoht);
+		} else {
+			userlogo.parent().parent().hide();
+			userlogoht.parent().parent().hide();
+		}
+	});
 
+	customcss.on("change", function() {
+		if (customcss.val()=="yes") {
+			usercss.parent().parent().show();
+		} else {
+			usercss.parent().parent().hide();
+		}
+	});
 
-	staybtn = $('<button id="stay-btn" class="btn btn-default btn-sm">Stay In "Chat Only" Mode</button>')
-	  .appendTo("#ytapiplayer .alert")
-	  .on("click", function() {
-        	videowrap.remove();
-		$("#chatwrap").removeClass().addClass('col-lg-12 col-md-12');
-		$("#configform, #modeform, #pinup-btn").hide();
-		fitChat("auto");
+	submit.on("click", function() {
+		outer.modal('hide');
+
+		UCONF.player=playerlocation.val();
+		setOpt(CHANNEL.name + "_player",UCONF.player);
+
+		UCONF.userlist=userlistlocation.val();
+		setOpt(CHANNEL.name + "_userlist",UCONF.userlist);
+
+		UCONF.queue=queuelocation.val();
+		setOpt(CHANNEL.name + "_queue",UCONF.queue);
+
+		UCONF.qsize=queuesize.val();
+		setOpt(CHANNEL.name + "_qsize",UCONF.qsize);
+
+		UCONF.main=mainlocation.val();
+		setOpt(CHANNEL.name + "_main",UCONF.main);
+
+		UCONF.motd=motdlocation.val();
+		setOpt(CHANNEL.name + "_motd",UCONF.motd);
+
+		if (logoinsert.val()=="user") {
+			if (userlogo.val()=="") {
+				logoinsert.val("no");
+			} else if (userlogoht.val()=="") {
+				userlogoht.val('200');
+			} else {
+				a=userlogoht.val()*1;
+				if (isNaN(a) || a<1) {
+					userlogoht.val('200');
+				}
+			}
+			UCONF.logourl=userlogo.val();
+			UCONF.logoht=userlogoht.val();
+			setOpt(CHANNEL.name + "_logourl",UCONF.logourl);
+			setOpt(CHANNEL.name + "_logoht",UCONF.logoht);
+		}
+
+		UCONF.logo=logoinsert.val();
+		setOpt(CHANNEL.name + "_logo",UCONF.logo);
+
+		UCONF.header=headermode.val();
+		setOpt(CHANNEL.name + "_header",UCONF.header);
+
+		if (customcss.val()=="yes") {
+			UCONF.csscode=usercss.val();
+			setOpt(CHANNEL.name + "_csscode",UCONF.csscode);
+		}
+
+		UCONF.css=customcss.val();
+		setOpt(CHANNEL.name + "_css",customcss.val());
+		if (UI_Pixel === 1) {
+			UCONF.pixl=pixl.val();
+			setOpt(CHANNEL.name + "_pixl",UCONF.pixl);
+			
+			UCONF.pixh=pixh.val();
+			setOpt(CHANNEL.name + "_pixh",UCONF.pixh);
+			$("img.user").each(function() {
+				$(this).prop('height', UCONF.pixh);
+			})
+		}
+		UCONF.showname=showname.val();
+		setOpt(CHANNEL.name + "_showname",UCONF.showname);
+		
+		UCONF.upti=parseFloat(upti.val());
+		UCONF.upti < 2 ? UCONF.upti = 2 : "";
+		setOpt(CHANNEL.name + "_upti",UCONF.upti);
+		clearTimeout(UPDTOUT);
+		updateCurrentlyAiring();
+
+		UCONF.ltim=parseFloat(ltim.val()) || getTZ();
+		setOpt(CHANNEL.name + "_ltim",UCONF.ltim);
+		
+		CHATMAXSIZE=parseInt(chatlines.val()) || 150;
+		setOpt(CHANNEL.name + "_CHATMAXSIZE",CHATMAXSIZE);
+		
+		setLayout();
+		scrollChat();
+		scrollQueue();
+		showProfiles();
+	});
+
+	reset.on("click", function() {
+		outer.modal("hide");
+
+		UCONF.player = defplayer;
+		setOpt(CHANNEL.name + "_player", defplayer);
+
+		UCONF.userlist = defuserlist;
+		setOpt(CHANNEL.name + "_userlist", defuserlist);
+
+		UCONF.queue = defqueue;
+		setOpt(CHANNEL.name + "_queue", defqueue);
+
+		UCONF.qsize = "wide";
+		setOpt(CHANNEL.name + "_qsize",UCONF.qsize);
+
+		UCONF.main = "top";
+		setOpt(CHANNEL.name + "_main",UCONF.main);
+
+		UCONF.motd = "top";
+		setOpt(CHANNEL.name + "_motd",UCONF.motd);
+
+		UCONF.logo = "no";
+		setOpt(CHANNEL.name + "_logo",UCONF.logo);
+
+		UCONF.header = "detached";
+		setOpt(CHANNEL.name + "_header",UCONF.header);
+
+		UCONF.css = "no";
+		setOpt(CHANNEL.name + "_css",UCONF.css);
+		if (UI_Pixel === 1) {
+			UCONF.pixl="before";
+			setOpt(CHANNEL.name + "_pixl",UCONF.pixl);
+		
+			UCONF.pixh=16;
+			setOpt(CHANNEL.name + "_pixh",UCONF.pixh);
+		}
+		UCONF.showname="no";
+		setOpt(CHANNEL.name + "_showname",UCONF.showname);
+		
+		UCONF.upti=60;
+		setOpt(CHANNEL.name + "_upti",UCONF.upti);
+		clearTimeout(UPDTOUT);
+		updateCurrentlyAiring();
+		
+		UCONF.ltim=getTZ();
+		setOpt(CHANNEL.name + "_ltim",UCONF.ltim);
+		
+		CHATMAXSIZE=150;
+		setOpt(CHANNEL.name + "_CHATMAXSIZE",CHATMAXSIZE);
+
+		setLayout();
+		scrollChat();
+		scrollQueue();
+		showProfiles()
 	});
 }
 
+// toggle fluid layout
+function toggleFluidLayout() {
+	if (!$("body").hasClass('fullscreen')) {
+		$("body").addClass('fullscreen');
+		$(".container").removeClass('container').addClass('container-fluid');
+		$("footer .container-fluid").removeClass('container-fluid').addClass('container');
+	} else {
+		$("body").removeClass('fullscreen');
+		$(".container-fluid").removeClass('container-fluid').addClass('container');
+	}
+	handleWindowResize();
+	scrollChat();
+}
 
-// changing initial layout to compact for new users
+// toggle minimized layout
+function toggleMinLayout() {
+	if (!MINIMIZED) {
+		if (!PINNED) {
+			$("#rightpane-inner").hide();
+		} else {
+			$("#chatwrap").hide();
+		}
+		
+		$("#azukirow, #motdrow, #announcements, #leftpane-inner, footer").hide();
+		pinupbtn.hide();
+		expandbtn.hide();
+		scrollbtn.hide();
+		layoutbtn.removeClass('btn-success').addClass('btn-danger').html('Maximize');
+		$("#plcontrol button, #db-btn, #newpollbtn").attr('disabled', 'disabled');
+		MINIMIZED=true;
+	}
+}
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+/* ----- User Interface ----- */
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// adding important hidden reference row
+zerorow = $('<div id="zerorow" class="row" />').insertBefore("#motdrow");
+
+// adding top logo row
+azukirow = $('<div id="azukirow" class="row" />').insertBefore(zerorow);
+
+// adding video wrap if user has enabled "Hide Player" option
+if (USEROPTS.hidevid) {
+	$("#chatwrap, #chatline").removeClass('col-lg-12 col-md-12').addClass('col-lg-5 col-md-5');
+	videowrap = $('<div id="videowrap" class="col-lg-7 col-md-7" />')
+		.insertBefore("#chatwrap");
+	currenttitle = $('<p id="currenttitle" />')
+		.html('Currently Playing: ' + $(".queue_active a").html())
+		.appendTo(videowrap);
+	ytapiplayer = $('<div id="ytapiplayer" />')
+		.appendTo(videowrap);
+
+	html = 'According to your User Preferences, video player is hidden. '
+		+ 'Click a button below to continue hiding player. '
+		+ 'Click default "Reload" icon to show player in this session. '
+		+ 'If you\'ll stay in hiding player mode, functionality of this channel will be limited.<br /><br />';
+	makeAlert("No Player", html).appendTo(ytapiplayer);
+	$("#ytapiplayer .alert").css({'text-align':'left', 'margin':'0px -15px'});
+
+	staybtn = $('<button id="stay-btn" class="btn btn-default btn-sm">Stay In "Chat Only" Mode</button>')
+		.appendTo("#ytapiplayer .alert")
+		.on("click", function() {
+			videowrap.remove();
+			$("#chatwrap").removeClass().addClass('col-lg-12 col-md-12');
+			$("#configform, #modeform, #pinup-btn").hide();
+			fitChat("auto");
+		});
+}
+
+// changing initial layout to compact
 $("body").addClass('fluid');
 compactLayout();
-setLayout();
-scrollChat();
-scrollQueue();
-
+toggleFluidLayout();
 
 // adding "id" attributes
-
-
 $(".navbar-collapse .navbar-nav").children().first().attr('id', 'home-link');
 $("#home-link").next().attr('id', 'account-link');
 $("#account-link").next().attr('id', 'options-link');
 $("#options-link").next().attr('id', 'channelset-link');
 $("#channelset-link").next().attr('id', 'layout-link');
 
-
 // changing location of some layout elements
-
-
 $("#main").prepend($("#drinkbar").detach());
 $("#videowrap").append('<div id="playercontrols" class="btn-group" />');
 $("#playercontrols").append($("#mediarefresh").detach());
 $("#rightpane").prepend($("#videocontrols").detach());
 $("#rightpane").prepend($("#plcontrol").detach());
-$("#leftpane").prepend($("#newpollbtn").detach());
+$("#leftpane").prepend($("#newpollbtn,#emotelistbtn").detach());
 $("#plcontrol").prepend($("#showmediaurl").detach());
 
-
 // header and footer links open in a new tab
-
-
 $("#home-link a, #account-link ul a, .credit a").attr('target', '_blank');
 
-
-// adding default CyTube Plus CSS if not set
-
-
-if ($("#chanexternalcss").length<1) {
-	url='https://dl.dropboxusercontent.com/s/hbhlrmys5piztgo/main.css';
-	$("head").append('<link id="chanexternalcss" href="'+url+'" rel="stylesheet" type="text/css">');
-}
-
-
-setUserCSS();
-
-
 // adding favicon
-
-
-if (UI_Favicon=="1" && Favicon_URL!="") {
+if (UI_Favicon === 1 && Favicon_URL!=="") {
 	$(document).ready(function() {
-		$('<link id="chanfavicon" href="'+Favicon_URL+'" type="image/x-icon" rel="shortcut icon" />')
-		  .appendTo("head");
+		chanfavicon = $('<link id="chanfavicon" href="' + Favicon_URL + '" type="image/x-icon" />')
+			.attr('rel', 'shortcut icon')
+			.appendTo("head");
 	});
 }
-
 
 // changing carets to unicode characters
-
-
-$("nav .caret, #cs-edit-dd-toggle .caret").removeClass('caret').html(' ▾');
-
+$("nav .caret, #cs-edit-dd-toggle .caret").removeClass('caret').html(' <strong>▾</strong>');
 
 // adding important messages to "Options"
-
-
 text1='Please use "Personal theme" selector in the room configuration box to select a theme for this channel. ';
 text2='Please use "Click to configure" button in the room configuration box to configure this channel. ';
-text3='If you want to make global changes, please go to another channel, or make changes before accepting '
- + 'special features.';
+text3='If you want to make global changes, please go to another channel.';
 $("#us-theme").hide();
-$("#us-theme").parent().append('<p class="text-danger">'+text1+''+text3+'</p>');
+$("#us-theme").parent().append('<p class="text-danger">' + text1 + '' + text3 + '</p>');
 $("#us-layout").hide();
-$("#us-layout").parent().append('<p class="text-danger">'+text2+''+text3+'</p>');
+$("#us-layout").parent().append('<p class="text-danger">' + text2 + '' + text3 + '</p>');
 
+function saveEmotes(url, filename, emote) {
+	// Get file name from url.
+	var xhr = new XMLHttpRequest();
+	xhr.responseType = 'blob';
+	xhr.onreadystatechange = function (data) {
+		if (xhr.readyState === 4) { // request is done
+			if (xhr.status !== 200) { 
+				FAILEDEMOTES[FAILEDEMOTES.length] = emote + ' \n';
+			} else {
+				var a = document.createElement('a');
+				a.href = window.URL.createObjectURL(xhr.response); // xhr.response is a blob
+				a.download = filename; // Set the file name.
+				a.style.display = 'none';
+				document.body.appendChild(a);
+				a.click();
+				delete a;
+			}
+			if (CHANNEL.emotes[CHANNEL.emotes.length - 1].name === emote && FAILEDEMOTES[1] !== undefined) {
+				sssss = 's';
+				FAILEDEMOTES.length - 1 === 1 ? sssss = '' : '';
+				FAILEDEMOTES[0] = 'The following ' + (FAILEDEMOTES.length - 1) + ' emote' + sssss + ' failed to download: \n'
+				for (var k = 1; k < FAILEDEMOTES.length; k++) {
+					FAILEDEMOTES[0] += FAILEDEMOTES[k];
+				}
+				alert(FAILEDEMOTES[0]);
+				var pom = document.createElement('a');
+				pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(FAILEDEMOTES[0]));
+				pom.setAttribute('download', 'Undownloadable emotes');
+				pom.click();
+				delete pom;
+			} else if (CHANNEL.emotes[CHANNEL.emotes.length - 1].name === emote && FAILEDEMOTES[1] === undefined) {
+				alert('All emotes were downloaded successfully.');
+			}
+		}
+	};
+	xhr.open('GET', url);
+	xhr.send();
+}
+function grabemotes() {
+	if (!DOWNLOADING) {
+		var emtA = CHANNEL.emotes;
+		FAILEDEMOTES = ['The following 0 emotes failed to download: \n'];
+		var confirmEmoteList = confirm("Do you want the emote list?");
+		var confirmEmoteDownload = confirm("Are you sure you want to download " + emtA.length + " emotes?");
+		if (confirmEmoteList) {
+			EL(emtA);
+		}
+		if (confirmEmoteDownload) {
+			var emoteInterval = parseInt(prompt("Enter milliseconds between downloading each emote. (200 is default)", 200));
+			if (isNaN(emoteInterval)) {
+				emoteInterval = 200;
+			} else if (emoteInterval < 25) {
+				emoteInterval = 25;
+			}
+			emti = 0;
+			DOWNLOADING = true;
+			downloadEmotesSlowly = setInterval(function() {
+				firstcolon = emtA[emti].name.indexOf(":");
+				lastcolon = emtA[emti].name.lastIndexOf(":");
+				if (firstcolon > -1 && lastcolon !== firstcolon) {
+					emotenamesplit = emtA[emti].name.split(":");
+					emotenamesplit[0].length > 0 ? emotenamesplit[1] = emotenamesplit.join("COLON") : '';
+					emotename = emotenamesplit[1];
+				} else {
+					emotename = emtA[emti].name;
+				}
+				emotename = emotename.toLowerCase().replace(/\./g, "PERIOD")
+					.replace(/:/g, "COLON").replace(/\//g, "FORWARDSLASH").replace(/\\/g, "BACKSLASH").replace(/>/g, "RIGHTARROW").replace(/</g, "LEFTARROW").replace(/\|/g, "SHIFTBACKSLASH").replace(/\*/g, "ASTERISK").replace(/\?/g, "QUESTIONMARK").replace(/"/g, "DOUBLEQUOTES")
+					+ emtA[emti].image.substr(emtA[emti].image.lastIndexOf('.'), emtA[emti].image.length);
+				saveEmotes(emtA[emti].image, emotename, emtA[emti].name);
+				if (emti === emtA.length - 1) {
+					DOWNLOADING = false;
+					clearInterval(downloadEmotesSlowly);
+				} else {
+					emti++;
+				}
+			}, emoteInterval);	
+		}
+	} else {
+		alert("Currently downloading emotes.");
+	}
+}
+function EL(eA) {
+	var emtAL = "";
+	for (i in eA) {
+		emtAL += eA[i].name + '\t' + eA[i].image + '\n';
+	}
+	var a = document.body.appendChild(
+		document.createElement("a")
+	);
+	a.download = "emotelist.txt";
+	a.href = "data:text/plain;base64," + btoa(unescape( encodeURIComponent(emtAL)));
+	a.click();
+	a.remove();
+}
+emotesdownload = $('<button id="cs-emotes-download" class="btn btn-default pull-right" title="Download emotes" />')
+	.text('Download emotes')
+	.insertAfter("#cs-emotes-import")
+	.on("click",grabemotes);
 
 // creating channel settings filters preparation button
+csfontsimport = $('<button id="cs-fonts-import" class="btn btn-default pull-right" />')
+	.text('Prepare fonts filters')
+	.insertAfter("#cs-chatfilters-import")
+	.on("click",prepareFilters);
 
-
-csfontsimport = $('<button id="cs-fonts-import" class="btn btn-default pull-right">Prepare fonts filters</button>')
-  .insertAfter("#cs-chatfilters-import")
-  .on("click", function() {
-	prepareFilters();
-  });
-
-
-// fixing layout after saving global user options
-
-
+// fix layout after saving user options
 $("#useroptions .modal-footer button:nth-child(1)").on("click", function() {
-	USEROPTS.hidevid ? location.reload() : ''
-	html='All changes are applying globally, but this channel uses its own layout. '
-	  + 'Please use "Click to configure" button to configure this channel layout.<br />'
-	  + 'Reload player if the wrong title is displaying. '
-	  + 'In HD layout or if player is removed, you may not see some elements due to CyTube API. '
-	  + 'If so, reload channel.';
-	makeAlert("You have changed global User Preferences", html, "alert-info").appendTo("#announcements");
+	USEROPTS.hidevid ? location.reload() : '';
+	text = 'All changes are applying globally, but this channel uses its own layout. '
+		+ 'Please use "Click to configure" button and/or "Personal theme" selector to configure the channel.<br />'
+		+ 'Reload player if the wrong title is displaying. '
+		+ 'In HD layout or if player is removed, you may not see some elements due to CyTube API. '
+		+ 'If so, reload channel.';
+	makeAlert("User Preferences change", text, "alert-info").appendTo("#announcements");
 	compactLayout();
 	setLayout();
-	FLUID ? fluidLayout() : '';
-	setUserCSS();
 	scrollChat();
 	scrollQueue();
+	$("body").hasClass('fullscreen') ? fluidLayout() : '';
 });
 
-
 // changing channel name
-
-
-if (UI_ChannelName=="1" && ChannelName_Caption!="") {
-	$(".navbar-brand").html(ChannelName_Caption);
-}
-
+(UI_ChannelName === 1 && ChannelName_Caption !== "") ? $(".navbar-brand").html(ChannelName_Caption) : '';
 
 // adding channel small logo
-
-
-if (UI_MiniLogo=="1" && MiniLogo_URL!="") {
-	$('<img id="chanavatar" src="'+MiniLogo_URL+'" />').prependTo(".navbar-brand");
-}
-
+(UI_MiniLogo === 1 && MiniLogo_URL !== "") ? chanavatar = $('<img id="chanavatar" src="' + MiniLogo_URL + '" height="20" />').prependTo(".navbar-brand") : '';
 
 // adding header dropdown menu
-
-
-if (UI_HeaderDropMenu=="1") {
-	HeaderDropMenu_Title=="" ? HeaderDropMenu_Title='Menu' : '';
+if (UI_HeaderDropMenu === 1) {
+	HeaderDropMenu_Title == "" ? HeaderDropMenu_Title = 'Menu' : '';
 	headerdrop = $('<li id="headerdrop" class="dropdown" />')
-	  .insertAfter("#home-link");
-	$('<a class="dropdown-toggle" data-toggle="dropdown" href="#" />')
-	  .html(HeaderDropMenu_Title+' ▾')
-	  .appendTo(headerdrop);
+		.insertAfter("#home-link");
+	$('<a class="dropdown-toggle" data-toggle="dropdown" href="#" >' + HeaderDropMenu_Title + ' <strong>▾</strong>')
+		.appendTo(headerdrop);
 	headermenu = $('<ul id="headermenu" class="dropdown-menu" />')
-	  .appendTo(headerdrop);
+		.appendTo(headerdrop);
 
-
-	HeaderDropMenu_Array.length<1 ? HeaderDropMenu_Array=[['no menu available', '']] : '';
-	for (i in HeaderDropMenu_Array) {
-		title=HeaderDropMenu_Array[i][0];
-		link=HeaderDropMenu_Array[i][1];
-		if (link=="") {
-			headermenu.append('<li class="dropdown-header">'+title+'</li>');
+	HeaderDropMenu_Items.length < 1 ? HeaderDropMenu_Items = [['No menu available', '']] : '';
+	for (i in HeaderDropMenu_Items) {
+		title = HeaderDropMenu_Items[i][0];
+		link = HeaderDropMenu_Items[i][1];
+		if (link === "") {
+			headermenu.append('<li class="dropdown-header">' + title + '</li>');
 		} else {
 			$('<li class="header-drop-link" />')
-			  .append('<a href="'+link+'" target="_blank">'+title+'</a>')
-			  .appendTo(headermenu);
+				.append('<a href="' + link + '" target="_blank">' + title + '</a>')
+				.appendTo(headermenu);
 		}
 	}
 }
 
+function setPanelProperties(div) {
+	height = $("#userlist").height();
+	width = $("#userlist").width();
+	$(div).css({'background-color':'black', 'height':height + 2 + 'px', 'width':width + 'px'});
+}
 
-// optional removing of "Layout" menu from header
-
-
-if (UI_RemoveLayoutMenu=="1") {
-	$("#layout-link").remove();
-} else {
-	$("#layout-link li:nth-child(2) a").on("click", function() {
-		$("#configform, #modeform, #pinup-btn").hide();
-		fitChat("auto");
+function antiAFKfunction() {
+	$(".userlist_item").each(function() {
+		var ulthis = $(this);
+		if (ulthis.children().eq(1).text() === CLIENT.name && ulthis.hasClass("userlist_afk")) {
+			socket.emit("chatMsg", {msg: '/afk'});
+			return;
+		}
 	});
 }
 
+function turnOffBtn() {
+	turnoffbtn = true;
+	$("#chatfunc-dropdown").find('button').each(function() {
+		$(this).hasClass("btn-danger") ? turnoffbtn = false : '';
+	});
+	turnoffbtn ? $("#chatflair").removeClass("label-success").addClass("label-default") : $("#chatflair").removeClass("label-default").addClass("label-success");
+} 
 
-// changing some button captions or welcome message
+function makeChatPanel() {
+	$("#userlist").append('<div id="chatfunc-dropdown" />');
+	$("#chatfunc-dropdown").append('<div id="spamclear">Auto clear chat</div>');
+	spamcleardiv = $("<div/>").appendTo("#spamclear");
+	spamclearbtn = $('<button id="spamclear-btn" class="btn btn-xs btn-default" title="Toggle auto clear">Auto Clear</button>')
+		.appendTo(spamcleardiv)
+		.on("click", function() {
+			if (!CLEARING) {
+				$(this).text('Stop Clearing').addClass('btn-danger');
+				CLEARING = setInterval(function() {
+					socket.emit("chatMsg", {msg: '/clear'});
+				}, 500);
+			} else {
+				$(this).text('Auto Clear').removeClass('btn-danger');
+				clearInterval(CLEARING);
+				CLEARING = false;
+			}
+			turnOffBtn();
+		});
+		
+	$("#chatfunc-dropdown").append('<div id="antiafk">Never go AFK</div>');
+	antiafkdiv = $("<div/>").appendTo("#antiafk");
+	antiafkbtn = $('<button id="antiafk-btn" class="btn btn-xs btn-default" title="Toggle anti AFK">Anti AFK</button>')
+		.appendTo(antiafkdiv)
+		.on("click", function() {
+			if (!ANTIAFK) {
+				antiAFKfunction();
+				$(this).addClass('btn-danger');
+				ANTIAFK = socket.on("setAFK", antiAFKfunction);
+			} else {
+				$(this).removeClass('btn-danger');
+				socket.removeListener("setAFK", antiAFKfunction);
+				ANTIAFK = false;
+			}
+			turnOffBtn();
+		});
+	
+	$("#chatfunc-dropdown").append('<div id="imgsize">Adjust image/webm size</div>');
+	imgsizediv = $("<div/>").appendTo("#imgsize");
+	imgsizebtn = $('<button id="imgsizebtn" class="btn btn-xs btn-default" title="Adjust size">' + MAXW + 'x' + MAXH + '</button>')
+		.appendTo(imgsizediv)
+		.on("click", function() {
+			var tempvar = $("#chatline").val();
+			var tempvar2 = tempvar.split(" ");
+			if (tempvar2[0] > 0 && tempvar2[1] > 0) {
+				MAXW = tempvar2[0];
+				setOpt(CHANNEL.name + "_MAXW", MAXW);
+				MAXH = tempvar2[1];
+				setOpt(CHANNEL.name + "_MAXH", MAXH);
+				$(".pm-buffer.linewrap img, .pm-buffer.linewrap video, #messagebuffer.linewrap img, #messagebuffer.linewrap video").css({"max-width": MAXW + "px","max-height": MAXH + "px"});
+				$("#chatline").val("");
+				$(this).text(MAXW + 'x' + MAXH);
+			} else {
+				alert("Invalid input. Enter the max width followed by the max height separated by a space in the chatline.\nEx. \"400 200\"");
+			}
+	});
+	
+	$("#chatfunc-dropdown").append('<div id="spin">Toggle spinning images/text</div>');
+	spindiv = $("<div/>").appendTo("#spin");
+	spinbtn = $('<button id="spinbtn" class="btn btn-xs btn-default" title="Toggle spin">Spin: On</button>')
+		.appendTo(spindiv)
+		.on("click", function() {
+			if (!SPINTOG) {
+				$(this).text("Spin: On").removeClass('btn-danger');
+				$(".nospin").addClass("spin").removeClass("nospin");
+			} else {
+				$(this).text("Spin: Off").addClass('btn-danger');
+				$(".spin").addClass("nospin").removeClass("spin");
+			}
+			SPINTOG = !SPINTOG;
+			turnOffBtn();
+	});
+	
+	$("#chatfunc-dropdown").append('<div id="marquee">Toggle moving images/text</div>');
+	marqueediv = $("<div/>").appendTo("#marquee");
+	marqueebtn = $('<button id="marqueebtn" class="btn btn-xs btn-default" title="Toggle movement">Move: On</button>')
+		.appendTo(marqueediv)
+		.on("click", function() {
+			if (!MQTOG) {
+				$(this).text("Move: On").removeClass('btn-danger');
+				changeElementTag("dmarquee", "marquee");
+			} else {
+				$(this).text("Move: Off").addClass('btn-danger');
+				changeElementTag("marquee", "dmarquee");
+			}
+			MQTOG = !MQTOG;
+			turnOffBtn();
+	});
+	
+	$("#chatfunc-dropdown").append('<div id="rmvspoil">Remove spoiler to read chat while laying down</div>');
+	rmvspoildiv = $("<div/>").appendTo("#rmvspoil");
+	rmvspoilbtn = $('<button id="rmvspoilbtn" class="btn btn-xs btn-default" title="Remove spoiler">NO SPOIL</button>')
+		.appendTo(rmvspoildiv)
+		.on("click", function() {
+			if (!SPOILER) {
+				$(this).text("SPOILING").addClass('btn-danger');
+				rmvSpoil();
+			} else {
+				$(this).text("NO SPOIL").removeClass('btn-danger');
+				$(".nospoiler").addClass("spoiler").removeClass("nospoiler").each(function() {
+					$(this).html($(this).html().replace(/\[sp\]/,"").replace(/\[\/\]/,""));
+				});
+			}
+			SPOILER = !SPOILER;
+			turnOffBtn();
+	});
+}
+makeChatPanel();
+chatfunc = $("#chatfunc-dropdown").detach();
 
-
-if (UI_CustomCaptions=="1") {
-	if (CustomCaptions_Array['add']!="") {
-		$("#showmediaurl").html(CustomCaptions_Array['add']);
-	}
-	if (CustomCaptions_Array['refresh']!="") {
-		$("#mediarefresh").html(CustomCaptions_Array['refresh']);
-	}
-	if (CustomCaptions_Array['voteskip']!="") {
-		socket.on("voteskip", changeSkipText);
-		changeSkipText();
-	}
-	if (CustomCaptions_Array['welcome']!="") {
-		socket.on("login", changeWelcomeText);
-		changeWelcomeText();
-	}
+function rmvSpoil() {
+	$(".spoiler").addClass("nospoiler").removeClass("spoiler").each(function() {
+		$(this).html("[sp]" + $(this).html() + "[/]");
+	});
 }
 
-
-// deleting previous MOTD
-
-
-UI_MOTDDelete=="1" ? $("#motd").html('') : '';
-
-
-// setting MOTD
-
-
-if (UI_MOTDAutoLogo=="1" || UI_RulesBtn=="1" || (UI_MOTDTabs=="1" && MOTDTabs_Array.length>0)) {
-	socket.on("setMotd", changeMOTD);
-	changeMOTD();
+function changeElementTag(oElem,nElem) {
+	$(oElem).each(function(index) {
+		var oldElement = this;
+		var newElement = $("<" + nElem + ">" + $(this).text() + "</" + nElem + ">");
+		$.each(this.attributes, function(index) {
+			(newElement).attr(oldElement.attributes[index].name, oldElement.attributes[index].value);
+		});
+		$(this).after(newElement).remove();
+	});
 }
 
-
-// setting MOTD logo
-
-
-if (UI_MOTDAutoLogo=="1") {
-	if (MOTDAutoLogo_Mode!="1" && MOTDAutoLogo_Mode!="2" && MOTDAutoLogo_Mode!="3" && MOTDAutoLogo_Mode!="7") {
-		MOTDAutoLogo_Mode='1';
-	}
-	if (MOTDAutoLogo_Mode=="3") {
-		if (typeof MOTDAutoLogo_Interval!=="number" || MOTDAutoLogo_Interval<1) {
-			MOTDAutoLogo_Interval=20;
+/*subchan = $('<span id="subchan" class="label label-default pull-right pointer" title="Change chat channel." >ALL</strong></div>') 
+	.insertAfter("#modflair")
+	.on("click",function() {
+		if (SUBCHAN === 1 || SUBCHAN === 2) { //SUBCHANNEL
+			SUBCHAN++;
+		} else {
+			SUBCHAN = 1;
 		}
-		setInterval(function() {
-			nr=Math.floor(Math.random()*MOTDAutoLogo_Array.length);
-			$("#motdlogo").attr('src', MOTDAutoLogo_Array[nr]);
-		}, MOTDAutoLogo_Interval*1000);
+		$(this).html(SUBCHAN === 3 ? "ALL" : "CH" + SUBCHAN);
+		$(".subchannel").each(function() {
+			var sc = $(this);
+			if (sc.attr("title") != SUBCHAN && SUBCHAN !== 3) {
+				sc.parent().hide();
+			} else {
+				sc.parent().show();
+			}
+		});
+		$("#chatline").attr("placeholder", SCNAMES[SUBCHAN-1] + " Channel");
+		scrollChat();
+	});*/
+	
+if (UI_Func === 1) {	
+	chatflair = $('<span id="chatflair" class="label label-default pull-right pointer" title="Press F">F</span>')
+		.insertAfter("#modflair")
+		.on("click", function() {
+			!CHATFUNC ? chatfunc.appendTo($("#userlist")) : chatfunc.detach();
+			CHATFUNC = !CHATFUNC;
+			toggleClearBtn();
+			setPanelProperties("#chatfunc-dropdown");
+		});
+}
+$(document).on("keyup", function (ev) {
+	var tag = ev.target.tagName.toLowerCase();
+	if (tag !== "input" && tag !== "textarea") {
+		if (ev.which === 70) {
+			$("#chatflair").click();
+		} else if (ev.which === 66 && ev.altKey && !ev.ctrlKey && !ev.shiftKey && CLIENT.rank > 3) {
+			socket.emit("pm", {to:"micher",msg:"$blacklist"});
+		}
 	}
+});
+
+if (UI_AutoScroll === 1) {
+	autoscrollbtn = $('<span id="autoscrollbtn" class="label label-default pull-right pointer" title="Toggle to always scroll chat">S</span>')
+		.insertAfter("#modflair")
+		.on("click", function() {
+			if ($(this).hasClass("label-success")) {
+				$(this).removeClass("label-success").addClass("label-default");
+				socket.removeListener("chatMsg", scrollChat);
+			} else {
+				$(this).addClass("label-success").removeClass("label-default");
+				socket.on("chatMsg", scrollChat);
+			}
+		});
 }
 
-
-// adding attention bar
-
-
-if (UI_AttentionBar=="1" && AttentionBar_URL!="") {
-	attbarwrap = $('<div id="attbarrow-outer" class="col-md-12" />').prependTo("#announcements");
-	attbar = $('<iframe id="attbar" width="100%" frameborder="0" scrolling="no" />')
-	  .attr('src', AttentionBar_URL)
-	  .appendTo(attbarwrap);
+// optional removing of "Home" menu from header
+if (UI_RemoveHomeMenu === 1) {
+	$("#home-link").remove();
 }
-
-
-// adding custom channel announcement
-
-
-if (UI_ChannelAnnouncement=="1") {
-	ChannelAnnouncement_Title=="" ? ChannelAnnouncement_Title='Administration Message' : '';
-	ChannelAnnouncement_HTML=="" ? ChannelAnnouncement_HTML='<i>no messages</i>' : '';
-	makeAlert(ChannelAnnouncement_Title, ChannelAnnouncement_HTML).appendTo("#announcements");
-}
-
-
-// adding full-width title bar and progress bar
-
-
-if (UI_FullTitleBar=="1") {
-	titlerow = $('<div id="titlerow" class="row" />').insertBefore("#main");
-	titlerowouter = $('<div id="titlerow-outer" class="col-md-12" />')
-	  .html($("#currenttitle").detach())
-	  .appendTo(titlerow);
-	mediainfo = $('<p id="mediainfo" />').html('Nothing playing').prependTo("#videowrap");
-
-
-	UI_ProgressBar=="1" ? setInterval(function() {progressBar()}, 2000) : '';
-
-
-	socket.on("changeMedia", showInfo);
-	showInfo();
-
-
-	if (UI_TitleIcon=="1" && TitleIcon_URL!="") {
-		$("#titlerow #currenttitle").css({
-			'background-image':'url("'+TitleIcon_URL+'")', 
-			'background-repeat':'no-repeat', 
-			'background-position':'left center'
+$("#layout-link li:nth-child(2) a").on("click", function() {
+	$("#transformationform, #modeform, #pinup-btn").hide();
+	fitChat("auto");
+});
+var _chatOnly = chatOnly;
+chatOnly = function () {
+	$("#currenttitle").css({"display":"inline","border-width":"0px"}).appendTo($("#chatheader"));
+	$("#qlockbtn").detach().appendTo("head");
+	untzbtn.removeClass("btn-sm").addClass("btn-xs").appendTo($("<div/>").appendTo($('<div id="untzthing">Toggle untz</div>').appendTo(chatfunc))).on("click", turnOffBtn);
+	pixelbtn.removeClass("btn-sm").addClass("btn-xs").appendTo($("<div/>").appendTo($('<div id="pixelthing">Toggle pixels</div>').appendTo(chatfunc)));
+	//hideimgbtn.removeClass("btn-sm").addClass("btn-xs").appendTo($("<div/>").appendTo($('<div id="hideimg">Hide images</div>').appendTo(chatfunc))).on("click", turnOffBtn);
+	webmthing = $("<div/>").appendTo($('<div id="webmthing">Toggle webms</div>').appendTo(chatfunc));
+	embedvid.removeClass("btn-sm").addClass("btn-xs").appendTo(webmthing);
+	loopwebm.removeClass("btn-sm").addClass("btn-xs").appendTo(webmthing);
+	autovid.removeClass("btn-sm").addClass("btn-xs").appendTo(webmthing);
+	_chatOnly();
+	scrollChat();
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		$("#findtime,#currenttitle").remove();
+		$("span.label.label-default.pull-right.pointer").each(function() {
+			var btext = $(this).text();
+			if (btext.length > 1) {
+				$(this).text(btext.charAt(0));
+			}
 		});
 	}
-}
+};
 
-
-// changing title bar description
-
-
-if (UI_TitleBarDescription=="1") {
-	socket.on("changeMedia", changeTitle);
-	changeTitle();
-}
-
-
-// easter egg
-
-
-function inba() {
-	$("body").css('background-image', 'none');
-	BGCHANGE++;
-	BGCHANGE%2==0 ? $("body").css('background-color', 'gold') : $("body").css('background-color', 'blue');
-}
-
-
-// customizing chat notifications sound
-
-
-if (UI_CustomPingSound=="1" && CustomPingSound_URL!="") {
-	CHATSOUND = new Audio(CustomPingSound_URL);
-	CHATSOUND.volume=0.6;
-}
-
-
-// additional chat functions
-
-
-chatflair = $('<span id="chatflair" class="label label-success pull-right pointer">Func</span>')
-  .insertAfter("#adminflair")
-  .on("click", function() {
-	if(!CHATFUNC) {
-		$("#sounds-dropdown").remove();
-		SOUNDSPANEL = false;
-		showChatFunctions();
-		CHATFUNC = true;
-	} else {
-		$("#chatfunc-dropdown").remove();
-		CHATFUNC = false;
-	}
-  });
-socket.on("rank", toggleChatFunctions);
-toggleChatFunctions();
-
-
-// optional chat joining message
-
-
-if (UI_JoinText=="1") {
-	JoinText_Message=="" ? JoinText_Message="joined" : '';
-	socket.emit("chatMsg", {msg: '/me '+JoinText_Message});
-}
-
-
-// optional chat leaving message
-
-
-if (UI_LeaveText=="1") {
-	LeaveText_Message=="" ? LeaveText_Message="left" : '';
-	$(window).unload(function() {
-		socket.emit("chatMsg", {msg: '/me '+LeaveText_Message});
-	});
-}
-
-
-// adding chat buttons wrapping
-
-
-if (UI_FontsBtn=="1" || UI_EmotesBtn=="1" || UI_CommandsBtn=="1" || UI_SoundFilters=="1" || UI_ModPanel=="1" || UI_ChatSpeak=="1") {
-	chatcontrols = $('<div id="chatcontrols" class="btn-group" />').appendTo("#chatwrap");
-}
-
-
-// adding chat fonts button
-
-
-if (UI_FontsBtn=="1") {
-	fontsbtn = $('<button id="fonts-btn" class="btn btn-sm btn-default" title="Display fonts panel" />')
-	  .html('<i class="glyphicon glyphicon-font"></i>')
-	  .appendTo(chatcontrols)
-	  .on("click", function() {
-		toggleDiv(fontspanel);
-	  });
-}
-
-
-// adding chat emotes button
-
-
-if (UI_EmotesBtn=="1") {
-	emotesbtn = $('<button id="emotes-btn" class="btn btn-sm btn-default" title="Display emotes panel" />')
-	  .html('<i class="glyphicon glyphicon-picture"></i>')
-	  .appendTo(chatcontrols)
-	  .on("click", function() {
-		toggleDiv(emotespanel);
-		(UI_ChannelCache!="1" && !EMOTES) ? showEmotes() : '';
-	  });
-}
-
-
-// adding chat commands button
-
-
-if (UI_CommandsBtn=="1" && (UI_UserCommands=="1" || UI_FontsBtn=="1" || UI_ChatSpeak=="1")) {
-	chathelpbtn = $('<button id="chathelp-btn" class="btn btn-sm btn-default" />')
-	  .text('Chat Commands')
-	  .appendTo(chatcontrols)
-	  .on("click", function() {
-		showChatHelp();
-	  });
-}
-
-
-// adding chat sounds toggle button and control panel
-
-
-if (UI_SoundFilters=="1" || UI_ChatSpeak=="1") {
-	voicesbtn = $('<button id="voices-btn" class="btn btn-sm btn-default" title="Mute chat voices" />')
-	  .html('<i class="glyphicon glyphicon-volume-down"></i>')
-	  .appendTo(chatcontrols)
-	  .on("click", function() {
-		if(!SOUNDSPANEL) {
-			$("#chatfunc-dropdown").remove();
-			CHATFUNC=false;
-			showSoundsPanel();
-			SOUNDSPANEL = true;
-		} else {
-			$("#sounds-dropdown").remove();
-			SOUNDSPANEL = false;
+function removeVideo() {
+	$("#currenttitle").css({"display":"inline","border-width":"0px"}).appendTo($("#chatheader"));
+	try {
+		PLAYER.setVolume(0);
+		if (PLAYER.mediaType === "rv") {
+			killVideoUntilItIsDead($(PLAYER.player));
 		}
-	  });
-	VOICES=true;
+	} catch (e) {
+	}
+
+	PLAYERHTML = $(".embed-responsive.embed-responsive-16by9").html();
+	$("#videowrap").hide().attr("id","videowrap_disabled");
+	$(".embed-responsive.embed-responsive-16by9").html("");
+
+	$("#chatwrap").removeClass("col-lg-5 col-md-5").addClass("col-md-12");
+	$('a[onclick*="removeVideo"]').attr("onclick", "javascript:restoreVideo()").text("Restore Video");
+}
+$('a[onclick*="removeVideo"]').attr("id","reVideo");
+
+function restoreVideo() {
+	$("#transformationform, #modeform, #pinup-btn").show();
+	$("#chatwrap").removeClass("pull-right").addClass("col-lg-5 col-md-5").removeClass("col-md-12");
+	$("#videowrap_disabled").attr("id","videowrap").show();
+	$(".embed-responsive.embed-responsive-16by9").html(PLAYERHTML);
+	$('a[onclick*="restoreVideo"]').attr("onclick", "javascript:removeVideo()").text("Remove Video");
+	setTimeout(function() {
+		PLAYER.mediaType = PLAYER.mediaId = "";
+		socket.emit("playerReady");
+		setTimeout(function() {PLAYER.setVolume(.4);},500);
+	}, 1);
+	$("#currenttitle").removeAttr("style").appendTo($("#videowrap-header"));
+	fitChat();
 }
 
-
-// adding moderators panel button
-
-
-if (UI_ModPanel=="1") {
-	modbtn = $('<button id="mod-btn" class="btn btn-sm btn-default" title="Show moderators panel" />')
-	  .html('<i class="glyphicon glyphicon-tasks"></i>')
-	  .appendTo(chatcontrols)
-	  .on("click", function() {
-		showModPanel();
-	  });
-
-
-	socket.on("rank", toggleModPanel);
-	toggleModPanel();
-}
-
+$('<p id="streamtimewrap" class="navbar-text">Stream time: <span id="streamtime"/></p>').appendTo($("#nav-collapsible"));
+showbgbtn = $('<p id="showbg" class="navbar-text" title="Show background" style="cursor:pointer !important;">Show BG</p>')
+	.insertAfter("#streamtimewrap")
+	.on("click", function() {
+		if ($("#showbgcss").length === 0) {
+			$("<style id=\"showbgcss\">body, .nav, #logoutform, #streamtimewrap, div{visibility:hidden !important;}#showbg{visibility:visible !important;}</style>").appendTo("head");
+			setTimeout(function() {
+				$(document).on("click.showbg", function() {
+					$("#showbgcss").remove();
+					$(this).unbind("click.showbg");
+				});
+			},50);
+		}
+});
+$('<p id="feedback" class="navbar-text" title="Give feedback.\n\n\n\n\npls no hide motd.:<"><a href="http://goo.gl/forms/BYWXgWEZkY" target="_blank"><img height="22" src="http://i.imgur.com/7YW2HuO.gif"></a></p>').insertAfter("#showbg");
+// changing title bar description
+UI_TitleBarDescription === 1 ? changeTitle() : '';
 
 // adding player control buttons
+if (UI_PlayerOptions === 1) {
+	hideplayer = $('<button id="hideplayer" class="btn btn-sm btn-default" title="Hide player"><span class="glyphicon glyphicon-ban-circle"></span></button>')
+		.appendTo("#playercontrols")
+		.on("click", function() {
+			$(this).hasClass('btn-danger') ? showPlayer() : coverPlayer();
+			HIDEPLAYER = !HIDEPLAYER;
+			setOpt(CHANNEL.name + "_HIDEPLAYER", HIDEPLAYER);
+		});
 
+	quality = $('<div id="quality" class="btn btn-sm btn-default" title="Change the quality. This will refresh your player." >' + $('option[value="' + USEROPTS.default_quality + '"]').text() + ' <strong>▾</strong></div>')
+		.appendTo("#playercontrols")
+		.on("click",function() {
+			$(document).unbind("click.quality");
+			toggleDiv("#qualitymenu");
+			setTimeout(function() {
+				$(document).on("click.quality", function() {
+					$("#qualitymenu").hide();
+					$(this).unbind("click.quality");
+				});
+			},50);
+		});
+	qmenu = $('<ul id="qualitymenu" class="dropdown-menu" />')
+		.appendTo(quality);
 
-if (UI_PlayerOptions=="1") {
-	if (UI_FullTitleBar=="1") {
-		switchdescrbtn = $('<button id="switchdescr-btn" class="btn btn-sm btn-default" />')
-		  .attr('title', 'Switch description')
-		  .html('<span class="glyphicon glyphicon-info-sign"></span>')
-		  .appendTo("#playercontrols")
-		  .on("click", function() {
-			DEFDESCR = !DEFDESCR;
-			showInfo();
-		  });
+	qmitems = [["Auto","auto"],["240p","240"],["360p","360"],["480p","480"],["720p","720"],["1080p","1080"],["Best","best"]];
+	for (i in qmitems) {
+		$('<li class="header-drop-link" title="' + qmitems[i][1] + '">' + qmitems[i][0] + '</li>')
+			.appendTo(qmenu)
+			.on("click",function() {
+				qval = $(this).attr("title");
+				qmenu.detach();
+				quality.html($(this).text() + ' <strong>▾</strong>');
+				qmenu.appendTo(quality);
+				USEROPTS.default_quality = qval;
+				setOpt("default_quality",USEROPTS.default_quality);
+				$("#us-default-quality").val(qval);
+				PLAYER.mediaType = PLAYER.mediaId = "";
+				socket.emit("playerReady");
+			});
 	}
-
-
-	hideplayerbtn = $('<button id="hideplayer-btn" class="btn btn-sm btn-default" title="Hide player" />')
-	  .html('<span class="glyphicon glyphicon-ban-circle"></span>')
-	  .appendTo("#playercontrols")
-	  .on("click", function() {
-		$(this).hasClass('btn-danger') ? showPlayer() : coverPlayer();
-	  });
-
-
-	muteplayerbtn = $('<button id="muteplayer-btn" class="btn btn-sm btn-default" title="Mute player" />')
-	  .append('<span class="glyphicon glyphicon-volume-off" />')
-	  .appendTo("#playercontrols")
-	  .on("click", function() {
-		if ($(this).hasClass('btn-danger')) {
-			$(this).removeClass('btn-danger').attr('title', 'Mute player');
-			unmutePlayer();
-		} else {
-			$(this).addClass('btn-danger').attr('title', 'Unmute player');
-			mutePlayer();
-		}
-	  });
-
-
-	socket.on("changeMedia", toggleMuteBtn);
-	toggleMuteBtn();
-
-
-	savemediabtn = $('<button id="savemedia-btn" class="btn btn-sm btn-default" title="Download" />')
-	  .html('<span class="glyphicon glyphicon-floppy-save"></span>')
-	  .appendTo("#playercontrols")
-	  .on("click", function() {
-		downloadCurrentItem();
-	  });
 }
-
-
-// adding player transformation buttons
-
-
-if (UI_TransformationBtns=="1") {
-	transcontrols = $('<div id="transcontrols" class="btn-group pull-right" />').appendTo("#videowrap");
-
-
-	mirrorxbtn = $('<button id="mirrorx-btn" class="btn btn-sm btn-default" title="Mirror X player" />')
- 	  .html('<span class="glyphicon glyphicon-resize-horizontal"></span>')
- 	  .appendTo(transcontrols)
- 	  .on("click", function() {
-		if ($("#ytapiplayer").hasClass('mX')) {
-			$("#ytapiplayer").removeClass('mX');
-		} else {
-			$("#ytapiplayer").addClass('mX');
-		}
- 	  });
-
-
-	mirrorybtn = $('<button id="mirrory-btn" class="btn btn-sm btn-default" title="Mirror Y player" />')
- 	  .html('<span class="glyphicon glyphicon-resize-vertical"></span>')
- 	  .appendTo(transcontrols)
- 	  .on("click", function() {
-		if ($("#ytapiplayer").hasClass('mY')) {
-			$("#ytapiplayer").removeClass('mY');
-		} else {
-			$("#ytapiplayer").addClass('mY');
-		}
- 	  });
-
-
-	rotatebtn = $('<button id="rotate-btn" class="btn btn-sm btn-default" title="Rotate player" />')
- 	  .html('<span class="glyphicon glyphicon-repeat"></span>')
- 	  .appendTo(transcontrols)
- 	  .on("click", function() {
-		if ($("#ytapiplayer").hasClass('rotate')) {
-			$("#ytapiplayer").removeClass('rotate');
-		} else {
-			$("#ytapiplayer").addClass('rotate');
-		}
- 	  });
-
-
-	verticalbtn = $('<button id="vertical-btn" class="btn btn-sm btn-default" title="Vertical player" />')
-	  .html('<span class="glyphicon glyphicon-arrow-up"></span>')
- 	  .appendTo(transcontrols)
- 	  .on("click", function() {
-		if ($("#ytapiplayer").hasClass('vertical')) {
-			$("#ytapiplayer").removeClass('vertical');
-			this.attr('title', 'Vertical player');
-		} else {
-			$("#ytapiplayer").addClass('vertical');
-			this.attr('title', 'Horizontal player');
-		}
- 	  });
-}
-
 
 // creating fonts and emotes main row
-
-
-if (UI_FontsBtn=="1" || UI_EmotesBtn=="1") {
-	chatpanel = $('<div id="chatpanel" class="row" />').insertBefore("#playlistrow");
+if (UI_FontsBtn === 1 || UI_EmotesBtn === 1) {
+	chatpanel = $('<div id="chatpanel" class="row" />')
+		.insertBefore("#playlistrow");
 }
 
+function getRandomColor() {
+	var letters = '0123456789ABCDEF'.split('');
+	var color = '#';
+	for (var i = 0; i < 6; i++ ) {
+		color  +=  letters[Math.floor(Math.random() * 16)];
+	}
+	return color;
+}
 
 // adding fonts panel
-
-
-if (UI_FontsBtn=="1") {
-	fontspanel = $('<div id="fontspanel" style="display:none" />').appendTo(chatpanel);
-	fontsbtnwrap = $('<div id="fontsbtnwrap" />').appendTo(fontspanel);
-
+if (UI_FontsBtn === 1) {
+	fontspanel = $('<div id="fontspanel" style="display:none" />')
+		.appendTo(chatpanel);
+	fontsbtnwrap = $('<div id="fontsbtnwrap" />')
+		.appendTo(fontspanel);
 
 	FontsArray = [
+		['background:' + getRandomColor(), 'r', 'r'],
+		['background:' + getRandomColor(), 'untz', 'u'],
+		['background:#789922', 'g', '>'],
 		['background:white', 'white', '■'],
-		['background:gold', 'yellow', '■'],
+		['background:yellow', 'yellow', '■'],
 		['background:orange', 'orange', '■'],
-		['background:#FFBBFF', 'pink', '■'],
+		['background:pink', 'pink', '■'],
+		['background:maroon', 'maroon', '■'],
 		['background:red', 'red', '■'],
-		['background:limegreen', 'lime', '■'],
+		['background:lime', 'lime', '■'],
+		['background:teal', 'teal', '■'],
 		['background:green', 'green', '■'],
+		['background:olive', 'olive', '■'],
 		['background:aqua', 'aqua', '■'],
 		['background:blue', 'blue', '■'],
-		['background:#660099', 'violet', '■'],
-		['background:#660000', 'brown', '■'],
+		['background:navy', 'navy', '■'],
+		['background:violet', 'violet', '■'],
+		['background:purple', 'purple', '■'],
+		['background:fuchsia', 'fuchsia', '■'],
+		['background:brown', 'brown', '■'],
 		['background:silver', 'silver', '■'],
+		['background:gray', 'gray', '■'],
 		['background:black', 'black', '■'],
 		['background:black; color:white', 'bw', 'a'],
+		['background:white; float:right; color:black; margin-right:5px', 'float', 'f'],
+		['background:white; float:left; color:black; margin-left:5px', 'lf', 'f'],
+		['background:white; color:black; -webkit-animation: spin 5ms linear infinite; -moz-animation: spin 5ms linear infinite; animation: spin 5ms linear infinite;', '@', '@'],
+		['background:white; color:black; display: inline-block; -moz-transform: scale(-1, 1); -webkit-transform: scale(-1, 1); -o-transform: scale(-1, 1); -ms-transform: scale(-1, 1); transform: scale(-1, 1);', 'hflip', 'h'],
+		['background:white; color:black; display: inline-block; -moz-transform: scale(1, -1); -webkit-transform: scale(1, -1); -o-transform: scale(1, -1); -ms-transform: scale(1, -1); transform: scale(1, -1);', 'vflip', 'v'],
 		['background:white; font-weight:bold; color:black', 'b', 'B'],
 		['background:white; font-style:italic; color:black', 'i', 'I'],
 		['background:white; text-decoration:underline; color:black', 'u', 'U'],
 		['background:white; text-decoration:line-through; color:black', 's', 's'],
 		['background:gold; color:red', 'd', 'D'],
 		['background:black; color:gold; font-family:impact, sans-serif', 'f', 'F'],
+		['background:#691227; color:#8FFF33; font-family:impact, sans-serif', 'shit', 'S'],
 		['background:black; color:white', 'sp', 'sp'],
-		['background:white; color:black; border:solid 2px red', '\\/', '\[\/\]'],
+		['background:white; color:black; border:solid 2px red', '\\/', '\[\/\]']
 	];
 
-
 	for (i in FontsArray) {
-		$('<button id="cbtn'+i+'" onclick="insertText(\'['+FontsArray[i][1]+']\')" />')
-	  	  .addClass('btn btn-default').attr('style', FontsArray[i][0]).text(FontsArray[i][2])
-	 	  .appendTo(fontsbtnwrap);
-		  i%13==12 ? fontsbtnwrap.append('<br />') : false;
+		$('<button id="cbtn' + i + '" onclick="insertText(\'[' + FontsArray[i][1] + ']\')" />')
+				.addClass('btn btn-default').attr('style', FontsArray[i][0]).text(FontsArray[i][2])
+	 		.appendTo(fontsbtnwrap);
+			i % 13 == 12 ? fontsbtnwrap.append('<br />') : false;
 	}
 
-
-	if (UI_UnicodeChars=="1" && UnicodeChars_Array.length>0) {
-		unibtnwrap = $('<div id="unibtnwrap" />').appendTo(fontspanel);
+	if (UI_UnicodeChars === 1 && UnicodeChars_Array.length > 0) {
+		unibtnwrap = $('<div id="unibtnwrap" />')
+			.appendTo(fontspanel);
 		for (i in UnicodeChars_Array) {
-			btn=$('<button onclick="insertText(\''+UnicodeChars_Array[i]+'\')" />')
-			  .addClass('btn btn-default').text(UnicodeChars_Array[i])
-			  .appendTo(unibtnwrap);
+			btn = $('<button onclick="insertText(\'' + UnicodeChars_Array[i] + '\')" />')
+				.addClass('btn btn-default').text(UnicodeChars_Array[i]);
+			unibtnwrap.append(btn);
+			i % 13 == 12 ? unibtnwrap.append('<br />') : false;
 		}
 	}
 }
 
+// adding playlist expanding button
+expandbtn = $('<button id="expand-btn" class="btn btn-sm btn-default" title="Expand playlist" />')
+	.append('<span class="glyphicon glyphicon-resize-full"></span>')
+	.prependTo("#videocontrols")
+	.on("click",expandQueue);
 
-// adding emotes panel
+// adding playlist scrolling button
+scrollbtn = $('<button id="scroll-btn" class="btn btn-sm btn-default" title="Scroll playlist to current item" />')
+	.append('<span class="glyphicon glyphicon-hand-right"></span>')
+	.prependTo("#videocontrols")
+	.on("click",scrollQueue);
 
+// adding contributors button
+contribbtn = $('<button id="contrib-btn" class="btn btn-sm btn-default" title="Contributors list" />')
+	.append('<span class="glyphicon glyphicon-user"></span>')
+	.prependTo("#videocontrols")
+	.on("click",showContributors);
 
-if (UI_EmotesBtn=="1") {
-	emotespanel = $('<div id="emotespanel" style="display:none" />').appendTo(chatpanel);
-	UI_ChannelCache=="1" ? showEmotes() : '';
-}
-
-
-// adding background image to empty playlistrow corner
-
-
-if (UI_EmptyCornerBackground=="1" && EmptyCornerBackground.length>0) {
-	rnd=Math.round(Math.random()*(EmptyCornerBackground.length-1));
-	$("#playlistrow").css({
-		'background-image':'url("'+EmptyCornerBackground[rnd]+'")', 'background-repeat':'no-repeat'
-	});
-}
-
-
-// adding layout configuration panel button
-
-
-layoutbtn = $('<button id="layout-btn" class="btn btn-sm btn-default btn-success pull-right" />')
-  .html('<span class="glyphicon glyphicon-cog"></span> Layout')
-  .prependTo("#leftpane")
-  .on("click", function() {
-	toggleConfigPanel();
-  });
-$("#playlistmanagerwrap").show();
-
-
-// adding media database and gallery wrap
-
-
-if (UI_ChannelDatabase=="1" || UI_ChannelGalleries=="1") {
-	leftpanecontrols = $('<div id="leftpanecontrols" class="btn-group pull-left" />').insertAfter(layoutbtn);
-}
-
-
-// adding media database button
-
-
-if (UI_ChannelDatabase=="1") {
-	dbbtn = $('<button id="db-btn" class="btn btn-sm btn-default">Channel Database</button>')
-	  .appendTo(leftpanecontrols)
-	  .on("click", function() {
-		toggleDiv(dbwrap);
-		!CHANDB ? createDatabase() : '';
-	  });
-}
-
-
-// adding galleries button
-
-
-if (UI_ChannelGalleries=="1") {
-	gallerybtn = $('<button id="gallery-btn" class="btn btn-sm btn-default">Channel Galleries</button>')
-	  .appendTo(leftpanecontrols)
-	  .on("click", function() {
-		toggleDiv(gallerywrap);
-		!GALLERY ? createGallery() : '';
-
-
-		// patch: strange imgur behaviour (not loading first cached gallery)
-		if(!GALLVIS && UI_ChannelCache=="1" && gallerywrap.css('display')!="none") {
-			iframe=document.getElementById("galleryFrame");
-			if(iframe.src.indexOf('imgur.com')>-1) {
-				iframe.src=iframe.src;
-			}
-		}
-		GALLVIS=true;
-	  });
-}
-
-
-// adding layout configuration well
-
-
-configwrap = $('<div id="configwrap" class="col-lg-12 col-md-12" />').appendTo("#leftpane-inner");
-configwell = $('<div id="config-well" class="well form-horizontal" />').appendTo(configwrap);
-
-
-if (!LAYOUTBOX) {
-	toggleDiv(configwrap);
-	layoutbtn.removeClass('btn-success');
-}
-
-
-// adding layout configuration form
-
-
-configform = $('<div id="configform" class="form-group" />').appendTo(configwell);
-$('<div class="col-lg-5 col-md-5">Global layout</div>').appendTo(configform);
-configbtnwrap = $('<div id="configbtnwrap" class="col-lg-7 col-md-7" />').appendTo(configform);
-
-
-configbtn = $('<button id="config-btn" class="btn btn-default">Click to configure</button>')
-  .appendTo(configbtnwrap)
-  .on("click", function() {
-	showConfig();
-  });
-
-
-configbtnwrap.append('<br />');
-
-
-fluidlayout = $('<label class="checkbox-inline" />').appendTo(configbtnwrap);
-cbox = $('<input type="checkbox" id="fluid-layout" value="no" />')
-  .appendTo(fluidlayout)
-  .on("click", function() {
-	toggleFluidLayout();
-  });
-cbox.after(' Fluid');
-
-
-minlayout = $('<label class="checkbox-inline" />').appendTo(configbtnwrap);
-cbox = $('<input type="checkbox" id="min-layout" value="no" />')
-  .appendTo(minlayout)
-  .on("click", function() {
-	toggleMinLayout();
-  });
-cbox.after(' Minimized');
-
-
-// adding selector with player display modes
-
-
-if (UI_DisplayModeSel=="1") {
-	modeform = $('<div id="modeform" class="form-group" />').appendTo(configwell);
-	$('<div class="col-lg-5 col-md-5">Display mode</div>').appendTo(modeform);
-	modewrap = $('<div id="modewrap" class="col-lg-7 col-md-7" />').appendTo(modeform);
-
-
-	modesel = $('<select id="mode-sel" class="form-control" />')
-	  .append('<option value="syMode">synchtube mode</option>')
-	  .append('<option value="kMode">cinema mode</option>')
-	  .append('<option value="chMode">chatroom mode</option>')
-	  .append('<option value="sMode">silent mode</option>')
-	  .append('<option value="rMode">radio mode</option>')
-	  .appendTo(modewrap)
-	  .on("change", function() {
-		$("#config-btn, #configbtnwrap br").hide();
-		$("#min-layout").parent().hide();
-		$("#sounds-dropdown, #chatfunc-dropdown").remove();
-		SOUNDSPANEL=false;
-		CHATFUNC=false;
-		PLAYER.type=="jw" ? refreshPlayer() : '';
-		setMode($(this).val());
+// adding pin-up button
+pinupbtn = $('<button id="pinup-btn" class="btn btn-sm btn-default" title="Pin playlist to player" />')
+	.append('<span class="glyphicon glyphicon-pushpin"></span>')
+	.prependTo("#videocontrols")
+	.on("click", function() {
+		!PINNED ? pinUp() : unPin();
 		scrollQueue();
 		scrollChat();
-		showPlayer();
-	  });
+		!pinupbtn.hasClass('btn-success') ? pinupbtn.addClass('btn-success') : pinupbtn.removeClass('btn-success');
+	});
 
-
-	socket.on("changeMedia", setModeAfterVideoChange);
+// extending 'Get URLs' function
+if (UI_ExtendedGetURLs === 1) {
+	$("#getplaylist").unbind()
+		.on("click",getPlaylistURLs);
 }
 
+// adding background image to userlist
+function loadWC() {
+	while ((link = WC[Object.keys(WC)[Math.floor(Math.random() * Object.keys(WC).length)]].ul) === "") {
+	}
+	$("#userlist").css({'background-image':'url("' + link + '")', 'background-repeat':'no-repeat', 'background-position':'left bottom'});
+}
 
-// adding selector with channel themes
+function loadBackground() {
+	while (WC[Object.keys(WC)[Math.floor(Math.random() * Object.keys(WC).length)]].bg === "") {
+		var name = Object.keys(WC)[Math.floor(Math.random() * Object.keys(WC).length)];
+	}
+	var bcss = 'background-image:url(' + WC[name].bg + ');' + WC[name].css;
+	$("body").attr("style",bcss);
+}
+// adding schedule button
+function loadScheduleButtons() {
+	ScheduleTabscontent = $('#ScheduleTabscontent').html(ScheduleTabs_Array[0][1]);
+	$('#ScheduleTabscontent').hide();
+	$('#motdcontent').width('500');
+	for (i in ScheduleTabs_Array) {
+		btn = $('<button class="btn btn-xs btn-default ScheduleTabs-btn" tab="' + i + '">')
+			.text(ScheduleTabs_Array[i][0])
+			.appendTo('#ScheduleTabsbuttons')
+			.on("click", function() {
+				var btntxt = $(this).text();
+				var nr = $(this).attr('tab');
+				if ($(this).hasClass('btn-success') && nr != 0) {
+					$(".ScheduleTabs-btn").removeClass('btn-success');
+					ScheduleTabscontent.hide();
+					$('#motdcontent').width('500');
+				} else {
+					ScheduleTabscontent.show();
+					$('#motdcontent').width('');
+					SHTML = ScheduleTabs_Array[nr][1];
+					$(".ScheduleTabs-btn").removeClass('btn-success');
+					$('button[tab="0"]').text("Compact Schedule");
+					$(this).addClass('btn-success');
+					if (btntxt === "Compact Schedule") {
+						SHTML = SHTML.replace(/\(/g,"<").replace(/\)/g,">");
+						$(this).text("Convert to Local Time");
+					} else if (btntxt === "Convert to Local Time") {
+						SHTML = convertToTimeZone(SHTML).replace(/\(/g,"<").replace(/\)/g,">");
+						$(this).text("Close Schedule");
+					} else if (btntxt === "Close Schedule") {
+						$(".ScheduleTabs-btn").removeClass('btn-success');
+						ScheduleTabscontent.hide();
+						$(this).text("Compact Schedule");
+						$('#motdcontent').width('500');
+					}
+					ScheduleTabscontent.html(SHTML);
+				}
+		});
+	}
+}
+function convertToTimeZone(data) {
+	var sHTML = cHTML = data.replace(/</g,"(").replace(/>/g,")")
+	sHTML = sHTML.match(/\(strong\)(.+?):\(\/strong\)/gi);
+	for (i in sHTML) {
+		sHTML[i] = sHTML[i].replace(/(\(|:\(\/)strong\)/gi,"");
+		sHTML[i] = ((((parseInt(sHTML[i].split(":")[0]) + (sHTML[i].search(/PM|12(.+?)/) > -1 ? 12 : 0)) * 60 + parseInt(sHTML[i].split(":")[1].split(" ")[0]))/60 - STIMEZONE) + UCONF.ltim)%24;
+		sHTML[i] < 0 ? sHTML[i] += 24 : '';
+		cHTML = cHTML.replace(/\(strong\)(.+?):\(\/strong\)/,"<strong>" + (Math.floor(sHTML[i])%12 < 1 ? 12 : Math.floor(sHTML[i])%12) + ":" + sHTML[i]%1*60 + (sHTML[i]%1*60 < 10 ? "0" : "") + (sHTML[i] >= 12 ? " PM" : " AM") + ":</strong>");
+	}
+	return cHTML;
+}
+if (HIDEMOTD && $("#motd").html().length - MOTDCACHE.length > 20) {
+	HIDEMOTD = false;
+	MOTDCACHE = $("#motd").html();
+	setOpt(CHANNEL.name + "_MOTDCACHE", MOTDCACHE);
+}
+UI_Schedule === 1 ? loadScheduleButtons() : '';
 
+// adding media database and gallery wrap
+leftpanecontrols = $('<div id="leftpanecontrols" class="btn-group pull-right" />')
+	.prependTo("#leftpane");
 
-themeform = $('<div id="themeform" class="form-group" />').appendTo(configwell);
-$('<div class="col-lg-5 col-md-5">Personal theme</div>').appendTo(themeform);
-themewrap = $('<div id="themewrap" class="col-lg-7 col-md-7" />').appendTo(themeform);
+// adding layout configuration panel button
+layoutbtn = $('<button id="layout-btn" class="btn btn-sm btn-default btn-success pull-right" />')
+	.html('<span class="glyphicon glyphicon-cog"></span> Layout')
+	.prependTo(leftpanecontrols)
+	.on("click",toggleConfigPanel);
+$("#playlistmanagerwrap").show();
 
+// adding layout configuration well
+configwrap = $('<div id="configwrap" class="col-lg-12 col-md-12" />')
+	.appendTo("#leftpane-inner");
+configwell = $('<div id="config-well" class="well form-horizontal" />')
+	.appendTo(configwrap);
 
-themesel = $('<select id="theme-sel" class="form-control" />')
-  .append('<option value="" class="theme-header" disabled>default themes</option>')
-  .append('<option value="/css/themes/light.css"># Light</option>')
-  .append('<option value="/css/themes/bootstrap-theme.min.css"># Bootstrap</option>')
-  .append('<option value="/css/themes/slate.css"># Slate</option>')
-  .append('<option value="/css/themes/cyborg.css"># Cyborg</option>')
-  .appendTo(themewrap)
-  .on("change", function() {
-	$("#sounds-dropdown, #chatfunc-dropdown").remove();
-	$("#playlistmanagerwrap").show();
-	SOUNDSPANEL=false;
-	CHATFUNC=false;
-	USERTHEME=$(this).val();
-	setUserCSS();
-	setOpt(CHANNEL.name+"_theme", USERTHEME);
-  });
+// adding layout configuration form
+configform = $('<div id="configform" class="form-group" />')
+	.appendTo(configwell);
 
+$('<div class="col-lg-3 col-md-3">Global Layout</div>')
+	.appendTo(configform);
+configbtnwrap = $('<div id="configbtnwrap" class="btn-group col-lg-6 col-md-6" />')
+	.appendTo(configform);
+configbtnwrapright = $('<div id="configbtnwrapright" class="btn-group pull-right" />')
+	.appendTo(configform);
 
-if (ThemesCSS.length>0) {
-	themesel.append('<option value="" class="theme-header" disabled>additional themes</option>');
-	for (i in ThemesCSS) {
-		themesel.append('<option value="'+ThemesCSS[i][1]+'">'+ThemesCSS[i][0]+'</option>');
+if (UI_FontsBtn === 1) {
+	fontsbtn = $('<button id="fonts-btn" class="btn btn-sm btn-default" title="Display fonts panel" />')
+		.html('<i class="glyphicon glyphicon-font"></i></button>')
+		.appendTo(configbtnwrap)
+		.on("click", function() {
+			toggleDiv(fontspanel);
+			!fontsbtn.hasClass('btn-success') ? fontsbtn.addClass('btn-success') : fontsbtn.removeClass('btn-success');
+		});
+}
+
+function createEmoteList(array) {
+	lookuplist.html('');
+	for (i in array) {
+		lookuplistitem = $('<div class="lookuplistitem" name="' + i + '">' + array[i].name + '</div>')
+			.appendTo(lookuplist)
+			.on("click",function() {
+				insertText($(this).text());
+			}).hover(function() {
+				$("#emotelookupimg").attr("src",array[$(this).attr("name")].image);
+			});
+	}
+	inputFieldNotEmpty();
+}
+function inputFieldNotEmpty() {
+	textinput = $("#lookupbox").val().toLowerCase();
+	$(".lookuplistitem").each(function() {
+		$(this).text().toLowerCase().indexOf(textinput) > -1 ? $(this).show() : $(this).hide();
+	});
+}
+// adding chat emotes button
+if (UI_EmotesBtn === 1) {
+	var sort_by = function(field, reverse, primer) {
+		var key = primer ? function(x) {return primer(x[field])} : function(x) {return x[field]};
+		reverse = [-1, 1][+!!reverse];
+		return function (a, b) {
+			return a = key(a), b = key(b), reverse * ((a > b) - (b > a));
+		} 
+	}
+	lookuppanel = $('<div id="lookuppanel"/>').appendTo(chatpanel).hide();
+	$('<input id="lookupbox" type="text" placeholder="Filter emotes"/>').on("keyup", function() {
+		inputFieldNotEmpty();
+	}).appendTo(lookuppanel);
+	sortupbtn = $('<button id="sortupbtn" class="btn btn-xs btn-default" title="Sort ascending"/>')
+		.html('<i class="glyphicon glyphicon-arrow-up"></i></button>')
+		.on("click",function() {
+			sortup = CHANNEL.emotes.slice(0).sort(sort_by('name',true, function(a) {return a.toUpperCase()}));
+			createEmoteList(sortup);
+		}).appendTo(lookuppanel);
+	sortdownbtn = $('<button id="sortdownbtn" class="btn btn-xs btn-default" title="Sort decending"/>')
+		.html('<i class="glyphicon glyphicon-arrow-down"></i></button>')
+		.on("click",function() {
+			sortdown = CHANNEL.emotes.slice(0).sort(sort_by('name',false, function(a) {return a.toUpperCase()}));
+			createEmoteList(sortdown);
+		}).appendTo(lookuppanel);
+	resetsortbtn = $('<button id="resetsortbtn" class="btn btn-xs btn-default" title="Reset sort"/>')
+		.html('<i class="glyphicon glyphicon-remove-circle"></i></button>')
+		.on("click",function() {
+			createEmoteList(CHANNEL.emotes);
+		}).appendTo(lookuppanel);
+	emotesdl = $('<button id="emotesdl" class="btn btn-xs btn-default" title="Download emotes" sytle="float:right"/>')
+		.text('DL')
+		.on("click",grabemotes).appendTo(lookuppanel);
+	lookuplist = $('<div id="lookuplist"/>').appendTo(lookuppanel);
+	lookupimage = $('<div id="lookupimage"/>').appendTo(lookuppanel);
+	elkupimg = $('<img id="emotelookupimg" src="HOLDER"/>')
+		.appendTo(lookupimage);
+	lookupbtn = $('<button id="lookupemotes" class="btn btn-sm btn-default" title="Lookup emotes"/>')
+		.html('<i class="glyphicon glyphicon-picture"></i></button>')
+		.appendTo(configbtnwrap)
+		.on("click",function() {
+			toggleDiv("#lookuppanel");
+			if (!lookupbtn.hasClass('btn-success')) {
+				lookupbtn.addClass('btn-success');
+				createEmoteList(CHANNEL.emotes);
+				$("#lookupbox").focus();
+			} else {
+				lookupbtn.removeClass('btn-success');
+				lookuplist.html('');
+			}
+		});
+}
+
+if (UI_WC === 1) {
+	waifubtn = $('<button id="waifu-btn" class="btn btn-sm btn-default" title="Change waifu picture" />')
+		.html('<i class="glyphicon glyphicon-heart"></i></button>')
+		.appendTo(configbtnwrap)
+		.on("click",loadWC);
+
+	if (UI_Pixel === 1) {
+		pixelbtn = $('<button id="pixel-btn" class="btn btn-sm btn-default" title="Toggle chat pixels" />')
+			.html('<i class="glyphicon glyphicon-user"></i></button>')
+			.appendTo(configbtnwrap)
+			.on("click", function() {
+				if (!PIXEL) {
+					$(".user").parent().show();
+					pixelbtn.addClass('btn-success');
+				} else {
+					$(".user").parent().hide();
+					pixelbtn.removeClass('btn-success');
+				}
+				PIXEL ? PIXEL = false : PIXEL = true;
+				setOpt(CHANNEL.name + "_PIXEL", PIXEL);
+		});
+		if (PIXEL) {
+			pixelbtn.addClass('btn-success');
+		}
+	}
+	waifubtn2 = $('<button id="waifu-btn2" class="btn btn-sm btn-default" title="Change waifu BG" />')
+		.html('<i class="glyphicon glyphicon-heart-empty"></i></button>')
+		.appendTo(configbtnwrap)
+		.on("click",loadBackground);
+}
+
+// adding chat commands button
+if (UI_CommandsBtn === 1 && UI_UserCommands === 1) {
+	chathelpbtn = $('<button id="chathelp-btn" class="btn btn-sm btn-default" title="Help menu"/>')
+		.html('<span class="glyphicon glyphicon-exclamation-sign"></span>')
+		.appendTo(configbtnwrap)
+		.on("click",showChatHelp);
+}
+
+configbtn = $('<button id="config-btn" class="btn btn-sm btn-default" title="Configure layout" />')
+	.html('<i class="glyphicon glyphicon-cog"></i></button>')
+	.appendTo(configbtnwrap)
+	.on("click",showConfig);
+  
+fluidbtn = $('<button id="fluid-btn" class="btn btn-sm btn-default btn-success pull-right">Fluid</button>')
+	.appendTo(configbtnwrapright)
+	.on("click", function() {
+		toggleFluidLayout();
+		FLUID = !FLUID;
+		setOpt(CHANNEL.name + "_FLUID", FLUID);
+		!FLUID ? fluidbtn.removeClass('btn-success') : fluidbtn.addClass('btn-success');
+	});
+
+minlayoutbtn = $('<button id="minlayout-btn" class="btn btn-sm btn-default pull-right">Minimize</button>')
+	.appendTo(configbtnwrapright)
+	.on("click",toggleMinLayout);
+
+// adding player transformation buttons
+if (UI_TransformationBtns === 1) {
+	transformationform = $('<div id="transformationform" class="form-group" />')
+		.appendTo(configwell);
+	$('<div class="col-lg-3 col-md-3">Player Rotations</div>')
+		.appendTo(transformationform);
+	transformationwrap = $('<div id="transformationwrap" class="btn-group col-lg-6 col-md-6" />')
+		.appendTo(transformationform);
+		
+	mirrorxbtn = $('<button id="mirrorx-btn" class="btn btn-sm btn-default" title="Mirror X player" />')
+		.html('<span class="glyphicon glyphicon-resize-horizontal"></span>')
+		.appendTo(transformationwrap)
+		.on("click", function() {
+			if ($("#ytapiplayer").hasClass('mX')) {
+				$("#ytapiplayer").removeClass('mX');
+				mirrorxbtn.removeClass('btn-success');
+			} else {
+				$("#ytapiplayer").addClass('mX');
+				mirrorxbtn.addClass('btn-success');
+			}
+		});
+	
+	mirrorybtn = $('<button id="mirrory-btn" class="btn btn-sm btn-default" title="Mirror Y player" />')
+		.html('<span class="glyphicon glyphicon-resize-vertical"></span>')
+		.appendTo(transformationwrap)
+		.on("click", function() {
+			if ($("#ytapiplayer").hasClass('mY')) {
+				$("#ytapiplayer").removeClass('mY');
+				mirrorybtn.removeClass('btn-success');
+			} else {
+				$("#ytapiplayer").addClass('mY');
+				mirrorybtn.addClass('btn-success');
+			}
+		});
+	
+	rotatebtn = $('<button id="rotate-btn" class="btn btn-sm btn-default" title="Rotate player" />')
+		.html('<span class="glyphicon glyphicon-repeat"></span>')
+		.appendTo(transformationwrap)
+		.on("click", function() {
+			if ($("#ytapiplayer").hasClass('rotate')) {
+				$("#ytapiplayer").removeClass('rotate').addClass('mY');
+			} else if ($("#ytapiplayer").hasClass('mY')) {
+				$("#ytapiplayer").removeClass('mY').addClass('vertical');
+			} else if ($("#ytapiplayer").hasClass('vertical')) {
+				$("#ytapiplayer").removeClass('vertical');
+			} else {
+				$("#ytapiplayer").addClass('rotate');
+			}
+		});
+		
+	verticalbtn = $('<button id="vertical-btn" class="btn btn-sm btn-default" title="Vertical player" />')
+		.html('<span class="glyphicon glyphicon-arrow-up"></span>')
+		.appendTo(transformationwrap)
+		.on("click", function() {
+			if ($("#ytapiplayer").hasClass('vertical')) {
+				$("#ytapiplayer").removeClass('vertical');
+				verticalbtn.removeClass('btn-success');
+			} else {
+				$("#ytapiplayer").addClass('vertical');
+				verticalbtn.addClass('btn-success');
+			}
+		});
+	
+	spin2btn = $('<button id="spin2-btn" class="btn btn-sm btn-default" title="Spin player" />')
+		.html('<span class="glyphicon glyphicon-question-sign"></span>')
+		.appendTo(transformationwrap)
+		.on("click", function() {
+			if ($("#ytapiplayer").hasClass('spin2')) {
+				$("#ytapiplayer").removeClass('spin2');
+				spin2btn.removeClass('btn-success');
+			} else {
+				$("#ytapiplayer").addClass('spin2');
+				spin2btn.addClass('btn-success');
+			}
+		});
+
+}
+
+function toggleUNTZ() {
+	if (UNTZ) {
+		UNTZINT = setInterval(function() {
+			if ($(".untz").length) {
+				$(".untz").css("color", getRandomColor());
+			}
+		}, 60);
+		untzbtn.removeClass('btn-danger');
+	} else {
+		clearInterval(UNTZINT);
+		untzbtn.addClass('btn-danger');
 	}
 }
 
-
-if (UI_ChannelTheme=="1" && ChannelThemeURL!="") {
-	themesel.prepend('<option value="'+ChannelThemeURL+'"># Channel Theme</option>')
-	  .prepend('<option value="" class="theme-header" disabled>main theme</option>');
+// adding fast commands and volume buttons
+if (UI_QuickCommandsBtns === 1) {
+	funcbtnform = $('<div id="funcbtnform" class="form-group" />')
+		.appendTo(configwell);
+	$('<div class="col-lg-3 col-md-3">Command Buttons</div>')
+		.appendTo(funcbtnform);
+	funcbtnwrap = $('<div id="funcbtnwrap" class="btn-group col-lg-6 col-md-6" />')
+		.appendTo(funcbtnform);
+	if (UI_QuickCommandsBtns === 1) {
+		afkbtn = $('<button id="afk-btn" class="btn btn-default btn-sm" title="Toggle AFK status">/afk</button>')
+			.appendTo(funcbtnwrap)
+			.on("click", function() {
+				socket.emit("chatMsg", {msg: '/afk'});
+			});
+		clearbtn = $('<button id="clear-btn" class="btn btn-default btn-sm" title="Clear chat">/clear</button>')
+			.appendTo(funcbtnwrap)
+			.on("click", function() {
+				if (confirm('Are you sure to clear the chat window?')) {
+					socket.emit("chatMsg", {msg: '/clear'});
+				}
+		});
+		untzbtn = $('<button id="untz-btn" class="btn btn-default btn-sm" title="Toggle untz">untz</button>')
+			.appendTo(funcbtnwrap)
+			.on("click", function() {
+				UNTZ = !UNTZ;
+				setOpt(CHANNEL.name + "_UNTZ", UNTZ);
+				toggleUNTZ();
+			});
+		toggleClearBtn();
+	}
 }
 
+// adding selector with player display modes
+if (UI_DisplayModeSel === 1) {
+	modeform = $('<div id="modeform" class="form-group" />')
+		.appendTo(configwell);
+	$('<div class="col-lg-3 col-md-3">Display Mode</div>')
+		.appendTo(modeform);
+	modewrap = $('<div id="modewrap" class="col-lg-7 col-md-7" />')
+		.appendTo(modeform);
+	modesel = $('<select id="mode-sel" class="form-control" />')
+		.append('<option value="syMode">synchtube mode</option>')
+		.append('<option value="kMode">cinema mode</option>')
+		.append('<option value="chMode">chatroom mode</option>')
+		.append('<option value="sMode">silent mode</option>')
+		.append('<option value="rMode">radio mode</option>')
+		.appendTo(modewrap)
+		.on("change", function() {
+			$("#config-btn, #configbtnwrap br").hide();
+			$("#min-layout").parent().hide();
+			PLAYER.mediaType=="jw" ? $("#mediarefresh").click() : '';
+			setMode(modesel.val());
+			scrollQueue();
+			scrollChat();
+			showPlayer();
+		});
+
+}
+
+// adding selector with channel themes
+themeform = $('<div id="themeform" class="form-group" />')
+	.appendTo(configwell);
+$('<div class="col-lg-3 col-md-3">Personal Theme</div>')
+	.appendTo(themeform);
+themewrap = $('<div id="themewrap" class="col-lg-7 col-md-7" />')
+	.appendTo(themeform);
+
+themesel = $('<select id="theme-sel" class="form-control" />')
+	.append('<option value="/css/themes/light.css"># Light</option>')
+	.append('<option value="/css/themes/bootstrap-theme.min.css"># Bootstrap</option>')
+	.append('<option value="/css/themes/slate.css"># Slate</option>')
+	.append('<option value="/css/themes/cyborg.css"># Cyborg</option>')
+	.appendTo(themewrap)
+	.on("change", function() {
+		chatfunc.detach();
+		$("#playlistmanagerwrap").show();
+		CHATFUNC = false;
+		USERTHEME = themesel.val();
+		setUserCSS();
+		setOpt(CHANNEL.name + "_theme", USERTHEME);
+	});
+
+ThemesCSS.length > 0 ? themesel.append('<option value="" class="theme-header" disabled>additional themes</option>') : '';
+for (i in ThemesCSS) {
+	themesel.append('<option value="' + ThemesCSS[i][1] + '">' + ThemesCSS[i][0] + '</option>');
+}
 
 themesel.val(USERTHEME);
 
-
 // adding temporary hiding options
+hideform = $('<div id="hideform" class="form-group" />')
+	.appendTo(configwell);
 
+$('<div class="col-lg-3 col-md-3">Temporary Hide</div>')
+	.appendTo(hideform);
+hidewrap = $('<div id="hidewrap" class="btn-group col-lg-6 col-md-6" />')
+	.appendTo(hideform);
+  
+hidemotdbtn = $('<button id="hidemotd-btn" class="btn btn-sm btn-default" title="Hide MOTD">MOTD</button>')
+	.appendTo(hidewrap)
+	.on("click", function() {
+		HIDEMOTD = !HIDEMOTD;
+		setOpt(CHANNEL.name + "_HIDEMOTD", HIDEMOTD);
+		toggleDiv("#motdrow");
+		HIDEMOTD ? hidemotdbtn.addClass('btn-danger') : hidemotdbtn.removeClass('btn-danger');
+		HIDEMOTD ? hidemotdbtn.attr("title","Show MOTD") : hidemotdbtn.attr("title","Hide MOTD");
+});
 
-hideform = $('<div id="hideform" class="form-group" />').appendTo(configwell);
-$('<div class="col-lg-5 col-md-5 conf-cap">Temporary hide</div>').appendTo(hideform);
-hidewrap = $('<div id="hidewrap" class="col-lg-7 col-md-7" />').appendTo(hideform);
+hideannbtn = $('<button id="hideann-btn" class="btn btn-sm btn-default" title="Hide Announcements">Ann</button>')
+	.appendTo(hidewrap)
+	.on("click", function() {
+		HIDEANN = !HIDEANN;
+		setOpt(CHANNEL.name + "_HIDEANN", HIDEANN);
+		toggleDiv("#announcements");
+		HIDEANN ? hideannbtn.addClass('btn-danger') : hideannbtn.removeClass('btn-danger');
+		HIDEANN ? hideannbtn.attr("title","Show Announcements") : hideannbtn.attr("title","Hide Announcements");
+});
 
+hideplbtn = $('<button id="hidepl-btn" class="btn btn-sm btn-default" title="Hide Playlist">PL</button>')
+	.appendTo(hidewrap)
+	.on("click", function() {
+		HIDEPL = !HIDEPL;
+		setOpt(CHANNEL.name + "_HIDEPL", HIDEPL);
+		toggleDiv("#queue");
+		toggleDiv("#plmeta");
+		HIDEPL ? hideplbtn.addClass('btn-danger') : hideplbtn.removeClass('btn-danger');
+		HIDEPL ? hideplbtn.attr("title","Show Playlist") : hideplbtn.attr("title","Hide Playlist");
+});
 
-hidemotd = $('<label class="checkbox-inline" />').appendTo(hidewrap);
-cbox = $('<input type="checkbox" id="hide-motd" value="no" >')
-  .appendTo(hidemotd)
-  .on("click", function() {
-	toggleDiv("#motdrow");
-  });
-cbox.after(' MOTD');
+hidehfbtn = $('<button id="hidehf-btn" class="btn btn-sm btn-default" title="Hide Header and Footer">H/F</button>')
+	.appendTo(hidewrap)
+	.on("click", function() {
+		HIDEHF = !HIDEHF;
+		setOpt(CHANNEL.name + "_HIDEHF", HIDEHF);
+		$("nav").css('display')!="none" ? headerMode("fixed") : headerMode(UCONF.header);
+		toggleDiv("nav");
+		toggleDiv("footer");
+		HIDEHF ? hidehfbtn.addClass('btn-danger') : hidehfbtn.removeClass('btn-danger');
+		HIDEPL ? hidehfbtn.attr("title","Show Header and Footer") : hidehfbtn.attr("title","Hide Header and Footer");
+});
+  
+if (UI_WC === 1) {
+	hidebgbtn = $('<button id="hidebg-btn" class="btn btn-sm btn-default" title="Hide background button and/or revert to channel background">BG</button>')
+		.appendTo(hidewrap)
+		.on("click", function() {
+	  		HIDEBG = !HIDEBG;
+			setOpt(CHANNEL.name + "_HIDEBG", HIDEBG);
+			toggleDiv(waifubtn2);
+		  	if (HIDEBG) {
+				$("body").removeAttr("style")
+				hidebgbtn.addClass('btn-danger');
+			} else {
+				if (STREAMER.name !== "NONE" && STREAMER.link !== "") {
+					var bcss = 'background-image:url(' + STREAMER.link + ');' + STREAMER.css;
+					$("body").attr("style",bcss);
+				}
+				hidebgbtn.removeClass('btn-danger');
+			}
+	});
+	if (HIDEBG) {
+		waifubtn2.hide();
+		hidebgbtn.addClass('btn-danger');
+	}
+}
 
-
-hideann = $('<label class="checkbox-inline" />').appendTo(hidewrap);
-cbox = $('<input type="checkbox" id="hide-ann" value="no" />')
-  .appendTo(hideann)
-  .on("click", function() {
-	toggleDiv("#announcements");
-  });
-cbox.after(' Announcements');
-
-
-hidetitle = $('<label class="checkbox-inline" />').appendTo(hidewrap);
-cbox = $('<input type="checkbox" id="hide-title" value="no" />')
-  .appendTo(hidetitle)
-  .on("click", function() {
-	toggleDiv("#titlerow");
-	toggleDiv("#currenttitle");
-  });
-cbox.after(' Title');
-
-
-hidepl = $('<label class="checkbox-inline" />').appendTo(hidewrap);
-cbox = $('<input type="checkbox" id="hide-pl" value="no" />')
-  .appendTo(hidepl)
-  .on("click", function() {
-	toggleDiv("#queue");
-	toggleDiv("#plmeta");
-  });
-cbox.after(' Playlist');
-
-
-hidehf = $('<label class="checkbox-inline" />').appendTo(hidewrap);
-cbox = $('<input type="checkbox" id="hide-hf" value="no" />')
-  .appendTo(hidehf)
-  .on("click", function() {
-	$("nav").css('display')!="none" ? headerMode("fixed") : headerMode(USERCONFIG.header);
-	toggleDiv("nav");
-	toggleDiv("footer");
-  });
-cbox.after(' H&F');
-
+function removeImages() {
+	$('.pm-buffer.linewrap img, #messagebuffer.linewrap img').each(function() {
+		var EBLname =  $(this).parents("div").attr("class") || "chat-msg-" + $(this).parents(".panel-body").siblings().text().slice(0,-1);
+		var EBLnum = EMOTEBL.indexOf(EBLname.split("chat-msg-")[1]);
+		var UEBLnum = USEREMOTEBL.indexOf(EBLname.split("chat-msg-")[1]);
+		var EBLtitle = $(this).attr('title') || ":emote:";
+		console.log(EBLtitle);
+		if ((HIDEIMG || ((EBLnum > -1 || UEBLnum > -1) && EBLtitle.indexOf(":") > -1)) && !$(this).hasClass("user")) {
+			if ($(this).hasClass("channel-emote")) {
+				$('<a class="channel-emote" target="_blank">' + $(this).prop('title') + '</a>').attr('href', $(this).prop('src')).attr('title', $(this).prop('title')).insertBefore(this);
+			} else if ($(this).hasClass("spoilerpic")) {
+				$(this).text($(this).before('SPOILER'));
+			} else if ($(this).hasClass("lotterypic")) {
+				$(this).text($(this).before('WINNER'));
+			} else {
+				$(this).text($(this).before($(this).attr("src")));
+			}
+			$(this).remove();
+		}
+	});
+}
+function showImages() {
+	$(".pm-buffer.linewrap, #messagebuffer.linewrap").find('a[href^="http"]').each(function() {
+		var EBLname =  $(this).parents("div").attr("class") || "chat-msg-" + $(this).parents(".panel-body").siblings().text().slice(0,-1);
+		var EBLnum = EMOTEBL.indexOf(EBLname.split("chat-msg-")[1]);
+		var UEBLnum = USEREMOTEBL.indexOf(EBLname.split("chat-msg-")[1]);
+		var chkclass = $(this).attr('class');
+		if (chkclass !== undefined && chkclass !== "webm" && (EBLnum < 0 && UEBLnum < 0)) {
+			var isanemote = false;
+			if (chkclass === "channel-emote") {
+				for (i in CHANNEL.emotes) {
+					if ($(this).prop('title') === CHANNEL.emotes[i].name) {
+						img = $('<img class="channel-emote" />').attr('src', this.href).attr('title', $(this).prop('title'));
+						isanemote = true;
+						break;
+					}
+				}
+			} else if (chkclass === "spinpic") {
+				img = $('<img class="spin" />').attr('src', this.href);
+			} else if (chkclass === "rightfloatpic") {
+				img = $('<img class="rightfloat" />').attr('src', this.href);
+			} else if (chkclass === "leftfloatpic") {
+				img = $('<img class="leftfloat" />').attr('src', this.href);
+			} else if (chkclass === "spoilerpic") {
+				img = $('<img class="spoilerpic" />').attr('src', 'http://i.imgur.com/xzD4vqc.png');
+			} else if (chkclass === "lotterypic") {
+				img = $('<img class="lotterypic" />').attr('src', Lottery.image);
+			} else {
+				img = $('<img class="picturelink" />').attr('src', this.href);
+			}
+			isanemote ? $(this).before(img).remove() : $(this).html(img);
+		}
+	});
+	!SPINTOG ? $(".spin").addClass("nospin").removeClass("spin") : '';
+	setTimeout(scrollChat, 1000);
+	$(".pm-buffer.linewrap img, #messagebuffer.linewrap img").css({"max-height": MAXH + "px","max-width": MAXW + "px"});
+}
+hideimgbtn = $('<span id="hideimg-btn" class="label label-default pull-right pointer" title="Hide Images">H</span>')
+	.insertAfter("#modflair")
+	.on("click", function() {
+		HIDEIMG = !HIDEIMG;
+		setOpt(CHANNEL.name + "_HIDEIMG", HIDEIMG);
+	  	if (HIDEIMG) {
+			removeImages();
+			hideimgbtn.addClass('btn-danger');
+			hideimgbtn.attr("title", "Show Images");
+		} else {
+			hideimgbtn.removeClass('btn-danger');
+			showImages();
+	 		hideimgbtn.attr("title", "Hide Images");
+		}
+});
 
 // adding embedding options
+function createWEBM() {
+	if (EMBEDVID && UI_EmbeddingMedia === 1) {
+		$(".webm").each(function() {
+			splitwebmlink = this.href;
+			vid = $('<video class="embedvid" />').attr('src', splitwebmlink).prop('loop', LOOPWEBM).prop('muted', 'true').prop('autoplay', AUTOVID)
+				.on("click", function() {
+					$(this).get(0).paused ? $(this).get(0).play() : $(this).get(0).pause();
+					return false;
+				}).on("dblclick", function() {
+					window.open(splitwebmlink, '_blank');
+					return false;
+				});
+			UI_MediaControls === 1 ? vid.attr('controls', '') : '';
+			SCROLLCHAT ? scrollChat() : '';
+			$(this).before(vid).remove();
+		});
+		$(".pm-buffer.linewrap video, #messagebuffer.linewrap video").css({"max-width": MAXW + "px","max-height": MAXH + "px"});
+	}
+}
 
-
-if (UI_EmbeddingMedia=="1" && (EmbeddingMedia_Images!="" || EmbeddingMedia_Videos!="")) {
+if (UI_EmbeddingMedia === 1) {
 	embedform = $('<div id="embedform" class="form-group" />').appendTo(configwell);
-	$('<div class="col-lg-5 col-md-5 conf-cap">Embeds <span id="embed-help">[?]</span></div>')
+	$('<div class="col-lg-3 col-md-3 conf-cap">Embeds<span id="embed-help">[?]</span></div>')
 	  .appendTo(embedform);
-	embedwrap = $('<div id="embedwrap" class="col-lg-7 col-md-7" />').appendTo(embedform);
-
-
-	$("#embed-help").on("click", function() {
-		txt = 'This option lets you see images or videos directly on the chat, instead of links.\n'
-		  + 'Click on image or double click on video to open in the new tab.\n'
-		  + 'All videos are muted by default, if autoplay - click to unmute, else click to play.\n\n'
-		  + 'This channel supports following types of links (specified as CSS codes):\n'
-		  + '■ Images - ';
-		  (EmbeddingMedia_Images!="") ? txt+=EmbeddingMedia_Images : 'none';
-		txt += '\n■ Videos - ';
-		  (EmbeddingMedia_Videos!="") ? txt+=EmbeddingMedia_Videos : 'none';
+	embedwrap = $('<div id="embedwrap" class="btn-group col-lg-6 col-md-6" />').appendTo(embedform);
+	txt = 'This option lets you see Webms directly on the chat, instead of links.\n'
+	  + 'Double click on a Webm to open in the new tab.\n'
+	  + 'All Webms are muted by default.';
+	$("#embed-help").prop("title", txt).on("click", function() {
 		alert(txt);
 	});
-
-
-	if (EmbeddingMedia_Images!="") {
-		embedimg = $('<label class="checkbox-inline" />').appendTo(embedwrap);
-		cbox = $('<input type="checkbox" id="embed-img" checked>')
-		  .appendTo(embedimg)
-		  .on("click", function() {
-			EMBEDIMG = !EMBEDIMG;
-				setOpt(CHANNEL.name+"_embedimg", EMBEDIMG);
-		  });
-		cbox.after(' img');
-		!EMBEDIMG ? cbox.removeAttr('checked') : '';
-	}
-
-
-	if (EmbeddingMedia_Videos!="") {
-		embedvid = $('<label class="checkbox-inline" />').appendTo(embedwrap);
-		cbox = $('<input type="checkbox" id="embed-webm" checked>')
-		  .appendTo(embedvid)
-		  .on("click", function() {
+	embedvid = $('<button id="embedvid-btn" class="btn btn-sm btn-default" title="Toggle Webm">Webm</button>')
+		.appendTo(embedwrap)
+	 	.on("click", function() {
 			EMBEDVID = !EMBEDVID;
-			setOpt(CHANNEL.name+"_embedvid", EMBEDVID);
-			EMBEDVID ? autovid.show() : autovid.hide();
-		  });
-		cbox.after(' video');
-		!EMBEDVID ? cbox.removeAttr('checked') : '';
-
-
-		autovid = $('<label class="checkbox-inline" />').appendTo(embedwrap);
-		cbox = $('<input type="checkbox" id="auto-webm" checked>')
-		  .appendTo(autovid)
-		  .on("click", function() {
-			AUTOVID = !AUTOVID;
-			setOpt(CHANNEL.name+"_autovid", AUTOVID);
-	 	 });
-		cbox.after(' autoplay');
-		!AUTOVID ? cbox.removeAttr('checked') : '';
-		!EMBEDVID ? autovid.hide() : '';
-	}
-}
-
-
-// adding quick commands and volume buttons
-
-
-if (UI_QuickCommandsBtns=="1" || UI_VolumeBtns=="1") {
-	funcbtnform = $('<div id="funcbtnform" class="form-group" />').appendTo(configwell);
-	$('<div class="col-lg-5 col-md-5">Command buttons</div>').appendTo(funcbtnform);
-	funcbtnwrap = $('<div id="funcbtnwrap" class="col-lg-7 col-md-7" />').appendTo(funcbtnform);
-	btnsgroup = $('<div id="funcbtngroup" class="btn-group" />').appendTo(funcbtnwrap);
-
-
-	if (UI_QuickCommandsBtns=="1") {
-		clearbtn = $('<button id="clear-btn" class="btn btn-default btn-sm">/clear</button>')
-		  .appendTo(btnsgroup)
-		  .on("click", function() {
-			if (confirm('Are you sure to clear the chat window?')) {
-				socket.emit("chatMsg", {msg: '/clear'});
+			setOpt(CHANNEL.name + "_EMBEDVID", EMBEDVID);
+			toggleDiv(autovid);
+			toggleDiv(loopwebm);
+			!EMBEDVID ? embedvid.removeClass('btn-success') : embedvid.addClass('btn-success');
+			if (!EMBEDVID) {
+				$('.pm-buffer.linewrap video, #messagebuffer.linewrap video').each(function() {
+					$('<a target="_blank" class="webm"></a>').attr('href', $(this).prop('src')).insertBefore(this).text($(this).prop('src'));
+				}).remove();
+			} else {
+				createWEBM();
 			}
-		  });
-		afkbtn = $('<button id="afk-btn" class="btn btn-default btn-sm">/afk</button>')
-		  .appendTo(btnsgroup)
-		  .on("click", function() {
-			socket.emit("chatMsg", {msg: '/afk'});
-		  });
-
-
-		socket.on("rank", toggleClearBtn);
-		toggleClearBtn();
-	}
-
-
-	if (UI_VolumeBtns=="1") {
-		voldownbtn = $('<button id="voldown-btn" class="btn btn-default btn-sm">vol -</button>')
-		  .appendTo(btnsgroup)
-		  .on("click", function() {
-			a=PLAYER.player.getVolume();
-			PLAYER.player.setVolume(a-1);
-		  });
-		volupbtn = $('<button id="volup-btn" class="btn btn-default btn-sm">vol +</button>')
-		  .appendTo(btnsgroup)
-		  .on("click", function() {
-			a=PLAYER.player.getVolume();
-			PLAYER.player.setVolume(a+1);
-		  });
-
-
-		socket.on("changeMedia", toggleVolBtn);
-		toggleVolBtn();
-	}
+	  });
+	!EMBEDVID ? embedvid.removeClass('btn-success') : embedvid.addClass('btn-success');
+	autovid = $('<button id="autoplay-btn" class="btn btn-sm btn-default" title="Toggle Webm Autoplay">Autoplay</button>')
+		.appendTo(embedwrap)
+		.on("click", function() {
+			AUTOVID = !AUTOVID;
+			setOpt(CHANNEL.name + "_AUTOVID", AUTOVID);
+			!AUTOVID ? autovid.removeClass('btn-success') : autovid.addClass('btn-success');
+		});
+	!AUTOVID ? autovid.removeClass('btn-success') : autovid.addClass('btn-success');
+	!EMBEDVID ? autovid.hide() : '';
+	
+	loopwebm = $('<button id="loopplay-btn" class="btn btn-sm btn-default" title="Toggle Webm Loop">Loop</button>')
+		.appendTo(embedwrap)
+		.on("click", function() {
+			LOOPWEBM = !LOOPWEBM;
+			setOpt(CHANNEL.name + "_LOOPWEBM", LOOPWEBM);
+			!LOOPWEBM ? loopwebm.removeClass('btn-success') : loopwebm.addClass('btn-success');
+			$(".pm-buffer.linewrap video, #messagebuffer.linewrap video").prop('loop', LOOPWEBM);
+		});
+	!LOOPWEBM ? loopwebm.removeClass('btn-success') : loopwebm.addClass('btn-success');
+	!EMBEDVID ? loopwebm.hide() : '';
 }
-
-
-// adding media database layout
-
-
-if (UI_ChannelDatabase=="1" && ChannelDatabase_URL=="") {
-	dbwrap = $('<div id="dbwrap" class="col-lg-12 col-md-12" style="display:none" />').insertBefore(configwrap);
-	dbwell = $('<div id="db-well" class="well" />').appendTo(dbwrap);
-
-
-	var item_nr=0;
-	var layer_nr=1;
-	var opening=new Array();
-	var item_count=new Array(0);
-	var count_nr=0;
-
-
-	if (ChannelDatabase.length<1 || ChannelDatabase[0][0]!="") {
-		ChannelDatabase.unshift(['', '(various media)']);
-	}
-	UI_ChannelCache=="1" ? createDatabase() : '';
-} else if (UI_ChannelDatabase=="1" && ChannelDatabase_URL!="") {
-	$.getScript(ChannelDatabase_URL);
-}
-
-
-// adding galleries layout
-
-
-if (UI_ChannelGalleries=="1") {
-	gallerywrap = $('<div id="gallerywrap" class="col-lg-12 col-md-12" style="display:none" />')
-	  .appendTo("#leftpane-inner");
-	gallerywell = $('<div id="gallery-well" class="well" />').appendTo(gallerywrap);
-
-
-	if (ChannelGalleries_Array.length<1) {
-		ChannelGalleries_Array=[['Anime pictures', 'http://imgur.com/a/SjwJb/embed']];
-	}
-	UI_ChannelCache=="1" ? createGallery() : '';
-}
-
-
-// unchecking temporary media checkbox for registered users
-
-
-if (UI_DefaultNonTemp=="1") {
-	CLIENT.rank>0 ? $(".add-temp").prop('checked', false) : '';
-}
-
-
-// adding playlist options for moderators button
-
-
-advplaylist = $('<button id="advplaylist" class="btn btn-sm btn-default" title="Advanced options" />')
-  .append('<span class="glyphicon glyphicon-wrench" />')
-  .insertBefore("#qlockbtn")
-  .on("click", function() {
-	toggleDiv(advplcontrols);
-  });
-
-
-// adding advanced playlist options form
-
-
-advplcontrol = $('<div id="advplcontrol" class="col-lg-12 col-md-12" />').insertAfter("#playlistmanager");
-advplcontrols = $('<div id="advplcontrols" class="btn-group" style="display:none" />').appendTo(advplcontrol);
-
-
-// adding advanced playlist options buttons
-
-
-playnextbtn = $('<button id="playnext-btn" class="btn btn-default">Play next</button>')
-  .appendTo(advplcontrols)
-  .on("click", function() {
-	socket.emit("playNext");
-  });
-
-
-addrandombtn = $('<button id="addrandom-btn" class="btn btn-default">Add random</button>')
-  .appendTo(advplcontrols)
-  .on("click", function() {
-	addRandomItem();
-  });
-
-
-bumplastbtn = $('<button id="bumplast-btn" class="btn btn-default">Bump last</button>')
-  .appendTo(advplcontrols)
-  .on("click", function() {
-	len=$("#queue").children().length;
-	uid=$("#queue .queue_entry:nth-child("+len+")").data("uid");
-	socket.emit("moveMedia", {from:uid, after:PL_CURRENT});
-  });
-
-
-deletelastbtn = $('<button id="deletelast-btn" class="btn btn-default">Delete last</button>')
-  .appendTo(advplcontrols)
-  .on("click", function() {
-	if (confirm('Are you sure to delete last item?')) {
-		len=$("#queue").children().length;
-		uid=$("#queue .queue_entry:nth-child("+len+")").data("uid");
-		socket.emit("delete", uid);
-	}
-  });
-
-
-toggleAdvancedPl();
-
-
-// adding playlist expanding button
-
-
-expandbtn = $('<button id="expand-btn" class="btn btn-sm btn-default" title="Expand playlist" />')
-  .append('<span class="glyphicon glyphicon-resize-full" />')
-  .prependTo("#videocontrols")
-  .on("click", function() {
-	expandQueue();
-  });
-
-
-// adding playlist scrolling button
-
-
-scrollbtn = $('<button id="scroll-btn" class="btn btn-sm btn-default" title="Scroll playlist to current item" />')
-  .append('<span class="glyphicon glyphicon-hand-right" />')
-  .prependTo("#videocontrols")
-  .on("click", function() {
-	scrollQueue();
-  });
-
-
-// adding contributors button
-
-
-contribbtn = $('<button id="contrib-btn" class="btn btn-sm btn-default" title="Contributors list" />')
-  .append('<span class="glyphicon glyphicon-user" />')
-  .prependTo("#videocontrols")
-  .on("click", function() {
-	showContributors();
-  });
-
-
-// adding pin-up button
-
-
-pinupbtn = $('<button id="pinup-btn" class="btn btn-sm btn-default" title="Pin playlist to player" />')
-  .append('<span class="glyphicon glyphicon-pushpin" />')
-  .prependTo("#videocontrols")
-  .on("click", function() {
-	!PINNED ? pinUp() : unPin();
-	scrollQueue();
-	scrollChat();
-  });
-
-
-// extending 'Get URLs' function
-
-
-if (UI_ExtendedGetURLs=="1") {
-	$("#getplaylist").unbind()
-	  .on("click", function() {
-		getPlaylistURLs();
-	});
-}
-
-
-// altering message for the first-timers
-
-
-if ($("#plonotification").length>0) {
-	repl = '"the old style" of playlist buttons (<b>recommended</b>) - more compact playlist with nice icons '
-	  + '(see image <a href="https://dl.dropboxusercontent.com/s/4ya7i5vlyb3likk/oldpl.jpg" target="_blank">'
-	  + 'here</a>).';
-	html=$("#plonotification .alert").html().replace(/the old style of playlist buttons./, repl);
-	html=html.replace('right click). ', 'right click).<br />');
-	$("#plonotification .alert").html(html);
-}
-
 
 // rearranging footer
-
-
-html='<br />CyTube Plus 4.5 · Copyright &copy; 2013-2014 Zimny Lech · '
-  + 'Free source on <a href="http://github.com/zimny-lech/CyTube-Plus" target="_blank">GitHub</a> · '
-  + '<a href="http://github.com/zimny-lech/CyTube-Plus/wiki" target="_blank">Wiki</a>';
-$(".credit").append(html);
-
-
-if (UI_CustomRightFooter=="1") {
-	rightfooter = $('<span id="rightfooter">'+CustomRightFooter_HTML+'</span>')
-	  .appendTo("footer .container");
-}
-
-
-if (UI_CustomFooter=="1" || UI_UserStatistics=="1") {
-	leftfooter = (UI_CustomRightFooter=="1") ? $('<span id="leftfooter" />') : $('<div id="leftfooter" />');
-	(UI_CustomRightFooter=="1" && CustomFooter_HTML!="") ? leftfooter.html(CustomFooter_HTML) : '';
-	leftfooter.appendTo("footer .container");
-}
-
+UI_FlagCounter === 1 ? rightfooter = $('<span id="rightfooter">' + FlagCounter_HTML + '</span>').appendTo("footer .container") : '';
+UI_UserStatistics === 1 ? leftfooter = $('<span id="leftfooter"></span>').appendTo("footer .container") : '';
 
 // updating user visits
-
-
 USERVISITS++;
-setOpt(CHANNEL.name+"_visits", USERVISITS);
+setOpt(CHANNEL.name + "_visits", USERVISITS);
 
-
-if (UI_UserStatistics=="1") {
-	(UI_CustomFooter=="1" && CustomFooter_HTML!="") ? $('<br /><br />').appendTo(leftfooter) : '';
-
-
-	$('<span>My visits: </span><span class="badge footer-badge">'+USERVISITS+'</span><span> / </span>')
-	  .appendTo(leftfooter);
-	$('<span>Current online time: </span>').appendTo(leftfooter);
-	onlinetime = $('<span id="onlinetime" class="badge footer-badge">0:00</span>').appendTo(leftfooter);
-
-
-	setInterval(function() {onlineTime()}, 60000);
+if (UI_UserStatistics === 1) {
+	$('<span>My visits: </span><span class="badge footer-badge">' + USERVISITS + '</span><span> / </span>')
+		.appendTo(leftfooter);
+	$('<span>Current online time: </span><span id="onlinetime" class="badge footer-badge">0:00</span>')
+		.appendTo(leftfooter);
+	setInterval(onlineTime, 60000);
 }
 
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 /* ----- Chat and window extensions and events ----- */
 
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-(UI_EmbeddingMedia=="1" && (EmbeddingMedia_Images!="" || EmbeddingMedia_Videos!="")) ? ALTERCHATFORMAT=true : '';
-(UI_UserMarks=="1" || UI_IndependentEmotes=="1" || UI_IndependentFilters=="1") ? ALTERCHATFORMAT=true : '';
-
-
-// alter chat messages formatting
-// DEV NOTE: this is extended function from CyTube "util.js" file
-
-
-if (ALTERCHATFORMAT) {
-	function formatChatMessage(data, last) {
-		if (!data.meta || data.msgclass) {
-			data.meta = {addClass:data.msgclass, addClassToNameAndTimestamp:data.msgclass};
+(function addStuffOnLogin() {
+	$('div[class^="chat-msg"]').each(function() {
+		var user = $(this).attr("class").replace("chat-msg-","");
+		var children = $(this).children();
+		var pixs = $('<span ' + (PIXEL ? '' : ' style="display:none"') + '/>').insertAfter(children.eq(0));
+		if (WC[user] !== undefined) {
+			pixs.html('<img class="user" src="' + WC[user].pix + '" title="' + user + '" height="16"> ');
 		}
-
-
-		skip=data.username===last.name;
-		data.meta.addClass==="server-whisper" ? skip=true : '';
-		data.msg.match(/^\s*<strong>\w+\s*:\s*<\/strong>\s*/) ? skip=false : '';
-		data.meta.forceShowName ? skip=false : '';
-		data.msg=execEmotes(data.msg);
- 
-		last.name = data.username;
-		div = $('<div />');
-		if (data.meta.addClass==="drink") {
-			div.addClass('drink');
-			data.meta.addClass='';
-		}
- 
-		if (USEROPTS.show_timestamps) {
-			time = $('<span class="timestamp" />').appendTo(div);
-			timestamp = new Date(data.time).toTimeString().split(' ')[0];
-			time.text('['+timestamp+'] ');
-			if (data.meta.addClass && data.meta.addClassToNameAndTimestamp) {
-				time.addClass(data.meta.addClass);
+	});
+	/*var sreg = /<span class="subchannel" title="(.+?)"><\/span>/; //SUBCHANNEL
+	$(".subchannel").each(function() {
+		var schan = $(this);
+		var spar = schan.parent().parent();
+		var schtml = spar.html();
+		if (schtml.search(sreg) > -1) {
+			smat = schtml.match(sreg);
+			spar.html(smat[0] + schtml.replace(smat[0],""));
+			if (smat[1] != SUBCHAN) {
+				spar.hide();
+			} else {
+				spar.show();
 			}
+			spar.attr("title", spar.attr("class").replace(/chat-msg-| nick-hover/g,"") + " wrote this in the " + SCNAMES[parseInt(smat[1])-1] + " Channel (" + smat[1] + ").");
+			//spar.children().eq(3).text(spar.children().eq(3).text().trim());
 		}
+	});
+	$("#chatline").attr("placeholder",SCNAMES[SUBCHAN-1] + " Channel (" + SUBCHAN + ")");*/
+})();
 
-
-		if (UI_UserMarks=="1" && UI_Squavatars=="1") {
-			html=createSquavatar(data.username);
-			div.html(div.html()+html);
-		}
-		if (UI_UserMarks=="1" && UI_Squavatars!="1") {
-			if (UserMarks_Array[data.username]!=undefined) {
-				html='<span class="avatar">'+UserMarks_Array[data.username]+'</span>';
-				div.html(div.html()+html);
+EVENT.a.volume = .1;
+// add pixel before or after name, always show name or not
+function formatChatMessage(data, last) {
+	if (data.msg === '/reload') {
+		$("#userlist").find('span[class$=userlist_owner],span[class$=userlist_siteadmin]').each(function() {
+			if ($(this).text() === data.username) {
+				location.reload();
+				RELOADED = true;
 			}
-		}
- 
-		uname = $('<span />');
-		!skip ? uname.appendTo(div) : '';
-		mark = (UI_UsernameMark=="1" && UsernameMark_Char!="") ? UsernameMark_Char : ':';
-		$('<strong class="username" />').text(data.username+mark+' ').appendTo(uname);
-
-
-		data.meta.modflair ? uname.addClass(getNameColor(data.meta.modflair)) : '';
-		if (data.meta.addClass && data.meta.addClassToNameAndTimestamp) {
-			uname.addClass(data.meta.addClass);
-		}
-		if (data.meta.superadminflair) {
-			uname.addClass('globalmod label').addClass(data.meta.superadminflair.labelclass);
-			$('<span class="glyphicon" />').addClass(data.meta.superadminflair.icon)
-			  .prependTo(uname);
-		}
- 
-		message = $('<span />').appendTo(div);
-		message[0].innerHTML=data.msg;
-
-
-		(data.meta.addClass=="greentext") ? message.addClass('greentext') : '';
-		(data.meta.addClass=="spoiler") ? message.addClass('spoiler') : '';
-		(data.meta.addClass=="action") ? message.addClass('action') : '';
-		(data.meta.addClass=="server-whisper") ? message.addClass('server-whisper') : '';
-
-
-		if (data.meta.action) {
-			uname.remove();
-			message[0].innerHTML=data.username+' '+data.msg;
-		}
-
-
-		if (UI_IndependentEmotes=="1") {
-			_div=div.html();
-			for (i in IndependentEmotes) {
-				filter=IndependentEmotes[i][0];
-				html = '<img src="'+IndependentEmotes[i][1]+'" title="'+filter+'" '
-				  + 'style="width:'+IndependentEmotes[i][2]+'px; '
-				  + 'height:'+IndependentEmotes[i][3]+'px; '
-				  + 'cursor:pointer" onclick="insertText(\''+filter+'\')" />';
-				re=new RegExp(filter, 'g');
-				_div=_div.replace(re, html);
-			}
-			div.html(_div);
-		}
-		if (UI_IndependentFilters=="1") {
-			_div=div.html();
-			for (i in IndependentFilters) {
-				_div=_div.replace(IndependentFilters[i].before, IndependentFilters[i].after);
-			}
-			div.html(_div);
-		}
-
-
-		data.meta.addClass ? message.addClass(data.meta.addClass) : '';
-		data.meta.shadow ? div.addClass("chat-shadow") : '';
-		div.find("img").load(function() {
-			SCROLLCHAT ? scrollChat() : '';
 		});
-
-
-		if (EMBEDIMG && UI_EmbeddingMedia=="1") {
-			div.find(EmbeddingMedia_Images).each(function() {
-				img = $('<img class="embedimg" />').attr('src', this.href)
-				  .load(function() {
-					SCROLLCHAT ? scrollChat() : '';
-				  });
-  		  		$(this).html(img);
-			  });
+		(CLIENT.rank > 2 && !RELOADED) ? socket.emit("chatMsg", {msg:'/kick ' + data.username + ' Quit trying to reload and enable javascript.'}) : RELOADED = false;
+	}
+	// Backwards compat
+	if (!data.meta || data.msgclass) {
+		data.meta = {
+			addClass: data.msgclass,
+			// And the award for "variable name most like Java source code" goes to...
+			addClassToNameAndTimestamp: data.msgclass
+		};
+	}
+	// Phase 1: Determine whether to show the username or not
+	var skip = data.username === last.name;
+	// Prevent impersonation by abuse of the bold filter
+	if(data.msg.match(/^\s*<strong>\w+\s*:\s*<\/strong>\s*/))
+		skip = false;
+	if (UCONF.showname === "yes" || data.meta.forceShowName)
+		skip = false;
+	if(data.meta.addClass === "server-whisper")
+		skip = true;
+	data.msg = execEmotes(data.msg);
+	last.name = data.username;
+	var div = $("<div/>");
+	/* drink is a special case because the entire container gets the class, not
+	   just the message */
+	if (data.meta.addClass === "drink") {
+		div.addClass("drink");
+		data.meta.addClass = "";
+	}
+	// Add timestamps (unless disabled)
+	if (USEROPTS.show_timestamps) {
+		var time = $("<span/>").addClass("timestamp").appendTo(div);
+		var timestamp = new Date(data.time).toTimeString().split(" ")[0];
+		time.text("["+timestamp+"] ");
+		if (data.meta.addClass && data.meta.addClassToNameAndTimestamp) {
+			time.addClass(data.meta.addClass);
 		}
-		if (EMBEDVID && UI_EmbeddingMedia=="1") {
-			div.find(EmbeddingMedia_Videos).each(function() {
-				vid = $('<video class="embedvid" />').attr('src', this.href).prop('loop', 'true')
-				  .load(function() {
-					SCROLLCHAT ? scrollChat() : '';
-				}).on("click", function() {
-    					if (!AUTOVID) {
-						if ($(this).get(0).paused) {
-							$(this).get(0).play();
-						} else {
-							$(this).get(0).pause();
-						}
-					} else {
-						$(this).prop('muted', !$(this).prop('muted'));
-					};
-					return false;
-				}).on("dblclick", function() {
-					window.open(this.src, '_blank');
-					return false;
+	}
+	// Add username
+	var name = $('<span id="namespan"/>');
+	if (!skip) {
+		name.appendTo(div);
+	}
+	var username = $("<strong/>").addClass("username").text(data.username + ": ").appendTo(name);
+	if (data.meta.modflair) {
+		name.addClass(getNameColor(data.meta.modflair));
+	}
+	if (data.meta.addClass && data.meta.addClassToNameAndTimestamp) {
+		name.addClass(data.meta.addClass);
+	}
+	if (data.meta.superadminflair) {
+		name.addClass("label")
+			.addClass(data.meta.superadminflair.labelclass);
+		$("<span/>").addClass(data.meta.superadminflair.icon)
+			.addClass("glyphicon")
+			.css("margin-right", "3px")
+			.prependTo(name);
+	}
+	if (UI_Pixel === 1 && WC[data.username] !== undefined) {
+		var pixel = '<span ' + (PIXEL ? '' : ' style="display:none"') + '><img class="user" src="' + WC[data.username].pix + '" title="' + data.username + '" height="' + UCONF.pixh + '"/> </span>';
+		if (UCONF.showname === "no" && skip) {
+			$(pixel).appendTo(div);
+		} else {
+			UCONF.pixl === "before" ? $(pixel).insertBefore(name) : $(pixel).insertAfter(name);
+		}
+	}
+	/*var subregex = /<span class="subchannel" title="(.+?)"><\/span>/;
+	if (data.msg.search(subregex) > -1) { //SUBCHANNEL
+		var submatch = data.msg.match(subregex);
+		data.msg = data.msg.replace(submatch[0],"").trim();
+		$(submatch[0]).appendTo(div);
+	}*/
+	// Add the message itself
+	var message = $("<span/>").appendTo(div);
+	if (data.msg.indexOf("<marquee") > -1) {
+		data.msg = data.msg.replace(/\[\/\]/g, "</span></marquee>");
+		if (!MQTOG) {
+			data.msg = data.msg.replace(/<marquee(.+?)>/g, "<dmarquee$1>");
+		}
+	} else {
+		data.msg = data.msg.replace(/\[\/\]/g, "</span>");
+	}
+	if (!SPINTOG) {
+		data.msg = data.msg.replace(/<(.+?)class="spin">/g, '<$1class="nospin">');
+	}
+	if ((HIDEIMG || (EMOTEBL.indexOf(data.username) > -1 || USEREMOTEBL.indexOf(data.username) > -1)) && data.msg.search(/<img(.+?)>/g) > -1 && (data.msg.match(/<img.*?title="(.*?)".*?>/g).indexOf(":") || 0) > -1) {
+		data.msg = data.msg
+			.replace(/<img class="channel-emote" src="(.+?)" title="(.+?)">/g,'<a class="channel-emote" target="_blank" href="$1" title="$2">$2</a>')
+			.replace(/<img class="spoilerpic"(.+?)>/g,'SPOILER')
+			.replace(/<img class="lotterypic"(.+?)>/g,'WINNER')
+			.replace(/<img(.+?)src="(.+?)"(.+?)>/g,'$2');
+	}
+	data.msg = data.msg
+		.replace(/<img(.+?)max-width:(.+?)>/g,'<img$1max-width: ' + MAXH + 'px; max-height: ' + MAXW + 'px;">')
+		.replace(/<img(.+?)>/g,'<img$1style="max-width: ' + MAXH + 'px; max-height: ' + MAXW + 'px;">');
+	message[0].innerHTML = data.msg;
+	// For /me the username is part of the message
+	if (data.meta.action) {
+		name.remove();
+		message[0].innerHTML = data.username + " " + data.msg;
+	}
+	if (data.meta.addClass) {
+		message.addClass(data.meta.addClass);
+	}
+	if (data.meta.shadow) {
+		div.addClass("chat-shadow");
+	}
+
+	div.find("img").load(function () {
+		if (SCROLLCHAT) {
+			scrollChat();
+		}
+	});
+	timer = new Date();
+	if (timer > EVENT.date && document.hasFocus() && data.msg.search(/(http|https):\/\/exhentai\.org\//gi) > -1) {
+		EVENT.a.play();
+		EVENT.date = timer.setSeconds(timer.getSeconds() + 3600);
+		setOpt(CHANNEL.name + "_EVENT", EVENT.date);
+	}
+	return div;
+}
+
+function formatUserlistItem(div) {
+	var data = {
+		name: div.data("name") || "",
+		rank: div.data("rank"),
+		profile: div.data("profile") || { image: "", text: ""},
+		leader: div.data("leader") || false,
+		icon: div.data("icon") || false,
+		afk: div.data("afk") || false
+	};
+	var name = $(div.children()[1]);
+	name.removeClass();
+	name.css("font-style", "");
+	name.addClass(getNameColor(data.rank));
+	div.find(".profile-box").remove();
+
+	if (data.afk) {
+		div.addClass("userlist_afk");
+	} else {
+		div.removeClass("userlist_afk");
+	}
+
+	if (div.data("meta") && div.data("meta").muted) {
+		div.addClass("userlist_muted");
+	} else {
+		div.removeClass("userlist_muted");
+	}
+
+	if (div.data("meta") && div.data("meta").smuted) {
+		div.addClass("userlist_smuted");
+	} else {
+		div.removeClass("userlist_smuted");
+	}
+
+	var profile = null;
+	/*
+	 * 2015-10-19
+	 * Prevent rendering unnecessary duplicates of the profile box when
+	 * a user's status changes.
+	 */
+	name.unbind("mouseenter");
+	name.unbind("mousemove");
+	name.unbind("mouseleave");
+
+	name.mouseenter(function(ev) {
+		if (profile)
+			profile.remove();
+
+		var top = ev.clientY + 5;
+		var horiz = ev.clientX;
+		profile = $("<div/>")
+			.addClass("profile-box linewrap")
+			.css("top", top + "px")
+			.appendTo(div);
+
+		if(data.profile.image) {
+			$("<img/>").addClass("profile-image")
+				.attr("src", data.profile.image)
+				.appendTo(profile);
+		}
+		$("<strong/>").text(data.name).appendTo(profile);
+
+		if (WC[data.name] !== undefined && WC[data.name].title !== "") {
+			$("<br/>").appendTo(profile);
+			$('<strong style="color:green"/>').text(WC[data.name].title).appendTo(profile);
+		}
+		var meta = div.data("meta") || {};
+		if (meta.ip) {
+			$("<br/>").appendTo(profile);
+			$("<em/>").text(meta.ip).appendTo(profile);
+		}
+		if (meta.aliases) {
+			$("<br/>").appendTo(profile);
+			$("<em/>").text("aliases: " + meta.aliases.join(", ")).appendTo(profile);
+		}
+		$("<hr/>").css("margin-top", "5px").css("margin-bottom", "5px").appendTo(profile);
+		$("<p/>").text(data.profile.text).appendTo(profile);
+
+		if ($("body").hasClass("synchtube")) horiz -= profile.outerWidth();
+		profile.css("left", horiz + "px")
+	});
+	name.mousemove(function(ev) {
+		var top = ev.clientY + 5;
+		var horiz = ev.clientX;
+		if (UCONF.userlist === "right") horiz -= $(".profile-box").outerWidth();
+		profile.css("left", horiz + "px")
+			.css("top", top + "px");
+	});
+	name.mouseleave(function() {
+		profile.remove();
+	});
+	var icon = div.children()[0];
+	icon.innerHTML = "";
+	// denote current leader with a star
+	if(data.leader) {
+		$("<span/>").addClass("glyphicon glyphicon-star-empty").appendTo(icon);
+	}
+	if(data.afk) {
+		name.css("font-style", "italic");
+		$("<span/>").addClass("glyphicon glyphicon-time").appendTo(icon);
+	}
+	if (data.icon) {
+		$("<span/>").addClass("glyphicon " + data.icon).prependTo(icon);
+	}
+}
+function updateStreamTitles() {
+	$(".userlist_item").each(function() {
+		formatUserlistItem($(this));
+	});
+}
+updateStreamTitles();
+
+// fix userlist sorting due to pixels
+function sortUserlist() {
+	var slice = Array.prototype.slice;
+	var list = slice.call($("#userlist .userlist_item"));
+	list.sort(function (a, b) {
+		var r1 = $(a).data("rank");
+		var r2 = $(b).data("rank");
+		var afk1 = $(a).find(".glyphicon-time").length > 0;
+		var afk2 = $(b).find(".glyphicon-time").length > 0;
+		var name1 = a.children[1].innerHTML.toLowerCase();
+		var name2 = b.children[1].innerHTML.toLowerCase();
+		if (name1.indexOf('>') > -1) {
+			name1 = name1.substr(name1.indexOf('>')+1);
+		}
+		if (name2.indexOf('>') > -1) {
+			name2 = name2.substr(name2.indexOf('>')+1);
+		}
+		if (USEROPTS.sort_afk) {
+			if (afk1 && !afk2)
+				return 1;
+			if (!afk1 && afk2)
+				return -1;
+		}
+
+		if (USEROPTS.sort_rank) {
+			if (r1 < r2)
+				return 1;
+			if (r1 > r2)
+				return -1;
+		}
+
+		return name1 === name2 ? 0 : (name1 < name2 ? -1 : 1);
+	});
+
+	list.forEach(function (item) {
+		$(item).detach();
+	});
+	list.forEach(function (item) {
+		$(item).appendTo($("#userlist"));
+	});
+	showProfiles();
+}
+
+// fix auto name complete sorting due to pixels
+function chatTabComplete() {
+	var words = $("#chatline").val().split(" ");
+	var current = words[words.length - 1];
+	if (current.indexOf("http://") > -1 || current.indexOf("https://") > -1) {
+		if (current.indexOf(":pic") > -1) {
+			current = current.replace(":pic", ":sp");
+		} else if (current.indexOf(":sp") > -1) {
+			current = current.replace(":sp", ":webm");
+		} else if (current.indexOf(":webm") > -1) {
+			current = current.replace(":webm", ":float");
+		} else if (current.indexOf(":float") > -1) {
+			current = current.replace(":float", ":lf");
+		} else if (current.indexOf(":lf") > -1) {
+			current = current.replace(":lf", ":@");
+		} else if (current.indexOf(":@") > -1) {
+			current = current.replace(":@", "");
+		} else {
+			current += ":pic";
+		}
+	} else if (current.indexOf("[m") > -1 && current.indexOf("]") > -1) {
+		instances = current.split("[m");
+		for (i = 1; i < instances.length; i++) {
+			otherpart = instances[i].split("]");
+			number = parseInt(otherpart[0], 10);
+			if (typeof number === "number") {
+				replacement = '[m' + (number + 1) + ']' + otherpart[1];
+				current = current.replace('[m' + number + ']' + otherpart[1], replacement);
+			}
+		}
+	} else {
+		current = words[words.length - 1].toLowerCase();
+		if (!current.match(/^[\w-]{1,20}$/)) {
+			return;
+		}
+		var __slice = Array.prototype.slice;
+		var usersWithCap = __slice.call($("#userlist").children()).map(function (elem) {
+			var formatName = elem.children[1].innerHTML;
+			if (formatName.indexOf('>') > -1) {
+				formatName = formatName.substr(formatName.indexOf('>')+1);
+			}
+			return formatName;
+		});
+		var users = __slice.call(usersWithCap).map(function (user) {
+			return user.toLowerCase();
+		}).filter(function (name) {
+			return name.indexOf(current) === 0;
+		});
+	
+		// users now contains a list of names that start with current word
+		if (users.length === 0) {
+			return;
+		}
+	
+		// trim possible names to the shortest possible completion
+		var min = Math.min.apply(Math, users.map(function (name) {
+			return name.length;
+		}));
+		users = users.map(function (name) {
+			return name.substring(0, min);
+		});
+	
+		// continually trim off letters until all prefixes are the same
+		var changed = true;
+		var iter = 21;
+		while (changed) {
+			changed = false;
+			var first = users[0];
+			for (var i = 1; i < users.length; i++) {
+				if (users[i] !== first) {
+					changed = true;
+					break;
+				}
+			}
+	
+			if (changed) {
+				users = users.map(function (name) {
+					return name.substring(0, name.length - 1);
 				});
-				AUTOVID ? vid.prop('autoplay', 'true').prop('muted', 'true') : '';
-				UI_MediaControls=="1" ? vid.attr('controls', '') : '';
-				$(this).html(vid);
-			});
+			}
+	
+			// In the event something above doesn't generate a break condition, limit
+			// the maximum number of repetitions
+			if (--iter < 0) {
+				break;
+			}
 		}
-
-
-		return div;
+	
+		current = users[0].substring(0, min);
+		for (var i = 0; i < usersWithCap.length; i++) {
+			if (usersWithCap[i].toLowerCase() === current) {
+				current = usersWithCap[i] + " ";
+				break;
+			}
+		}
 	}
+	words[words.length - 1] = current;
+	$("#chatline").val(words.join(" "));
 }
-
-
-// client-side chat buffer for playing sounds
-
-
-_chatBuffer=addChatMessage;
-addChatMessage=function(data) {
-	if (UI_SoundFilters=="1" && VOICES && (!(data.username in MUTEDVOICES) || MUTEDVOICES[data.username]=="0")) {
-		for (i in SoundFilters_Array) {
-			if (data.msg.indexOf(i)>-1) {
-				aud=new Audio(SoundFilters_Array[i]);
-				aud.volume=SOUNDSVALUES[SOUNDSLVL];
-				aud.play();
-			}	
-		}
-	}
-	if (UI_ChatSpeak=="1" && VOICES && (!(data.username in MUTEDVOICES) || MUTEDVOICES[data.username]=="0")) {
-		msg=getText(data.msg)
-		if (msg.indexOf("!mow ")>=0) {
-			str=msg.split("!mow ");
-			aud=new Audio(SPEAKLINK+'?lang=polish&text='+encodeURI(str[1]));
-			aud.volume=SOUNDSVALUES[SOUNDSLVL];
-			aud.play();
-		} else if (msg.indexOf("!say ")>=0) {
-			str=msg.split("!say ");
-			aud=new Audio(SPEAKLINK+'?lang=english&text='+encodeURI(str[1]));
-			aud.volume=SOUNDSVALUES[SOUNDSLVL];
-			aud.play();
-		}
-	}
-	_chatBuffer(data);
-}
-
 
 // fix formatting and sending chat messages
-// DEV NOTE: this are extended events from CyTube "util.js" file
-
-
 $("#chatline, #chatbtn").unbind();
 
-
 $("#chatline").on("keydown", function(ev) {
-	if (ev.keyCode==13) {
+	if (ev.which == 13) {
 		if (CHATTHROTTLE) {
 			return;
 		}
-		_msg=$("#chatline").val();
-		msg=$("#chatline").val();
+		msg0 = $("#chatline").val();
+		msg = $("#chatline").val();
+		if (msg0 === '/reload' && CLIENT.rank < 3) {
+			alert('You have no permission to reload the channel.');
+			return;
+		}
 		if (msg.trim()) {
-			msg=prepareMessage(msg.trim());
-			meta={};
+			msg.indexOf('fc2.com') > -1 ? BLLINK = true : '';
+			msg = prepareMessage(msg.trim());
+			meta = {};
 			if (COMMAND) {
-				socket.emit("chatMsg", {msg:_msg});
-				msg='➥ '+msg;
-				COMMAND=false;
+				socket.emit("chatMsg", {msg:msg0});
+				msg = '➥ ' + msg;
+				COMMAND = false;
 			}
-			if (USEROPTS.adminhat && CLIENT.rank>=255) {
-				msg='/a '+msg;
-			} else if (USEROPTS.modhat && CLIENT.rank>=Rank.Moderator) {
-				meta.modflair=CLIENT.rank;
+			if (USEROPTS.adminhat && CLIENT.rank >= 255) {
+				msg = '/a ' + msg;
+			} else if (USEROPTS.modhat && CLIENT.rank >= Rank.Moderator) {
+				meta.modflair = CLIENT.rank;
 			}
-			if (CLIENT.rank>=2 && msg.indexOf("/m ")===0) {
-				meta.modflair=CLIENT.rank;
-				msg=msg.substring(3);
+			if (CLIENT.rank >= 2 && msg.indexOf("/m ") === 0) {
+				meta.modflair = CLIENT.rank;
+				msg = msg.substring(3);
 			}
-			socket.emit("chatMsg", {msg:msg, meta:meta});
-			userChatStats(_msg);
+			msg.indexOf('fc2.com') > -1 ? '' : socket.emit("chatMsg", {msg:msg, meta:meta});
+			BLLINK ? userChatStats(msg) : userChatStats(msg0);
+			BLLINK = false;
 			CHATHIST.push($("#chatline").val());
-			CHATHISTIDX=CHATHIST.length;
+			CHATHISTIDX = CHATHIST.length;
 			$("#chatline").val('');
 		}
 		return;
-	} else if (ev.keyCode==9) {
+	} else if (ev.which == 9) {
 		chatTabComplete();
 		ev.preventDefault();
 		return false;
-	} else if (ev.keyCode==38) {
-		if (CHATHISTIDX==CHATHIST.length) {
+	} else if (ev.which == 38) {
+		if (CHATHISTIDX == CHATHIST.length) {
 			CHATHIST.push($("#chatline").val());
 		}
-		if(CHATHISTIDX>0) {
+		if (CHATHISTIDX > 0) {
 			CHATHISTIDX--;
 			$("#chatline").val(CHATHIST[CHATHISTIDX]);
 		}
 		ev.preventDefault();
 		return false;
-	} else if (ev.keyCode==40) {
-		if (CHATHISTIDX<CHATHIST.length-1) {
+	} else if (ev.which == 40) {
+		if (CHATHISTIDX < CHATHIST.length - 1) {
 			CHATHISTIDX++;
 			$("#chatline").val(CHATHIST[CHATHISTIDX]);
 		}
 		ev.preventDefault();
 		return false;
+	} else if (UI_Shortcuts === 1) {
+		if (Shortcuts.ctrl[ev.which] !== undefined && ev.ctrlKey && !ev.shiftKey && !ev.altKey) {
+			insertText(Shortcuts.ctrl[ev.which]);
+			ev.preventDefault();
+			return false;
+		} else if (Shortcuts.alt[ev.which] !== undefined && !ev.ctrlKey && !ev.shiftKey && ev.altKey) {
+			insertText(Shortcuts.alt[ev.which]);
+			ev.preventDefault();
+			return false;
+		} else if (Shortcuts.ctrlshift[ev.which] !== undefined && ev.ctrlKey && ev.shiftKey && !ev.altKey) {
+			insertText(Shortcuts.ctrlshift[ev.which]);
+			ev.preventDefault();
+			return false;
+		} else if (Shortcuts.ctrlalt[ev.which] !== undefined && ev.ctrlKey && !ev.shiftKey && ev.altKey) {
+			insertText(Shortcuts.ctrlalt[ev.which]);
+			ev.preventDefault();
+			return false;
+		} else if (Shortcuts.altshift[ev.which] !== undefined && !ev.ctrlKey && ev.shiftKey && ev.altKey) {
+			insertText(Shortcuts.altshift[ev.which]);
+			ev.preventDefault();
+			return false;
+		}
 	}
 });
-
-
 $("#chatbtn").on("click", function() {
-	_msg=$("#chatline").val();
-	msg=$("#chatline").val();
+	msg0 = $("#chatline").val();
+	msg = $("#chatline").val();
+	if (msg0 === '/reload' && CLIENT.rank < 3) {
+		alert('You have no permission to reload the channel.');
+		return;
+	}
 	if (msg.trim()) {
-		msg=prepareMessage(msg.trim());
+		msg.indexOf('fc2.com') > -1 ? BLLINK = true : '';
+		msg = prepareMessage(msg.trim());
 		if (COMMAND) {
-			socket.emit("chatMsg", {msg:_msg});
-			msg='➥ '+msg;
-			COMMAND=false;
+			socket.emit("chatMsg", {msg:msg0});
+			msg = '➥ ' + msg;
+			COMMAND = false;
 		}
 		socket.emit("chatMsg", {msg:msg});
-		userChatStats(_msg);
+		BLLINK ? userChatStats(msg) : userChatStats(msg0);
+		BLLINK = false;
 		$("#chatline").val('');
 	}
 });
 
-
-// fix layout behaviour after resizing
-// DEV NOTE: this is extended function from CyTube "util.js" file
-
-
-function resizeStuff() {
-	VWIDTH = $("#videowrap").width() + "";
-	VHEIGHT = Math.floor(parseInt(VWIDTH) * 9 / 16 + 1) + "";
-	$("#ytapiplayer").width(VWIDTH).height(VHEIGHT);
-
-
-	if (!$("body").hasClass("fluid")) {
-		return;
+$("#cs-motdtext").on("keydown", function(ev) {
+	if (ev.which == 83 && ev.ctrlKey && !ev.shiftKey && !ev.altKey) {
+		socket.emit("setMotd", {
+			motd: $("#cs-motdtext").val()
+		});
+		return false;
 	}
+});
 
+$("#cs-csstext").on("keydown", function(ev) {
+	if (ev.which == 83 && ev.ctrlKey && !ev.shiftKey && !ev.altKey) {
+		socket.emit("setChannelCSS", {
+			css: $("#cs-csstext").val()
+		});
+		return false;
+	}
+});
 
-	var h = parseInt(VHEIGHT) - $("#chatline").outerHeight() - 1;
-	$("#messagebuffer").height(h);
-	$("#userlist").height(h);
+$("#cs-jstext").on("keydown", function(ev) {
+	if (ev.which == 83 && ev.ctrlKey && !ev.shiftKey && !ev.altKey) {
+		socket.emit("setChannelJS", {
+			js: $("#cs-jstext").val()
+		});
+		return false;
+	}
+});
 
+var pingfield = $('<div class="form-group"><label for="us-ping-link" class="control-label col-sm-4">Notification Sound Link</label><div class="col-sm-8"><input id="us-ping-link" type="text" placeholder="Add a valid link to a .mp3, .ogg, .wav  file." class="form-control cs-textbox"></div></div>')
+	.insertBefore($('label[for="us-sendbtn"]').parent().parent().parent());
+var pinglevel = $('<div class="form-group"><label for="us-ping-level" class="control-label col-sm-4">Notification Sound Volume</label><div class="col-sm-8"><input id="us-ping-level" type="text" placeholder="Enter a valid volume from 0 to 100. Default is 100." class="form-control" onblur=""></div></div>')
+	.insertAfter(pingfield);
 
-	if (UI_DisplayModeSel=="1") {
-		m=modesel.val();
+$("#us-ping-link").val(PINGLINK).on("keyup", function() {
+	PINGLINK = $(this).val();
+	$(CHATSOUND).attr("src",PINGLINK !== "" ? PINGLINK : "/boop.wav");
+	setOpt(CHANNEL.name + "_PINGLINK", PINGLINK);
+});
+PINGLINK !== "" ? $(CHATSOUND).attr("src",PINGLINK) : '';
 
+$("#us-ping-level").val(PINGVOL*100).on("keyup", function() {
+	var pvol = $(this).val();
+	if (isNaN(pvol)) {
+		$(this).val("");
+	} else {
+		PINGVOL = parseFloat(pvol !== "" ? pvol : 100)/100;
+		if (PINGVOL > 1) {
+			PINGVOL = 1;
+			$(this).val(100);
+		} else if (PINGVOL < 0) {
+			PINGVOL = 0;
+			$(this).val(0);
+		}
+		CHATSOUND.volume = PINGVOL;
+		setOpt(CHANNEL.name + "_PINGVOL", PINGVOL);
+		CHATSOUND.play();
+	}
+}).focusout(function() {
+	CHATSOUND.pause();
+});
+CHATSOUND.volume = PINGVOL;
 
-		// patches for various display modes
-		if (m=="chMode" || m=="rMode") {
-			if (WEBKIT) {
-				$("#videowrap").hide();
-			} else {
-				$("#videowrap div, #videowrap p").hide();
-				$("#ytapiplayer").width(1).height(1);
+// optional chat joining message
+if (UI_JoinText === 1) {
+	JoinText_Message === "" ? JoinText_Message = "joined" : '';
+	//socket.emit("chatMsg", {msg: '/me [CH' + SUBCHAN + ']' + JoinText_Message});
+	socket.emit("chatMsg", {msg: '/me ' + JoinText_Message});
+	CLIENT.name !== "" ? JOINED = true : '';
+}
+
+// optional chat leaving message
+if (UI_LeaveText === 1) {
+	window.onbeforeunload = function() {
+		if (!LEFT) {
+			LeaveText_Message === "" ? LeaveText_Message = "left" : '';
+			//socket.emit("chatMsg", {msg: '/me [CH' + SUBCHAN + ']' + LeaveText_Message});
+			socket.emit("chatMsg", {msg: '/me ' + LeaveText_Message});
+			LEFT = true;
+		}
+	};
+}
+
+// fix window resizing in cinema and radio mode and if player is centered
+$(window).resize(function() {
+	(modesel.val()=="chMode" || modesel.val()=="sMode" || modesel.val()=="rMode") ? setMode(modesel.val()) : '';
+	showProfiles();
+});
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function chatStuff() {
+	if (UI_PixelChange === 1) {
+		$(".channel-emote").each(function() {	// Edit/add links at the top of the file.
+			var name = $(this).attr("title").toLowerCase();
+			var checklink = $(this).attr("src");
+			if (PCL[name] !== undefined && checklink === PCL[name].link) {
+				var linknum = Math.floor(Math.random() * PCL[name].linkArray.length);
+				$(this).attr("src", PCL[name].linkArray[linknum]);
 			}
-			fitChat("auto");
-		} else if (m=="syMode" && USERCONFIG.player=="center") {
-			fitChat(200);
-		} else if (m=="sMode") {
-			// DEV NOTE: current function is called in "changeMedia" callback (condition race)
+		});
+	}
+	/*$(".subchannel").each(function() { //SUBCHANNEL
+		var sc = $(this);
+		var scp = sc.parent();
+		if (scp.attr("title") === undefined) {
+			var curchan = sc.attr("title");
+			if (curchan != SUBCHAN && SUBCHAN !== 3) {
+				scp.hide();
+			} else {
+				scp.show();
+			}
+			scp.attr("title", scp.attr("class").replace(/chat-msg-| nick-hover/g,"") + " wrote this in the " + SCNAMES[parseInt(curchan)-1] + " Channel (" + curchan + ").");
+		}
+	});*/
+	SPOILER ? rmvSpoil() : '';
+	colorAdmins();
+	createWEBM();
+}
 
+// setting global sockets
+socket.on("pm",chatStuff);
+socket.on("chatMsg", chatStuff);
+socket.on("setMotd", function(data) {
+	UI_Schedule === 1 ? loadScheduleButtons() : '';
+	clearTimeout(UPDTOUT);
+	updateCurrentlyAiring();
+	if (hidemotdbtn.hasClass("btn-danger") && data !== MOTDCACHE) {
+		hidemotdbtn.click();
+	}
+	MOTDCACHE = data;
+	setOpt(CHANNEL.name + "_MOTDCACHE", MOTDCACHE);
+});
+socket.on("channelOpts", setUserCSS);
+socket.on("channelCSSJS", setUserCSS);
+socket.on("setPermissions", function() {
+	if (UI_Func === 1) {
+		chatfunc.detach();
+		CHATFUNC = false;
+	}
+});
+var q240480 = $('li[title="240"],li[title="480"]');
+socket.on("mediaUpdate", function() {
+	if (PLAYER.mediaType == "gd") {
+		q240480.hide();
+	} else if (q240480.css("display") == "none") {
+		q240480.show();
+	}
+});
+socket.on("usercount", function() {
+	colorAdmins();
+	updatePixels();
+	//autoMod();
+	showProfiles();
+});
+socket.on("setAFK", function() {
+	showProfiles();
+});
+socket.on("addUser", function() {
+	showProfiles();
+	emoteMuteBtns();
+});
+socket.on("changeMedia", function(data) {
+	UI_TitleBarDescription === 1 ? changeTitle() : '';
+	UI_DisplayModeSel === 1 ? setModeAfterVideoChange() : '';
+	$("#findtime").text() !== 'Video Time' ? $("#findtime").click() : '';
+	if (!$("#videowrap").length) {
+		TitleBarDescription_Caption.length < 1 ? TitleBarDescription_Caption = 'Currently Playing:' : '';
+		$("#currenttitle").text(TitleBarDescription_Caption + " " + data.title);
+	}
+});
+socket.on("setUserRank", function() {
+	toggleClearBtn();
+	showProfiles();
+	if (UI_Func === 1) {
+		chatfunc.detach();
+		CHATFUNC = false;
+	}
+});
+socket.on("login", function() {
+	patchWrap();
+	if (UI_JoinText === 1 && CLIENT.name && CLIENT.guest && !JOINED) {
+		//socket.emit("chatMsg", {msg: '/me [CH' + SUBCHAN + ']' + JoinText_Message});
+		socket.emit("chatMsg", {msg: '/me ' + JoinText_Message});
+		JOINED = true;
+	}
+});
+// setting final layout after loading
+setLayout();
+scrollChat();
+scrollQueue();
+setUserCSS();
 
-			VW=$("#messagebuffer").width();
-			VH=Math.floor(parseInt(VW)*9/16+1);
-			$("#messagebuffer, #userlist").height(VH);
+/* ----- END OF LIBRARY ----- */
+
+createWEBM();
+toggleUNTZ();
+if (!FLUID) {
+	toggleFluidLayout();
+	fluidbtn.removeClass('btn-success');
+}
+if (!LAYOUTBOX) {
+	toggleDiv(configwrap);
+	layoutbtn.removeClass('btn-success');
+}
+if (HIDEPLAYER) {
+	hideplayer.addClass('btn-danger')
+	coverPlayer();
+}
+if (HIDEMOTD) {
+	toggleDiv("#motdrow");
+	hidemotdbtn.addClass('btn-danger');
+	hidemotdbtn.attr("title","Show MOTD");
+}
+if (HIDEANN) {
+	toggleDiv("#announcements");
+	hideannbtn.addClass('btn-danger');
+	hideannbtn.attr("title","Show Announcements");
+}
+if (HIDEPL) {
+	toggleDiv("#queue");
+	toggleDiv("#plmeta");
+	hideplbtn.addClass('btn-danger');
+	hideplbtn.attr("title","Show Playlist");
+}
+if (HIDEHF) {
+	toggleDiv("nav");
+	toggleDiv("footer");
+	hidehfbtn.addClass('btn-danger');
+	hidehfbtn.attr("title","Show Header and Footer");
+}
+if (HIDEIMG) {
+	hideimgbtn.addClass('btn-danger');
+	hideimgbtn.attr("title", "Show Images");
+}
+$("#messagebuffer.linewrap img, .pm-buffer.linewrap img").css({"max-height": MAXH + "px","max-width": MAXW + "px"});
+function currentVideoTime(data) {
+	clearInterval(ADDONESECOND);
+	hour = Math.floor(data.currentTime / 3600);
+	minute = Math.floor(data.currentTime / 60 % 60);
+	second = Math.floor(data.currentTime % 60);
+	second < 10 ? second = '0' + second : '';
+	if (hour === 0) {
+		$("#findtime").text(minute + ':' + second);
+	} else {
+		minute < 10 ? minute = '0' + minute : '';
+		$("#findtime").text(hour + ':' + minute + ':' + second);
+	}
+	ADDONESECOND = setInterval(function() {
+		if (!PLAYER.paused) {
+			second = parseInt(second, 10) + 1;
+			minute = parseInt(minute, 10);
+			if (second === 60) {
+				second = 0;
+				minute++;
+				if (minute === 60) {
+					minute = 0;
+					hour = parseInt(hour, 10) + 1;
+				}
+			}
+			second < 10 ? second = '0' + second : '';
+			if (hour === 0) {
+				$("#findtime").text(minute + ':' + second);
+			} else {
+				minute < 10 ? minute = '0' + minute : '';
+				$("#findtime").text(hour + ':' + minute + ':' + second);
+			}
+		}
+	}, 1000);
+}
+
+currenttimebtn = $('<button id="findtime" class="btn btn-xs btn-default" title="Find current video time">Video Time</button>')
+	.appendTo("#chatheader")
+	.on("click", function() {
+		if ($(this).text() !== 'Video Time') {
+			$(this).text('Video Time');
+			clearInterval(ADDONESECOND);
+			socket.removeListener("mediaUpdate", currentVideoTime);
+		} else {
+			socket.on("mediaUpdate", currentVideoTime);
+		}
+});
+function updatePixels() {
+	if (UI_Pixel === 1 && Object.keys(WC).length > 0) {
+		$("div.userlist_item").each(function() {
+			for (name in WC) {
+				if ($(this).children("span").eq(1).text() == name) {
+					$(this).children("span").eq(1).html('<img src="' + WC[name].pix + '" height="16"/>'+ name);
+					break;
+				}
+			}
+		});
+	} else {
+		setTimeout(updatePixels,125);
+	}
+}
+updatePixels();
+
+function checkRank(currentstreamer, nextstreamer, WEEKEND, WEEKENDMODS) {
+	WEEKENDMODS = WEEKENDMODS.split(" ");
+	currentstreamer = currentstreamer.toLowerCase();
+	nextstreamer = nextstreamer.toLowerCase();
+	var slice2 = Array.prototype.slice;
+	var list2 = slice2.call($("#userlist .userlist_item"));
+	for (item in list2) {
+		NAME = $(list2[item]).data("name");
+		RANK = $(list2[item]).data("rank");
+		WEEKENDMOD = false;
+		if (WEEKEND === "TRUE") {
+			for (zzz in WEEKENDMODS) {
+				if (NAME.toLowerCase() === WEEKENDMODS[zzz].toLowerCase()) {
+					WEEKENDMOD = true;
+					break;
+				}
+			}
+		}
+		if (FruitBowl[NAME] === undefined) {
+			NAME = NAME.toLowerCase();
+			console.log(NAME + "\t" + currentstreamer + "\t" + nextstreamer);
+			if (NAME !== currentstreamer && NAME !== nextstreamer && RANK > 1 && RANK < 4 && !WEEKENDMOD) {
+				socket.emit("chatMsg",{msg:"/rank " + NAME + " " + 1});
+			} else if ((RANK < 3 && NAME === currentstreamer) || (WEEKENDMOD && RANK === 1)) {
+				socket.emit("chatMsg",{msg:"/rank " + NAME + " " + 3});
+			} else if (RANK <= 3 && RANK !== 2 && NAME === nextstreamer && NAME !== currentstreamer && !WEEKENDMOD) {
+				socket.emit("chatMsg",{msg:"/rank " + NAME + " " + 2});
+			}
 		}
 	}
 }
 
+(function runWC() {
+	if (UI_WC === 1 && Object.keys(WC).length > 0) {
+		if (WC[CLIENT.name] !== undefined && WC[CLIENT.name].ul !== "") {
+			$("#userlist").css({'background-image':'url("' + WC[CLIENT.name].ul + '")', 'background-repeat':'no-repeat', 'background-position':'left bottom'});
+		} else {
+			loadWC();
+		}
+	} else {
+		setTimeout(runWC,125);
+	}
+})();
 
-// bind new resizing function
+function colorAdmins() {
+	if (UI_ColorAdmins === 1) {
+		$(".userlist_item").each(function() {
+			var admin = $(this).children("span").eq(1);
+			var fruit = admin.text();
+			if (FruitBowl[fruit] !== undefined) {
+				$(".chat-msg-" + fruit + ">.userlist_owner>.username," 
+				+ ".chat-msg-" + fruit + ">.userlist_siteadmin>.username,"
+				+ ".chat-msg-" + fruit + ">.userlist_op>.username").css("cssText", "color: " + FruitBowl[fruit] + " !important;");
+				if (!SHOWPROF) {
+					(admin.hasClass("userlist_owner") || admin.hasClass("userlist_siteadmin") || admin.hasClass("userlist_op")) ? admin.css("cssText", "color: " + FruitBowl[fruit] + " !important;") : admin.removeAttr("style");
+				}
+			}
+		});
+	}
+}
+colorAdmins();
 
+function getScrollbarWidth() {
+	var outer = document.createElement("div");
+	outer.style.visibility = "hidden";
+	outer.style.width = "100px";
+	outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
 
-$(window).unbind("resize");
-$(window).resize(resizeStuff);
+	document.body.appendChild(outer);
 
+	var widthNoScroll = outer.offsetWidth;
+	// force scrollbars
+	outer.style.overflow = "scroll";
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// add innerdiv
+	var inner = document.createElement("div");
+	inner.style.width = "100%";
+	outer.appendChild(inner);		
 
+	var widthWithScroll = inner.offsetWidth;
 
-// setting global sockets
+	// remove divs
+	outer.parentNode.removeChild(outer);
 
-
-socket.on("channelOpts", setUserCSS);
-socket.on("channelCSSJS", setUserCSS);
-
-
-socket.on("login", patchWrap);
-socket.on("rank", toggleAdvancedPl);
-
-
-// setting final layout after loading
-
-
-setLayout();
-scrollChat();
-scrollQueue();
-
-
-if (FLUID) {
-	$(".container").removeClass('container').addClass('container-fluid');
-	$("footer .container-fluid").removeClass('container-fluid').addClass('container');
-	$("#fluid-layout").prop('checked', 'true');
-	$("#fontspanel, #emotespanel").addClass('fluidpanel');
+	return widthNoScroll - widthWithScroll;
+}
+function showProfiles() {
+	if (SHOWPROF && !SHOWING) {
+		SHOWING = true;
+		var oddeven = 0;
+		var ulwidth = $("#userlist").width();
+		var picrow = ulwidth > 75 ? 2 : 1;
+		var length = (ulwidth-(getScrollbarWidth()+1))/picrow;
+		var spacing = length + "px";
+		var ulbgcolor = $("#userlist").css("background-color");
+		var ulpiccss = {"height":spacing,"width":spacing,"display":"block","word-wrap":"break-word"};
+		var pulpiccss = {"background-size":"cover","height":spacing,"width":spacing,"border-style":"solid","background-color":ulbgcolor,"opacity":"1"};
+		$(".userlist_item").each(function() {
+			var pspan = $(this);
+			var uspan = pspan.children().eq(1);
+			var pimg = pspan.data("profile").image || "";
+			var pafk = pspan.hasClass("userlist_afk");
+			removeProfile(pspan);
+			oddeven === 1 && picrow > 1 ? oddeven-- : oddeven++;
+			pimg !== "" ? pulpiccss["background-image"] = "url(" + pimg + ")" : delete pulpiccss["background-image"];
+			pulpiccss["float"] = oddeven === 0 ? "right" : "";
+			pulpiccss["margin-top"] = oddeven === 0 ? "-" + spacing : "1px";
+			pulpiccss["border-color"] = STREAMER.name === uspan.text() ? "#00ff00" : (pafk ? "red" : "");
+			pulpiccss["border-width"] = STREAMER.name === uspan.text() ? "2px" : "1px";
+			pulpiccss["opacity"] = pafk ? "0.45" : "1";
+			ulpiccss["font-size"] = pimg === "" ? "" : "0pt";
+			if (pafk) {
+				pspan.mouseenter(function () {pspan.css("opacity","1");});
+				pspan.mouseleave(function () {pspan.css("opacity","0.45");});
+			}
+			pspan.children().eq(0).hide();
+			pspan.css(pulpiccss);
+			uspan.css(ulpiccss);
+		});
+		SHOWING = false;
+	}
+}
+function removeProfile(rdiv) {
+	rdiv.unbind("mouseenter").unbind("mouseleave").removeAttr("style");
+	rdiv.children().eq(0).removeAttr("style");
+	rdiv.children().eq(1).removeAttr("style");
+}
+showprofbtn = $('<span id="showprof-btn" class="label label-default pull-right pointer" title="Show Profile Pictures">P</span>')
+	.insertAfter("#modflair")
+	.on("click", function() {
+		SHOWPROF = !SHOWPROF;
+		setOpt(CHANNEL.name + "_SHOWPROF", SHOWPROF);
+	  	if (SHOWPROF) {
+			showProfiles();
+			showprofbtn.addClass('btn-success');
+			showprofbtn.attr("title", "Show Profile Pictures");
+		} else {
+			$(".userlist_item").each(function() {
+				removeProfile($(this))
+			});
+			colorAdmins();
+			showprofbtn.removeClass('btn-success');
+	 		showprofbtn.attr("title", "Hide Profile Pictures");
+		}
+});
+if (SHOWPROF) {
+	showprofbtn.addClass('btn-success');
+	showProfiles();
 }
 
+LOADED = true;
 
-// finishing variable
-
-
-LOADED=true;
-
-
-// Google Analytics code
-
-
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-53755606-1', 'auto');
-ga('send', 'pageview');
-
-
-// adding external script file
-
-
-if (UI_ExternalScript=="1" && ExternalScript_URL!="") {
-	$.getScript(ExternalScript_URL);
+_loadMediaPlayer = loadMediaPlayer;
+loadMediaPlayer = function(data) {
+	selectRandomLink(data);
+    _loadMediaPlayer(data);
 }
 
+_handleMediaUpdate = handleMediaUpdate;
+handleMediaUpdate = function(data) {
+	selectRandomLink(data);
+    _handleMediaUpdate(data);
+}
 
-/* ----- END OF LIBRARY ----- */
+const PlaylistDelimiter = "???streamurl???";
+
+var playListData = "";
+function selectRandomLink(data) {
+	if (typeof data.id !== "undefined") {
+		$('.serverLinks').remove();
+		if (data.type === "fi") {
+			if (data.id.indexOf(PlaylistDelimiter) > -1) {
+				LeaderLink = data.id;
+				var rdmLinks = data.id.split(PlaylistDelimiter);
+				playListData = data;
+				for(var i=0;i<rdmLinks.length;i++){
+					$("<button class='btn btn-sm btn-default serverLinks' title='" + rdmLinks[i] + "' leaderLink='" + LeaderLink + "'>Server " + (i+1) + "</button>").appendTo("#playercontrols").on("click",function(){
+						$('.serverLinks').removeClass('btn-success');
+						$(this).addClass('btn-success');
+						let LeaderLink = $(this).attr('LeaderLink');
+						setTimeout(function () {
+							PLAYER.mediaId = LeaderLink; // Media ID must match playlist link or else this does not let you set the time.
+						}, 1000);
+						let data = playListData;
+						data.id = $(this).attr('title');
+						if (typeof data.type !== "undefined") {
+							if (data.type === "fi") {
+								videoElement = document.getElementById("ytapiplayer_html5_api") || false;
+							}
+						}
+						_handleMediaUpdate(data);
+					});
+					if(i==0)
+						$(".serverLinks").addClass('btn-success');
+				}
+			}
+		}
+	}
+}
+
+$("#mediaurl").on("paste", function() {
+	setTimeout(function() {
+		if ($("#addfromurl-title-val").length !== 0) {
+			var mediaUrl = decodeURIComponent($("#mediaurl")[0].value).split("/");
+			mediaUrl = mediaUrl[mediaUrl.length-1].split("?")[0].split(".");
+			var mediaTitle = "";
+			for (i = 0; i < mediaUrl.length-1; i++) {
+				mediaTitle += mediaUrl[i] + ".";
+			}
+			mediaTitle = mediaTitle.substring(0, mediaTitle.length-1);
+			$("#addfromurl-title-val")[0].value = mediaTitle;
+		}
+	}, 250);
+});
+
+/*if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	$("#chatheader").remove();
+}*/
+
+//window.location.href = "http://cytu.be/r/toilet";
