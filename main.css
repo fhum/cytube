@@ -44,7 +44,7 @@ border-color: white !important;
 #userlist {
             font-size: 7.61pt;
             background-color: #1C1E22;
-            background-image: url(https://media.discordapp.net/attachments/944043842456395837/1140113458742972567/smug_teio2_50.png);
+            background-image: url(https://files.catbox.moe/z6xytn.png);
             background-position: bottom center;
             background-repeat: no-repeat;}
  
@@ -57,7 +57,7 @@ border-color: white !important;
 /*Botes: http://puu.sh/aHrs6/2e36260f66.jpg*/
 /* halloween cuteness http://puu.sh/c2Uxe.png */
 body {
-background-image:url(https://media.discordapp.net/attachments/941880564665958441/1139390926486241452/SsReCYNJ.png);
+background-image:url(https://files.catbox.moe/bpnnfb.jpg);
  background-position: bottom right; background-attachment: fixed; background-size: cover;            
 /*background-position: bottom left;*/
             /*background-attachment: fixed;*/
@@ -89,9 +89,6 @@ FOOTER#footer {opacity: 0.9;}
 #messagebuffer div:nth-child(odd) {background-color: #272B30;}
 #messagebuffer div.nick-hover{ background-color: #111122;}
 #messagebuffer div.nick-highlight, #messagebuffer div.nick-highlight > a{ color: #FFFFFF;}
- 
-/*Cursors */
-body a:hover{cursor:url(http://i.imgur.com/G9Q7JW4.png), auto;}
  
 /*Background for easier reading of some shit*/
 DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E22;}
