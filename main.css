@@ -23,6 +23,10 @@
     opacity: 1;
 }
 
+.nick-highlight {
+    background-color: #272B30;
+}
+
 /*CSS pretty much complete now, anyone should be able to edit it. Backup at http://pastebin.com/FcpGvxi6 and http://pastebin.com/5Jz6980X*/
 /*Try to adhere to the formatting if you're going to add new code*/
 /*Backup of emotes is in the javascript section*/
