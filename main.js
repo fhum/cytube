@@ -41,19 +41,14 @@ var UI_Shortcuts = 1;			// [&] keyboard shortcuts to insert text
 
 /* ----- DETAILED BASIC CONFIGURATION ----- */
 
-var Usercount_Text = "dead emote";
+var Usercount_Text = "retard";
 
-var Grape_HexColor = '#A623CF';
+var Mod_HexColor = '#A623CF';
 
 var Blueberry_HexColor = '#6D68D8';
 
 var FruitBowl = {		// FORMAT: 'NAME':'HEXCOLOR',
-	'Happy': Grape_HexColor,
-	'tsukarin': Grape_HexColor,
-	'Mio-chi': Grape_HexColor,
-	'Smiff': Grape_HexColor,
-	'Pyro': Grape_HexColor,
-	'micher': Blueberry_HexColor};
+	'mywifechino': Mod_HexColor};
 
 var SpoilerImg = 'http://i.imgur.com/xzD4vqc.png';
 
@@ -61,7 +56,7 @@ var Favicon_URL = 'http://i.imgur.com/OzAC4l0.png';
 
 var MiniLogo_URL = 'http://i.imgur.com/OCidf8n.gif';
 
-var ChannelName_Caption = 'BestKeyTube';
+var ChannelName_Caption = 'Loliconia';
 
 var HeaderDropMenu_Title = 'Stuff';
 
@@ -114,9 +109,9 @@ var Lottery = {
 	chance:0.01
 };
 
-var JoinText_Message = 'has made contact with the server.';
+var JoinText_Message = 'joined.';
 
-var LeaveText_Message = 'has tried the restarting.';
+var LeaveText_Message = 'ragequit.';
 
 var PlayerHiding_URL = [
 	'http://i.imgur.com/mWv1dsg.jpg',
@@ -1653,7 +1648,7 @@ function prepareFilters() {
 		+ '{"name":"Spoiler image","source":"http(.+?):sp","flags":"gi",'
 		+ '"replace":"<a class=\\"spoilerpic\\" href=\\"http$1\\" target=\\"_blank\\"><img class=\\"spoilerpic\\" src=\\"'+SpoilerImg+'\\"></a>","active":true,"filterlinks":true},'
 		+ '{"name":"Admin","source":"\\\\[admin\\\\]","flags":"gi",'
-		+ '"replace":"<span style=\\"color:'+Grape_HexColor+'\\">","active":true,"filterlinks":false},'
+		+ '"replace":"<span style=\\"color:'+Mod_HexColor+'\\">","active":true,"filterlinks":false},'
 		+ '{"name":"Spin Text","source":"\\\\[@\\\\]","flags":"gi",'
 		+ '"replace":"<span class=\\"spin\\">","active":true,"filterlinks":false},'
 		+ '{"name":"Untz color","source":"\\\\[untz\\\\]","flags":"gi",'
@@ -4667,9 +4662,3 @@ $("#mediaurl").on("paste", function() {
 		}
 	}, 250);
 });
-
-/*if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-	$("#chatheader").remove();
-}*/
-
-//window.location.href = "http://cytu.be/r/toilet";
