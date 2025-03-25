@@ -3,7 +3,7 @@
 var UI_Favicon = 1;				// [&] channel favicon
 var UI_MiniLogo = 0;			// [&] small channel logo/avatar in the top navbar
 var UI_ChannelName = 1;			// [&] channel custom brand name
-var UI_HeaderDropMenu = 1;		// [&] additional header dropdown menu
+var UI_HeaderDropMenu = 0;		// [&] additional header dropdown menu
 var UI_RemoveHomeMenu = 1;		// removing 'Home' menu from the header
 var UI_TitleBarDescription = 1;	// [&] custom title bar description
 var UI_UserCommands = 1;		// [&] additional commands in the chat window
@@ -2792,9 +2792,8 @@ function restoreVideo() {
 	fitChat();
 }
 
-$('<p id="streamtimewrap" class="navbar-text">Stream time: <span id="streamtime"/></p>').appendTo($("#nav-collapsible"));
 showbgbtn = $('<p id="showbg" class="navbar-text" title="Show background" style="cursor:pointer !important;">Show BG</p>')
-	.insertAfter("#streamtimewrap")
+	.insertAfter("#layout-link")
 	.on("click", function() {
 		if ($("#showbgcss").length === 0) {
 			$("<style id=\"showbgcss\">body, .nav, #logoutform, #streamtimewrap, div{visibility:hidden !important;}#showbg{visibility:visible !important;}</style>").appendTo("head");
@@ -2806,7 +2805,6 @@ showbgbtn = $('<p id="showbg" class="navbar-text" title="Show background" style=
 			},50);
 		}
 });
-$('<p id="feedback" class="navbar-text" title="Give feedback.\n\n\n\n\npls no hide motd.:<"><a href="http://goo.gl/forms/BYWXgWEZkY" target="_blank"><img height="22" src="http://i.imgur.com/7YW2HuO.gif"></a></p>').insertAfter("#showbg");
 // changing title bar description
 UI_TitleBarDescription === 1 ? changeTitle() : '';
 
