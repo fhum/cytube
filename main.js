@@ -58,12 +58,15 @@ var MiniLogo_URL = 'http://i.imgur.com/OCidf8n.gif';
 
 var ChannelName_Caption = 'Loliconia';
 
-var HeaderDropMenu_Title = 'Stuff';
+var HeaderDropMenu_Title = 'Change BG';
 
 var HeaderDropMenu_Items = [		// FORMAT: ['NAME','LINK'],
-	['Feedback','http://goo.gl/forms/BYWXgWEZkY'],
-	['Stream Schedule', 'https://docs.google.com/spreadsheets/d/1Ye0mzOVODl2IAo3MWjvZOtqSXq-KK_JR5RYbzjUmOY4/edit#gid=9190525'],
-	['Emotes', 'https://drive.google.com/folderview?id=0ByZgrUw4okC-STQyNUE0UXh5UU0&usp=drive_web'],
+	['Yoshinoya', 'https://files.catbox.moe/bpnnfb.jpg'],
+    ['Azusa & Tsukiko', 'https://files.catbox.moe/jin1um.jpg'],
+	['Sora', 'https://files.catbox.moe/pusocu.png'],
+    ['Arisu', 'https://files.catbox.moe/xgqnws.jpg'],
+    ['Hachiroku', 'https://files.catbox.moe/wx0n8u.png'],
+    ['Murasame', 'https://files.catbox.moe/foz0cr.jpg']
 ];
 
 var ScheduleTabs_Array = [
@@ -74,20 +77,64 @@ var ScheduleTabs_Array = [
 var TitleBarDescription_Caption = '>Streaming:';
 
 var RandomQuotes = [
-	'tsukarin is (not) a lolicon.', 'Pyro and Kolt OTP. ', 'Dicks are a marvelous thing.', 
-	'TTGL, not so good.', 'Kill La Kill is best anime.', 
-	'We suffer together.', 'Anyone can love anyone they want.',
-	'Love knows no age.', 'Girls can\'t love girls', 'league','Your taste is shit!',
-	'30 MinutE NaP', 'StreaminG', 'But Toradora is a terrible series to stream. I vote we skip it.',
-	'You\'re famous. My quotes all suck. They wouldn\'t put one of mine up.',
-	'You could set a nuclear clock to the movement of my hips?', 'I\'m a pedo. -Edes 2015',
-	'Ecchi nano wa ikenai to omoimasu!', 'I dun geddit...', 'We should just watch more .hack!', 
-	'Sayonara Rosifica.', 'KLK, not so good', 'Do you know Oyashiro-sama', 'Oarz ;_;',
-	'It feels like an endless ejaculation', 'Thanks #anime-supreme', 'DUN MISSIT', 'OMOCHIKAERI'
+	'Always trying to take all the cocks for themselves. They are so selfish and rude.',
+    'Big Brother Battler Absolute Bottom" was a huge success!',
+    'It\'s very easy to see your imperfections if you stare at them. Nobody else is looking that hard, I promise.', 
+	'First up is the piss drinking diet!',
+    'I\'ll be in middle school in the spring! I\'m practically an adult.',
+	'That\'s not true! If I wasn\'t happy or satisfied with my life with you, I wouldn\'t have written a story like this. That\'s why... I\'m sorry for forgetting it.',
+    'There are many things a person can think about, such as what to draw when you get home? How to draw?',
+	'Love knows no age.',
+    'Girls can\'t love girls',
+    'I mean, to begin with, this stage is not even NTR yet, just mob humiliation. In other words, it\'s the furthest thing from my proclivities and interests!',
+    'Your taste is shit!',
+	'So... If we can be together... I don\'t mind becoming a kidnapper.' ,
+    'Being stupid is my speciality.',
+    'For someone that pretty to still be so human and to fart like that... It drives me fucking crazy.' ,
+	'Melons melons~' ,
+	'It seems she wanted to see a crab lose at Rock-Paper-Scissors.' ,
+    '...To cum, or to keep fapping, that is the question...',
+	'Ecchi nano wa ikenai to omoimasu!',
+    'I dun geddit...',
+    'The world gently breathes a sigh—— in its chest, in its eyes... and in its heart.' ,
+	'I\'ve given up on studying. My muscles will get me into university.' ,
+    'Please understand my feeling as someone who got called an ambulance because he had a morning wood!' ,
+    'Do you know Oyashiro-sama',
+    'A visual novel. The original game is 18+, but I played the console version.' ,
+	'It feels like an endless ejaculation',
+    'Thanks #anime-supreme',
+    'You looked so festive, like a carriage horse in heat galloping off to a stable full of mares.' ,
+    'OMOCHIKAERI'
 ];
 RandomQuotes = [
-	'I should', 'What did you just feet?', 'KLK, not so good', 'Sayonara Rosifica', 'We should just watch more .hack!', 'I dun geddit...', 'Ecchi nano wa ikenai to omoimasu!', 'Do you know Oyashiro-sama', 'Oarz ;_;',
-	'It feels like an endless ejaculation', 'Thanks #anime-supreme', 'DUN MISSIT', 'OMOCHIKAERI'
+	'Always trying to take all the cocks for themselves. They are so selfish and rude.',
+    'Big Brother Battler Absolute Bottom" was a huge success!',
+    'It\'s very easy to see your imperfections if you stare at them. Nobody else is looking that hard, I promise.', 
+	'First up is the piss drinking diet!',
+    'I\'ll be in middle school in the spring! I\'m practically an adult.',
+	'That\'s not true! If I wasn\'t happy or satisfied with my life with you, I wouldn\'t have written a story like this. That\'s why... I\'m sorry for forgetting it.',
+    'There are many things a person can think about, such as what to draw when you get home? How to draw?',
+	'Love knows no age.',
+    'Girls can\'t love girls',
+    'I mean, to begin with, this stage is not even NTR yet, just mob humiliation. In other words, it\'s the furthest thing from my proclivities and interests!',
+    'Your taste is shit!',
+	'So... If we can be together... I don\'t mind becoming a kidnapper.' ,
+    'Being stupid is my speciality.',
+    'For someone that pretty to still be so human and to fart like that... It drives me fucking crazy.' ,
+	'Melons melons~' ,
+	'It seems she wanted to see a crab lose at Rock-Paper-Scissors.' ,
+    '...To cum, or to keep fapping, that is the question...',
+	'Ecchi nano wa ikenai to omoimasu!',
+    'I dun geddit...',
+    'The world gently breathes a sigh—— in its chest, in its eyes... and in its heart.' ,
+	'I\'ve given up on studying. My muscles will get me into university.' ,
+    'Please understand my feeling as someone who got called an ambulance because he had a morning wood!' ,
+    'Do you know Oyashiro-sama',
+    'A visual novel. The original game is 18+, but I played the console version.' ,
+	'It feels like an endless ejaculation',
+    'Thanks #anime-supreme',
+    'You looked so festive, like a carriage horse in heat galloping off to a stable full of mares.' ,
+    'OMOCHIKAERI'
 ];
 
 var AskAnswers = [
@@ -114,20 +161,11 @@ var JoinText_Message = 'joined.';
 var LeaveText_Message = 'ragequit.';
 
 var PlayerHiding_URL = [
-	'http://i.imgur.com/mWv1dsg.jpg',
-	'http://i.imgur.com/oJ0zCJa.jpg',
-	'http://i.imgur.com/sKjK5g4.png',
-	'http://i.imgur.com/W84l9q1.jpg',
-	'http://i.imgur.com/NxpzQpA.jpg',
-	'http://i.imgur.com/pKPPKyY.jpg',
-	'http://i.imgur.com/YscblPs.jpg',
-	'http://i.imgur.com/idLmUhF.jpg',
-	'http://i.imgur.com/QPZZZxW.jpg',
-	'http://i.imgur.com/9G3Emgo.png',
-	'http://i.imgur.com/e01noAv.jpg',
-	'http://i.imgur.com/NSGoG5n.jpg',
-	'http://i.imgur.com/MOLi0X0.jpg',
-	'https://files.catbox.moe/w3zsp1.png'
+	'https://files.catbox.moe/eyqtkb.jpg',
+	'https://files.catbox.moe/zzz2dx.jpg',
+	'https://files.catbox.moe/m7yzrf.gif',
+	'https://files.catbox.moe/3mo8j1.jpg',
+	'https://files.catbox.moe/ndsbwy.jpg'
 ];
 
 var Memes_Array = [
@@ -2856,13 +2894,13 @@ UI_TitleBarDescription === 1 ? changeTitle() : '';
 
 // adding player control buttons
 if (UI_PlayerOptions === 1) {
-	hideplayer = $('<button id="hideplayer" class="btn btn-sm btn-default" title="Hide player"><span class="glyphicon glyphicon-ban-circle"></span></button>')
+	/*hideplayer = $('<button id="hideplayer" class="btn btn-sm btn-default" title="Hide player"><span class="glyphicon glyphicon-ban-circle"></span></button>')
 		.appendTo("#playercontrols")
 		.on("click", function() {
 			$(this).hasClass('btn-danger') ? showPlayer() : coverPlayer();
 			HIDEPLAYER = !HIDEPLAYER;
 			setOpt(CHANNEL.name + "_HIDEPLAYER", HIDEPLAYER);
-		});
+		});*/
 
 	quality = $('<div id="quality" class="btn btn-sm btn-default" title="Change the quality. This will refresh your player." >' + $('option[value="' + USEROPTS.default_quality + '"]').text() + ' <strong>▾</strong></div>')
 		.appendTo("#playercontrols")
