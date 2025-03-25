@@ -35,7 +35,7 @@ var UI_MediaControls = 1;		// embedded video preloaded controls
 var UI_ColorAdmins = 1;			// [&] change the color of admin names
 var UI_Schedule = 1;			// [&] add schedule to MOTD
 var UI_OpenPlaylist = 1;		// [&] change playlist permissions on toggle
-var UI_Shortcuts = 1;			// [&] keyboard shortcuts to insert text
+var UI_Shortcuts = 0;			// [&] keyboard shortcuts to insert text
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -170,6 +170,52 @@ var Shortcuts = {		// FORMAT: Keycode:'INSERT TEXT',	http://www.cambiaresearch.c
 	ctrlalt:{},
 	altshift:{}
 };
+
+$(document).keydown(function (event) {
+    if (!event.ctrlKey || event.shiftKey)
+      return true;
+    if (typeof event.target.selectionStart == "undefined" || event.target.selectionStart == null)
+      return true;
+  
+    // -- Shortcuts and their properties
+    var tag = {}; tag.wrap = false; tag.braced = false;
+    switch (event.which) {
+      case 83:
+        tag.code = 'sp';
+        tag.wrap = true;
+        tag.braced = true;
+        break;
+      default: return true;
+    }
+  
+    // -- Grab targets complete contents and selection start and end
+    var text = $(event.target).val();
+    var start = event.target.selectionStart;
+    var end = event.target.selectionEnd;
+    var caret = text.length;
+    var zero = (start == end);
+  
+    // -- Propagate the changes
+    if (tag.wrap && tag.braced) {
+      text = text.slice(0, start) + '[' + tag.code + ']' + text.slice(start, end) + '[/' + tag.code + ']' + text.slice(end);
+    } else if (tag.wrap) {
+      text = text.slice(0, start) + tag.code + text.slice(start, end) + tag.code + text.slice(end);
+    } else {
+      text = text.slice(0, start) + text.slice(start, end) + tag.code + text.slice(end);
+    }
+    $(event.target).val(text);
+  
+    // -- Place the caret where it should be
+    if (zero) {
+      caret = end + tag.code.length + function () { if (tag.braced) return 2; return 0 }()
+    } else {
+      caret = end + ($(event.target).val().length - caret);
+    }
+  
+    event.target.setSelectionRange(caret, caret);
+  
+    return false;
+  });
 
 var ThemesCSS = [
 	['Kobato', 'https://dl.dropboxusercontent.com/s/1r3twlb0loipybw/kobato.css']
