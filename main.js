@@ -52,7 +52,7 @@ var FruitBowl = {		// FORMAT: 'NAME':'HEXCOLOR',
 
 var SpoilerImg = 'http://i.imgur.com/xzD4vqc.png';
 
-var Favicon_URL = 'http://i.imgur.com/OzAC4l0.png';
+var Favicon_URL = 'https://files.catbox.moe/53fewo.png';
 
 var MiniLogo_URL = 'http://i.imgur.com/OCidf8n.gif';
 
