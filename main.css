@@ -42,7 +42,7 @@ border-color: white !important;
 }
 /*Adds image to the user list window*/
 #userlist {
-            font-size: 14pt;
+            font-size: 10pt;
             background-color: #1C1E22;
             background-image: url(https://files.catbox.moe/z6xytn.png);
             background-position: bottom center;
