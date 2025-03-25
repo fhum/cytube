@@ -11,8 +11,8 @@ var UI_Func = 1;				// anti-AFK and auto chat clearing panel
 var UI_AutoScroll = 1;			// auto scroll chat
 var UI_WC = 1;					// [&] random background image for empty playlist row corner
 					// [ REQUIRES: UI_Pixel enabled ]
-var UI_Pixel = 1;				// [&] special signs preceding messages in the chat window for selected users
-var UI_PixelChange = 1;			// [&] change img link when a certain img link is posted
+var UI_Pixel = 0;				// [&] special signs preceding messages in the chat window for selected users
+var UI_PixelChange = 0;			// [&] change img link when a certain img link is posted
 var UI_Lottery = 1;				// [&] text added to random chat messages
 var UI_JoinText = 1;			// [&] chat message after user joining
 var UI_LeaveText = 1;			// [&] chat message after user leaving
