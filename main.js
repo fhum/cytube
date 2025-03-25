@@ -3897,10 +3897,10 @@ function formatUserlistItem(div) {
 		}
 		$("<strong/>").text(data.name).appendTo(profile);
 
-		if (WC[data.name] !== undefined && WC[data.name].title !== "") {
+		/*if (WC[data.name] !== undefined && WC[data.name].title !== "") {
 			$("<br/>").appendTo(profile);
 			$('<strong style="color:green"/>').text(WC[data.name].title).appendTo(profile);
-		}
+		}*/
 		var meta = div.data("meta") || {};
 		if (meta.ip) {
 			$("<br/>").appendTo(profile);
