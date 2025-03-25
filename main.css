@@ -1,14 +1,14 @@
-.username::before{
+/*.username::before{
 	content:"AA";
 	background:url('https://files.catbox.moe/rowfl7.png');
 	background-size:16px !important;
 	background-repeat:no-repeat !important;
 	color:rgba(0,0,0,0);
 	text-shadow: none !important;
-}
+}*/
 
-#chatwrap{padding:0;margin:0;}
-#videowrap{padding-bottom:10px; padding-top:0; padding-right:0; padding-left:0; margin:0;}
+#chatwrap{padding-bottom:0; padding-top:0; padding-right:15px; padding-left:15px; margin:0;}
+#videowrap{padding-bottom:10px; padding-top:0; padding-right:15px; padding-left:15px; margin:0;}
 #motdwrap{display: none! important;}
 
 .spoiler a {
@@ -69,11 +69,11 @@ background-position: bottom right; background-attachment: fixed; background-size
 }
  
 /*Changes the color of the textA1FBFF*/
-body, header, p, a, #mainpage {color:#A1C5FF !important;}
+body, header, p, a, #mainpage {color:#c8c8c8 !important;}
  
 /*Footer*/
 P.text-muted.credit {font-size: 0px;} /*This part removes the previous text*/
-P.text-muted.credit:after {content: "In Memorial of Xebec"; font-size: 14px;} /*Footer Text*/
+P.text-muted.credit:after {content: "In Memorial of Xebec (1995-2019) ;-;"; font-size: 14px;} /*Footer Text*/
 FOOTER#footer {opacity: 0.9;}
  
 /*Adds suffix to messages*/
@@ -81,8 +81,8 @@ FOOTER#footer {opacity: 0.9;}
  
 /*Alternate message backgrounds*/
 /*Alternate message backgrounds*/
-/*#messagebuffer {background-color: #272B30;}
-#messagebuffer div:nth-child(even) {background-color: #444444;}
+#messagebuffer {background-color: #272B30;}
+/*#messagebuffer div:nth-child(even) {background-color: #444444;}
 #messagebuffer div:nth-child(odd) {background-color: #272B30;}
 #messagebuffer div.nick-hover{ background-color: #111122;}
 #messagebuffer div.nick-highlight, #messagebuffer div.nick-highlight > a{ color: #FFFFFF;}*/
