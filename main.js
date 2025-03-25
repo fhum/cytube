@@ -9,7 +9,7 @@ var UI_TitleBarDescription = 1;	// [&] custom title bar description
 var UI_UserCommands = 1;		// [&] additional commands in the chat window
 var UI_Func = 1;				// anti-AFK and auto chat clearing panel
 var UI_AutoScroll = 1;			// auto scroll chat
-var UI_WC = 1;					// [&] random background image for empty playlist row corner
+var UI_WC = 0;					// [&] random background image for empty playlist row corner
 					// [ REQUIRES: UI_Pixel enabled ]
 var UI_Pixel = 0;				// [&] special signs preceding messages in the chat window for selected users
 var UI_PixelChange = 0;			// [&] change img link when a certain img link is posted
@@ -3680,10 +3680,10 @@ if (UI_UserStatistics === 1) {
 	$('div[class^="chat-msg"]').each(function() {
 		var user = $(this).attr("class").replace("chat-msg-","");
 		var children = $(this).children();
-		var pixs = $('<span ' + (PIXEL ? '' : ' style="display:none"') + '/>').insertAfter(children.eq(0));
+		/*var pixs = $('<span ' + (PIXEL ? '' : ' style="display:none"') + '/>').insertAfter(children.eq(0));
 		if (WC[user] !== undefined) {
 			pixs.html('<img class="user" src="' + WC[user].pix + '" title="' + user + '" height="16"> ');
-		}
+		}*/
 	});
 	/*var sreg = /<span class="subchannel" title="(.+?)"><\/span>/; //SUBCHANNEL
 	$(".subchannel").each(function() {
