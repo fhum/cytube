@@ -42,7 +42,7 @@ border-color: white !important;
 }
 /*Adds image to the user list window*/
 #userlist {
-            font-size: 7.61pt;
+            font-size: 14pt;
             background-color: #1C1E22;
             background-image: url(https://files.catbox.moe/z6xytn.png);
             background-position: bottom center;
@@ -58,7 +58,7 @@ border-color: white !important;
 /* halloween cuteness http://puu.sh/c2Uxe.png */
 body {
 background-image:url(https://files.catbox.moe/bpnnfb.jpg);
- background-position: bottom right; background-attachment: fixed; background-size: cover;            
+background-position: bottom right; background-attachment: fixed; background-size: cover;            
 /*background-position: bottom left;*/
             /*background-attachment: fixed;*/
             /*background-size: fit;*/
@@ -71,12 +71,9 @@ background-image:url(https://files.catbox.moe/bpnnfb.jpg);
 /*Changes the color of the textA1FBFF*/
 body, header, p, a, #mainpage {color:#A1C5FF !important;}
  
-/*Orenji*/
-/*body, header, p {color:#ffa500;}*/
- 
 /*Footer*/
 P.text-muted.credit {font-size: 0px;} /*This part removes the previous text*/
-P.text-muted.credit:after {content: "In Memorial of: 2Wide4Me , PingPongYeti, ThuglyFegg, MassiveFaggot, FucknoBackup"; font-size: 14px;} /*Footer Text*/
+P.text-muted.credit:after {content: "In Memorial of Xebec"; font-size: 14px;} /*Footer Text*/
 FOOTER#footer {opacity: 0.9;}
  
 /*Adds suffix to messages*/
@@ -84,11 +81,11 @@ FOOTER#footer {opacity: 0.9;}
  
 /*Alternate message backgrounds*/
 /*Alternate message backgrounds*/
-#messagebuffer {background-color: #272B30;}
+/*#messagebuffer {background-color: #272B30;}
 #messagebuffer div:nth-child(even) {background-color: #444444;}
 #messagebuffer div:nth-child(odd) {background-color: #272B30;}
 #messagebuffer div.nick-hover{ background-color: #111122;}
-#messagebuffer div.nick-highlight, #messagebuffer div.nick-highlight > a{ color: #FFFFFF;}
+#messagebuffer div.nick-highlight, #messagebuffer div.nick-highlight > a{ color: #FFFFFF;}*/
  
 /*Background for easier reading of some shit*/
 DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E22;}
