@@ -3,7 +3,7 @@
 var UI_Favicon = 1;				// [&] channel favicon
 var UI_MiniLogo = 0;			// [&] small channel logo/avatar in the top navbar
 var UI_ChannelName = 1;			// [&] channel custom brand name
-var UI_HeaderDropMenu = 0;		// [&] additional header dropdown menu
+var UI_HeaderDropMenu = 1;		// [&] additional header dropdown menu
 var UI_RemoveHomeMenu = 1;		// removing 'Home' menu from the header
 var UI_TitleBarDescription = 1;	// [&] custom title bar description
 var UI_UserCommands = 1;		// [&] additional commands in the chat window
@@ -41,9 +41,9 @@ var UI_Shortcuts = 0;			// [&] keyboard shortcuts to insert text
 
 /* ----- DETAILED BASIC CONFIGURATION ----- */
 
-var Usercount_Text = "retard";
+var Usercount_Text = "John Stewart";
 
-var Mod_HexColor = '#A623CF';
+var Mod_HexColor = ' #33FFB2';
 
 var Blueberry_HexColor = '#6D68D8';
 
@@ -61,12 +61,13 @@ var ChannelName_Caption = 'Loliconia';
 var HeaderDropMenu_Title = 'Change BG';
 
 var HeaderDropMenu_Items = [		// FORMAT: ['NAME','LINK'],
-	['Yoshinoya', 'https://files.catbox.moe/bpnnfb.jpg'],
-    ['Azusa & Tsukiko', 'https://files.catbox.moe/jin1um.jpg'],
+    ['Henneko', 'https://files.catbox.moe/mfiuu5.jpg'],
+    ['Hachiroku', 'https://files.catbox.moe/t1en18.png'],
+    ['Yoshinoya', 'https://files.catbox.moe/bpnnfb.jpg'],
 	['Sora', 'https://files.catbox.moe/pusocu.png'],
-    ['Arisu', 'https://files.catbox.moe/xgqnws.jpg'],
-    ['Hachiroku', 'https://files.catbox.moe/wx0n8u.png'],
-    ['Murasame', 'https://files.catbox.moe/foz0cr.jpg']
+    ['Arisu', 'https://files.catbox.moe/dqm6vb.jpg'],
+    ['Murasame', 'https://files.catbox.moe/d3ah31.jpg'],
+    ['Cave Story', 'https://files.catbox.moe/n3q80h.png']
 ];
 
 var ScheduleTabs_Array = [
@@ -2580,28 +2581,36 @@ $("#useroptions .modal-footer button:nth-child(1)").on("click", function() {
 (UI_MiniLogo === 1 && MiniLogo_URL !== "") ? chanavatar = $('<img id="chanavatar" src="' + MiniLogo_URL + '" height="20" />').prependTo(".navbar-brand") : '';
 
 // adding header dropdown menu
-if (UI_HeaderDropMenu === 1) {
-	HeaderDropMenu_Title == "" ? HeaderDropMenu_Title = 'Menu' : '';
-	headerdrop = $('<li id="headerdrop" class="dropdown" />')
-		.insertAfter("#home-link");
-	$('<a class="dropdown-toggle" data-toggle="dropdown" href="#" >' + HeaderDropMenu_Title + ' <strong>▾</strong>')
-		.appendTo(headerdrop);
-	headermenu = $('<ul id="headermenu" class="dropdown-menu" />')
-		.appendTo(headerdrop);
-
-	HeaderDropMenu_Items.length < 1 ? HeaderDropMenu_Items = [['No menu available', '']] : '';
-	for (i in HeaderDropMenu_Items) {
-		title = HeaderDropMenu_Items[i][0];
-		link = HeaderDropMenu_Items[i][1];
-		if (link === "") {
-			headermenu.append('<li class="dropdown-header">' + title + '</li>');
-		} else {
-			$('<li class="header-drop-link" />')
-				.append('<a href="' + link + '" target="_blank">' + title + '</a>')
-				.appendTo(headermenu);
-		}
-	}
-}
+$(document).ready(function() {
+    if (typeof UI_HeaderDropMenu !== 'undefined' && UI_HeaderDropMenu === 1) {
+        HeaderDropMenu_Title = HeaderDropMenu_Title || 'Menu';
+        let headerdrop = $('<li id="headerdrop" class="dropdown" />').insertAfter("#home-link");
+        $('<a class="dropdown-toggle" data-toggle="dropdown" href="#">' + HeaderDropMenu_Title + ' <strong>▾</strong></a>').appendTo(headerdrop);
+        let headermenu = $('<ul id="headermenu" class="dropdown-menu" />').appendTo(headerdrop);
+        
+        if (!HeaderDropMenu_Items || HeaderDropMenu_Items.length < 1) {
+            HeaderDropMenu_Items = [['No menu available', '']];
+        }
+        
+        for (let i in HeaderDropMenu_Items) {
+            let title = HeaderDropMenu_Items[i][0];
+            let link = HeaderDropMenu_Items[i][1];
+            if (link === "") {
+                headermenu.append('<li class="dropdown-header">' + title + '</li>');
+            } else {
+                $('<li class="header-drop-link" />')
+                    .append('<a href="#" data-bg="' + link + '">' + title + '</a>')
+                    .appendTo(headermenu);
+            }
+        }
+        
+        $(document).on('click', '.header-drop-link a', function(event) {
+            event.preventDefault();
+            let bgUrl = $(this).data('bg');
+            $('body').css('background-image', bgUrl ? `url('${bgUrl}')` : "url('https://files.catbox.moe/t1en18.png')");
+        });
+    }
+});
 
 function setPanelProperties(div) {
 	height = $("#userlist").height();
