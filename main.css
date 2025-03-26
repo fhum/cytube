@@ -27,6 +27,14 @@
     background-color: #272B30;
 }
 
+.userlist_owner {
+    color: #33ffb2;
+}
+
+.userlist_op {
+    color: #69C7FF;
+}
+
 .qe_user, .qe_endTime {
     float: right;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
