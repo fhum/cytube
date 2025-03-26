@@ -621,7 +621,7 @@ function updateCurrentlyAiring() {
 			$("#streamtime").text(JSONValue[3][0]);
 			STIMEZONE = JSONValue[5][0] === "EDT" ? -4 : -5;
 			setOpt(CHANNEL.name + "_STIMEZONE", STIMEZONE);
-			(function runBG() {
+			/*(function runBG() {
 				if (Object.keys(WC).length > 0) {
 					streamer = JSONValue[4][0];
 					if (streamer !== "NONE" && !HIDEBG && (STREAMER.name !== streamer || STREAMER.link !== WC[streamer].bg || STREAMER.css !== WC[streamer].css)) {
@@ -647,7 +647,7 @@ function updateCurrentlyAiring() {
 				} else {
 					setTimeout(runBG, 125);
 				}
-			})();
+			})();*/
 			
 			UPDTOUT = setTimeout(updateCurrentlyAiring, UCONF.upti*1000);
 		}
@@ -2605,11 +2605,24 @@ $(document).ready(function() {
                     .appendTo(headermenu);
             }
         }
+
+		// apply stored background if available
+        let savedBg = localStorage.getItem('selectedBg');
+        if (savedBg) {
+            $('body').css('background-image', `url('${savedBg}')`);
+        }
         
         $(document).on('click', '.header-drop-link a', function(event) {
             event.preventDefault();
             let bgUrl = $(this).data('bg');
-            $('body').css('background-image', bgUrl ? `url('${bgUrl}')` : "url('https://files.catbox.moe/t1en18.png')");
+
+            if (bgUrl) {
+                $('body').css('background-image', `url('${bgUrl}')`);
+                localStorage.setItem('selectedBg', bgUrl);
+            } else {
+                $('body').css('background-image', "url('https://files.catbox.moe/t1en18.png')");
+                localStorage.removeItem('selectedBg');
+            }
         });
     }
 });
