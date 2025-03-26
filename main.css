@@ -28,11 +28,11 @@
 }
 
 .userlist_owner {
-    color: #33ffb2;
+    color: #33ffb2 !important;
 }
 
 .userlist_op {
-    color: #69C7FF;
+    color: #69C7FF !important;
 }
 
 .qe_user, .qe_endTime {
