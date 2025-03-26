@@ -27,6 +27,16 @@
     background-color: #272B30;
 }
 
+.qe_user, .qe_endTime {
+    float: right;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding-right: 2pt
+}
+
+.qe_time {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
 /*CSS pretty much complete now, anyone should be able to edit it. Backup at http://pastebin.com/FcpGvxi6 and http://pastebin.com/5Jz6980X*/
 /*Try to adhere to the formatting if you're going to add new code*/
 /*Backup of emotes is in the javascript section*/
