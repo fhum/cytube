@@ -54,7 +54,7 @@ var FruitBowl = {		// FORMAT: 'NAME':'HEXCOLOR',
 
 var SpoilerImg = 'http://i.imgur.com/xzD4vqc.png';
 
-var Favicon_URL = 'https://files.catbox.moe/53fewo.png';
+var Favicon_URL = 'https://dl.dropboxusercontent.com/scl/fi/43t6yg71ym0kflp7i8rs7/aa-icon.png?rlkey=jtmd2nxkluagboblb6x4qh5sv&st=bccztpxl&dl=0';
 
 var MiniLogo_URL = 'http://i.imgur.com/OCidf8n.gif';
 
@@ -63,13 +63,13 @@ var ChannelName_Caption = 'Loliconia';
 var HeaderDropMenu_Title = 'Change BG';
 
 var HeaderDropMenu_Items = [		// FORMAT: ['NAME','LINK'],
-    ['Henneko', 'https://files.catbox.moe/mfiuu5.jpg'],
-    ['Hachiroku', 'https://files.catbox.moe/t1en18.png'],
-    ['Yoshinoya', 'https://files.catbox.moe/bpnnfb.jpg'],
-	['Sora', 'https://files.catbox.moe/pusocu.png'],
-    ['Arisu', 'https://files.catbox.moe/dqm6vb.jpg'],
-    ['Murasame', 'https://files.catbox.moe/d3ah31.jpg'],
-    ['Cave Story', 'https://files.catbox.moe/n3q80h.png']
+    ['Henneko', 'https://dl.dropboxusercontent.com/scl/fi/ob1nan7rm7vcbxfmxdn0i/henneko.jpg?rlkey=jkj0ssrvrr4xypwluivq32m41&st=u4bzg8ct&dl=0'],
+    ['Hachiroku', 'https://dl.dropboxusercontent.com/scl/fi/pjjeloomclysdflkntuvw/86.png?rlkey=0v6nspkwable94wssoap162qz&st=6xmxi1jx&dl=0'],
+    ['Yoshinoya', 'https://dl.dropboxusercontent.com/scl/fi/9qo9aw5rdomv75zbw7ha9/yoshinoya.jpg?rlkey=71pg0jy255lb8z4kaqhuocx1q&st=2xf8kl4r&dl=0'],
+	['Sora', 'https://dl.dropboxusercontent.com/scl/fi/9bhdq3gxxu27emsbuwn6x/sora.png?rlkey=pjn2h0auz8ttmkmi2c1cupi3n&st=g3777tp0&dl=0'],
+    ['Arisu', 'https://dl.dropboxusercontent.com/scl/fi/s2wahvgrm48v8zgu1kf6l/arisu.jpg?rlkey=20urnrj7kyo2yv983vl13858w&st=ksihmxoe&dl=0'],
+    ['Murasame', 'https://dl.dropboxusercontent.com/scl/fi/u7kt4fs02bvn9wbod7oj8/murasame.jpg?rlkey=1jk2t8bhhrcxy1rzz7j50br3y&st=80uxnlky&dl=0'],
+    ['Cave Story', 'https://dl.dropboxusercontent.com/scl/fi/vuz59y9b7u7j17ta921th/doumon.png?rlkey=iiwv3ale12jvfdndhlo4l86d9&st=ywvnvy7q&dl=0']
 ];
 
 var ScheduleTabs_Array = [
@@ -2620,7 +2620,7 @@ $(document).ready(function() {
                 $('body').css('background-image', `url('${bgUrl}')`);
                 localStorage.setItem('selectedBg', bgUrl);
             } else {
-                $('body').css('background-image', "url('https://files.catbox.moe/t1en18.png')");
+                $('body').css('background-image', "url('https://dl.dropboxusercontent.com/scl/fi/vuz59y9b7u7j17ta921th/doumon.png?rlkey=iiwv3ale12jvfdndhlo4l86d9&st=ywvnvy7q&dl=0')");
                 localStorage.removeItem('selectedBg');
             }
         });
