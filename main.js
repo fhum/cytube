@@ -129,7 +129,7 @@ RandomQuotes = [
     '...To cum, or to keep fapping, that is the question...',
 	'Ecchi nano wa ikenai to omoimasu!',
     'I dun geddit...',
-    'The world gently breathes a sigh—— in its chest, in its eyes... and in its heart.' ,
+    'The world gently breathes a sigh, in its chest, in its eyes... and in its heart.' ,
 	'I\'ve given up on studying. My muscles will get me into university.' ,
     'Please understand my feeling as someone who got called an ambulance because he had a morning wood!' ,
     'Do you know Oyashiro-sama',
