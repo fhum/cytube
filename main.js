@@ -50,7 +50,8 @@ var Blueberry_HexColor = '#6D68D8';
 var FruitBowl = {		// FORMAT: 'NAME':'HEXCOLOR',
 	'mywifechino': Mod_HexColor,
 	'Uncreativeguy': Mod_HexColor,
-	'Juaard': Mod_HexColor};
+	'Juaard': Mod_HexColor,
+	'Kartoffel': Mod_HexColor};
 
 var SpoilerImg = 'http://i.imgur.com/xzD4vqc.png';
 
