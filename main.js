@@ -5485,3 +5485,115 @@ if ($("#toggleSnow").length <= 0) {
 		);
 	}
 }
+
+//drug mode
+const drugMode = document.createElement('div');
+drugMode.id = 'drugged';
+document.body.appendChild(drugMode);
+
+if ($('#toggleDrugs').length <= 0) {
+	let drugsEnabled = false;
+
+	const toggleDrugs = () => {
+		drugsEnabled = !drugsEnabled;
+
+		const $btn = $('#toggleDrugs');
+		$btn.toggleClass('btn-success', drugsEnabled);
+		$btn.toggleClass('active', drugsEnabled);
+
+		$('#drugged').css('display', drugsEnabled ? 'block' : 'none');
+
+		$btn.html('UNTZ');
+	};
+
+	const $drugsBtn = $('<button/>', {
+		id: 'toggleDrugs',
+		class: 'btn btn-default btn-sm',
+		html: 'UNTZ',
+		click: toggleDrugs
+	});
+
+	$('#toggleSnow').after($drugsBtn); // insert after snow, before nonowa
+}
+
+//nonowa toggle
+let nonowaEnabled = false;
+let nonowas = [];
+
+function getNonowaStyleVars() {
+	const xStart = Math.random();
+	const angle = (Math.random() - 0.5) * 0.25;
+	const xMid = xStart + angle;
+	const xEnd = xMid + angle * Math.random();
+	const scale = Math.random() * 0.8 + 0.2;
+	const duration = Math.random() * 5 + 3;
+	const delay = Math.random() * -duration;
+	const mid = 0.5 + (Math.random() - 0.5) * 0.2;
+	const rotation = Math.floor(Math.random() * 360);
+
+	return {
+		'--xStart': `${xStart * 100}vw`,
+		'--xMid': `${xMid * 100}vw`,
+		'--xEnd': `${xEnd * 100}vw`,
+		'--scale': scale,
+		'--duration': `${duration}s`,
+		'--delay': `${delay}s`,
+		'--yMid': `${mid * 100}svh`,
+		'--rotation': `${rotation}deg`
+	};
+}
+
+function createNonowa() {
+	const nonowaImg = document.createElement('div');
+	nonowaImg.className = 'nonowa';
+
+	const vars = getNonowaStyleVars();
+	for (let [key, value] of Object.entries(vars)) {
+		nonowaImg.style.setProperty(key, value);
+	}
+
+	snowContainer.appendChild(nonowaImg);
+	nonowas.push(nonowaImg);
+}
+
+if ($('#toggleNonowa').length <= 0) {
+	const toggleNonowa = () => {
+		nonowaEnabled = !nonowaEnabled;
+		const $btn = $('#toggleNonowa');
+		$btn.toggleClass('btn-success', nonowaEnabled);
+		$btn.toggleClass('active', nonowaEnabled);
+
+		if (nonowaEnabled) {
+			for (let i = 0; i < 300; i++) createNonowa();
+			$btn.html('ののワさん');
+		} else {
+			nonowas.forEach(nonowaImg => nonowaImg.remove());
+			nonowas = [];
+			$btn.html('ののワさん');
+		}
+	};
+
+	if (window.cytubeEnhanced) {
+		$('<li/>').append(
+			$('<a/>', {
+				href: '#',
+				id: 'toggleNonowa',
+				text: 'ののワさん',
+				click: (e) => {
+					e.preventDefault();
+					e.stopPropagation();
+					toggleNonowa();
+				}
+			})
+		).insertAfter($('#' + window.cytubeEnhanced.prefix + 'ui').parent());
+	} else {
+		$('#playercontrols').append(
+			$('<button/>', {
+				id: 'toggleNonowa',
+				class: 'btn btn-default btn-sm',
+				html: 'ののワさん',
+				click: toggleNonowa
+			})
+		);
+	}
+}

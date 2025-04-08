@@ -163,7 +163,6 @@ transform: scale(1, -1);
     border-radius: 50%;
     box-shadow: 0px 0px 5px 5px white;
   
-    /* Fix: expand animation shorthand */
     animation-name: snowfall;
     animation-duration: var(--duration);
     animation-timing-function: linear;
@@ -172,16 +171,64 @@ transform: scale(1, -1);
   
     transform: translate(var(--xStart), calc(0svh - 20px)) scale(var(--scale));
     opacity: var(--opacity);
-  }
+}
+
+.nonowa {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	background-image: url("https://www.dropbox.com/scl/fi/u6j9ji5ph5nxy2z2hdzck/.png?rlkey=6snykp8zoq6fu7vejpdp869bm&raw=1");
+	background-size: contain;
+	background-repeat: no-repeat;
+	animation: nonowafall var(--duration) linear infinite;
+	animation-delay: var(--delay);
+	transform: scale(var(--scale)) rotate(var(--rotation));
+	pointer-events: none;
+}
+
+#drugged {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100svh;
+	pointer-events: none;
+	z-index: 9999;
+	opacity: 0.5;
+	background: red;
+	mix-blend-mode: screen;
+	animation: drugcolor 1s linear infinite;
+	display: none;
+}
+
+@keyframes drugcolor {
+	0% { background: red; }
+	25% { background: lime; }
+	50% { background: blue; }
+	75% { background: magenta; }
+	100% { background: red; }
+}
 
 @keyframes snowfall {
-    from {
-      transform: translate(var(--xStart), calc(0svh - 20px)) scale(var(--scale));
-    }
-    50% {
-      transform: translate(var(--xMid), var(--yMid)) scale(var(--scale));
-    }
-    to {
-      transform: translate(var(--xEnd), calc(100svh + 20px)) scale(var(--scale));
-    }
-  }
+	from {
+		transform: translate(var(--xStart), calc(0svh - 20px)) scale(var(--scale));
+	}
+	50% {
+		transform: translate(var(--xMid), var(--yMid)) scale(var(--scale));
+	}
+	to {
+		transform: translate(var(--xEnd), calc(100svh + 20px)) scale(var(--scale));
+	}
+}
+
+@keyframes nonowafall {
+	from {
+		transform: translate(var(--xStart), calc(0svh - 20px)) scale(var(--scale)) rotate(var(--rotation));
+	}
+	50% {
+		transform: translate(var(--xMid), var(--yMid)) scale(var(--scale)) rotate(var(--rotation));
+	}
+	to {
+		transform: translate(var(--xEnd), calc(100svh + 20px)) scale(var(--scale)) rotate(var(--rotation));
+	}
+}
