@@ -93,6 +93,9 @@ background-position: bottom right; background-attachment: fixed; background-size
  
 /*Changes the color of the textA1FBFF*/
 body, header, p, a, #mainpage {color:#c8c8c8 !important;}
+body {
+    overflow-x: hidden !important;
+  }
  
 /*Footer*/
 P.text-muted.credit {font-size: 0px;} /*This part removes the previous text*/
@@ -140,3 +143,45 @@ display: inline-block;
 -ms-transform: scale(1, -1);
 transform: scale(1, -1);
 }
+
+#snowContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100svh;
+	z-index: 3;
+	pointer-events: none;
+	overflow: hidden;
+}
+
+.snow {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 5px white;
+  
+    /* Fix: expand animation shorthand */
+    animation-name: snowfall;
+    animation-duration: var(--duration);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: var(--delay);
+  
+    transform: translate(var(--xStart), calc(0svh - 20px)) scale(var(--scale));
+    opacity: var(--opacity);
+  }
+
+@keyframes snowfall {
+    from {
+      transform: translate(var(--xStart), calc(0svh - 20px)) scale(var(--scale));
+    }
+    50% {
+      transform: translate(var(--xMid), var(--yMid)) scale(var(--scale));
+    }
+    to {
+      transform: translate(var(--xEnd), calc(100svh + 20px)) scale(var(--scale));
+    }
+  }

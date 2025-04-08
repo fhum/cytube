@@ -4993,6 +4993,7 @@ $("#mediaurl").on("paste", function() {
 	}, 250);
 });
 
+//danmaku button
 (function() {
 
     let _defaultEnabled = true,
@@ -5004,8 +5005,9 @@ $("#mediaurl").on("paste", function() {
       $('.head-NNDCSS-fontsize').remove();
       $('<style />', {
           'class':'head-NNDCSS-fontsize',
-          text:".videoText img, .videochatContainer .channel-emote {max-height: "+imageheight+"px!important;max-width: "+(imageheight*2)+"px!important;}"+
-          ".videoText {font-size: "+fontsize+"px}"
+          text:
+		  	".videoText img, .videochatContainer .channel-emote {max-height: "+imageheight+"px!important;max-width: "+(imageheight*2)+"px!important;}"+
+          	".videoText {font-size: "+fontsize+"px; font-family: 'Meiryo', sans-serif; font-weight: bold;}"
       }).appendTo('head');
     }
 
@@ -5064,7 +5066,7 @@ $("#mediaurl").on("paste", function() {
         'imageHeight':_defaultImageHeight, //max height of images in pixels
         'displayImages':true, //show emotes/images in niconico messages
         'discardWhenFull':false,
-        'opacity':70,
+        'opacity':100,
         '_fn': {
             'init':()=>{
               nnd['enabled'] = _defaultEnabled;
@@ -5075,7 +5077,7 @@ $("#mediaurl").on("paste", function() {
               nnd['imageHeight'] = _defaultImageHeight;
               nnd['displayImages'] = true;
               nnd['discardWhenFull'] = false;
-              nnd['opacity'] = 70;
+              nnd['opacity'] = 100;
               nnd._fn.updateModal();
               nnd._fn.save()
             },
@@ -5333,7 +5335,7 @@ $("#mediaurl").on("paste", function() {
     //saveFromModal: sets the current window's nnd object properties based on the options selected in the modal window, and calls _fn.save
 
     //create modal element, insert before #pmbar
-    $('<div class="fade modal"id=nndSettingsModal aria-hidden=true role=dialog style=display:none tabindex=-1><div class=modal-dialog><div class=modal-content><div class=modal-header><button class=close data-dismiss=modal aria-hidden=true>×</button><h4>Danmaku Settings</h4></div><div class=modal-body id=nndSettingsWrap><div class=modal-option><div class=checkbox><label for=nnd-enable><input id=nnd-enable type=checkbox> Enable Danmaku</label><div class=modal-caption>Enable Danmaku-style chat messages. Places chat messages on the currently playing video and scrolls them to the opposite side.</div></div></div><div class=modal-option><div class=checkbox><label for=nnd-displayimages><input id=nnd-displayimages type=checkbox> Display Images and Emotes</label><div class=modal-caption>Show images in Danmaku messages.</div></div></div><div class="modal-option"><div class="checkbox"><label for="nnd-discardwhenfull"><input id="nnd-discardwhenfull" type="checkbox"> Discard New Messages When Full</label><div class="modal-caption">If checked, new messages will be ignored if there\'s no room for them. Otherwise, when there\'s no room, it will essentially be placed on a random line regardless of overlaps.</div></div></div><div class="modal-option"><div class="slider"><label for="nnd-opacity"> Opacity <span id="nnd-opacity-value">70%</span><input id="nnd-opacity" min="0" max="100" type="range"></label><div class="modal-caption">Controls transparency of messages. Default 70%.</div></div></div><div class=modal-option><div class=modal-subheader> Message Order</div><div class=modal-caption>Determines the order in which new messages are placed, as long as there is enough room.</div><div class=radio><label for=nnd-offsettype-0><input id=nnd-offsettype-0 type=radio name=offsettype> Random </label><br><label for=nnd-offsettype-1><input id=nnd-offsettype-1 type=radio name=offsettype> Top to Bottom </label></div></div><div class=modal-option><div class=modal-subheader>Message Direction</div><div class=modal-caption>Determines where new messages will start and end.</div><div class=radio><label for=nnd-fromright-true><input id=nnd-fromright-true type=radio name=fromright> from Right to Left</label><br><label for=nnd-fromright-false><input id=nnd-fromright-false type=radio name=fromright> from Left to Right</label></div></div><div class=modal-option><div class=modal-subheader>Maximum Messages</div><div class=modal-caption>Maximum amount of messages allowed on screen at once. New messages will be ignored if this many are on screen. A large amount of messages may cause lag. Default 125.</div><input id=nnd-maxmsgs type=text class=form-control placeholder=125></div><div class="modal-option"><div class="modal-subheader">Message Size</div><div class="modal-caption">Sizes of all text and images in Danmaku messages. Max image width is always twice the max image height. If you want to avoid vertical image overlap, make sure Max Image Height is the same as or less than Font Size.</div><div class="modal-group"><div class="modal-caption">Font Size (px, default '+_defaultFontSize+') </div><input id="nnd-fontsize" type="text" class="form-control" placeholder="'+_defaultFontSize+'"></div><div class="modal-group"><div class="modal-caption">Max Image Height (px, default '+_defaultImageHeight+')</div><input id="nnd-imageheight" type="text" class="form-control" placeholder="'+_defaultImageHeight+'"></div></div></div><div class=modal-footer><div class=left-warning>Settings are not applied until you click Save.</div><button class="btn btn-primary"data-dismiss=modal type=button onclick=nnd._fn.saveFromModal()>Save</button> <button class="btn btn-primary"data-dismiss=modal type=button onclick=nnd._fn.updateModal()>Close</button><div class="subfooter"><span class="by">made by biggles-</span><a href="https://github.com/deerfarce/cytube-nnd-chat" target="_blank" rel="noreferrer noopener">github</a><span class="ver">version '+nnd._ver+'</span></div></div></div></div></div>').insertBefore('#pmbar');
+    $('<div class="fade modal"id=nndSettingsModal aria-hidden=true role=dialog style=display:none tabindex=-1><div class=modal-dialog><div class=modal-content><div class=modal-header><button class=close data-dismiss=modal aria-hidden=true>×</button><h4>Danmaku Settings</h4></div><div class=modal-body id=nndSettingsWrap><div class=modal-option><div class=checkbox><label for=nnd-enable><input id=nnd-enable type=checkbox> Enable Danmaku</label><div class=modal-caption>Enable Danmaku-style chat messages. Places chat messages on the currently playing video and scrolls them to the opposite side.</div></div></div><div class=modal-option><div class=checkbox><label for=nnd-displayimages><input id=nnd-displayimages type=checkbox> Display Images and Emotes</label><div class=modal-caption>Show images in Danmaku messages.</div></div></div><div class="modal-option"><div class="checkbox"><label for="nnd-discardwhenfull"><input id="nnd-discardwhenfull" type="checkbox"> Discard New Messages When Full</label><div class="modal-caption">If checked, new messages will be ignored if there\'s no room for them. Otherwise, when there\'s no room, it will essentially be placed on a random line regardless of overlaps.</div></div></div><div class="modal-option"><div class="slider"><label for="nnd-opacity"> Opacity <span id="nnd-opacity-value">70%</span><input id="nnd-opacity" min="0" max="100" type="range"></label><div class="modal-caption">Controls transparency of messages. Default 100%.</div></div></div><div class=modal-option><div class=modal-subheader> Message Order</div><div class=modal-caption>Determines the order in which new messages are placed, as long as there is enough room.</div><div class=radio><label for=nnd-offsettype-0><input id=nnd-offsettype-0 type=radio name=offsettype> Random </label><br><label for=nnd-offsettype-1><input id=nnd-offsettype-1 type=radio name=offsettype> Top to Bottom </label></div></div><div class=modal-option><div class=modal-subheader>Message Direction</div><div class=modal-caption>Determines where new messages will start and end.</div><div class=radio><label for=nnd-fromright-true><input id=nnd-fromright-true type=radio name=fromright> from Right to Left</label><br><label for=nnd-fromright-false><input id=nnd-fromright-false type=radio name=fromright> from Left to Right</label></div></div><div class=modal-option><div class=modal-subheader>Maximum Messages</div><div class=modal-caption>Maximum amount of messages allowed on screen at once. New messages will be ignored if this many are on screen. A large amount of messages may cause lag. Default 125.</div><input id=nnd-maxmsgs type=text class=form-control placeholder=125></div><div class="modal-option"><div class="modal-subheader">Message Size</div><div class="modal-caption">Sizes of all text and images in Danmaku messages. Max image width is always twice the max image height. If you want to avoid vertical image overlap, make sure Max Image Height is the same as or less than Font Size.</div><div class="modal-group"><div class="modal-caption">Font Size (px, default '+_defaultFontSize+') </div><input id="nnd-fontsize" type="text" class="form-control" placeholder="'+_defaultFontSize+'"></div><div class="modal-group"><div class="modal-caption">Max Image Height (px, default '+_defaultImageHeight+')</div><input id="nnd-imageheight" type="text" class="form-control" placeholder="'+_defaultImageHeight+'"></div></div></div><div class=modal-footer><div class=left-warning>Settings are not applied until you click Save.</div><button class="btn btn-primary"data-dismiss=modal type=button onclick=nnd._fn.saveFromModal()>Save</button> <button class="btn btn-primary"data-dismiss=modal type=button onclick=nnd._fn.updateModal()>Close</button><div class="subfooter"><span class="by">made by biggles-</span><a href="https://github.com/deerfarce/cytube-nnd-chat" target="_blank" rel="noreferrer noopener">github</a><span class="ver">version '+nnd._ver+'</span></div></div></div></div></div>').insertBefore('#pmbar');
 
     //load the user's options then update the modal element
     nnd._fn.load();
@@ -5396,3 +5398,90 @@ $("#mediaurl").on("paste", function() {
     console.log('LOADED: Niconico chat script for cytu.be [https://github.com/deerfarce/cytube-nnd-chat]. Version '+nnd._ver);
 
 })();
+
+//snow toggle
+const snowContainer = document.createElement('div');
+snowContainer.id = 'snowContainer';
+document.body.appendChild(snowContainer);
+
+let snowEnabled = false;
+let snowflakes = [];
+
+function getSnowStyleVars() {
+  const xStart = Math.random();
+  const angle = (Math.random() - 0.5) * 0.25;
+  const xMid = xStart + angle;
+  const xEnd = xMid + angle * Math.random();
+  const scale = Math.random() * 0.8 + 0.2;
+  const duration = Math.random() * 20 + 10;
+  const delay = Math.random() * -duration;
+  const mid = 0.5 + (Math.random() - 0.5) * 0.2;
+  const opacity = Math.random();
+
+  return {
+    '--xStart': `${xStart * 100}vw`,
+    '--xMid': `${xMid * 100}vw`,
+    '--xEnd': `${xEnd * 100}vw`,
+    '--scale': scale,
+    '--duration': `${duration}s`,
+    '--delay': `${delay}s`,
+    '--yMid': `${mid * 100}svh`,
+    'opacity': opacity
+  };
+}
+
+function createSnowflake() {
+  const snow = document.createElement('div');
+  snow.className = 'snow';
+  const vars = getSnowStyleVars();
+  for (let [key, value] of Object.entries(vars)) {
+    snow.style.setProperty(key, value);
+  }
+  snowContainer.appendChild(snow);
+  snowflakes.push(snow);
+}
+
+if ($("#toggleSnow").length <= 0) {
+	let snowEnabled = false;
+
+	const toggleSnow = () => {
+		snowEnabled = !snowEnabled;
+
+		const $btn = $('#toggleSnow');
+		$btn.toggleClass('btn-success', snowEnabled);
+		$btn.toggleClass('active', snowEnabled);
+
+		if (snowEnabled) {
+			for (let i = 0; i < 100; i++) createSnowflake();
+			$btn.html('Snow');
+		} else {
+			snowflakes.forEach(el => el.remove());
+			snowflakes = [];
+			$btn.html('Snow');
+		}
+	};
+
+	if (window.cytubeEnhanced) {
+		$('<li/>').append(
+			$('<a/>', {
+				href: '#',
+				id: 'toggleSnow',
+				text: 'Toggle Snow',
+				click: (e) => {
+					e.preventDefault();
+					e.stopPropagation();
+					toggleSnow();
+				}
+			})
+		).insertAfter($("#" + window.cytubeEnhanced.prefix + "ui").parent());
+	} else {
+		$('#playercontrols').append(
+			$('<button/>', {
+				id: 'toggleSnow',
+				class: 'btn btn-default btn-sm',
+				html: 'Snow',
+				click: toggleSnow
+			})
+		);
+	}
+}
