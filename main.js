@@ -5413,7 +5413,7 @@ function getSnowStyleVars() {
   const xMid = xStart + angle;
   const xEnd = xMid + angle * Math.random();
   const scale = Math.random() * 0.8 + 0.2;
-  const duration = Math.random() * 20 + 10;
+  const duration = Math.random() * 10 + 5;
   const delay = Math.random() * -duration;
   const mid = 0.5 + (Math.random() - 0.5) * 0.2;
   const opacity = Math.random();
