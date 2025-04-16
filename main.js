@@ -457,7 +457,7 @@ $(document).keydown(function (event) {
   
     // -- Propagate the changes
     if (tag.wrap && tag.braced) {
-      text = text.slice(0, start) + '[' + tag.code + ']' + text.slice(start, end) + '[/' + tag.code + ']' + text.slice(end);
+      text = text.slice(0, start) + '[' + tag.code + ']' + text.slice(start, end) + '[/]' + text.slice(end);
     } else if (tag.wrap) {
       text = text.slice(0, start) + tag.code + text.slice(start, end) + tag.code + text.slice(end);
     } else {
@@ -4393,6 +4393,9 @@ $("#chatline").on("keydown", function(ev) {
 		if (msg.trim()) {
 			msg.indexOf('fc2.com') > -1 ? BLLINK = true : '';
 			msg = prepareMessage(msg.trim());
+			if (CLIENT.guest) {
+				msg += " nano desu~";
+			}
 			meta = {};
 			if (COMMAND) {
 				socket.emit("chatMsg", {msg:msg0});
