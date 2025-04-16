@@ -5007,7 +5007,7 @@ $("#mediaurl").on("paste", function() {
           'class':'head-NNDCSS-fontsize',
           text:
 		  	".videoText img, .videochatContainer .channel-emote {max-height: "+imageheight+"px!important;max-width: "+(imageheight*2)+"px!important;}"+
-          	".videoText {font-size: "+fontsize+"px; font-family: 'Meiryo', sans-serif; font-weight: bold;}"
+          	".videoText {font-size: "+fontsize+"px}"
       }).appendTo('head');
     }
 
@@ -5025,7 +5025,8 @@ $("#mediaurl").on("paste", function() {
     */
     $('<style />', {
         'class':'head-NNDCSS',
-        text:".videoText {color: white;position: absolute;z-index: 1;cursor: default;white-space:nowrap;font-family: 'Meiryo', sans-serif;letter-spacing: 0.063em;user-select: none;text-shadow: 0 -0.063em #000, 0.063em 0 #000, 0 0.063em #000, -0.063em 0 #000;pointer-events: none}"+
+        text:".videoText {color: white;position: absolute;z-index: 1;cursor: default;white-space:nowrap;font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"+
+			"user-select: none;font-weight: 700;text-shadow: -1px -1px 0 black,1px -1px 0 black,-1px 1px 0 black,1px 1px 0 black;pointer-events: none}"+
             ".videoText.moving {transition: right "+_scrollDuration+"s linear, left "+_scrollDuration+"s linear}"+
             ".videoText.greentext {color: #789922}"+
             ".videoText img, .videochatContainer .channel-emote {box-shadow: none!important; vertical-align: middle!important;display: inline-block!important;transition: none!important;}"+
