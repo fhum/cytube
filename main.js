@@ -356,7 +356,8 @@ RandomImages =
 	'https://dl.dropboxusercontent.com/scl/fi/l6aqnlzzcos09ll5x8wlk/6d58ccc40d225057f760424b03a676e1.jpg?rlkey=ekwzaw1qdqi0j27aesf9eteii&st=olhd41la&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/on6r031wt8kyfegyc6je0/10a3fc42d183426148a19bd4c5c70960.jpg?rlkey=u53isra756olp40f21997uf54&st=68ciwf82&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/cwvus6micvsj8k77j85xe/l5OszWQ.jpeg?rlkey=obe7jtkn206lchk71468j4fh2&st=f602x02z&dl=0',
-	'https://dl.dropboxusercontent.com/scl/fi/m7r8pzv1omm73hn8fbmhn/GknqhFXWUAAGHx3.jpg?rlkey=om3890tcm7v2gg7dm1rhhfyat&st=facinczl&dl=0'
+	'https://dl.dropboxusercontent.com/scl/fi/m7r8pzv1omm73hn8fbmhn/GknqhFXWUAAGHx3.jpg?rlkey=om3890tcm7v2gg7dm1rhhfyat&st=facinczl&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/ob3yqapr38hesmdrojnl3/__seia_blue_archive_drawn_by_nanihatomoare__296af9f4befb012c32cfa84ec8158064.png?rlkey=di66vucrgv6uamzx1hddbhr18&st=fv7xwkyc&dl=0'
   ]
 
 var AskAnswers = [
