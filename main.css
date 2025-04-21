@@ -12,6 +12,16 @@
 #videowrap-header{background-color: #1C1E22;}
 #motdwrap{display: none! important;}
 
+@keyframes poll {
+	0%   { color: rgb(31, 208, 231); }
+	50%  { color: rgb(0, 112, 187); }
+	100% { color: rgb(31, 208, 231); }
+  }
+  
+  .poll-notify {
+	animation: poll 0.5s infinite;
+  }
+
 .spoiler a {
     color: #000000;
     background-color: #000000;
