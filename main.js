@@ -356,7 +356,12 @@ RandomImages =
 	'https://dl.dropboxusercontent.com/scl/fi/on6r031wt8kyfegyc6je0/10a3fc42d183426148a19bd4c5c70960.jpg?rlkey=u53isra756olp40f21997uf54&st=68ciwf82&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/cwvus6micvsj8k77j85xe/l5OszWQ.jpeg?rlkey=obe7jtkn206lchk71468j4fh2&st=f602x02z&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/m7r8pzv1omm73hn8fbmhn/GknqhFXWUAAGHx3.jpg?rlkey=om3890tcm7v2gg7dm1rhhfyat&st=facinczl&dl=0',
-	'https://dl.dropboxusercontent.com/scl/fi/ob3yqapr38hesmdrojnl3/__seia_blue_archive_drawn_by_nanihatomoare__296af9f4befb012c32cfa84ec8158064.png?rlkey=di66vucrgv6uamzx1hddbhr18&st=fv7xwkyc&dl=0'
+	'https://dl.dropboxusercontent.com/scl/fi/ob3yqapr38hesmdrojnl3/__seia_blue_archive_drawn_by_nanihatomoare__296af9f4befb012c32cfa84ec8158064.png?rlkey=di66vucrgv6uamzx1hddbhr18&st=fv7xwkyc&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/89pz7sc7nbogy5iyo8lim/https___x.com_kainownill_status_1913789726139519016-img1.jpg?rlkey=g7ubk92mtm4trz85529pbmdln&st=4firzdsh&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/cfdgdq0qt14razgs2tg95/128552330_p0.jpg?rlkey=eodkhu1xads2mdvyxdqi08k5b&st=4xzkoa4t&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/nkjd3lrazajhn7q775cw8/__hataya_misuzu_idolmaster_and_1_more_drawn_by_pulmo_artist__sample-84b2cb5d2aaaa7bb0edaf7d4beb4c60c.jpg?rlkey=f5z19zem8xxg1jv1ne6b4sj81&st=2wdvpmpf&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/gr2v55nztg3k9i1kaet4l/v9uddi.png?rlkey=dw42r1nr85taojfkw5pttw868&st=prltanzx&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/nkjd3lrazajhn7q775cw8/__hataya_misuzu_idolmaster_and_1_more_drawn_by_pulmo_artist__sample-84b2cb5d2aaaa7bb0edaf7d4beb4c60c.jpg?rlkey=f5z19zem8xxg1jv1ne6b4sj81&st=mxqz7cmg&dl=0'
   ]
 
 var AskAnswers = [
