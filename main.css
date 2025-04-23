@@ -55,6 +55,28 @@
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+@keyframes rollDubs {
+	0%   { color: rgb(31, 231, 98); }
+	50%  { color: rgb(28, 163, 73); }
+	100% { color: rgb(31, 231, 98);}
+  }
+  
+  @keyframes rollMax {
+	0%   { color: rgb(252, 236, 19); }
+	50%  { color: rgb(167, 156, 12); }
+	100% { color: rgb(252, 236, 19);}
+  }
+  
+  .roll-dubs {
+	font-weight: bold;
+	animation: rollDubs 0.5s infinite;
+  }
+  
+  .roll-max {
+	font-weight: bold;
+	animation: rollMax 0.25s infinite;
+  }
+
 /*CSS pretty much complete now, anyone should be able to edit it. Backup at http://pastebin.com/FcpGvxi6 and http://pastebin.com/5Jz6980X*/
 /*Try to adhere to the formatting if you're going to add new code*/
 /*Backup of emotes is in the javascript section*/
