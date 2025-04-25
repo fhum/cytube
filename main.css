@@ -77,6 +77,16 @@
 	animation: rollMax 0.25s infinite;
   }
 
+  .glyphicon.glyphicon-star-empty {
+	animation: leader 1s infinite;
+  }
+  
+  @keyframes leader {
+	0%   { color: #33ffb2 }
+	50%  { color: #26b880; }
+	100% { color: #33ffb2; }
+  }
+
 /*CSS pretty much complete now, anyone should be able to edit it. Backup at http://pastebin.com/FcpGvxi6 and http://pastebin.com/5Jz6980X*/
 /*Try to adhere to the formatting if you're going to add new code*/
 /*Backup of emotes is in the javascript section*/
