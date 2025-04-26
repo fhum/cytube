@@ -360,7 +360,8 @@ RandomImages =
 	'https://dl.dropboxusercontent.com/scl/fi/89pz7sc7nbogy5iyo8lim/https___x.com_kainownill_status_1913789726139519016-img1.jpg?rlkey=g7ubk92mtm4trz85529pbmdln&st=4firzdsh&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/cfdgdq0qt14razgs2tg95/128552330_p0.jpg?rlkey=eodkhu1xads2mdvyxdqi08k5b&st=4xzkoa4t&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/nkjd3lrazajhn7q775cw8/__hataya_misuzu_idolmaster_and_1_more_drawn_by_pulmo_artist__sample-84b2cb5d2aaaa7bb0edaf7d4beb4c60c.jpg?rlkey=f5z19zem8xxg1jv1ne6b4sj81&st=2wdvpmpf&dl=0',
-	'https://dl.dropboxusercontent.com/scl/fi/gr2v55nztg3k9i1kaet4l/v9uddi.png?rlkey=dw42r1nr85taojfkw5pttw868&st=prltanzx&dl=0'
+	'https://dl.dropboxusercontent.com/scl/fi/gr2v55nztg3k9i1kaet4l/v9uddi.png?rlkey=dw42r1nr85taojfkw5pttw868&st=prltanzx&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/3ihp49car8lp9d4t2co1w/https___x.com_ice_0416_status_1915968061490008275-img1.jpg?rlkey=u961oaehqj7j3vmdnmyt9ejiw&st=6e249raf&dl=0'
   ]
 
 var AskAnswers = [
