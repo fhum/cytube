@@ -5003,7 +5003,7 @@ $("#mediaurl").on("paste", function() {
 
     let _defaultEnabled = true,
         _defaultFontSize = 32,
-        _defaultImageHeight = 48,
+        _defaultImageHeight = 150,
         _scrollDuration = 7;
 
     let setFontSizeCSS = function(fontsize, imageheight) {
