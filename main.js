@@ -47,10 +47,7 @@ var Mod_HexColor = ' #33FFB2';
 
 var Blueberry_HexColor = '#6D68D8';
 
-var FruitBowl = {		// FORMAT: 'NAME':'HEXCOLOR',
-	'mywifechino': Mod_HexColor,
-	'Uncreativeguy': Mod_HexColor,
-	'Juaard': Mod_HexColor};
+var FruitBowl = {};
 
 var SpoilerImg = 'http://i.imgur.com/xzD4vqc.png';
 
@@ -425,7 +422,7 @@ var Shortcuts = {		// FORMAT: Keycode:'INSERT TEXT',	http://www.cambiaresearch.c
 		54:'[vflip]',	// 6
 		66:'[b]',		// b
 		73:'[i]',		// i
-		83:'[sp]',		// s
+		83:'[spoiler]',		// s
 		85:'[u]'		// u
 	}, 
 	alt:{
@@ -446,7 +443,7 @@ $(document).keydown(function (event) {
     var tag = {}; tag.wrap = false; tag.braced = false;
     switch (event.which) {
       case 83:
-        tag.code = 'sp';
+        tag.code = 'spoiler';
         tag.wrap = true;
         tag.braced = true;
         break;
@@ -1998,7 +1995,7 @@ function prepareFilters() {
 		+ '"replace":"<span style=\\"color:#691227; font-family:impact, sans-serif; padding-top:20px; '
 		+ 'text-shadow:0px 0px 4px #000000, 0px -5px 4px #8FFF33, 2px -8px 6px #49BF2C, -2px -15px 10px #14730B, '
 		+ '2px -20px 18px #204006; letter-spacing:2px\\">","active":true,"filterlinks":false},'
-		+ '{"name":"Short spoiler","source":"\\\\[sp\\\\]","flags":"gi",'
+		+ '{"name":"Short spoiler","source":"\\\\[spoiler\\\\]","flags":"gi",'
 		+ '"replace":"<span class=\\"spoiler\\">","active":true,"filterlinks":false},'
 		+ '{"name":"Closing font style","source":"\\\\[\\\\/\\\\]","flags":"gi",'
 		+ '"replace":"</span></marquee>","active":true,"filterlinks":false},'
@@ -2137,7 +2134,7 @@ function showChatHelp() {
 			+ '<li><code>[d]</code> - Distinguished text. (red on yelllow background)</li>'
 			+ '<li><code>[f]</code> - Text with a fire effect.</li>'
 			+ '<li><code>[shit]</code> - Text with a shit effect.</li>'
-			+ '<li><code>[sp]</code> - An inline spoiler.</li>'
+			+ '<li><code>[spoiler]</code> - An inline spoiler.</li>'
 			+ '<li><code>[float]</code> - Float text to the right.</li>'
 			+ '<li><code>[lf]</code> - Float text to the left.</li>'
 			+ '<li><code>[m<span style="background-color:yellow">#</span>]</code> - Move text side to side. Speed dependent on the number after <code>[m</code>.</li>'
@@ -2980,7 +2977,7 @@ function makeChatPanel() {
 			} else {
 				$(this).text("NO SPOIL").removeClass('btn-danger');
 				$(".nospoiler").addClass("spoiler").removeClass("nospoiler").each(function() {
-					$(this).html($(this).html().replace(/\[sp\]/,"").replace(/\[\/\]/,""));
+					$(this).html($(this).html().replace(/\[spoiler\]/,"").replace(/\[\/\]/,""));
 				});
 			}
 			SPOILER = !SPOILER;
@@ -2992,7 +2989,7 @@ chatfunc = $("#chatfunc-dropdown").detach();
 
 function rmvSpoil() {
 	$(".spoiler").addClass("nospoiler").removeClass("spoiler").each(function() {
-		$(this).html("[sp]" + $(this).html() + "[/]");
+		$(this).html("[spoiler]" + $(this).html() + "[/]");
 	});
 }
 
@@ -3247,7 +3244,7 @@ if (UI_FontsBtn === 1) {
 		['background:gold; color:red', 'd', 'D'],
 		['background:black; color:gold; font-family:impact, sans-serif', 'f', 'F'],
 		['background:#691227; color:#8FFF33; font-family:impact, sans-serif', 'shit', 'S'],
-		['background:black; color:white', 'sp', 'sp'],
+		['background:black; color:white', 'spoiler', 'spoiler'],
 		['background:white; color:black; border:solid 2px red', '\\/', '\[\/\]']
 	];
 
