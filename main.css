@@ -7,7 +7,7 @@
 	text-shadow: none !important;
 }*/
 
-#chatwrap{padding-bottom:0; padding-top:0; padding-right:15px; padding-left:15px; margin:0;}
+#chatwrap{padding-bottom:0; padding-top:0; padding-right:15px; padding-left:15px; margin:0; opacity:0.975;}
 #videowrap{padding-bottom:10px; padding-top:0; padding-right:15px; padding-left:15px; margin:0;}
 #videowrap-header{background-color: #1C1E22;}
 #motdwrap{display: none! important;}
@@ -37,13 +37,23 @@
     background-color: #272B30;
 }
 
-.userlist_owner {
-    color: #33ffb2 !important;
-}
+.userlist_owner, .userlist_op {
+	box-sizing: border-box;
+	color: rgb(200, 200, 200) !important;
+	cursor: pointer;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 13.3333px;
+	font-weight: normal !important;
+	line-height: 19.05px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+  }
 
-.userlist_op {
-    color: #69C7FF !important;
-}
+  #modflair{
+	display: none;
+	pointer-events: none;
+  }
 
 .qe_user, .qe_endTime {
     float: right;
