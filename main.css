@@ -111,13 +111,82 @@
 
   .glyphicon.glyphicon-star-empty {
 	animation: leader 1s infinite;
+	font-weight: 700;
   }
   
   @keyframes leader {
-	0%   { color: #89b6da; }
-	50%  { color: #56728a;}
-	100% { color: #89b6da; }
-  }
+	0%   { color: #e57373; }
+	14%  { color: #64b5f6; }
+	28%  { color: #81c784; }
+	42%  { color: #ba68c8; }
+	57%  { color: #ffd54f; }
+	71%  { color: #4db6ac; }
+	85%  { color: #ff8a65; }
+	100% { color: #e57373; }
+}
+
+body.theme-henneko .userlist_owner,
+body.theme-henneko .userlist_op,
+body.theme-henneko .userlist_item,
+body.theme-henneko .userlist_guest,
+body.theme-henneko .username,
+body.theme-henneko .timestamp {
+	color: #30e7a1 !important;
+}
+
+body.theme-hachiroku .userlist_owner,
+body.theme-hachiroku .userlist_op,
+body.theme-hachiroku .userlist_item,
+body.theme-hachiroku .userlist_guest,
+body.theme-hachiroku .username,
+body.theme-hachiroku .timestamp {
+	color: #e085ab !important;
+}
+
+body.theme-yoshinoya .userlist_owner,
+body.theme-yoshinoya .userlist_op,
+body.theme-yoshinoya .userlist_item,
+body.theme-yoshinoya .userlist_guest,
+body.theme-yoshinoya .username,
+body.theme-yoshinoya .timestamp {
+	color: #bde4a7 !important;
+}
+
+body.theme-sora .userlist_owner,
+body.theme-sora .userlist_op,
+body.theme-sora .userlist_item,
+body.theme-sora .userlist_guest,
+body.theme-sora .username,
+body.theme-sora .timestamp {
+	color: #e2e2e2 !important;
+}
+
+body.theme-arisu .userlist_owner,
+body.theme-arisu .userlist_op,
+body.theme-arisu .userlist_item,
+body.theme-arisu .userlist_guest,
+body.theme-arisu .username,
+body.theme-arisu .timestamp {
+	color: #d8c89f !important;
+}
+
+body.theme-murasame .userlist_owner,
+body.theme-murasame .userlist_op,
+body.theme-murasame .userlist_item,
+body.theme-murasame .userlist_guest,
+body.theme-murasame .username,
+body.theme-murasame .timestamp {
+	color: #7cc97f !important;
+}
+
+body.theme-cave-story .userlist_owner,
+body.theme-cave-story .userlist_op,
+body.theme-cave-story .userlist_item,
+body.theme-cave-story .userlist_guest,
+body.theme-cave-story .username,
+body.theme-cave-story .timestamp {
+	color: #89b6da !important;
+}
 
 /*CSS pretty much complete now, anyone should be able to edit it. Backup at http://pastebin.com/FcpGvxi6 and http://pastebin.com/5Jz6980X*/
 /*Try to adhere to the formatting if you're going to add new code*/

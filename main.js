@@ -57,7 +57,7 @@ var MiniLogo_URL = 'http://i.imgur.com/OCidf8n.gif';
 
 var ChannelName_Caption = 'Loliconia';
 
-var HeaderDropMenu_Title = 'Change BG';
+var HeaderDropMenu_Title = 'Change Theme';
 
 var HeaderDropMenu_Items = [		// FORMAT: ['NAME','LINK'],
     ['Henneko', 'https://dl.dropboxusercontent.com/scl/fi/ob1nan7rm7vcbxfmxdn0i/henneko.jpg?rlkey=jkj0ssrvrr4xypwluivq32m41&st=u4bzg8ct&dl=0'],
@@ -2809,47 +2809,54 @@ $("#useroptions .modal-footer button:nth-child(1)").on("click", function() {
 (UI_MiniLogo === 1 && MiniLogo_URL !== "") ? chanavatar = $('<img id="chanavatar" src="' + MiniLogo_URL + '" height="20" />').prependTo(".navbar-brand") : '';
 
 // adding header dropdown menu
-$(document).ready(function() {
+$(document).ready(function () {
     if (typeof UI_HeaderDropMenu !== 'undefined' && UI_HeaderDropMenu === 1) {
         HeaderDropMenu_Title = HeaderDropMenu_Title || 'Menu';
         let headerdrop = $('<li id="headerdrop" class="dropdown" />').insertAfter("#home-link");
         $('<a class="dropdown-toggle" data-toggle="dropdown" href="#">' + HeaderDropMenu_Title + ' <strong>▾</strong></a>').appendTo(headerdrop);
         let headermenu = $('<ul id="headermenu" class="dropdown-menu" />').appendTo(headerdrop);
-        
+
         if (!HeaderDropMenu_Items || HeaderDropMenu_Items.length < 1) {
             HeaderDropMenu_Items = [['No menu available', '']];
         }
-        
-        for (let i in HeaderDropMenu_Items) {
-            let title = HeaderDropMenu_Items[i][0];
-            let link = HeaderDropMenu_Items[i][1];
-            if (link === "") {
-                headermenu.append('<li class="dropdown-header">' + title + '</li>');
-            } else {
-                $('<li class="header-drop-link" />')
-                    .append('<a href="#" data-bg="' + link + '">' + title + '</a>')
-                    .appendTo(headermenu);
-            }
+
+        for (let i = 0; i < HeaderDropMenu_Items.length; i++) {
+            let [title, link] = HeaderDropMenu_Items[i];
+            $('<li class="header-drop-link" />')
+                .append(`<a href="#" data-bg="${link}" data-theme="${title}">${title}</a>`)
+                .appendTo(headermenu);
         }
 
-		// apply stored background if available
-        let savedBg = localStorage.getItem('selectedBg');
-        if (savedBg) {
-            $('body').css('background-image', `url('${savedBg}')`);
-        }
-        
-        $(document).on('click', '.header-drop-link a', function(event) {
-            event.preventDefault();
-            let bgUrl = $(this).data('bg');
+        function applyThemeClass(themeName) {
+			$('body').removeClass(function (index, className) {
+				return (className.match(/(^|\s)theme-\S+/g) || []).join(' ');
+			});
+		
+			let className = 'theme-' + themeName.toLowerCase().replace(/\s+/g, '-');
+			$('body').addClass(className);
+		}
 
-            if (bgUrl) {
-                $('body').css('background-image', `url('${bgUrl}')`);
-                localStorage.setItem('selectedBg', bgUrl);
-            } else {
-                $('body').css('background-image', "url('https://dl.dropboxusercontent.com/scl/fi/vuz59y9b7u7j17ta921th/doumon.png?rlkey=iiwv3ale12jvfdndhlo4l86d9&st=ywvnvy7q&dl=0')");
-                localStorage.removeItem('selectedBg');
-            }
-        });
+		const savedBg = localStorage.getItem('selectedBg');
+		const savedTheme = localStorage.getItem('selectedTheme');
+		if (savedBg) {
+			$('body').css('background-image', `url('${savedBg}')`);
+		}
+		if (savedTheme) {
+			applyThemeClass(savedTheme);
+		}
+
+		$(document).on('click', '.header-drop-link a', function (event) {
+			event.preventDefault();
+			const bgUrl = $(this).data('bg');
+			const themeName = $(this).data('theme');
+
+			if (bgUrl) {
+				$('body').css('background-image', `url('${bgUrl}')`);
+				applyThemeClass(themeName);
+				localStorage.setItem('selectedBg', bgUrl);
+				localStorage.setItem('selectedTheme', themeName);
+			}
+		});
     }
 });
 
