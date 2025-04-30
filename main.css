@@ -43,14 +43,18 @@
 	cursor: pointer;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 13.3333px;
-	font-weight: 700;
 	line-height: 19.05px;
 	list-style-image: none;
 	list-style-position: outside;
 	list-style-type: none;
-  }
+}
 
-  .username {
+.userlist_op {
+	font-weight: 700;
+}
+  
+
+.username {
 	box-sizing: border-box;
 	color: #89b6da !important;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -60,9 +64,9 @@
 	overflow-wrap: break-word;
 	white-space-collapse: preserve;
 	text-wrap-mode: wrap;
-  }
+}
 
-  .timestamp {
+.timestamp {
 	box-sizing: border-box;
 	color: #89b6da !important;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -71,12 +75,12 @@
 	overflow-wrap: break-word;
 	white-space-collapse: preserve;
 	text-wrap-mode: wrap;
-  }
+}
 
-  #modflair{
+#modflair{
 	display: none;
 	pointer-events: none;
-  }
+}
 
 .qe_user, .qe_endTime {
     float: right;
