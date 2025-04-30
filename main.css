@@ -13,7 +13,7 @@
 #motdwrap{display: none! important;}
 
 @keyframes poll {
-	0%   { color: rgb(31, 208, 231); }
+	0%   { color: rgb(97, 189, 218); }
 	50%  { color: rgb(0, 112, 187); }
 	100% { color: rgb(31, 208, 231); }
   }
@@ -37,17 +37,39 @@
     background-color: #272B30;
 }
 
-.userlist_owner, .userlist_op {
+.userlist_owner, .userlist_op, .userlist_item, .userlist_guest{
 	box-sizing: border-box;
-	color: rgb(200, 200, 200) !important;
+	color: #89b6da !important;
 	cursor: pointer;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 13.3333px;
-	font-weight: normal !important;
 	line-height: 19.05px;
 	list-style-image: none;
 	list-style-position: outside;
 	list-style-type: none;
+  }
+
+  .username {
+	box-sizing: border-box;
+	color: #89b6da !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 20px;
+	overflow-wrap: break-word;
+	white-space-collapse: preserve;
+	text-wrap-mode: wrap;
+  }
+
+  .timestamp {
+	box-sizing: border-box;
+	color: #89b6da !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 10.6667px;
+	line-height: 15.2333px;
+	overflow-wrap: break-word;
+	white-space-collapse: preserve;
+	text-wrap-mode: wrap;
   }
 
   #modflair{
