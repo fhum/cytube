@@ -114,9 +114,9 @@
   }
   
   @keyframes leader {
-	0%   { color: #33ffb2 }
-	50%  { color: #26b880; }
-	100% { color: #33ffb2; }
+	0%   { color: #89b6da; }
+	50%  { color: #5ba0d8; }
+	100% { color: #89b6da; }
   }
 
 /*CSS pretty much complete now, anyone should be able to edit it. Backup at http://pastebin.com/FcpGvxi6 and http://pastebin.com/5Jz6980X*/
