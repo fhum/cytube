@@ -44,15 +44,11 @@
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 13.3333px;
 	line-height: 19.05px;
+	font-weight: 400 !important;
 	list-style-image: none;
 	list-style-position: outside;
 	list-style-type: none;
 }
-
-.userlist_op {
-	font-weight: 700;
-}
-  
 
 .username {
 	box-sizing: border-box;
@@ -145,16 +141,16 @@ body.theme-hachiroku .userlist_item,
 body.theme-hachiroku .userlist_guest,
 body.theme-hachiroku .username,
 body.theme-hachiroku .timestamp {
-	color: #e085ab !important;
+	color: #dd858e !important;
 }
 
-body.theme-yoshinoya .userlist_owner,
-body.theme-yoshinoya .userlist_op,
-body.theme-yoshinoya .userlist_item,
-body.theme-yoshinoya .userlist_guest,
-body.theme-yoshinoya .username,
-body.theme-yoshinoya .timestamp {
-	color: #bde4a7 !important;
+body.theme-hanyuu .userlist_owner,
+body.theme-hanyuu .userlist_op,
+body.theme-hanyuu .userlist_item,
+body.theme-hanyuu .userlist_guest,
+body.theme-hanyuu .username,
+body.theme-hanyuu .timestamp {
+	color: #c1a7e4 !important;
 }
 
 body.theme-sora .userlist_owner,
@@ -215,7 +211,7 @@ border-color: white !important;
 #userlist {
             font-size: 10pt;
             background-color: #1C1E22;
-            background-image: url(https://dl.dropboxusercontent.com/scl/fi/oz860je7jvbzidhe9tlve/aa-chatbox.png?rlkey=pd35kgslt6q1sckghkkc0wa2x&st=grne45ah&dl=0);
+            background-image: url(https://dl.dropboxusercontent.com/scl/fi/f34q1696g9ajphky712o4/ss-chatbox.png?rlkey=ypo2b2qiktuol4hnc3ysncuoh&st=bvqlqbo4&dl=0);
             background-position: bottom center;
             background-repeat: no-repeat;}
  

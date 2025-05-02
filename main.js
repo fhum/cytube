@@ -62,12 +62,22 @@ var HeaderDropMenu_Title = 'Change Theme';
 var HeaderDropMenu_Items = [		// FORMAT: ['NAME','LINK'],
     ['Henneko', 'https://dl.dropboxusercontent.com/scl/fi/ob1nan7rm7vcbxfmxdn0i/henneko.jpg?rlkey=jkj0ssrvrr4xypwluivq32m41&st=u4bzg8ct&dl=0'],
     ['Hachiroku', 'https://dl.dropboxusercontent.com/scl/fi/pjjeloomclysdflkntuvw/86.png?rlkey=0v6nspkwable94wssoap162qz&st=6xmxi1jx&dl=0'],
-    ['Yoshinoya', 'https://dl.dropboxusercontent.com/scl/fi/9qo9aw5rdomv75zbw7ha9/yoshinoya.jpg?rlkey=71pg0jy255lb8z4kaqhuocx1q&st=2xf8kl4r&dl=0'],
+    ['Hanyuu', 'https://dl.dropboxusercontent.com/scl/fi/pih0t5zrs0sd5iu388btf/hanyuu.jpg?rlkey=rgk3lzlp3k51616h1do6ruts4&st=tpvjsqtp&dl=0'],
 	['Sora', 'https://dl.dropboxusercontent.com/scl/fi/9bhdq3gxxu27emsbuwn6x/sora.png?rlkey=pjn2h0auz8ttmkmi2c1cupi3n&st=g3777tp0&dl=0'],
     ['Arisu', 'https://dl.dropboxusercontent.com/scl/fi/s2wahvgrm48v8zgu1kf6l/arisu.jpg?rlkey=20urnrj7kyo2yv983vl13858w&st=ksihmxoe&dl=0'],
     ['Murasame', 'https://dl.dropboxusercontent.com/scl/fi/u7kt4fs02bvn9wbod7oj8/murasame.jpg?rlkey=1jk2t8bhhrcxy1rzz7j50br3y&st=80uxnlky&dl=0'],
     ['Cave Story', 'https://dl.dropboxusercontent.com/scl/fi/vuz59y9b7u7j17ta921th/doumon.png?rlkey=iiwv3ale12jvfdndhlo4l86d9&st=ywvnvy7q&dl=0']
 ];
+
+var UserlistBackgrounds = {
+    'Henneko': 'url(https://dl.dropboxusercontent.com/scl/fi/si1psqqjo46klx46uay08/aa-chatboxv2.png?rlkey=qrfs4zpu1n8vikvaieu7q197i&st=71nkw3bm&dl=0)',
+    'Hachiroku': 'url(https://dl.dropboxusercontent.com/scl/fi/kzspq2nadbm6oftchu4ws/86-chatbox.png?rlkey=tfcn5cet8mumtv3g20v3onpja&st=r1jgpxnw&dl=0)',
+    'Hanyuu': 'url(https://dl.dropboxusercontent.com/scl/fi/3yvuqwq30trnatcuzgezx/h-chatbox.png?rlkey=x5lgphuuxusbb2rqmkj6z5afl&st=vaxvcgzs&dl=0)',
+	'Sora': 'url(https://dl.dropboxusercontent.com/scl/fi/yb4z6axq0wzyxv1qf60rn/ks-chatbox.png?rlkey=l8jzy7tojwfha1y7g8v71dvte&st=cyrqi6ul&dl=0)',
+	'Arisu': 'url(https://dl.dropboxusercontent.com/scl/fi/h5aafw7np3tj2crlfoqg2/sa-chatbox.png?rlkey=186xvik4gaxn82odtqg0rn5vz&st=3s6zbau8&dl=0)',
+	'Murasame': 'url(https://dl.dropboxusercontent.com/scl/fi/ml8w4ju4d5ekoy0gcimed/m-chatbox.png?rlkey=8pz29d2g26k4m0yez1grygnia&st=aicnf9go&dl=0)',
+    'Cave Story': 'url(https://dl.dropboxusercontent.com/scl/fi/f34q1696g9ajphky712o4/ss-chatbox.png?rlkey=ypo2b2qiktuol4hnc3ysncuoh&st=bvqlqbo4&dl=0)'
+};
 
 var ScheduleTabs_Array = [
 	['Compact Schedule', 'If you see this, Google has probably shat itself or it\'s still loading.'],
@@ -2844,17 +2854,36 @@ $(document).ready(function () {
 		if (savedTheme) {
 			applyThemeClass(savedTheme);
 		}
+		const savedUserlistBg = localStorage.getItem('userlistBg');
+		if (savedUserlistBg) {
+			$('#userlist').css('background-image', savedUserlistBg);
+		}
 
-		$(document).on('click', '.header-drop-link a', function (event) {
+		$(document).on('click', '.header-drop-link a', function(event) {
 			event.preventDefault();
-			const bgUrl = $(this).data('bg');
-			const themeName = $(this).data('theme');
-
+			let bgUrl = $(this).data('bg');
+			let themeName = $(this).text();
+		
 			if (bgUrl) {
 				$('body').css('background-image', `url('${bgUrl}')`);
-				applyThemeClass(themeName);
 				localStorage.setItem('selectedBg', bgUrl);
 				localStorage.setItem('selectedTheme', themeName);
+		
+				if (UserlistBackgrounds[themeName]) {
+					$('#userlist').css('background-image', UserlistBackgrounds[themeName]);
+					localStorage.setItem('userlistBg', UserlistBackgrounds[themeName]);
+				}
+		
+				applyThemeClass(themeName);
+			} else {
+				$('body').css('background-image', "url('...default...')");
+				localStorage.removeItem('selectedBg');
+				$('#userlist').css('background-image', '');
+				localStorage.removeItem('userlistBg');
+				$('body').removeClass(function (index, className) {
+					return (className.match(/(^|\s)theme-\S+/g) || []).join(' ');
+				});
+				localStorage.removeItem('selectedTheme');
 			}
 		});
     }
