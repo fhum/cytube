@@ -76,7 +76,7 @@ var UserlistBackgrounds = {
 	'Sora': 'url(https://dl.dropboxusercontent.com/scl/fi/yb4z6axq0wzyxv1qf60rn/ks-chatbox.png?rlkey=l8jzy7tojwfha1y7g8v71dvte&st=cyrqi6ul&dl=0)',
 	'Arisu': 'url(https://dl.dropboxusercontent.com/scl/fi/h5aafw7np3tj2crlfoqg2/sa-chatbox.png?rlkey=186xvik4gaxn82odtqg0rn5vz&st=3s6zbau8&dl=0)',
 	'Murasame': 'url(https://dl.dropboxusercontent.com/scl/fi/ml8w4ju4d5ekoy0gcimed/m-chatbox.png?rlkey=8pz29d2g26k4m0yez1grygnia&st=aicnf9go&dl=0)',
-    'Cave Story': 'url(https://dl.dropboxusercontent.com/scl/fi/f34q1696g9ajphky712o4/ss-chatbox.png?rlkey=ypo2b2qiktuol4hnc3ysncuoh&st=bvqlqbo4&dl=0)'
+    'Cave Story': 'url(https://dl.dropboxusercontent.com/scl/fi/57yxwa78y5xa8rps6u1wm/patchy-chatbox.png?rlkey=9t79i97ob2em249ru7rjtlp8i&st=x4nbhif2&dl=0)'
 };
 
 var ScheduleTabs_Array = [
