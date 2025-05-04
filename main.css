@@ -182,12 +182,21 @@ body.theme-murasame .timestamp {
 	color: #7cc97f !important;
 }
 
-body.theme-cave-story .userlist_owner,
-body.theme-cave-story .userlist_op,
-body.theme-cave-story .userlist_item,
-body.theme-cave-story .userlist_guest,
-body.theme-cave-story .username,
-body.theme-cave-story .timestamp {
+body.theme-lum .userlist_owner,
+body.theme-lum .userlist_op,
+body.theme-lum .userlist_item,
+body.theme-lum .userlist_guest,
+body.theme-lum .username,
+body.theme-lum .timestamp {
+	color: #67c4b4 !important;
+}
+
+body.theme-gensokyo .userlist_owner,
+body.theme-gensokyo .userlist_op,
+body.theme-gensokyo .userlist_item,
+body.theme-gensokyo .userlist_guest,
+body.theme-gensokyo .username,
+body.theme-gensokyo .timestamp {
 	color: #89b6da !important;
 }
 
@@ -226,7 +235,7 @@ border-color: white !important;
 /*Botes: http://puu.sh/aHrs6/2e36260f66.jpg*/
 /* halloween cuteness http://puu.sh/c2Uxe.png */
 body {
-background-image:url(https://dl.dropboxusercontent.com/scl/fi/vuz59y9b7u7j17ta921th/doumon.png?rlkey=iiwv3ale12jvfdndhlo4l86d9&st=ywvnvy7q&dl=0);
+background-image:url(https://dl.dropboxusercontent.com/scl/fi/1a244y2qh80jtse1samid/gensokyo.jpg?rlkey=1w5tqlllq19z8meg5tz6uy058&st=brignrdc&dl=0);
 background-position: bottom right; background-attachment: fixed; background-size: cover;            
 /*background-position: bottom left;*/
             /*background-attachment: fixed;*/
