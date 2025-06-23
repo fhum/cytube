@@ -113,20 +113,8 @@
   }
 
   .glyphicon.glyphicon-star-empty {
-	animation: leader 1s infinite;
 	font-weight: 700;
   }
-  
-  @keyframes leader {
-	0%   { color: #e57373; }
-	14%  { color: #64b5f6; }
-	28%  { color: #81c784; }
-	42%  { color: #ba68c8; }
-	57%  { color: #ffd54f; }
-	71%  { color: #4db6ac; }
-	85%  { color: #ff8a65; }
-	100% { color: #e57373; }
-}
 
 body.theme-henneko .userlist_owner,
 body.theme-henneko .userlist_op,
@@ -135,6 +123,14 @@ body.theme-henneko .userlist_guest,
 body.theme-henneko .username,
 body.theme-henneko .timestamp {
 	color: #30e7a1 !important;
+}
+body.theme-henneko .glyphicon.glyphicon-star-empty {
+	animation: leader-henneko 1s infinite;
+}
+@keyframes leader-henneko {
+	0%   {color: #30e7a1}
+	50%  {color: #30e7a1a6}
+	100% {color: #30e7a1}
 }
 
 body.theme-hachiroku .userlist_owner,
@@ -145,6 +141,14 @@ body.theme-hachiroku .username,
 body.theme-hachiroku .timestamp {
 	color: #dd858e !important;
 }
+body.theme-hachiroku .glyphicon.glyphicon-star-empty {
+	animation: leader-hachiroku 1s infinite;
+}
+@keyframes leader-hachiroku {
+	0%   {color: #dd858e}
+	50%  {color: #dd858ea6}
+	100% {color: #dd858e}
+}
 
 body.theme-hanyuu .userlist_owner,
 body.theme-hanyuu .userlist_op,
@@ -153,6 +157,14 @@ body.theme-hanyuu .userlist_guest,
 body.theme-hanyuu .username,
 body.theme-hanyuu .timestamp {
 	color: #c1a7e4 !important;
+}
+body.theme-hanyuu .glyphicon.glyphicon-star-empty {
+	animation: leader-hanyuu 1s infinite;
+}
+@keyframes leader-hanyuu {
+	0%   {color: #c1a7e4}
+	50%  {color: #c1a7e4a6}
+	100% {color: #c1a7e4}
 }
 
 body.theme-arisu .userlist_owner,
@@ -163,6 +175,14 @@ body.theme-arisu .username,
 body.theme-arisu .timestamp {
 	color: #d8c89f !important;
 }
+body.theme-arisu .glyphicon.glyphicon-star-empty {
+	animation: leader-arisu 1s infinite;
+}
+@keyframes leader-arisu {
+	0%   {color: #d8c89f}
+	50%  {color: #d8c89fa6}
+	100% {color: #d8c89f}
+}
 
 body.theme-murasame .userlist_owner,
 body.theme-murasame .userlist_op,
@@ -171,6 +191,14 @@ body.theme-murasame .userlist_guest,
 body.theme-murasame .username,
 body.theme-murasame .timestamp {
 	color: #7cc97f !important;
+}
+body.theme-murasame .glyphicon.glyphicon-star-empty {
+	animation: leader-murasame 1s infinite;
+}
+@keyframes leader-murasame {
+	0%   {color: #7cc97f}
+	50%  {color: #7cc97fa6}
+	100% {color: #7cc97f}
 }
 
 body.theme-lum .userlist_owner,
@@ -181,6 +209,14 @@ body.theme-lum .username,
 body.theme-lum .timestamp {
 	color: #67c4b4 !important;
 }
+body.theme-lum .glyphicon.glyphicon-star-empty {
+	animation: leader-lum 1s infinite;
+}
+@keyframes leader-lum {
+	0%   {color: #67c4b4}
+	50%  {color: #67c4b4a6}
+	100% {color: #67c4b4}
+}
 
 body.theme-jun .userlist_owner,
 body.theme-jun .userlist_op,
@@ -189,6 +225,14 @@ body.theme-jun .userlist_guest,
 body.theme-jun .username,
 body.theme-jun .timestamp {
 	color: #89b6da !important;
+}
+body.theme-jun .glyphicon.glyphicon-star-empty {
+	animation: leader-jun 1s infinite;
+}
+@keyframes leader-jun {
+	0%   {color: #89b6da}
+	50%  {color: #89b6daa6}
+	100% {color: #89b6da}
 }
 
 /*CSS pretty much complete now, anyone should be able to edit it. Backup at http://pastebin.com/FcpGvxi6 and http://pastebin.com/5Jz6980X*/
@@ -213,7 +257,7 @@ border-color: white !important;
 #userlist {
             font-size: 10pt;
             background-color: #1C1E22;
-            background-image: url(https://dl.dropboxusercontent.com/scl/fi/57yxwa78y5xa8rps6u1wm/patchy-chatbox.png?rlkey=9t79i97ob2em249ru7rjtlp8i&st=x4nbhif2&dl=0);
+            background-image: url(https://dl.dropboxusercontent.com/scl/fi/lo48sbm2triv5b84x7r5x/jun.png?rlkey=287w0ev2wcbjts7lxji7as847&st=2hdqqxbm&dl=0);
             background-position: bottom center;
             background-repeat: no-repeat;}
  

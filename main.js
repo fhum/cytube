@@ -1563,6 +1563,9 @@ function prepareMessage(msg) {
 			msg = TitleBarDescription_Caption + ' ' + $(".queue_active a").html();
 		} else if (cmdcheck[0] === "!next") {
 			msg = UPNEXT;
+		} 
+		else if (cmdcheck[0] === "!jun") {
+			msg = 'https://dl.dropboxusercontent.com/scl/fi/tq9463re3lkfj18wpoa2d/where_there_are_lolis.jpg?rlkey=qu2ns8xi493oevp2pfya5x6xx&st=qmuof8ke&dl=0' + ':pic';
 		} else {
 			COMMAND = false;
 		}
