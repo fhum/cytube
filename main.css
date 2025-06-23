@@ -155,15 +155,6 @@ body.theme-hanyuu .timestamp {
 	color: #c1a7e4 !important;
 }
 
-body.theme-sora .userlist_owner,
-body.theme-sora .userlist_op,
-body.theme-sora .userlist_item,
-body.theme-sora .userlist_guest,
-body.theme-sora .username,
-body.theme-sora .timestamp {
-	color: #e2e2e2 !important;
-}
-
 body.theme-arisu .userlist_owner,
 body.theme-arisu .userlist_op,
 body.theme-arisu .userlist_item,
@@ -191,12 +182,12 @@ body.theme-lum .timestamp {
 	color: #67c4b4 !important;
 }
 
-body.theme-gensokyo .userlist_owner,
-body.theme-gensokyo .userlist_op,
-body.theme-gensokyo .userlist_item,
-body.theme-gensokyo .userlist_guest,
-body.theme-gensokyo .username,
-body.theme-gensokyo .timestamp {
+body.theme-jun .userlist_owner,
+body.theme-jun .userlist_op,
+body.theme-jun .userlist_item,
+body.theme-jun .userlist_guest,
+body.theme-jun .username,
+body.theme-jun .timestamp {
 	color: #89b6da !important;
 }
 
@@ -235,7 +226,7 @@ border-color: white !important;
 /*Botes: http://puu.sh/aHrs6/2e36260f66.jpg*/
 /* halloween cuteness http://puu.sh/c2Uxe.png */
 body {
-background-image:url(https://dl.dropboxusercontent.com/scl/fi/1a244y2qh80jtse1samid/gensokyo.jpg?rlkey=1w5tqlllq19z8meg5tz6uy058&st=brignrdc&dl=0);
+background-image:url(https://dl.dropboxusercontent.com/scl/fi/l4ib85kakvgb3zy3ybhgd/jun_bg.jpg?rlkey=15nl9a52rpsilme38t25hrmdg&st=u3kl3evt&dl=0);
 background-position: bottom right; background-attachment: fixed; background-size: cover;            
 /*background-position: bottom left;*/
             /*background-attachment: fixed;*/
