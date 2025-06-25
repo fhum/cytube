@@ -3423,7 +3423,6 @@ $("#playlistmanagerwrap").show();
 configwrap = $('<div id="configwrap" class="col-lg-12 col-md-12" />')
     .appendTo("#leftpane-inner");
 
-// Outer black background block with 0.98 opacity
 const wellWrapper = $('<div id="config-well" class="well form-horizontal" />')
     .css({
         background: "rgba(30, 30, 30, 0.98)",
@@ -3433,7 +3432,6 @@ const wellWrapper = $('<div id="config-well" class="well form-horizontal" />')
     })
     .appendTo(configwrap);
 
-// Title header
 $('<h1>~本日のロリ~</h1>')
 	.attr('title', 'Loli of the Day')
     .css({
@@ -3443,7 +3441,6 @@ $('<h1>~本日のロリ~</h1>')
     })
     .appendTo(wellWrapper);
 
-// Inner gray square block with 0.95 opacity
 const motdBox = $('<div id="motd-box" />')
     .css({
         backgroundImage: 'url("https://www.dropbox.com/scl/fi/9d563nixbo8zw7isuj1x6/checkers.jpg?rlkey=20sl7drmh2k2d8ymwir99ox0l&st=6wtxh0t2&dl=1")',
@@ -3475,7 +3472,7 @@ $(document).ready(function () {
     fetch(csvUrl)
         .then(response => response.text())
         .then(text => {
-            const rows = text.trim().split("\n").slice(1); // skip header
+            const rows = text.trim().split("\n").slice(1);
             if (rows.length === 0) {
                 $("#motd-content").html("<p>No data found in the sheet.</p>");
                 return;
@@ -3486,9 +3483,9 @@ $(document).ready(function () {
             const seed = today.getUTCFullYear() * 10000 + (today.getUTCMonth() + 1) * 100 + today.getUTCDate();
             const row = rows[seed % rows.length].split(",");
 
-            const image = row[3]?.trim();        // Column D (image URL)
-            const title = row[1]?.trim();        // Column B
-            const description = row[2]?.trim();  // Column C
+            const image = row[3]?.trim();
+            const title = row[1]?.trim();
+            const description = row[2]?.trim();
 
             const content = `
                 <img src="${image}" style="border-radius: 4px; max-height: 300px; height: auto; width: auto;" />
@@ -5202,3 +5199,27 @@ if ($('#toggleNonowa').length <= 0) {
 		);
 	}*/
 }
+
+// Clock above chat
+let clockInterval = 0;
+const chatHeader = document.getElementById('chatheader');
+const chatClock = document.createElement('div');
+chatClock.id = 'chatClock';
+
+chatClock.style.flexGrow = '2';
+chatClock.style.fontFamily = 'system-ui';
+chatClock.style.textAlign = 'center';
+
+
+
+document.getElementById("chatheader").insertAdjacentElement('beforebegin', chatClock);
+const setChatClock = () => {
+	const clockDate = new Date();
+	const localTime = clockDate.toLocaleTimeString("JPN");
+	const UTCTime = clockDate.toLocaleTimeString("JPN", {timeZone: 'UTC'});
+
+	chatClock.innerText = `Local ${localTime} | UTC ${UTCTime}`;
+}
+
+setChatClock();
+clockInterval = setInterval(setChatClock, 1000);

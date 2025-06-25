@@ -306,6 +306,40 @@ FOOTER#footer {opacity: 0.9;}
 /*Background for easier reading of some shit*/
 DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E22;}
 #currenttitle, #chatheader, #messagebuffer, #userlist, #guestlogin, #chatline, #plmeta {border-color:#444444;}
+
+#chatClock {
+    display: flex;
+    align-items: center;
+	justify-content: center;
+    flex-wrap: wrap;
+
+    background-color: rgb(28, 30, 34);
+
+    border-top: 1px solid rgb(68, 68, 68);
+    border-right: 1px solid rgb(68, 68, 68);
+    border-bottom: 0px solid rgb(68, 68, 68);
+    border-left: 1px solid rgb(68, 68, 68);
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    box-sizing: border-box;
+    color: rgb(200, 200, 200);
+
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+
+    text-align: center;
+}
+
+#chatheader {
+	border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+	border-top: none;
+}
  
 /*For the spinning images*/
 .spin, .spintext{
