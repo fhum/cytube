@@ -427,3 +427,12 @@ transform: scale(1, -1);
 		transform: translate(var(--xEnd), calc(100svh + 20px)) scale(var(--scale)) rotate(var(--rotation));
 	}
 }
+
+@keyframes diagonalScroll {
+	0% { 
+		background-position: 0 0; 
+	}
+	100% { 
+		background-position: 250px 250px; 
+	}
+}
