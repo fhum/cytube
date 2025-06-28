@@ -434,6 +434,8 @@ var RedditChange_Links = {		// FORMAT:	'NAME':['LINK ONE','LINK TWO']}
 
 let TEAMCOLORREGEX = /( |)<span style="display:none" class="teamColorSpan">.+/gi;
 
+document.body.classList.add("retardblock");
+
 var Shortcuts = {		// FORMAT: Keycode:'INSERT TEXT',	http://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes
 	ctrl:{
 		49:'[m1]',		// 1

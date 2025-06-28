@@ -430,6 +430,7 @@ transform: scale(1, -1);
 	animation-delay: var(--delay);
 	transform: scale(var(--scale)) rotate(var(--rotation));
 	pointer-events: none;
+	z-index: 999;
 }
 
 #drugged {
@@ -486,4 +487,28 @@ transform: scale(1, -1);
 	100% { 
 		background-position: 250px 250px; 
 	}
+}
+
+#messagebuffer::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("https://www.dropbox.com/scl/fi/c9svz4vnyoa8elrmupbh8/1645333131817.jpg?rlkey=ztkncjy4xv1zqevfc6k0l7isw&st=9fj8cxql&dl=1");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index:100;
+	pointer-events: none;
+}
+
+.profile-box {
+	max-width: 240px;
+	z-index: 999 !important;
+}
+
+body.retardblock #messagebuffer::before {
+	display: none !important;
 }
