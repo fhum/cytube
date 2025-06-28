@@ -393,6 +393,14 @@ AskAnswers = [
 	'...', 'What was the question?', ':Fuck you.'
 ];
 
+var FoodArray = [
+	'Through the Dark Lord, Amen.',
+    'Eat a duck I must?',
+    'Rub a dub grub!', 
+	'メンカタカラメヤサイダブルニンニクアブラマシマシ。',
+	'https://dl.dropboxusercontent.com/scl/fi/s34cqral6xpvf2hxj6y0r/averageblackmiddleschoolmeal.png?rlkey=kalxs2bueaqi3dl2l55xj31kn&st=i3t2l43g&dl=0:pic'
+]
+
 var Lottery = {
 	click:'http://www.downloadmoreram.com/',
 	image:'http://i.imgur.com/BS1Eehd.gif',
@@ -1577,7 +1585,11 @@ function prepareMessage(msg) {
 			msg = TitleBarDescription_Caption + ' ' + $(".queue_active a").html();
 		} else if (cmdcheck[0] === "!next") {
 			msg = UPNEXT;
-		} 
+		} else if (cmdcheck[0] === "!food") {
+			FoodArray.length < 1 ? FoodArray = ['Error: No food available.'] : '';
+			a = Math.round(Math.random() * (FoodArray.length - 1));
+			msg = FoodArray[a];
+		}
 		else if (cmdcheck[0] === "!jun") {
 			msg = 'https://dl.dropboxusercontent.com/scl/fi/tq9463re3lkfj18wpoa2d/where_there_are_lolis.jpg?rlkey=qu2ns8xi493oevp2pfya5x6xx&st=qmuof8ke&dl=0' + ':pic';
 		} else {
