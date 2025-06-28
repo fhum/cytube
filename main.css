@@ -14,6 +14,28 @@
 
 .queue_entry{border-color: #444444}
 
+/* Scrollbar (Doesn't work on Firefox) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(255,153,0,0);
+    border-radius: 0px;
+    background-color: #161a20;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background: rgb(70, 70, 70);
+    box-shadow: inset 0 0 6px rgba(49, 49, 49, 0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(51, 51, 51, 0.6);
+}
+
 @keyframes poll {
 	0%   { color: rgb(97, 189, 218); }
 	50%  { color: rgb(0, 112, 187); }
