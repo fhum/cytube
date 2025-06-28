@@ -79,6 +79,16 @@ var UserlistBackgrounds = {
     'Jun': 'url(https://dl.dropboxusercontent.com/scl/fi/lo48sbm2triv5b84x7r5x/jun.png?rlkey=287w0ev2wcbjts7lxji7as847&st=2hdqqxbm&dl=0)'
 };
 
+var UserIcons = {
+	'Henneko': 'url(https://dl.dropboxusercontent.com/scl/fi/187l9yqa7079bstz0kn5o/azusa.png?rlkey=eu8h4tvc76mgpgqt6vvzzaxfh&st=nfiil482&dl=0)',
+    'Hachiroku': 'url(https://dl.dropboxusercontent.com/scl/fi/jurohdddlblzq5xuqr125/hachiroku.png?rlkey=j4ht6aeqbokhpoy9hofo66n3o&st=kg9323it&dl=0)',
+    'Hanyuu': 'url(https://dl.dropboxusercontent.com/scl/fi/5kyv7mhce8a2fidjls9ii/hanyuu.png?rlkey=riv27au2r3o2hktyxacecbqq1&st=0sp7kvx7&dl=0)',
+	'Arisu': 'url(https://dl.dropboxusercontent.com/scl/fi/rh7l5llipr7tva212wyuv/arisu.png?rlkey=37dr3ev408qo2j4v8pynv3q4i&st=udyni8xl&dl=0)',
+	'Murasame': 'url(https://dl.dropboxusercontent.com/scl/fi/45ch12nu35c9vsxjzpks6/murasame.png?rlkey=4pphkw2p5mwytzoh61pmnjens&st=bmch1vop&dl=0)',
+	'Lum': 'url(https://dl.dropboxusercontent.com/scl/fi/9hphvc1qxlmmb3czbgje4/lum.png?rlkey=l3h76nvtt2ve00n60p4dvy9yk&st=y0p7twkg&dl=0)',
+    'Jun': 'url(https://dl.dropboxusercontent.com/scl/fi/e6fr3cer9ffeupz5a7whn/jun.png?rlkey=nnj5cmdckkl6mcygxma7110u9&st=k1wg625t&dl=0)'
+}
+
 var ScheduleTabs_Array = [
 	['Compact Schedule', 'If you see this, Google has probably shat itself or it\'s still loading.'],
 	['Full Schedule', '<iframe id="scheduleBox" src="https://docs.google.com/spreadsheets/d/1Ye0mzOVODl2IAo3MWjvZOtqSXq-KK_JR5RYbzjUmOY4/pubhtml?gid=9190525&single=true" width="100%" height="' + $(window).height() + '"></iframe>']
@@ -421,6 +431,8 @@ var RedditChange_Links = {		// FORMAT:	'NAME':['LINK ONE','LINK TWO']}
 			'http://kudo.moe/fuckno.jpg',
 			'http://i.imgur.com/Ud4cJUq.jpg'],	
 };
+
+let TEAMCOLORREGEX = /( |)<span style="display:none" class="teamColorSpan">.+/gi;
 
 var Shortcuts = {		// FORMAT: Keycode:'INSERT TEXT',	http://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes
 	ctrl:{
@@ -2648,6 +2660,17 @@ if (USEROPTS.hidevid) {
 		});
 }
 
+//Team Color
+var teamList_4cc = ["henneko","hachiroku","hanyuu","arisu","murasame","lum","jun"];
+
+//Format messages upon page load because they're handled differently and I can't find the function
+document.getElementById("messagebuffer").childNodes.forEach(function(chatmessage){
+//	if (chatmessage.childElementCount == 2) {
+	  chatmessage.innerHTML = chatmessage.innerHTML.replace(/Ð.+Ð/,"");
+//	} 
+});
+
+
 // changing initial layout to compact
 $("body").addClass('fluid');
 compactLayout();
@@ -2835,60 +2858,75 @@ $(document).ready(function () {
 
         for (let i = 0; i < HeaderDropMenu_Items.length; i++) {
             let [title, link] = HeaderDropMenu_Items[i];
+            let team = teamList_4cc[i] || '';
+            let iconUrl = UserIcons[title] || '';
+
+            let iconSpan = iconUrl
+                ? `<span style="display:inline-block;width:16px;height:16px;margin-right:6px;vertical-align:middle;background-size:contain;background-image:${iconUrl};background-repeat:no-repeat;background-position:center;"></span>`
+                : '';
+
             $('<li class="header-drop-link" />')
-                .append(`<a href="#" data-bg="${link}" data-theme="${title}">${title}</a>`)
+                .append(`<a href="#" data-bg="${link}" data-theme="${title}" data-team="${team}">${iconSpan}${title}</a>`)
                 .appendTo(headermenu);
         }
 
         function applyThemeClass(themeName) {
-			$('body').removeClass(function (index, className) {
-				return (className.match(/(^|\s)theme-\S+/g) || []).join(' ');
-			});
-		
-			let className = 'theme-' + themeName.toLowerCase().replace(/\s+/g, '-');
-			$('body').addClass(className);
-		}
+            $('body').removeClass(function (index, className) {
+                return (className.match(/(^|\s)theme-\S+/g) || []).join(' ');
+            });
 
-		const savedBg = localStorage.getItem('selectedBg');
-		const savedTheme = localStorage.getItem('selectedTheme');
-		if (savedBg) {
-			$('body').css('background-image', `url('${savedBg}')`);
-		}
-		if (savedTheme) {
-			applyThemeClass(savedTheme);
-		}
-		const savedUserlistBg = localStorage.getItem('userlistBg');
-		if (savedUserlistBg) {
-			$('#userlist').css('background-image', savedUserlistBg);
-		}
+            let className = 'theme-' + themeName.toLowerCase().replace(/\s+/g, '-');
+            $('body').addClass(className);
+        }
 
-		$(document).on('click', '.header-drop-link a', function(event) {
-			event.preventDefault();
-			let bgUrl = $(this).data('bg');
-			let themeName = $(this).text();
-		
-			if (bgUrl) {
-				$('body').css('background-image', `url('${bgUrl}')`);
-				localStorage.setItem('selectedBg', bgUrl);
-				localStorage.setItem('selectedTheme', themeName);
-		
-				if (UserlistBackgrounds[themeName]) {
-					$('#userlist').css('background-image', UserlistBackgrounds[themeName]);
-					localStorage.setItem('userlistBg', UserlistBackgrounds[themeName]);
-				}
-		
-				applyThemeClass(themeName);
-			} else {
-				$('body').css('background-image', "url('...default...')");
-				localStorage.removeItem('selectedBg');
-				$('#userlist').css('background-image', '');
-				localStorage.removeItem('userlistBg');
-				$('body').removeClass(function (index, className) {
-					return (className.match(/(^|\s)theme-\S+/g) || []).join(' ');
-				});
-				localStorage.removeItem('selectedTheme');
-			}
-		});
+        const savedBg = localStorage.getItem('selectedBg');
+        const savedTheme = localStorage.getItem('selectedTheme');
+        const savedTeamColor = getOrDefault(CHANNEL.name + "_TEAMCOLOR", '');
+
+        if (savedBg) {
+            $('body').css('background-image', `url('${savedBg}')`);
+        }
+        if (savedTheme) {
+            applyThemeClass(savedTheme);
+        }
+        if (savedTeamColor) {
+            TEAMCOLOR = savedTeamColor;
+        }
+
+        $(document).on('click', '.header-drop-link a', function (event) {
+            event.preventDefault();
+            let bgUrl = $(this).data('bg');
+            let themeName = $(this).data('theme');
+            let teamColor = $(this).data('team');
+
+            if (bgUrl) {
+                $('body').css('background-image', `url('${bgUrl}')`);
+                localStorage.setItem('selectedBg', bgUrl);
+                localStorage.setItem('selectedTheme', themeName);
+
+                if (UserlistBackgrounds[themeName]) {
+                    $('#userlist').css('background-image', UserlistBackgrounds[themeName]);
+                    localStorage.setItem('userlistBg', UserlistBackgrounds[themeName]);
+                }
+
+                applyThemeClass(themeName);
+            } else {
+                $('body').css('background-image', "url('...default...')");
+                localStorage.removeItem('selectedBg');
+                $('#userlist').css('background-image', '');
+                localStorage.removeItem('userlistBg');
+                $('body').removeClass(function (index, className) {
+                    return (className.match(/(^|\s)theme-\S+/g) || []).join(' ');
+                });
+                localStorage.removeItem('selectedTheme');
+            }
+
+            // Set and save team color
+            if (teamColor) {
+                TEAMCOLOR = teamColor;
+                setOpt(CHANNEL.name + "_TEAMCOLOR", TEAMCOLOR);
+            }
+        });
     }
 });
 
@@ -3615,6 +3653,14 @@ function formatChatMessage(data, last) {
 			addClassToNameAndTimestamp: data.msgclass
 		};
 	}
+	//4CC Team Colors
+	var teamClass = data.msg.match(/(Ð.+Ð)/gi);
+	if (teamClass){
+		teamClass = 'team' + teamClass[0].replace(new RegExp('Ð','g'),'');
+		data.msg = data.msg.replace(/Ð.+Ð/gi,'');
+	} else {
+		teamClass = '';
+	}
 	// Phase 1: Determine whether to show the username or not
 	var skip = data.username === last.name;
 	// Prevent impersonation by abuse of the bold filter
@@ -3624,7 +3670,25 @@ function formatChatMessage(data, last) {
 		skip = false;
 	if(data.meta.addClass === "server-whisper")
 		skip = true;
+
+	data.msg = stripImages(data.msg);
 	data.msg = execEmotes(data.msg);
+
+	data.msg = data.msg.replace(TEAMCOLORREGEX,"").replace(/Ð.+Ð/,"").trim();
+	
+	if (data.msg.length === 0) {
+		return;
+	}
+	if (data.msg.replace(/<.+?>| /gi,"").length > 25) {
+		var greaterThanSign = 0;
+		if (data.msg[0] === "<") {
+			greaterThanSign = data.msg.indexOf(">");
+		}
+
+		var noHTMLMsg = data.msg.replace(/<.+?>/gi," ");
+		var splitMsg = noHTMLMsg.split(" ");
+	}
+
 	last.name = data.username;
 	var div = $("<div/>");
 	/* drink is a special case because the entire container gets the class, not
@@ -3647,7 +3711,7 @@ function formatChatMessage(data, last) {
 	if (!skip) {
 		name.appendTo(div);
 	}
-	var username = $("<strong/>").addClass("username").text(data.username + ": ").appendTo(name);
+	$("<strong/>").addClass("username " + teamClass).text(data.username + ": ").appendTo(name);
 	if (data.meta.modflair) {
 		name.addClass(getNameColor(data.meta.modflair));
 	}
@@ -3662,14 +3726,14 @@ function formatChatMessage(data, last) {
 			.css("margin-right", "3px")
 			.prependTo(name);
 	}
-	if (UI_Pixel === 1 && WC[data.username] !== undefined) {
+	/*if (UI_Pixel === 1 && WC[data.username] !== undefined) {
 		var pixel = '<span ' + (PIXEL ? '' : ' style="display:none"') + '><img class="user" src="' + WC[data.username].pix + '" title="' + data.username + '" height="' + UCONF.pixh + '"/> </span>';
 		if (UCONF.showname === "no" && skip) {
 			$(pixel).appendTo(div);
 		} else {
 			UCONF.pixl === "before" ? $(pixel).insertBefore(name) : $(pixel).insertAfter(name);
 		}
-	}
+	}*/
 	/*var subregex = /<span class="subchannel" title="(.+?)"><\/span>/;
 	if (data.msg.search(subregex) > -1) { //SUBCHANNEL
 		var submatch = data.msg.match(subregex);
@@ -3725,6 +3789,10 @@ function formatChatMessage(data, last) {
 	}
 	return div;
 }
+
+setTimeout(function() {
+    $(".teamColorSpan").remove();
+}, 2500);
 
 function formatUserlistItem(div) {
 	var data = {
@@ -4014,8 +4082,16 @@ $("#chatline").on("keydown", function(ev) {
 			if (CLIENT.rank >= 2 && msg.indexOf("/m ") === 0) {
 				meta.modflair = CLIENT.rank;
 				msg = msg.substring(3);
+			} else {
+				var t = msg.trim();
+				if (TEAMCOLOR && t.indexOf("/") !== 0) {
+					t = t + ' Ð' + TEAMCOLOR + 'Ð';
+				}
+				socket.emit("chatMsg", {
+					msg: t,
+					meta: meta
+				});
 			}
-			msg.indexOf('fc2.com') > -1 ? '' : socket.emit("chatMsg", {msg:msg, meta:meta});
 			BLLINK ? userChatStats(msg) : userChatStats(msg0);
 			BLLINK = false;
 			CHATHIST.push($("#chatline").val());
