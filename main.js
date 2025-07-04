@@ -2895,7 +2895,7 @@ $(document).ready(function () {
 
         const savedBg = localStorage.getItem('selectedBg');
         const savedTheme = localStorage.getItem('selectedTheme');
-        const savedTeamColor = getOrDefault(CHANNEL.name + "_TEAMCOLOR", '');
+        const savedTeamColor = getOrDefault(CHANNEL.name + "_TEAMCOLOR", 'jun');
 
         if (savedBg) {
             $('body').css('background-image', `url('${savedBg}')`);
@@ -2903,9 +2903,8 @@ $(document).ready(function () {
         if (savedTheme) {
             applyThemeClass(savedTheme);
         }
-        if (savedTeamColor) {
-            TEAMCOLOR = savedTeamColor;
-        }
+        TEAMCOLOR = savedTeamColor;
+		setOpt(CHANNEL.name + "_TEAMCOLOR", TEAMCOLOR);
 
         $(document).on('click', '.header-drop-link a', function (event) {
             event.preventDefault();
