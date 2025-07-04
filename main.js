@@ -2903,6 +2903,10 @@ $(document).ready(function () {
         if (savedTheme) {
             applyThemeClass(savedTheme);
         }
+		const savedUserlistBg = localStorage.getItem('userlistBg');
+		if (savedUserlistBg) {
+			$('#userlist').css('background-image', savedUserlistBg);
+		}
         TEAMCOLOR = savedTeamColor;
 		setOpt(CHANNEL.name + "_TEAMCOLOR", TEAMCOLOR);
 
