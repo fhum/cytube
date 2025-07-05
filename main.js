@@ -66,6 +66,7 @@ var HeaderDropMenu_Items = [		// FORMAT: ['NAME','LINK'],
     ['Arisu', 'https://dl.dropboxusercontent.com/scl/fi/s2wahvgrm48v8zgu1kf6l/arisu.jpg?rlkey=20urnrj7kyo2yv983vl13858w&st=ksihmxoe&dl=0'],
     ['Murasame', 'https://dl.dropboxusercontent.com/scl/fi/u7kt4fs02bvn9wbod7oj8/murasame.jpg?rlkey=1jk2t8bhhrcxy1rzz7j50br3y&st=80uxnlky&dl=0'],
 	['Lum', 'https://dl.dropboxusercontent.com/scl/fi/40zuia2yhvipl5gabg6px/lum.jpg?rlkey=8weroos9k3545ajjl3i74p19w&st=h4ccdc95&dl=0'],
+	['Liru', 'https://dl.dropboxusercontent.com/scl/fi/4hkxy4wy3qv2awho92whg/liru2.png?rlkey=dc6gvn7jahjgody821spaesrq&st=nrxcit1z&dl=0'],
     ['Jun', 'https://dl.dropboxusercontent.com/scl/fi/l4ib85kakvgb3zy3ybhgd/jun_bg.jpg?rlkey=15nl9a52rpsilme38t25hrmdg&st=u3kl3evt&dl=0']
 ];
 
@@ -76,6 +77,7 @@ var UserlistBackgrounds = {
 	'Arisu': 'url(https://dl.dropboxusercontent.com/scl/fi/h5aafw7np3tj2crlfoqg2/sa-chatbox.png?rlkey=186xvik4gaxn82odtqg0rn5vz&st=3s6zbau8&dl=0)',
 	'Murasame': 'url(https://dl.dropboxusercontent.com/scl/fi/ml8w4ju4d5ekoy0gcimed/m-chatbox.png?rlkey=8pz29d2g26k4m0yez1grygnia&st=aicnf9go&dl=0)',
 	'Lum': 'url(https://dl.dropboxusercontent.com/scl/fi/rergcc2pb7lo496qvboul/uy-chatbox.png?rlkey=eurwbefusmqfqrg7o2xliqbqy&st=fio5q0bg&dl=0)',
+	'Liru': 'url(https://dl.dropboxusercontent.com/scl/fi/cclemtephjncw1503wtxf/liru-chatbox.png?rlkey=dviprfn6sfa7cc2f964h4tbow&st=t11qfndo&dl=0)',
     'Jun': 'url(https://dl.dropboxusercontent.com/scl/fi/lo48sbm2triv5b84x7r5x/jun.png?rlkey=287w0ev2wcbjts7lxji7as847&st=2hdqqxbm&dl=0)'
 };
 
@@ -86,6 +88,7 @@ var UserIcons = {
 	'Arisu': 'url(https://dl.dropboxusercontent.com/scl/fi/rh7l5llipr7tva212wyuv/arisu.png?rlkey=37dr3ev408qo2j4v8pynv3q4i&st=udyni8xl&dl=0)',
 	'Murasame': 'url(https://dl.dropboxusercontent.com/scl/fi/45ch12nu35c9vsxjzpks6/murasame.png?rlkey=4pphkw2p5mwytzoh61pmnjens&st=bmch1vop&dl=0)',
 	'Lum': 'url(https://dl.dropboxusercontent.com/scl/fi/9hphvc1qxlmmb3czbgje4/lum.png?rlkey=l3h76nvtt2ve00n60p4dvy9yk&st=y0p7twkg&dl=0)',
+	'Liru': 'url(https://dl.dropboxusercontent.com/scl/fi/h8dn67rxmboowgmd8aay0/liru.png?rlkey=tjjcyincetb4nv903uhl7qzmq&st=5stq4dp1&dl=0)',
     'Jun': 'url(https://dl.dropboxusercontent.com/scl/fi/e6fr3cer9ffeupz5a7whn/jun.png?rlkey=nnj5cmdckkl6mcygxma7110u9&st=k1wg625t&dl=0)'
 }
 
@@ -378,7 +381,12 @@ RandomImages =
 	'https://dl.dropboxusercontent.com/scl/fi/cfdgdq0qt14razgs2tg95/128552330_p0.jpg?rlkey=eodkhu1xads2mdvyxdqi08k5b&st=4xzkoa4t&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/nkjd3lrazajhn7q775cw8/__hataya_misuzu_idolmaster_and_1_more_drawn_by_pulmo_artist__sample-84b2cb5d2aaaa7bb0edaf7d4beb4c60c.jpg?rlkey=f5z19zem8xxg1jv1ne6b4sj81&st=2wdvpmpf&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/gr2v55nztg3k9i1kaet4l/v9uddi.png?rlkey=dw42r1nr85taojfkw5pttw868&st=prltanzx&dl=0',
-	'https://dl.dropboxusercontent.com/scl/fi/3ihp49car8lp9d4t2co1w/https___x.com_ice_0416_status_1915968061490008275-img1.jpg?rlkey=u961oaehqj7j3vmdnmyt9ejiw&st=6e249raf&dl=0'
+	'https://dl.dropboxusercontent.com/scl/fi/3ihp49car8lp9d4t2co1w/https___x.com_ice_0416_status_1915968061490008275-img1.jpg?rlkey=u961oaehqj7j3vmdnmyt9ejiw&st=6e249raf&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/p3739g7021n8k8l5jlidb/2777780.099999994_-_2021-02-18_060638.png?rlkey=8ucj9hi6mowopcqxe6ixcq5cb&st=fgtbk1bp&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/33vealpzwh72hfrtbh7mm/3441383.5_ed2667e3318dd46d8e014080dfa70fed.jpg?rlkey=7pp5q39flo42x8vd7ccci47io&st=nf9bmg24&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/k54wcfh5lme5c4jcatb67/4c1vcx.png?rlkey=eewq6yg1meee9o2cokz4qkj0b&st=6oaa7tjx&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/effx2oyf80e8ekyj0hein/__liru_pachira_uma_and_aiko_renkin_san_kyuu_magical_pokaan_drawn_by_okamura_masahiro__a19c68ece3b2413025c5b5638b193cb4.jpg?rlkey=xknbxl52jv1pf6h16uwiqyn5c&st=j05fwke8&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/op6gbcnhytnb53byt2zv5/3563632.8999999985_58f639460a03e16ceb77369836ce5109.jpg?rlkey=ydory96ovkvmsptxp0d0mh16y&st=rs53vf20&dl=0'
   ]
 
 var AskAnswers = [
@@ -2831,7 +2839,7 @@ if (USEROPTS.hidevid) {
 }
 
 //Team Color
-var teamList_4cc = ["henneko","hachiroku","hanyuu","arisu","murasame","lum","jun"];
+var teamList_4cc = ["henneko","hachiroku","hanyuu","arisu","murasame","lum","liru","jun"];
 
 //Format messages upon page load because they're handled differently and I can't find the function
 document.getElementById("messagebuffer").childNodes.forEach(function(chatmessage){

@@ -242,6 +242,23 @@ body.theme-lum .glyphicon.glyphicon-star-empty {
 	100% {color: #67c4b4}
 }
 
+body.theme-liru .userlist_owner,
+body.theme-liru .userlist_op,
+body.theme-liru .userlist_item,
+body.theme-liru .userlist_guest,
+body.theme-liru .username,
+body.theme-liru .timestamp {
+	color: #e7ad6b !important;
+}
+body.theme-liru .glyphicon.glyphicon-star-empty {
+	animation: leader-liru 1s infinite;
+}
+@keyframes leader-liru {
+	0%   {color: #e7ad6b}
+	50%  {color: #e7ad6ba6}
+	100% {color: #e7ad6b}
+}
+
 body.theme-jun .userlist_owner,
 body.theme-jun .userlist_op,
 body.theme-jun .userlist_item,
@@ -373,6 +390,7 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
 .teamarisu::before{background:url('https://dl.dropboxusercontent.com/scl/fi/rh7l5llipr7tva212wyuv/arisu.png?rlkey=37dr3ev408qo2j4v8pynv3q4i&st=udyni8xl&dl=0');}
 .teammurasame::before{background:url('https://dl.dropboxusercontent.com/scl/fi/45ch12nu35c9vsxjzpks6/murasame.png?rlkey=4pphkw2p5mwytzoh61pmnjens&st=bmch1vop&dl=0');}
 .teamlum::before{background:url('https://dl.dropboxusercontent.com/scl/fi/9hphvc1qxlmmb3czbgje4/lum.png?rlkey=l3h76nvtt2ve00n60p4dvy9yk&st=y0p7twkg&dl=0');}
+.teamliru::before{background:url('https://dl.dropboxusercontent.com/scl/fi/h8dn67rxmboowgmd8aay0/liru.png?rlkey=tjjcyincetb4nv903uhl7qzmq&st=9lqpbp5u&dl=0');}
 .teamjun::before{background:url('https://dl.dropboxusercontent.com/scl/fi/e6fr3cer9ffeupz5a7whn/jun.png?rlkey=nnj5cmdckkl6mcygxma7110u9&st=k1wg625t&dl=0');}
 .username::before{
     content:"AA";
