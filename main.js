@@ -25,7 +25,7 @@ var UI_UnicodeChars = 1;		// [&] additional buttons in the fonts panel with unic
 var UI_EmotesBtn = 1;			// button displaying box with clickable chat emotes
 var UI_CommandsBtn = 1;			// button displaying modal window with chat commands help
 var UI_ExtendedGetURLs = 1;		// extended 'Get URLs' function
-var UI_DisplayModeSel = 1;		// selector with player display modes
+var UI_DisplayModeSel = 0;		// selector with player display modes
 var UI_QuickCommandsBtns = 1;	// buttons with '/clear' and '/afk' functions
 var UI_FlagCounter = 0;			// [&] channel right-sided footer box
 var UI_UserStatistics = 1;		// displaying in the footer user visits number and current online time
@@ -1215,7 +1215,7 @@ socket.on("changeMedia", function(data) {
     updateEndTimes(Math.floor(data.currentTime));
 	videoLength = data.seconds;
 	changeTitle();
-	setModeAfterVideoChange();
+	// setModeAfterVideoChange();
 	$("#findtime").text() !== 'Video Time' ? $("#findtime").click() : '';
 	if (!$("#videowrap").length) {
 		TitleBarDescription_Caption.length < 1 ? TitleBarDescription_Caption = 'Currently Playing:' : '';
@@ -4502,7 +4502,7 @@ socket.on("addUser", function() {
 });
 socket.on("changeMedia", function(data) {
 	UI_TitleBarDescription === 1 ? changeTitle() : '';
-	UI_DisplayModeSel === 1 ? setModeAfterVideoChange() : '';
+	// UI_DisplayModeSel === 1 ? setModeAfterVideoChange() : '';
 	$("#findtime").text() !== 'Video Time' ? $("#findtime").click() : '';
 	if (!$("#videowrap").length) {
 		TitleBarDescription_Caption.length < 1 ? TitleBarDescription_Caption = 'Currently Playing:' : '';
