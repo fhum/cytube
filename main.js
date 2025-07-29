@@ -398,7 +398,7 @@ var AskAnswers = [
 AskAnswers = [
 	'100% for sure.', 'Definitely yes.', 'Yes.', 'Probably.', 'Not any chance.', 'Definitely no.', 
 	'A little chance.', 'No.', '50/50', 'Fairy is tired and will not answer.', 'I refuse to answer.', 'Your question is so stupid that you should just leave.',
-	'...', 'What was the question?', ':Fuck you.'
+	'...', 'What was the question?', 'Fuck you.'
 ];
 
 var FoodArray = [
