@@ -60,36 +60,123 @@ var ChannelName_Caption = 'Loliconia';
 var HeaderDropMenu_Title = 'Change Theme';
 
 var HeaderDropMenu_Items = [		// FORMAT: ['NAME','LINK'],
-    ['Henneko', 'https://dl.dropboxusercontent.com/scl/fi/ob1nan7rm7vcbxfmxdn0i/henneko.jpg?rlkey=jkj0ssrvrr4xypwluivq32m41&st=u4bzg8ct&dl=0'],
-    ['Hachiroku', 'https://dl.dropboxusercontent.com/scl/fi/pjjeloomclysdflkntuvw/86.png?rlkey=0v6nspkwable94wssoap162qz&st=6xmxi1jx&dl=0'],
+    ['Azusa', 'https://dl.dropboxusercontent.com/scl/fi/ob1nan7rm7vcbxfmxdn0i/henneko.jpg?rlkey=jkj0ssrvrr4xypwluivq32m41&st=u4bzg8ct&dl=0'],
+	['Tsukiko', 'https://dl.dropboxusercontent.com/scl/fi/ob1nan7rm7vcbxfmxdn0i/henneko.jpg?rlkey=jkj0ssrvrr4xypwluivq32m41&st=u4bzg8ct&dl=0'],
+	['Akane', 'https://dl.dropboxusercontent.com/scl/fi/g8n9x4h6oguzirvnr6wvj/odorobo.jpg?rlkey=8k18y5a7kn5vb0f1w5le13slq&st=tie5rx1u&dl=0'],
+	['Aoi', 'https://dl.dropboxusercontent.com/scl/fi/g8n9x4h6oguzirvnr6wvj/odorobo.jpg?rlkey=8k18y5a7kn5vb0f1w5le13slq&st=tie5rx1u&dl=0'],
+	['Zundamon', 'https://dl.dropboxusercontent.com/scl/fi/g8n9x4h6oguzirvnr6wvj/odorobo.jpg?rlkey=8k18y5a7kn5vb0f1w5le13slq&st=tie5rx1u&dl=0'],
+	['Kiritan', 'https://dl.dropboxusercontent.com/scl/fi/ils51xfl3oosp428b4u74/kiritan.jpg?rlkey=kjd8znuta2p67qyqipwrb8xb0&st=9xnclbuy&dl=0'],
+	['Akari', 'https://dl.dropboxusercontent.com/scl/fi/y055xenesfglpvobl8moa/yuzuaka.jpg?rlkey=a298bquqew8580lrmh9198m3l&st=pqojwg4l&dl=0'],
+	['Yukari', 'https://dl.dropboxusercontent.com/scl/fi/y055xenesfglpvobl8moa/yuzuaka.jpg?rlkey=a298bquqew8580lrmh9198m3l&st=pqojwg4l&dl=0'],
+	['Usagi', 'https://dl.dropboxusercontent.com/scl/fi/wjtruy8se1icp4dek9g5v/usagi.jpg?rlkey=xso6dz33442kxhfidzz17xg64&st=gjxi3095&dl=0'],
+    ['Shinobu', 'https://dl.dropboxusercontent.com/scl/fi/03f2ymhu185wlzor7gp70/monogatari.jpg?rlkey=2f3m89dk5t9t8789zkwqs56dg&st=58oyldxv&dl=0'],
+	['Hachikuji', 'https://dl.dropboxusercontent.com/scl/fi/03f2ymhu185wlzor7gp70/monogatari.jpg?rlkey=2f3m89dk5t9t8789zkwqs56dg&st=58oyldxv&dl=0'],
+	['Ougi', 'https://dl.dropboxusercontent.com/scl/fi/03f2ymhu185wlzor7gp70/monogatari.jpg?rlkey=2f3m89dk5t9t8789zkwqs56dg&st=58oyldxv&dl=0'],
+	['Hachiroku', 'https://dl.dropboxusercontent.com/scl/fi/pjjeloomclysdflkntuvw/86.png?rlkey=0v6nspkwable94wssoap162qz&st=6xmxi1jx&dl=0'],
+	['Rika', 'https://dl.dropboxusercontent.com/scl/fi/0e84ggwvfrol54ee1m2lu/rika.png?rlkey=at0f475q78yo5thbb7ov978m8&st=h83w7pw0&dl=0'],
     ['Hanyuu', 'https://dl.dropboxusercontent.com/scl/fi/pih0t5zrs0sd5iu388btf/hanyuu.jpg?rlkey=rgk3lzlp3k51616h1do6ruts4&st=tpvjsqtp&dl=0'],
     ['Arisu', 'https://dl.dropboxusercontent.com/scl/fi/s2wahvgrm48v8zgu1kf6l/arisu.jpg?rlkey=20urnrj7kyo2yv983vl13858w&st=ksihmxoe&dl=0'],
     ['Murasame', 'https://dl.dropboxusercontent.com/scl/fi/u7kt4fs02bvn9wbod7oj8/murasame.jpg?rlkey=1jk2t8bhhrcxy1rzz7j50br3y&st=80uxnlky&dl=0'],
 	['Lum', 'https://dl.dropboxusercontent.com/scl/fi/40zuia2yhvipl5gabg6px/lum.jpg?rlkey=8weroos9k3545ajjl3i74p19w&st=h4ccdc95&dl=0'],
 	['Liru', 'https://dl.dropboxusercontent.com/scl/fi/4hkxy4wy3qv2awho92whg/liru2.png?rlkey=dc6gvn7jahjgody821spaesrq&st=nrxcit1z&dl=0'],
+	['Dokuro', 'https://dl.dropboxusercontent.com/scl/fi/s5h97tk6fuo51eocl0hft/dokuro.jpg?rlkey=t67w8od3cccxwtm9mmmwi6fq6&st=0vefwqbn&dl=0'],
+	['Sabato', 'https://dl.dropboxusercontent.com/scl/fi/s5h97tk6fuo51eocl0hft/dokuro.jpg?rlkey=t67w8od3cccxwtm9mmmwi6fq6&st=0vefwqbn&dl=0'],
+	['Komugi', 'https://dl.dropboxusercontent.com/scl/fi/uqjk9q6h7tv385zoqrydl/komugi.jpg?rlkey=2tzdl428z4cggm7r719ujhemb&st=cndd09j5&dl=0'],
+	['Koyori', 'https://dl.dropboxusercontent.com/scl/fi/uqjk9q6h7tv385zoqrydl/komugi.jpg?rlkey=2tzdl428z4cggm7r719ujhemb&st=cndd09j5&dl=0'],
+	['Dejiko', 'https://dl.dropboxusercontent.com/scl/fi/v73pwx5nr0c3d6rgwxdel/digicharat.png?rlkey=v1ivq9khyjcdlcthtpy2lirzz&st=eqwa3s5u&dl=0'],
+	['Puchiko', 'https://dl.dropboxusercontent.com/scl/fi/v73pwx5nr0c3d6rgwxdel/digicharat.png?rlkey=v1ivq9khyjcdlcthtpy2lirzz&st=eqwa3s5u&dl=0'],
+	['Usada', 'https://dl.dropboxusercontent.com/scl/fi/v73pwx5nr0c3d6rgwxdel/digicharat.png?rlkey=v1ivq9khyjcdlcthtpy2lirzz&st=eqwa3s5u&dl=0'],
     ['Jun', 'https://dl.dropboxusercontent.com/scl/fi/l4ib85kakvgb3zy3ybhgd/jun_bg.jpg?rlkey=15nl9a52rpsilme38t25hrmdg&st=u3kl3evt&dl=0']
 ];
 
 var UserlistBackgrounds = {
-    'Henneko': 'url(https://dl.dropboxusercontent.com/scl/fi/si1psqqjo46klx46uay08/aa-chatboxv2.png?rlkey=qrfs4zpu1n8vikvaieu7q197i&st=71nkw3bm&dl=0)',
+    'Azusa': 'url(https://dl.dropboxusercontent.com/scl/fi/si1psqqjo46klx46uay08/aa-chatboxv2.png?rlkey=qrfs4zpu1n8vikvaieu7q197i&st=71nkw3bm&dl=0)',
+	'Tsukiko': 'url(https://dl.dropboxusercontent.com/scl/fi/c0c2oq9g61c3oakrrj0s3/ts-chatbox.png?rlkey=9j1p4oxub7pmq3bno2pji93vs&st=bh6hd1dg&dl=0)',
+	'Akane': 'url(https://dl.dropboxusercontent.com/scl/fi/wopvaczyup983cmrngqko/akane-chatbox.png?rlkey=xkevs2qg7lafoqiu3fu5wjk2c&st=gdwobr5g&dl=0)',
+	'Aoi': 'url(https://dl.dropboxusercontent.com/scl/fi/92tpfmvm0kx9ey1v7nah1/aoi-chatbox.png?rlkey=513i8hlg40y6wql96y7fbqi4b&st=4y3hy18v&dl=0)',
+	'Zundamon': 'url(https://dl.dropboxusercontent.com/scl/fi/jj40dqmfr9xi7qgfdnfjm/z-chatbox.png?rlkey=4xnvj7fek5m32ofkhmqqab4b3&st=i3ripe8k&dl=0)',
+	'Kiritan': 'url(https://dl.dropboxusercontent.com/scl/fi/73doqzzofer4t514phogq/kiri-chatbox.png?rlkey=9irfjm68xd1svaedrhbrbp84d&st=oxn8zuof&dl=0)',
+	'Akari': 'url(https://dl.dropboxusercontent.com/scl/fi/l06b6bdv5b1sdav074ukx/akari-chatbox.png?rlkey=q41qsni96bkjg6vk2q1ouk5cs&st=0zpgd0zo&dl=0)',
+	'Yukari': 'url(https://dl.dropboxusercontent.com/scl/fi/tv6sliropid65t3c9k33c/yuk-chatbox.png?rlkey=1qw523cj5kdobg7577waj3y75&st=hhv7gzyh&dl=0)',
+	'Usagi': 'url(https://dl.dropboxusercontent.com/scl/fi/lt51hn2br2e06n02byo58/usagi-chatbox.png?rlkey=fe2a96a0ym3axz3wwtizfhd21&st=5m8t38rm&dl=0)',
+	'Shinobu': 'url(https://dl.dropboxusercontent.com/scl/fi/nd77ii3bq52ohjchh2ojr/shi-chatbox.png?rlkey=tzfj4dkokln11lxfwpl0gwkua&st=td0p1lfh&dl=0)',
+	'Hachikuji': 'url(https://dl.dropboxusercontent.com/scl/fi/czwfy1qvffvh72bieju9e/89ji-chatbox.png?rlkey=icxkvp86olcbcwchtb1rkkyds&st=2m4hyg8r&dl=0)',
+	'Ougi': 'url(https://dl.dropboxusercontent.com/scl/fi/cwyfut5d6jzp32sjhitoo/ou-chatbox.png?rlkey=c3ybvdql941n21ecdwecw5wnu&st=3fbxivi0&dl=0)',
     'Hachiroku': 'url(https://dl.dropboxusercontent.com/scl/fi/kzspq2nadbm6oftchu4ws/86-chatbox.png?rlkey=tfcn5cet8mumtv3g20v3onpja&st=r1jgpxnw&dl=0)',
+	'Rika': 'url(https://dl.dropboxusercontent.com/scl/fi/w1mgxjw4wsans9jw54vct/rika-chatbox.png?rlkey=lqmf7u30gr262br2a1rvsgj3h&st=sb7wytan&dl=0)',
     'Hanyuu': 'url(https://dl.dropboxusercontent.com/scl/fi/3yvuqwq30trnatcuzgezx/h-chatbox.png?rlkey=x5lgphuuxusbb2rqmkj6z5afl&st=vaxvcgzs&dl=0)',
 	'Arisu': 'url(https://dl.dropboxusercontent.com/scl/fi/h5aafw7np3tj2crlfoqg2/sa-chatbox.png?rlkey=186xvik4gaxn82odtqg0rn5vz&st=3s6zbau8&dl=0)',
 	'Murasame': 'url(https://dl.dropboxusercontent.com/scl/fi/ml8w4ju4d5ekoy0gcimed/m-chatbox.png?rlkey=8pz29d2g26k4m0yez1grygnia&st=aicnf9go&dl=0)',
 	'Lum': 'url(https://dl.dropboxusercontent.com/scl/fi/rergcc2pb7lo496qvboul/uy-chatbox.png?rlkey=eurwbefusmqfqrg7o2xliqbqy&st=fio5q0bg&dl=0)',
 	'Liru': 'url(https://dl.dropboxusercontent.com/scl/fi/cclemtephjncw1503wtxf/liru-chatbox.png?rlkey=dviprfn6sfa7cc2f964h4tbow&st=t11qfndo&dl=0)',
+	'Dokuro': 'url(https://dl.dropboxusercontent.com/scl/fi/brdk34ev3o76hqavm011m/dk-chatbox.png?rlkey=l8ub9kbs9fz368i3jckstmw35&st=y9ni8f36&dl=0)',
+	'Sabato': 'url(https://dl.dropboxusercontent.com/scl/fi/4bpfit8sepru12oh8z44q/sab-chatbox.png?rlkey=zfdnr75i9893ia8ubcfja50jp&st=nnp7rs8h&dl=0)',
+	'Komugi': 'url(https://dl.dropboxusercontent.com/scl/fi/mq1hg0pqfj4lnni21aawo/kom-chatbox.png?rlkey=ppneje7f6z5qpk4ceci2ru83h&st=1ehx7pmf&dl=0)',
+	'Koyori': 'url(https://dl.dropboxusercontent.com/scl/fi/5p22kgotztj4c3a7s84hw/koy-chatbox.png?rlkey=xiubcqk3fa4bpkzh9gswtw8wn&st=649q2lv3&dl=0)',
+	'Dejiko': 'url(https://dl.dropboxusercontent.com/scl/fi/k3qyvnp3bag5jgv2dbm87/dej-chatbox.png?rlkey=l0w67898ecgwlxp7oj9zkx5o3&st=gd1w9ma2&dl=0)',
+	'Puchiko': 'url(https://dl.dropboxusercontent.com/scl/fi/w12tq0xy9yj04b2n9v2v4/pu-chatbox.png?rlkey=421byqp7nuozp1ebeqofhlhkg&st=3qjtsnl7&dl=0)',
+	'Usada': 'url(https://dl.dropboxusercontent.com/scl/fi/0jbtsmwx3w7d0ljlgdpre/us-chatbox.png?rlkey=qb9tnbyztmymmrudfryynj1dl&st=bbu38erh&dl=0)',
     'Jun': 'url(https://dl.dropboxusercontent.com/scl/fi/lo48sbm2triv5b84x7r5x/jun.png?rlkey=287w0ev2wcbjts7lxji7as847&st=2hdqqxbm&dl=0)'
 };
 
 var UserIcons = {
-	'Henneko': 'url(https://dl.dropboxusercontent.com/scl/fi/187l9yqa7079bstz0kn5o/azusa.png?rlkey=eu8h4tvc76mgpgqt6vvzzaxfh&st=nfiil482&dl=0)',
-    'Hachiroku': 'url(https://dl.dropboxusercontent.com/scl/fi/jurohdddlblzq5xuqr125/hachiroku.png?rlkey=j4ht6aeqbokhpoy9hofo66n3o&st=kg9323it&dl=0)',
+	'Azusa': 'url(https://dl.dropboxusercontent.com/scl/fi/187l9yqa7079bstz0kn5o/azusa.png?rlkey=eu8h4tvc76mgpgqt6vvzzaxfh&st=nfiil482&dl=0)',
+	'Tsukiko': 'url(https://dl.dropboxusercontent.com/scl/fi/psemdq0wpvgwr29a3cuap/tsukiko.png?rlkey=0w575urf18s5pfgi4vruhwerz&st=ncdigwvw&dl=0)',
+	'Akane': 'url(https://dl.dropboxusercontent.com/scl/fi/btu2ruzppvvwsct2by9w4/akane.png?rlkey=tu5ofsnr7wup5umowmlribn6e&st=tbeknrtg&dl=0)',
+	'Aoi': 'url(https://dl.dropboxusercontent.com/scl/fi/r2cjcpjtidzmebx0lb1wh/aoi.png?rlkey=ux6z08syhm4ilri4be1gw4gug&st=whfqre9o&dl=0)',
+	'Zundamon': 'url(https://dl.dropboxusercontent.com/scl/fi/6l5btp6877xv9q9z5v3bv/zundamon.png?rlkey=rw9g4ejsgbqy616896rhshcs9&st=gaj8phaw&dl=0)',
+	'Kiritan': 'url(https://dl.dropboxusercontent.com/scl/fi/u0f1uzrn7t00cr3ctqvd7/kiritan.png?rlkey=2y9q4xh8h1ifds8mfx75k0pa8&st=tndpc4t9&dl=0)',
+	'Akari': 'url(https://dl.dropboxusercontent.com/scl/fi/92v6vegvlx2sqpe04irkn/akari.png?rlkey=ufogjng0cptuof12qoo7j85og&st=z7e6g3zr&dl=0)',
+	'Yukari': 'url(https://dl.dropboxusercontent.com/scl/fi/3f0ab49d0iqfv1w5jchi4/yukari.png?rlkey=c4sbjgwyx7mtigon1bvx4ne72&st=qetejil2&dl=0)',
+	'Usagi': 'url(https://dl.dropboxusercontent.com/scl/fi/oukaii8aejxf9d098ef66/usagi.png?rlkey=iro15oylrrt30ro63rj3wl34o&st=vbc4ax6c&dl=0)',
+	'Shinobu': 'url(https://dl.dropboxusercontent.com/scl/fi/ehrfkhjevm5xuhm64ah38/shinobu.png?rlkey=5rmgfnkeont78w8etj1m6tutx&st=gjd07bjy&dl=0)',
+	'Hachikuji': 'url(https://dl.dropboxusercontent.com/scl/fi/vu6zbdddby5clyrg0j2gk/hachikuji.png?rlkey=n5yamf5rwxpdf2nx829bix26n&st=73dxg8nn&dl=0)',
+	'Ougi': 'url(https://dl.dropboxusercontent.com/scl/fi/7fik5zc7t6ileocqevkwi/ougi.png?rlkey=m2ht38l0bjsubqgbsw07z8qmm&st=5enomds1&dl=0)',
+    'Hachiroku': 'url(https://dl.dropboxusercontent.com/scl/fi/jurohdddlblzq5xuqr125/hachiroku.png?rlkey=j4ht6aeqbokhpoy9hofo66n3o&st=ztdqw5oz&dl=0)',
+	'Rika': 'url(https://dl.dropboxusercontent.com/scl/fi/e65hyekvcdfnjtjwl7wua/rika.png?rlkey=ah2kv0igvp6kpc9wrcneydgnx&st=lamnms32&dl=0)',
     'Hanyuu': 'url(https://dl.dropboxusercontent.com/scl/fi/5kyv7mhce8a2fidjls9ii/hanyuu.png?rlkey=riv27au2r3o2hktyxacecbqq1&st=0sp7kvx7&dl=0)',
 	'Arisu': 'url(https://dl.dropboxusercontent.com/scl/fi/rh7l5llipr7tva212wyuv/arisu.png?rlkey=37dr3ev408qo2j4v8pynv3q4i&st=udyni8xl&dl=0)',
 	'Murasame': 'url(https://dl.dropboxusercontent.com/scl/fi/45ch12nu35c9vsxjzpks6/murasame.png?rlkey=4pphkw2p5mwytzoh61pmnjens&st=bmch1vop&dl=0)',
 	'Lum': 'url(https://dl.dropboxusercontent.com/scl/fi/9hphvc1qxlmmb3czbgje4/lum.png?rlkey=l3h76nvtt2ve00n60p4dvy9yk&st=y0p7twkg&dl=0)',
 	'Liru': 'url(https://dl.dropboxusercontent.com/scl/fi/h8dn67rxmboowgmd8aay0/liru.png?rlkey=tjjcyincetb4nv903uhl7qzmq&st=5stq4dp1&dl=0)',
+	'Dokuro': 'url(https://dl.dropboxusercontent.com/scl/fi/j8uyay6u0go37sdujxcrq/dokuro.png?rlkey=esqjjfr6nwrgz5zb2ln27rzxq&st=xxpf78o4&dl=0)',
+	'Sabato': 'url(https://dl.dropboxusercontent.com/scl/fi/wv66i1zjhoffm39wslgpy/sabato.png?rlkey=vhrvk28h1ds99vma1fsw93pr9&st=yyzyhehp&dl=0)',
+	'Komugi': 'url(https://dl.dropboxusercontent.com/scl/fi/sugic905cfxl57kpo2pad/komugi.png?rlkey=4mq4g6txpetf1mkd58s46f889&st=yaqre69z&dl=0)',
+	'Koyori': 'url(https://dl.dropboxusercontent.com/scl/fi/cprvt94p4qbzuzsra606c/koyori.png?rlkey=ruyisel6euytu7zqfuwe77q0n&st=onasrthb&dl=0)',
+	'Dejiko': 'url(https://dl.dropboxusercontent.com/scl/fi/9kefl7x7ho54nvvup2qlg/dejiko.png?rlkey=4fnvsrn2vtta3ufv1cfcfp5ic&st=c9w7anqf&dl=0)',
+	'Puchiko': 'url(https://dl.dropboxusercontent.com/scl/fi/aiq7dq6broeuk7kwpxaz4/puchiko.png?rlkey=w565ei2qlij0mqb70od91an9s&st=bmzous4s&dl=0)',
+	'Usada': 'url(https://dl.dropboxusercontent.com/scl/fi/13g4gdgim2ktswvflkg22/usada.png?rlkey=f5mtvdot9wcr914npwrv2es1e&st=wj40m5tk&dl=0)',
     'Jun': 'url(https://dl.dropboxusercontent.com/scl/fi/e6fr3cer9ffeupz5a7whn/jun.png?rlkey=nnj5cmdckkl6mcygxma7110u9&st=k1wg625t&dl=0)'
+}
+
+var userColors = {
+    "azusa": "#30e7a1",
+    "tsukiko": "#30cce7",
+    "akane": "#fca8c4",
+    "aoi": "#8ed2f1",
+    "zundamon": "#73ff7f",
+    "kiritan": "#c07272",
+    "akari": "#ffc558",
+    "yukari": "#99769c",
+    "usagi": "#db3131",
+    "shinobu": "#fff34b",
+    "hachikuji": "#267e2d",
+    "ougi": "#ffffff",
+    "hachiroku": "#dd858e",
+    "rika": "#5d93f8",
+    "hanyuu": "#c1a7e4",
+    "arisu": "#d8c89f",
+    "murasame": "#a0e6a3",
+    "lum": "#67c4b4",
+    "liru": "#e7ad6b",
+    "dokuro": "#848cfd",
+    "sabato": "#f3f2c4",
+    "komugi": "#ff79b8",
+    "koyori": "#2546ff",
+    "dejiko": "#7ec07b",
+    "puchiko": "#d39437",
+    "usada": "#ff008c",
+    "jun": "#89b6da"
 }
 
 var ScheduleTabs_Array = [
@@ -2839,15 +2926,40 @@ if (USEROPTS.hidevid) {
 }
 
 //Team Color
-var teamList_4cc = ["henneko","hachiroku","hanyuu","arisu","murasame","lum","liru","jun"];
+var teamList_4cc = ["azusa", "tsukiko", "akane", "aoi", "zundamon", "kiritan", "akari", "yukari", "usagi", "shinobu", "hachikuji", "ougi", "hachiroku", "rika", "hanyuu", "arisu", "murasame", "lum", "liru", "dokuro", "sabato", "komugi", "koyori", "dejiko", "puchiko", "usada", "jun"];
 
 //Format messages upon page load because they're handled differently and I can't find the function
-document.getElementById("messagebuffer").childNodes.forEach(function(chatmessage){
-//	if (chatmessage.childElementCount == 2) {
-	  chatmessage.innerHTML = chatmessage.innerHTML.replace(/Ð.+Ð/,"");
-//	} 
-});
+(function() {
+	const buffer = document.getElementById("messagebuffer");
+	if (!buffer) return;
 
+  
+	function processMessage(messageElement) {
+		// Format messages
+		const textSpans = messageElement.querySelectorAll("span");
+		textSpans.forEach(span => {
+			const match = span.textContent.match(/Ð(.+?)Ð/);
+			if (match) {
+				const teamName = match[1];
+				const teamClass = "team" + teamName;
+
+				const usernameElement = messageElement.querySelector(".username");
+				if (usernameElement) {
+					usernameElement.classList.add(teamClass);
+				}
+				span.textContent = span.textContent.replace(/Ð.+?Ð/, "");
+			}
+		});
+
+		// Format shorter timestamps
+		const timestampSpans = messageElement.querySelectorAll("span.timestamp");
+		timestampSpans.forEach(span => {
+			span.textContent = span.textContent.replace(/\[(\d{2}:\d{2}):\d{2}\]/, "[$1]");
+		});
+  	}
+
+	buffer.querySelectorAll("div").forEach(processMessage);
+})();
 
 // changing initial layout to compact
 $("body").addClass('fluid');
@@ -3881,7 +3993,10 @@ function formatChatMessage(data, last) {
 	// Add timestamps (unless disabled)
 	if (USEROPTS.show_timestamps) {
 		var time = $("<span/>").addClass("timestamp").appendTo(div);
-		var timestamp = new Date(data.time).toTimeString().split(" ")[0];
+		var date = new Date(data.time);
+		var hours = ("0" + date.getHours()).slice(-2);
+		var minutes = ("0" + date.getMinutes()).slice(-2);
+		var timestamp = hours + ":" + minutes;
 		time.text("["+timestamp+"] ");
 		if (data.meta.addClass && data.meta.addClassToNameAndTimestamp) {
 			time.addClass(data.meta.addClass);
