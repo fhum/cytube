@@ -2933,31 +2933,38 @@ var teamList_4cc = ["azusa", "tsukiko", "akane", "aoi", "zundamon", "kiritan", "
 	const buffer = document.getElementById("messagebuffer");
 	if (!buffer) return;
 
-  
 	function processMessage(messageElement) {
-		// Format messages
-		const textSpans = messageElement.querySelectorAll("span");
-		textSpans.forEach(span => {
-			const match = span.textContent.match(/Ð(.+?)Ð/);
-			if (match) {
-				const teamName = match[1];
-				const teamClass = "team" + teamName;
+		// Format teamcolor messages
+		messageElement.querySelectorAll("span").forEach(span => {
+			span.childNodes.forEach(node => {
+				if (node.nodeType === Node.TEXT_NODE) {
+					const match = node.textContent.match(/Ð(.+?)Ð/);
+					if (match) {
+						const teamName = match[1];
+						const teamClass = "team" + teamName;
 
-				const usernameElement = messageElement.querySelector(".username");
-				if (usernameElement) {
-					usernameElement.classList.add(teamClass);
+						const usernameElement = messageElement.querySelector(".username");
+						if (usernameElement) {
+							usernameElement.classList.add(teamClass);
+						}
+
+						node.textContent = node.textContent.replace(/Ð.+?Ð/, "");
+					}
 				}
-				span.textContent = span.textContent.replace(/Ð.+?Ð/, "");
-			}
+			});
 		});
 
-		// Format shorter timestamps
-		const timestampSpans = messageElement.querySelectorAll("span.timestamp");
-		timestampSpans.forEach(span => {
-			span.textContent = span.textContent.replace(/\[(\d{2}:\d{2}):\d{2}\]/, "[$1]");
+		// Format timestamps
+		messageElement.querySelectorAll("span.timestamp").forEach(span => {
+			span.childNodes.forEach(node => {
+				if (node.nodeType === Node.TEXT_NODE) {
+					node.textContent = node.textContent.replace(/\[(\d{2}:\d{2}):\d{2}\]/, "[$1]");
+				}
+			});
 		});
-  	}
+	}
 
+	// Process all messages once on page load
 	buffer.querySelectorAll("div").forEach(processMessage);
 })();
 
