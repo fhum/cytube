@@ -71,12 +71,15 @@ var CustomThemeMenu_Items = [		// FORMAT: ['NAME','LINK'],
 	['Usagi', 'https://dl.dropboxusercontent.com/scl/fi/wjtruy8se1icp4dek9g5v/usagi.jpg?rlkey=xso6dz33442kxhfidzz17xg64&st=gjxi3095&dl=0'],
     ['Shinobu', 'https://dl.dropboxusercontent.com/scl/fi/03f2ymhu185wlzor7gp70/monogatari.jpg?rlkey=2f3m89dk5t9t8789zkwqs56dg&st=58oyldxv&dl=0'],
 	['Hachikuji', 'https://dl.dropboxusercontent.com/scl/fi/03f2ymhu185wlzor7gp70/monogatari.jpg?rlkey=2f3m89dk5t9t8789zkwqs56dg&st=58oyldxv&dl=0'],
+	['Nadeko', 'https://dl.dropboxusercontent.com/scl/fi/3s59slz04tftivr7dn2nw/nadeko.jpg?rlkey=dpthdfccn8pe6dqlzrwfzb2ji&st=s9p7q87p&dl=0'],
 	['Ougi', 'https://dl.dropboxusercontent.com/scl/fi/03f2ymhu185wlzor7gp70/monogatari.jpg?rlkey=2f3m89dk5t9t8789zkwqs56dg&st=58oyldxv&dl=0'],
+	['Yotsugi', 'https://dl.dropboxusercontent.com/scl/fi/dlgxovegiczeuru9o70k2/yotsugi.jpg?rlkey=tvbqcb3zotcqw7zjuveeri2f7&st=xcimoskk&dl=0'],
 	['Hachiroku', 'https://dl.dropboxusercontent.com/scl/fi/pjjeloomclysdflkntuvw/86.png?rlkey=0v6nspkwable94wssoap162qz&st=6xmxi1jx&dl=0'],
 	['Rika', 'https://dl.dropboxusercontent.com/scl/fi/0e84ggwvfrol54ee1m2lu/rika.png?rlkey=at0f475q78yo5thbb7ov978m8&st=h83w7pw0&dl=0'],
     ['Hanyuu', 'https://dl.dropboxusercontent.com/scl/fi/pih0t5zrs0sd5iu388btf/hanyuu.jpg?rlkey=rgk3lzlp3k51616h1do6ruts4&st=tpvjsqtp&dl=0'],
     ['Arisu', 'https://dl.dropboxusercontent.com/scl/fi/s2wahvgrm48v8zgu1kf6l/arisu.jpg?rlkey=20urnrj7kyo2yv983vl13858w&st=ksihmxoe&dl=0'],
     ['Murasame', 'https://dl.dropboxusercontent.com/scl/fi/u7kt4fs02bvn9wbod7oj8/murasame.jpg?rlkey=1jk2t8bhhrcxy1rzz7j50br3y&st=80uxnlky&dl=0'],
+	['Sora', 'https://dl.dropboxusercontent.com/scl/fi/9bhdq3gxxu27emsbuwn6x/sora.png?rlkey=pjn2h0auz8ttmkmi2c1cupi3n&st=g8m6o3jc&dl=0'],
 	['Lum', 'https://dl.dropboxusercontent.com/scl/fi/40zuia2yhvipl5gabg6px/lum.jpg?rlkey=8weroos9k3545ajjl3i74p19w&st=h4ccdc95&dl=0'],
 	['Liru', 'https://dl.dropboxusercontent.com/scl/fi/4hkxy4wy3qv2awho92whg/liru2.png?rlkey=dc6gvn7jahjgody821spaesrq&st=nrxcit1z&dl=0'],
 	['Dokuro', 'https://dl.dropboxusercontent.com/scl/fi/s5h97tk6fuo51eocl0hft/dokuro.jpg?rlkey=t67w8od3cccxwtm9mmmwi6fq6&st=0vefwqbn&dl=0'],
@@ -86,6 +89,9 @@ var CustomThemeMenu_Items = [		// FORMAT: ['NAME','LINK'],
 	['Dejiko', 'https://dl.dropboxusercontent.com/scl/fi/v73pwx5nr0c3d6rgwxdel/digicharat.png?rlkey=v1ivq9khyjcdlcthtpy2lirzz&st=eqwa3s5u&dl=0'],
 	['Puchiko', 'https://dl.dropboxusercontent.com/scl/fi/v73pwx5nr0c3d6rgwxdel/digicharat.png?rlkey=v1ivq9khyjcdlcthtpy2lirzz&st=eqwa3s5u&dl=0'],
 	['Usada', 'https://dl.dropboxusercontent.com/scl/fi/v73pwx5nr0c3d6rgwxdel/digicharat.png?rlkey=v1ivq9khyjcdlcthtpy2lirzz&st=eqwa3s5u&dl=0'],
+	['K1', 'https://dl.dropboxusercontent.com/scl/fi/8lnp6kg86nf6scihitx53/k1.png?rlkey=iy7wj2unxok6hyo22axu822o9&st=ocyz9eig&dl=0'],
+	['Takuji', 'https://dl.dropboxusercontent.com/scl/fi/h5rc8kyx1s2q1stsb8inj/takuji.jpg?rlkey=u8dom40q6tsesf6dalhix4drl&st=hjvdpo4g&dl=0'],
+	['Matsuken', 'https://dl.dropboxusercontent.com/scl/fi/theyvsggomomr17okvm1m/matuken.jpg?rlkey=if06f3rw64uqsatxs5umnpunh&st=r7h7dprd&dl=0'],
     ['Jun', 'https://dl.dropboxusercontent.com/scl/fi/l4ib85kakvgb3zy3ybhgd/jun_bg.jpg?rlkey=15nl9a52rpsilme38t25hrmdg&st=u3kl3evt&dl=0']
 ];
 
@@ -101,12 +107,15 @@ var UserlistBackgrounds = {
 	'Usagi': 'url(https://dl.dropboxusercontent.com/scl/fi/lt51hn2br2e06n02byo58/usagi-chatbox.png?rlkey=fe2a96a0ym3axz3wwtizfhd21&st=5m8t38rm&dl=0)',
 	'Shinobu': 'url(https://dl.dropboxusercontent.com/scl/fi/nd77ii3bq52ohjchh2ojr/shi-chatbox.png?rlkey=tzfj4dkokln11lxfwpl0gwkua&st=td0p1lfh&dl=0)',
 	'Hachikuji': 'url(https://dl.dropboxusercontent.com/scl/fi/czwfy1qvffvh72bieju9e/89ji-chatbox.png?rlkey=icxkvp86olcbcwchtb1rkkyds&st=2m4hyg8r&dl=0)',
+	'Nadeko': 'url(https://dl.dropboxusercontent.com/scl/fi/x9vxa8uhohg05zg21apy3/ndk-chatbox.png?rlkey=nmpmmb9kim5sdn6h5od8owq4k&st=gr29szr6&dl=0)',
 	'Ougi': 'url(https://dl.dropboxusercontent.com/scl/fi/cwyfut5d6jzp32sjhitoo/ou-chatbox.png?rlkey=c3ybvdql941n21ecdwecw5wnu&st=3fbxivi0&dl=0)',
+	'Yotsugi': 'url(https://dl.dropboxusercontent.com/scl/fi/rekd7grurvvdy6ckq6htm/ytg-chatbox.png?rlkey=1ggps97rbxtpdzcw244nos11k&st=tmzfhe8x&dl=0)',
     'Hachiroku': 'url(https://dl.dropboxusercontent.com/scl/fi/kzspq2nadbm6oftchu4ws/86-chatbox.png?rlkey=tfcn5cet8mumtv3g20v3onpja&st=r1jgpxnw&dl=0)',
 	'Rika': 'url(https://dl.dropboxusercontent.com/scl/fi/w1mgxjw4wsans9jw54vct/rika-chatbox.png?rlkey=lqmf7u30gr262br2a1rvsgj3h&st=sb7wytan&dl=0)',
     'Hanyuu': 'url(https://dl.dropboxusercontent.com/scl/fi/3yvuqwq30trnatcuzgezx/h-chatbox.png?rlkey=x5lgphuuxusbb2rqmkj6z5afl&st=vaxvcgzs&dl=0)',
 	'Arisu': 'url(https://dl.dropboxusercontent.com/scl/fi/h5aafw7np3tj2crlfoqg2/sa-chatbox.png?rlkey=186xvik4gaxn82odtqg0rn5vz&st=3s6zbau8&dl=0)',
 	'Murasame': 'url(https://dl.dropboxusercontent.com/scl/fi/ml8w4ju4d5ekoy0gcimed/m-chatbox.png?rlkey=8pz29d2g26k4m0yez1grygnia&st=aicnf9go&dl=0)',
+	'Sora': 'url(https://dl.dropboxusercontent.com/scl/fi/yb4z6axq0wzyxv1qf60rn/ks-chatbox.png?rlkey=l8jzy7tojwfha1y7g8v71dvte&st=5iz5v3gp&dl=0)',
 	'Lum': 'url(https://dl.dropboxusercontent.com/scl/fi/rergcc2pb7lo496qvboul/uy-chatbox.png?rlkey=eurwbefusmqfqrg7o2xliqbqy&st=fio5q0bg&dl=0)',
 	'Liru': 'url(https://dl.dropboxusercontent.com/scl/fi/cclemtephjncw1503wtxf/liru-chatbox.png?rlkey=dviprfn6sfa7cc2f964h4tbow&st=t11qfndo&dl=0)',
 	'Dokuro': 'url(https://dl.dropboxusercontent.com/scl/fi/brdk34ev3o76hqavm011m/dk-chatbox.png?rlkey=l8ub9kbs9fz368i3jckstmw35&st=y9ni8f36&dl=0)',
@@ -116,6 +125,9 @@ var UserlistBackgrounds = {
 	'Dejiko': 'url(https://dl.dropboxusercontent.com/scl/fi/k3qyvnp3bag5jgv2dbm87/dej-chatbox.png?rlkey=l0w67898ecgwlxp7oj9zkx5o3&st=gd1w9ma2&dl=0)',
 	'Puchiko': 'url(https://dl.dropboxusercontent.com/scl/fi/w12tq0xy9yj04b2n9v2v4/pu-chatbox.png?rlkey=421byqp7nuozp1ebeqofhlhkg&st=3qjtsnl7&dl=0)',
 	'Usada': 'url(https://dl.dropboxusercontent.com/scl/fi/0jbtsmwx3w7d0ljlgdpre/us-chatbox.png?rlkey=qb9tnbyztmymmrudfryynj1dl&st=bbu38erh&dl=0)',
+	'K1': 'url(https://dl.dropboxusercontent.com/scl/fi/ke4krkaoq5nft6iwa7liu/k1-chatbox.png?rlkey=0ysk8jco1k5j7v5mdjq232rgo&st=fedzfcle&dl=0)',
+	'Takuji': 'url(https://dl.dropboxusercontent.com/scl/fi/aspib28olmcigbt7pirix/tkj-chatbox.png?rlkey=ni5p7u79sna91u7n08mver5b5&st=zysm9ihd&dl=0)',
+	'Matsuken': 'url(https://dl.dropboxusercontent.com/scl/fi/h1dbqte0h2j8wfq6hdi41/matsuken-chatbox.png?rlkey=vevcx6of1i42dudboyp6vr3qu&st=mfic7u0w&dl=0)',
     'Jun': 'url(https://dl.dropboxusercontent.com/scl/fi/lo48sbm2triv5b84x7r5x/jun.png?rlkey=287w0ev2wcbjts7lxji7as847&st=2hdqqxbm&dl=0)'
 };
 
@@ -131,12 +143,15 @@ var UserIcons = {
 	'Usagi': 'url(https://dl.dropboxusercontent.com/scl/fi/oukaii8aejxf9d098ef66/usagi.png?rlkey=iro15oylrrt30ro63rj3wl34o&st=vbc4ax6c&dl=0)',
 	'Shinobu': 'url(https://dl.dropboxusercontent.com/scl/fi/ehrfkhjevm5xuhm64ah38/shinobu.png?rlkey=5rmgfnkeont78w8etj1m6tutx&st=gjd07bjy&dl=0)',
 	'Hachikuji': 'url(https://dl.dropboxusercontent.com/scl/fi/vu6zbdddby5clyrg0j2gk/hachikuji.png?rlkey=n5yamf5rwxpdf2nx829bix26n&st=73dxg8nn&dl=0)',
+	'Nadeko': 'url(https://dl.dropboxusercontent.com/scl/fi/kd595jmz45fydc979jcnb/nadeko.png?rlkey=5zxfj72c3bn3dqdcqog1fd9a1&st=rghaylji&dl=0)',
 	'Ougi': 'url(https://dl.dropboxusercontent.com/scl/fi/7fik5zc7t6ileocqevkwi/ougi.png?rlkey=m2ht38l0bjsubqgbsw07z8qmm&st=5enomds1&dl=0)',
+	'Yotsugi': 'url(https://dl.dropboxusercontent.com/scl/fi/wm7yvadympj60lrzy7r19/ononoki.png?rlkey=slqpynapchr1ouk82xi4q2gpl&st=8h08az70&dl=0)',
     'Hachiroku': 'url(https://dl.dropboxusercontent.com/scl/fi/jurohdddlblzq5xuqr125/hachiroku.png?rlkey=j4ht6aeqbokhpoy9hofo66n3o&st=ztdqw5oz&dl=0)',
 	'Rika': 'url(https://dl.dropboxusercontent.com/scl/fi/e65hyekvcdfnjtjwl7wua/rika.png?rlkey=ah2kv0igvp6kpc9wrcneydgnx&st=lamnms32&dl=0)',
     'Hanyuu': 'url(https://dl.dropboxusercontent.com/scl/fi/5kyv7mhce8a2fidjls9ii/hanyuu.png?rlkey=riv27au2r3o2hktyxacecbqq1&st=0sp7kvx7&dl=0)',
 	'Arisu': 'url(https://dl.dropboxusercontent.com/scl/fi/rh7l5llipr7tva212wyuv/arisu.png?rlkey=37dr3ev408qo2j4v8pynv3q4i&st=udyni8xl&dl=0)',
 	'Murasame': 'url(https://dl.dropboxusercontent.com/scl/fi/45ch12nu35c9vsxjzpks6/murasame.png?rlkey=4pphkw2p5mwytzoh61pmnjens&st=bmch1vop&dl=0)',
+	'Sora': 'url(https://dl.dropboxusercontent.com/scl/fi/yljgwtv7siztjk5dzibon/sora.png?rlkey=n216glz8nv25djfo8vh6hf8nf&st=n20plc2x&dl=0)',
 	'Lum': 'url(https://dl.dropboxusercontent.com/scl/fi/9hphvc1qxlmmb3czbgje4/lum.png?rlkey=l3h76nvtt2ve00n60p4dvy9yk&st=y0p7twkg&dl=0)',
 	'Liru': 'url(https://dl.dropboxusercontent.com/scl/fi/h8dn67rxmboowgmd8aay0/liru.png?rlkey=tjjcyincetb4nv903uhl7qzmq&st=5stq4dp1&dl=0)',
 	'Dokuro': 'url(https://dl.dropboxusercontent.com/scl/fi/j8uyay6u0go37sdujxcrq/dokuro.png?rlkey=esqjjfr6nwrgz5zb2ln27rzxq&st=xxpf78o4&dl=0)',
@@ -146,6 +161,9 @@ var UserIcons = {
 	'Dejiko': 'url(https://dl.dropboxusercontent.com/scl/fi/9kefl7x7ho54nvvup2qlg/dejiko.png?rlkey=4fnvsrn2vtta3ufv1cfcfp5ic&st=c9w7anqf&dl=0)',
 	'Puchiko': 'url(https://dl.dropboxusercontent.com/scl/fi/aiq7dq6broeuk7kwpxaz4/puchiko.png?rlkey=w565ei2qlij0mqb70od91an9s&st=bmzous4s&dl=0)',
 	'Usada': 'url(https://dl.dropboxusercontent.com/scl/fi/13g4gdgim2ktswvflkg22/usada.png?rlkey=f5mtvdot9wcr914npwrv2es1e&st=wj40m5tk&dl=0)',
+	'K1': 'url(https://dl.dropboxusercontent.com/scl/fi/zjfdxmt2eqriyarrkkb7p/k1.png?rlkey=kzqcap96apzbdea1078zvmegd&st=2suvmlmv&dl=0)',
+	'Takuji': 'url(https://dl.dropboxusercontent.com/scl/fi/afkukfly6a2mfa5ckqqnc/takuji.png?rlkey=viuap962htiebwtedabhlqhqo&st=hsgp61ks&dl=0)',
+	'Matsuken': 'url(https://dl.dropboxusercontent.com/scl/fi/b65vbfjcxpu1umwlveyvr/matsuken.png?rlkey=qke57i0bm368zguk1mckcijqt&st=nj54ifmf&dl=0)',
     'Jun': 'url(https://dl.dropboxusercontent.com/scl/fi/e6fr3cer9ffeupz5a7whn/jun.png?rlkey=nnj5cmdckkl6mcygxma7110u9&st=k1wg625t&dl=0)'
 }
 
@@ -161,8 +179,11 @@ var userColors = {
     "usagi": "#db3131",
     "shinobu": "#fff34b",
     "hachikuji": "#267e2d",
+	"nadeko": "#ffc0b0ff",
     "ougi": "#ffffff",
+	"yotsugi": "#00b679",
     "hachiroku": "#dd858e",
+	"sora": "#fff1c2",
     "rika": "#5d93f8",
     "hanyuu": "#c1a7e4",
     "arisu": "#d8c89f",
@@ -176,6 +197,9 @@ var userColors = {
     "dejiko": "#7ec07b",
     "puchiko": "#d39437",
     "usada": "#ff008c",
+	"k1": "#af4d5a",
+	"takuji": "#6beeff",
+	"matsuken": "#e2bd18",
     "jun": "#89b6da"
 }
 
@@ -2926,7 +2950,7 @@ if (USEROPTS.hidevid) {
 }
 
 //Team Color
-var teamList_4cc = ["azusa", "tsukiko", "akane", "aoi", "zundamon", "kiritan", "akari", "yukari", "usagi", "shinobu", "hachikuji", "ougi", "hachiroku", "rika", "hanyuu", "arisu", "murasame", "lum", "liru", "dokuro", "sabato", "komugi", "koyori", "dejiko", "puchiko", "usada", "jun"];
+var teamList_4cc = ["azusa", "tsukiko", "akane", "aoi", "zundamon", "kiritan", "akari", "yukari", "usagi", "shinobu", "hachikuji", "nadeko", "ougi", "yotsugi", "hachiroku", "rika", "hanyuu", "arisu", "murasame","sora", "lum", "liru", "dokuro", "sabato", "komugi", "koyori", "dejiko", "puchiko", "usada", "k1", "takuji", "matsuken", "jun"];
 
 //Format messages upon page load because they're handled differently and I can't find the function
 (function() {

@@ -273,12 +273,15 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
 .teamusagi::before{background:url('https://dl.dropboxusercontent.com/scl/fi/oukaii8aejxf9d098ef66/usagi.png?rlkey=iro15oylrrt30ro63rj3wl34o&st=vbc4ax6c&dl=0');}
 .teamshinobu::before{background:url('https://dl.dropboxusercontent.com/scl/fi/ehrfkhjevm5xuhm64ah38/shinobu.png?rlkey=5rmgfnkeont78w8etj1m6tutx&st=gjd07bjy&dl=0');}
 .teamhachikuji::before{background:url('https://dl.dropboxusercontent.com/scl/fi/vu6zbdddby5clyrg0j2gk/hachikuji.png?rlkey=n5yamf5rwxpdf2nx829bix26n&st=73dxg8nn&dl=0');}
+.teamnadeko::before{background:url('https://dl.dropboxusercontent.com/scl/fi/kd595jmz45fydc979jcnb/nadeko.png?rlkey=5zxfj72c3bn3dqdcqog1fd9a1&st=rghaylji&dl=0');}
 .teamougi::before{background:url('https://dl.dropboxusercontent.com/scl/fi/7fik5zc7t6ileocqevkwi/ougi.png?rlkey=m2ht38l0bjsubqgbsw07z8qmm&st=5enomds1&dl=0');}
+.teamyotsugi::before{background:url('https://dl.dropboxusercontent.com/scl/fi/wm7yvadympj60lrzy7r19/ononoki.png?rlkey=slqpynapchr1ouk82xi4q2gpl&st=8h08az70&dl=0');}
 .teamhachiroku::before{background:url('https://dl.dropboxusercontent.com/scl/fi/jurohdddlblzq5xuqr125/hachiroku.png?rlkey=j4ht6aeqbokhpoy9hofo66n3o&st=ztdqw5oz&dl=0');}
 .teamrika::before{background:url('https://dl.dropboxusercontent.com/scl/fi/e65hyekvcdfnjtjwl7wua/rika.png?rlkey=ah2kv0igvp6kpc9wrcneydgnx&st=lamnms32&dl=0');}
 .teamhanyuu::before{background:url('https://dl.dropboxusercontent.com/scl/fi/5kyv7mhce8a2fidjls9ii/hanyuu.png?rlkey=riv27au2r3o2hktyxacecbqq1&st=0sp7kvx7&dl=0');}
 .teamarisu::before{background:url('https://dl.dropboxusercontent.com/scl/fi/rh7l5llipr7tva212wyuv/arisu.png?rlkey=37dr3ev408qo2j4v8pynv3q4i&st=udyni8xl&dl=0');}
 .teammurasame::before{background:url('https://dl.dropboxusercontent.com/scl/fi/45ch12nu35c9vsxjzpks6/murasame.png?rlkey=4pphkw2p5mwytzoh61pmnjens&st=bmch1vop&dl=0');}
+.teamsora::before{background:url('https://dl.dropboxusercontent.com/scl/fi/yljgwtv7siztjk5dzibon/sora.png?rlkey=n216glz8nv25djfo8vh6hf8nf&st=n20plc2x&dl=0');}
 .teamlum::before{background:url('https://dl.dropboxusercontent.com/scl/fi/9hphvc1qxlmmb3czbgje4/lum.png?rlkey=l3h76nvtt2ve00n60p4dvy9yk&st=y0p7twkg&dl=0');}
 .teamliru::before{background:url('https://dl.dropboxusercontent.com/scl/fi/h8dn67rxmboowgmd8aay0/liru.png?rlkey=tjjcyincetb4nv903uhl7qzmq&st=5stq4dp1&dl=0');}
 .teamdokuro::before{background:url('https://dl.dropboxusercontent.com/scl/fi/j8uyay6u0go37sdujxcrq/dokuro.png?rlkey=esqjjfr6nwrgz5zb2ln27rzxq&st=xxpf78o4&dl=0');}
@@ -288,6 +291,9 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
 .teamdejiko::before{background:url('https://dl.dropboxusercontent.com/scl/fi/9kefl7x7ho54nvvup2qlg/dejiko.png?rlkey=4fnvsrn2vtta3ufv1cfcfp5ic&st=c9w7anqf&dl=0');}
 .teampuchiko::before{background:url('https://dl.dropboxusercontent.com/scl/fi/aiq7dq6broeuk7kwpxaz4/puchiko.png?rlkey=w565ei2qlij0mqb70od91an9s&st=bmzous4s&dl=0');}
 .teamusada::before{background:url('https://dl.dropboxusercontent.com/scl/fi/13g4gdgim2ktswvflkg22/usada.png?rlkey=f5mtvdot9wcr914npwrv2es1e&st=wj40m5tk&dl=0');}
+.teamk1::before{background:url('https://dl.dropboxusercontent.com/scl/fi/zjfdxmt2eqriyarrkkb7p/k1.png?rlkey=kzqcap96apzbdea1078zvmegd&st=2suvmlmv&dl=0');}
+.teamtakuji::before{background:url('https://dl.dropboxusercontent.com/scl/fi/afkukfly6a2mfa5ckqqnc/takuji.png?rlkey=viuap962htiebwtedabhlqhqo&st=hsgp61ks&dl=0');}
+.teammatsuken::before{background:url('https://dl.dropboxusercontent.com/scl/fi/b65vbfjcxpu1umwlveyvr/matsuken.png?rlkey=qke57i0bm368zguk1mckcijqt&st=nj54ifmf&dl=0');}
 .teamjun::before{background:url('https://dl.dropboxusercontent.com/scl/fi/e6fr3cer9ffeupz5a7whn/jun.png?rlkey=nnj5cmdckkl6mcygxma7110u9&st=k1wg625t&dl=0');}
 .username::before{
     content:"AA";
@@ -342,8 +348,16 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
     color: #267e2d !important;
 }
 
+.username.teamnadeko {
+    color: #ffc0b0ff !important;
+}
+
 .username.teamougi {
     color: #ffffff !important;
+}
+
+.username.teamyotsugi {
+    color: #00b679 !important;
 }
 
 .username.teamhachiroku {
@@ -364,6 +378,10 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
 
 .username.teammurasame {
     color: #a0e6a3 !important;
+}
+
+.username.teamsora {
+    color: #fff1c2 !important
 }
 
 .username.teamlum {
@@ -400,6 +418,18 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
 
 .username.teamusada {
     color: #ff008c !important;
+}
+
+.username.teamk1 {
+    color: #af4d5a !important;
+}
+
+.username.teamtakuji {
+    color: #6beeff !important;
+}
+
+.username.teammatsuken {
+    color: #e2bd18 !important;
 }
 
 .username.teamjun {
