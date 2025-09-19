@@ -3,7 +3,7 @@
 var UI_Favicon = 1;				// [&] channel favicon
 var UI_MiniLogo = 0;			// [&] small channel logo/avatar in the top navbar
 var UI_ChannelName = 1;			// [&] channel custom brand name
-var UI_HeaderDropMenu = 1;		// [&] additional header dropdown menu
+var UI_CustomThemeMenu = 1;		// [&] enable custom themes
 var UI_RemoveHomeMenu = 1;		// removing 'Home' menu from the header
 var UI_TitleBarDescription = 1;	// [&] custom title bar description
 var UI_UserCommands = 1;		// [&] additional commands in the chat window
@@ -57,9 +57,9 @@ var MiniLogo_URL = 'http://i.imgur.com/OCidf8n.gif';
 
 var ChannelName_Caption = 'Loliconia';
 
-var HeaderDropMenu_Title = 'Change Theme';
+var CustomThemeMenu_Title = 'Change Theme';
 
-var HeaderDropMenu_Items = [		// FORMAT: ['NAME','LINK'],
+var CustomThemeMenu_Items = [		// FORMAT: ['NAME','LINK'],
     ['Azusa', 'https://dl.dropboxusercontent.com/scl/fi/ob1nan7rm7vcbxfmxdn0i/henneko.jpg?rlkey=jkj0ssrvrr4xypwluivq32m41&st=u4bzg8ct&dl=0'],
 	['Tsukiko', 'https://dl.dropboxusercontent.com/scl/fi/ob1nan7rm7vcbxfmxdn0i/henneko.jpg?rlkey=jkj0ssrvrr4xypwluivq32m41&st=u4bzg8ct&dl=0'],
 	['Akane', 'https://dl.dropboxusercontent.com/scl/fi/g8n9x4h6oguzirvnr6wvj/odorobo.jpg?rlkey=8k18y5a7kn5vb0f1w5le13slq&st=tie5rx1u&dl=0'],
@@ -3143,35 +3143,111 @@ $("#useroptions .modal-footer button:nth-child(1)").on("click", function() {
 
 // adding header dropdown menu
 $(document).ready(function () {
-    if (typeof UI_HeaderDropMenu !== 'undefined' && UI_HeaderDropMenu === 1) {
-        HeaderDropMenu_Title = HeaderDropMenu_Title || 'Menu';
-        let headerdrop = $('<li id="headerdrop" class="dropdown" />').insertAfter("#home-link");
-        $('<a class="dropdown-toggle" data-toggle="dropdown" href="#">' + HeaderDropMenu_Title + ' <strong>▾</strong></a>').appendTo(headerdrop);
-        let headermenu = $('<ul id="headermenu" class="dropdown-menu" />').appendTo(headerdrop);
+    if (typeof UI_CustomThemeMenu !== 'undefined' && UI_CustomThemeMenu === 1) {
+        CustomThemeMenu_Title = CustomThemeMenu_Title || 'Menu';
 
-        if (!HeaderDropMenu_Items || HeaderDropMenu_Items.length < 1) {
-            HeaderDropMenu_Items = [['No menu available', '']];
+        $('<div class="fade modal" id="customthemeModal" aria-hidden="true" role="dialog" style="display:none" tabindex="-1">' +
+            '<div class="modal-dialog">' +
+                '<div class="modal-content">' +
+                    '<div class="modal-header">' +
+                        '<button class="close" data-dismiss="modal" aria-hidden="true">×</button>' +
+                        '<h4>' + CustomThemeMenu_Title + '</h4>' +
+                    '</div>' +
+                    '<div class="modal-body">' +
+                        // Current theme display
+                        '<div id="currentThemeDisplay" style="display:flex; align-items:center; justify-content:center; margin-bottom:10px;"></div>' +
+                        '<div id="customthemeWrap"></div>' +
+                    '</div>' +
+                    '<div class="modal-footer">' +
+                        '<button class="btn btn-primary" data-dismiss="modal" type="button">Close</button>' +
+                    '</div>' +
+                '</div>' +
+            '</div>' +
+        '</div>').insertBefore('#pmbar');
+
+        if ($("#customtheme-btn").length <= 0) {
+            $('#emotelistbtn').after(
+                $('<button/>', {
+                    id: 'customtheme-btn',
+                    class: 'btn btn-default btn-sm',
+                    html: CustomThemeMenu_Title,
+                    click: () => $('#customthemeModal').modal()
+                })
+            );
         }
 
-        for (let i = 0; i < HeaderDropMenu_Items.length; i++) {
-            let [title, link] = HeaderDropMenu_Items[i];
+        if (!CustomThemeMenu_Items || CustomThemeMenu_Items.length < 1) {
+            CustomThemeMenu_Items = [['No menu available', '']];
+        }
+
+        const $wrap = $('#customthemeWrap').css({
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            gap: '0',
+            padding: '0'
+        });
+
+        const $currentThemeDisplay = $('#currentThemeDisplay');
+
+        function updateCurrentThemeDisplay(title) {
+            const iconUrl = UserIcons[title] || '';
+            const color = userColors[title.toLowerCase()] || '#fff';
+            $currentThemeDisplay.html(`
+                <div style="display:flex; align-items:center; gap:5px;">
+                    <span style="font-weight:normal; color:#c8c8c8;">Current Theme: </span>
+                    <div style="width:20px; height:20px; background-image:${iconUrl}; background-size:cover; background-position:center; border-radius:3px;"></div>
+                    <div style="color:${color}; font-weight:bold;">${title}</div>
+                </div>
+            `);
+        }
+
+        CustomThemeMenu_Items.forEach((item, i) => {
+            let [title, link] = item;
             let team = teamList_4cc[i] || '';
             let iconUrl = UserIcons[title] || '';
+            let color = userColors[title.toLowerCase()] || '#fff';
 
-            let iconSpan = iconUrl
-                ? `<span style="display:inline-block;width:16px;height:16px;margin-right:6px;vertical-align:middle;background-size:contain;background-image:${iconUrl};background-repeat:no-repeat;background-position:center;"></span>`
-                : '';
+            const $item = $(`
+                <div class="theme-item" style="background-image: ${iconUrl}; --border-color:${color}">
+                    <div class="theme-overlay">${title}</div>
+                </div>
+            `).appendTo($wrap);
 
-            $('<li class="header-drop-link" />')
-                .append(`<a href="#" data-bg="${link}" data-theme="${title}" data-team="${team}">${iconSpan}${title}</a>`)
-                .appendTo(headermenu);
-        }
+            $item.click(function () {
+                if (link) {
+                    $('body').css('background-image', `url('${link}')`);
+                    localStorage.setItem('selectedBg', link);
+                    localStorage.setItem('selectedTheme', title);
+                    if (UserlistBackgrounds[title]) {
+                        $('#userlist').css('background-image', UserlistBackgrounds[title]);
+                        localStorage.setItem('userlistBg', UserlistBackgrounds[title]);
+                    }
+                    applyThemeClass(title);
+                } else {
+                    $('body').css('background-image', '');
+                    localStorage.removeItem('selectedBg');
+                    $('#userlist').css('background-image', '');
+                    localStorage.removeItem('userlistBg');
+                    $('body').removeClass(function (index, className) {
+                        return (className.match(/(^|\s)theme-\S+/g) || []).join(' ');
+                    });
+                    localStorage.removeItem('selectedTheme');
+                }
+                if (team) {
+                    TEAMCOLOR = team;
+                    setOpt(CHANNEL.name + "_TEAMCOLOR", TEAMCOLOR);
+                }
+
+                updateCurrentThemeDisplay(title);
+                $('#customthemeModal').modal('hide');
+            });
+        });
 
         function applyThemeClass(themeName) {
             $('body').removeClass(function (index, className) {
                 return (className.match(/(^|\s)theme-\S+/g) || []).join(' ');
             });
-
             let className = 'theme-' + themeName.toLowerCase().replace(/\s+/g, '-');
             $('body').addClass(className);
         }
@@ -3180,55 +3256,20 @@ $(document).ready(function () {
         const savedTheme = localStorage.getItem('selectedTheme');
         const savedTeamColor = getOrDefault(CHANNEL.name + "_TEAMCOLOR", 'jun');
 
-        if (savedBg) {
-            $('body').css('background-image', `url('${savedBg}')`);
-        }
+        if (savedBg) $('body').css('background-image', `url('${savedBg}')`);
         if (savedTheme) {
             applyThemeClass(savedTheme);
+            updateCurrentThemeDisplay(savedTheme);
         }
-		const savedUserlistBg = localStorage.getItem('userlistBg');
-		if (savedUserlistBg) {
-			$('#userlist').css('background-image', savedUserlistBg);
-		}
+        const savedUserlistBg = localStorage.getItem('userlistBg');
+        if (savedUserlistBg) $('#userlist').css('background-image', savedUserlistBg);
+
         TEAMCOLOR = savedTeamColor;
-		setOpt(CHANNEL.name + "_TEAMCOLOR", TEAMCOLOR);
-
-        $(document).on('click', '.header-drop-link a', function (event) {
-            event.preventDefault();
-            let bgUrl = $(this).data('bg');
-            let themeName = $(this).data('theme');
-            let teamColor = $(this).data('team');
-
-            if (bgUrl) {
-                $('body').css('background-image', `url('${bgUrl}')`);
-                localStorage.setItem('selectedBg', bgUrl);
-                localStorage.setItem('selectedTheme', themeName);
-
-                if (UserlistBackgrounds[themeName]) {
-                    $('#userlist').css('background-image', UserlistBackgrounds[themeName]);
-                    localStorage.setItem('userlistBg', UserlistBackgrounds[themeName]);
-                }
-
-                applyThemeClass(themeName);
-            } else {
-                $('body').css('background-image', "url('...default...')");
-                localStorage.removeItem('selectedBg');
-                $('#userlist').css('background-image', '');
-                localStorage.removeItem('userlistBg');
-                $('body').removeClass(function (index, className) {
-                    return (className.match(/(^|\s)theme-\S+/g) || []).join(' ');
-                });
-                localStorage.removeItem('selectedTheme');
-            }
-
-            // Set and save team color
-            if (teamColor) {
-                TEAMCOLOR = teamColor;
-                setOpt(CHANNEL.name + "_TEAMCOLOR", TEAMCOLOR);
-            }
-        });
+        setOpt(CHANNEL.name + "_TEAMCOLOR", TEAMCOLOR);
     }
 });
+
+
 
 function setPanelProperties(div) {
 	height = $("#userlist").height();
