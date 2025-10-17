@@ -176,7 +176,7 @@ border-color: white !important;
 #userlist {
             font-size: 10pt;
             background-color: #1C1E22;
-            background-image: url(https://dl.dropboxusercontent.com/scl/fi/lo48sbm2triv5b84x7r5x/jun.png?rlkey=287w0ev2wcbjts7lxji7as847&st=2hdqqxbm&dl=0);
+            background-image: url(https://dl.dropboxusercontent.com/scl/fi/jy8gcfgzjsnjxsmw7j3vh/f-chatbox.png?rlkey=g57r9omivi4gkir5hznze8esp&st=z71dllfh&dl=0);
             background-position: bottom center;
             background-repeat: no-repeat;}
  
@@ -189,8 +189,8 @@ border-color: white !important;
 /*Botes: http://puu.sh/aHrs6/2e36260f66.jpg*/
 /* halloween cuteness http://puu.sh/c2Uxe.png */
 body {
-background-image:url(https://dl.dropboxusercontent.com/scl/fi/l4ib85kakvgb3zy3ybhgd/jun_bg.jpg?rlkey=15nl9a52rpsilme38t25hrmdg&st=u3kl3evt&dl=0);
-background-position: bottom right; background-attachment: fixed; background-size: cover;            
+background-image:url(https://dl.dropboxusercontent.com/scl/fi/z6ambmuuwx0fv9b3uksti/hm2.png?rlkey=mrt88r6lp9zjvtywgqz226d9k&st=fpczyxor&dl=0);
+background-position: bottom right; background-attachment: fixed; background-size: cover;         
 /*background-position: bottom left;*/
             /*background-attachment: fixed;*/
             /*background-size: fit;*/
@@ -261,7 +261,7 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
 }
 
 /*Chat Icons*/
-.username::before{background:url('https://dl.dropboxusercontent.com/scl/fi/e6fr3cer9ffeupz5a7whn/jun.png?rlkey=nnj5cmdckkl6mcygxma7110u9&st=k1wg625t&dl=0');}
+.username::before{background:url('https://dl.dropboxusercontent.com/scl/fi/blpynt85z9futg2fnlak0/fernandeath.png?rlkey=2ctc45gsnl1x9k6xmmgv6tc83&st=klvds179&dl=0');}
 .teamazusa::before{background:url('https://dl.dropboxusercontent.com/scl/fi/187l9yqa7079bstz0kn5o/azusa.png?rlkey=eu8h4tvc76mgpgqt6vvzzaxfh&st=nfiil482&dl=0');}
 .teamtsukiko::before{background:url('https://dl.dropboxusercontent.com/scl/fi/psemdq0wpvgwr29a3cuap/tsukiko.png?rlkey=0w575urf18s5pfgi4vruhwerz&st=ncdigwvw&dl=0');}
 .teamakane::before{background:url('https://dl.dropboxusercontent.com/scl/fi/btu2ruzppvvwsct2by9w4/akane.png?rlkey=tu5ofsnr7wup5umowmlribn6e&st=tbeknrtg&dl=0');}
@@ -295,6 +295,7 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
 .teamtakuji::before{background:url('https://dl.dropboxusercontent.com/scl/fi/afkukfly6a2mfa5ckqqnc/takuji.png?rlkey=viuap962htiebwtedabhlqhqo&st=hsgp61ks&dl=0');}
 .teammatsuken::before{background:url('https://dl.dropboxusercontent.com/scl/fi/b65vbfjcxpu1umwlveyvr/matsuken.png?rlkey=qke57i0bm368zguk1mckcijqt&st=nj54ifmf&dl=0');}
 .teamjun::before{background:url('https://dl.dropboxusercontent.com/scl/fi/e6fr3cer9ffeupz5a7whn/jun.png?rlkey=nnj5cmdckkl6mcygxma7110u9&st=k1wg625t&dl=0');}
+.teamfernandeath::before{background:url('https://dl.dropboxusercontent.com/scl/fi/blpynt85z9futg2fnlak0/fernandeath.png?rlkey=2ctc45gsnl1x9k6xmmgv6tc83&st=klvds179&dl=0');}
 .username::before{
     content:"AA";
 	display: inline-block;
@@ -434,6 +435,10 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
 
 .username.teamjun {
     color: #89b6da !important;
+}
+
+.username.teamfernandeath {
+    color: #c8c8c8 !important;
 }
  
 /*For the spinning images*/

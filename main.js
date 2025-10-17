@@ -57,42 +57,43 @@ var MiniLogo_URL = 'http://i.imgur.com/OCidf8n.gif';
 
 var ChannelName_Caption = 'Loliconia';
 
-var CustomThemeMenu_Title = 'Change Theme';
+var CustomThemeMenu_Title = 'Change Icon';
 
-var CustomThemeMenu_Items = [		// FORMAT: ['NAME','LINK'],
-    ['Azusa', 'https://dl.dropboxusercontent.com/scl/fi/ob1nan7rm7vcbxfmxdn0i/henneko.jpg?rlkey=jkj0ssrvrr4xypwluivq32m41&st=u4bzg8ct&dl=0'],
-	['Tsukiko', 'https://dl.dropboxusercontent.com/scl/fi/ob1nan7rm7vcbxfmxdn0i/henneko.jpg?rlkey=jkj0ssrvrr4xypwluivq32m41&st=u4bzg8ct&dl=0'],
-	['Akane', 'https://dl.dropboxusercontent.com/scl/fi/g8n9x4h6oguzirvnr6wvj/odorobo.jpg?rlkey=8k18y5a7kn5vb0f1w5le13slq&st=tie5rx1u&dl=0'],
-	['Aoi', 'https://dl.dropboxusercontent.com/scl/fi/g8n9x4h6oguzirvnr6wvj/odorobo.jpg?rlkey=8k18y5a7kn5vb0f1w5le13slq&st=tie5rx1u&dl=0'],
-	['Zundamon', 'https://dl.dropboxusercontent.com/scl/fi/g8n9x4h6oguzirvnr6wvj/odorobo.jpg?rlkey=8k18y5a7kn5vb0f1w5le13slq&st=tie5rx1u&dl=0'],
-	['Kiritan', 'https://dl.dropboxusercontent.com/scl/fi/ils51xfl3oosp428b4u74/kiritan.jpg?rlkey=kjd8znuta2p67qyqipwrb8xb0&st=9xnclbuy&dl=0'],
-	['Akari', 'https://dl.dropboxusercontent.com/scl/fi/y055xenesfglpvobl8moa/yuzuaka.jpg?rlkey=a298bquqew8580lrmh9198m3l&st=pqojwg4l&dl=0'],
-	['Yukari', 'https://dl.dropboxusercontent.com/scl/fi/y055xenesfglpvobl8moa/yuzuaka.jpg?rlkey=a298bquqew8580lrmh9198m3l&st=pqojwg4l&dl=0'],
-	['Usagi', 'https://dl.dropboxusercontent.com/scl/fi/wjtruy8se1icp4dek9g5v/usagi.jpg?rlkey=xso6dz33442kxhfidzz17xg64&st=gjxi3095&dl=0'],
-    ['Shinobu', 'https://dl.dropboxusercontent.com/scl/fi/03f2ymhu185wlzor7gp70/monogatari.jpg?rlkey=2f3m89dk5t9t8789zkwqs56dg&st=58oyldxv&dl=0'],
-	['Hachikuji', 'https://dl.dropboxusercontent.com/scl/fi/03f2ymhu185wlzor7gp70/monogatari.jpg?rlkey=2f3m89dk5t9t8789zkwqs56dg&st=58oyldxv&dl=0'],
-	['Nadeko', 'https://dl.dropboxusercontent.com/scl/fi/3s59slz04tftivr7dn2nw/nadeko.jpg?rlkey=dpthdfccn8pe6dqlzrwfzb2ji&st=s9p7q87p&dl=0'],
-	['Ougi', 'https://dl.dropboxusercontent.com/scl/fi/03f2ymhu185wlzor7gp70/monogatari.jpg?rlkey=2f3m89dk5t9t8789zkwqs56dg&st=58oyldxv&dl=0'],
-	['Yotsugi', 'https://dl.dropboxusercontent.com/scl/fi/dlgxovegiczeuru9o70k2/yotsugi.jpg?rlkey=tvbqcb3zotcqw7zjuveeri2f7&st=xcimoskk&dl=0'],
-	['Hachiroku', 'https://dl.dropboxusercontent.com/scl/fi/pjjeloomclysdflkntuvw/86.png?rlkey=0v6nspkwable94wssoap162qz&st=6xmxi1jx&dl=0'],
-	['Rika', 'https://dl.dropboxusercontent.com/scl/fi/0e84ggwvfrol54ee1m2lu/rika.png?rlkey=at0f475q78yo5thbb7ov978m8&st=h83w7pw0&dl=0'],
-    ['Hanyuu', 'https://dl.dropboxusercontent.com/scl/fi/pih0t5zrs0sd5iu388btf/hanyuu.jpg?rlkey=rgk3lzlp3k51616h1do6ruts4&st=tpvjsqtp&dl=0'],
-    ['Arisu', 'https://dl.dropboxusercontent.com/scl/fi/s2wahvgrm48v8zgu1kf6l/arisu.jpg?rlkey=20urnrj7kyo2yv983vl13858w&st=ksihmxoe&dl=0'],
-    ['Murasame', 'https://dl.dropboxusercontent.com/scl/fi/u7kt4fs02bvn9wbod7oj8/murasame.jpg?rlkey=1jk2t8bhhrcxy1rzz7j50br3y&st=80uxnlky&dl=0'],
-	['Sora', 'https://dl.dropboxusercontent.com/scl/fi/9bhdq3gxxu27emsbuwn6x/sora.png?rlkey=pjn2h0auz8ttmkmi2c1cupi3n&st=g8m6o3jc&dl=0'],
-	['Lum', 'https://dl.dropboxusercontent.com/scl/fi/40zuia2yhvipl5gabg6px/lum.jpg?rlkey=8weroos9k3545ajjl3i74p19w&st=h4ccdc95&dl=0'],
-	['Liru', 'https://dl.dropboxusercontent.com/scl/fi/4hkxy4wy3qv2awho92whg/liru2.png?rlkey=dc6gvn7jahjgody821spaesrq&st=nrxcit1z&dl=0'],
-	['Dokuro', 'https://dl.dropboxusercontent.com/scl/fi/s5h97tk6fuo51eocl0hft/dokuro.jpg?rlkey=t67w8od3cccxwtm9mmmwi6fq6&st=0vefwqbn&dl=0'],
-	['Sabato', 'https://dl.dropboxusercontent.com/scl/fi/s5h97tk6fuo51eocl0hft/dokuro.jpg?rlkey=t67w8od3cccxwtm9mmmwi6fq6&st=0vefwqbn&dl=0'],
-	['Komugi', 'https://dl.dropboxusercontent.com/scl/fi/uqjk9q6h7tv385zoqrydl/komugi.jpg?rlkey=2tzdl428z4cggm7r719ujhemb&st=cndd09j5&dl=0'],
-	['Koyori', 'https://dl.dropboxusercontent.com/scl/fi/uqjk9q6h7tv385zoqrydl/komugi.jpg?rlkey=2tzdl428z4cggm7r719ujhemb&st=cndd09j5&dl=0'],
-	['Dejiko', 'https://dl.dropboxusercontent.com/scl/fi/v73pwx5nr0c3d6rgwxdel/digicharat.png?rlkey=v1ivq9khyjcdlcthtpy2lirzz&st=eqwa3s5u&dl=0'],
-	['Puchiko', 'https://dl.dropboxusercontent.com/scl/fi/v73pwx5nr0c3d6rgwxdel/digicharat.png?rlkey=v1ivq9khyjcdlcthtpy2lirzz&st=eqwa3s5u&dl=0'],
-	['Usada', 'https://dl.dropboxusercontent.com/scl/fi/v73pwx5nr0c3d6rgwxdel/digicharat.png?rlkey=v1ivq9khyjcdlcthtpy2lirzz&st=eqwa3s5u&dl=0'],
-	['K1', 'https://dl.dropboxusercontent.com/scl/fi/8lnp6kg86nf6scihitx53/k1.png?rlkey=iy7wj2unxok6hyo22axu822o9&st=ocyz9eig&dl=0'],
-	['Takuji', 'https://dl.dropboxusercontent.com/scl/fi/h5rc8kyx1s2q1stsb8inj/takuji.jpg?rlkey=u8dom40q6tsesf6dalhix4drl&st=hjvdpo4g&dl=0'],
-	['Matsuken', 'https://dl.dropboxusercontent.com/scl/fi/theyvsggomomr17okvm1m/matuken.jpg?rlkey=if06f3rw64uqsatxs5umnpunh&st=r7h7dprd&dl=0'],
-    ['Jun', 'https://dl.dropboxusercontent.com/scl/fi/l4ib85kakvgb3zy3ybhgd/jun_bg.jpg?rlkey=15nl9a52rpsilme38t25hrmdg&st=u3kl3evt&dl=0']
+var CustomThemeMenu_Items = [  // Fernandeath is the default one
+    'Azusa',
+    'Tsukiko',
+    'Akane',
+    'Aoi',
+    'Zundamon',
+    'Kiritan',
+    'Akari',
+    'Yukari',
+    'Usagi',
+    'Shinobu',
+    'Hachikuji',
+    'Nadeko',
+    'Ougi',
+    'Yotsugi',
+    'Hachiroku',
+    'Rika',
+    'Hanyuu',
+    'Arisu',
+    'Murasame',
+    'Sora',
+    'Lum',
+    'Liru',
+    'Dokuro',
+    'Sabato',
+    'Komugi',
+    'Koyori',
+    'Dejiko',
+    'Puchiko',
+    'Usada',
+    'K1',
+    'Takuji',
+    'Matsuken',
+    'Jun',
+    'Fernandeath'
 ];
 
 var UserlistBackgrounds = {
@@ -128,7 +129,8 @@ var UserlistBackgrounds = {
 	'K1': 'url(https://dl.dropboxusercontent.com/scl/fi/ke4krkaoq5nft6iwa7liu/k1-chatbox.png?rlkey=0ysk8jco1k5j7v5mdjq232rgo&st=fedzfcle&dl=0)',
 	'Takuji': 'url(https://dl.dropboxusercontent.com/scl/fi/aspib28olmcigbt7pirix/tkj-chatbox.png?rlkey=ni5p7u79sna91u7n08mver5b5&st=zysm9ihd&dl=0)',
 	'Matsuken': 'url(https://dl.dropboxusercontent.com/scl/fi/h1dbqte0h2j8wfq6hdi41/matsuken-chatbox.png?rlkey=vevcx6of1i42dudboyp6vr3qu&st=mfic7u0w&dl=0)',
-    'Jun': 'url(https://dl.dropboxusercontent.com/scl/fi/lo48sbm2triv5b84x7r5x/jun.png?rlkey=287w0ev2wcbjts7lxji7as847&st=2hdqqxbm&dl=0)'
+    'Jun': 'url(https://dl.dropboxusercontent.com/scl/fi/lo48sbm2triv5b84x7r5x/jun.png?rlkey=287w0ev2wcbjts7lxji7as847&st=2hdqqxbm&dl=0)',
+	'Fernandeath': 'url(https://dl.dropboxusercontent.com/scl/fi/jy8gcfgzjsnjxsmw7j3vh/f-chatbox.png?rlkey=g57r9omivi4gkir5hznze8esp&st=z71dllfh&dl=0)'
 };
 
 var UserIcons = {
@@ -164,7 +166,8 @@ var UserIcons = {
 	'K1': 'url(https://dl.dropboxusercontent.com/scl/fi/zjfdxmt2eqriyarrkkb7p/k1.png?rlkey=kzqcap96apzbdea1078zvmegd&st=2suvmlmv&dl=0)',
 	'Takuji': 'url(https://dl.dropboxusercontent.com/scl/fi/afkukfly6a2mfa5ckqqnc/takuji.png?rlkey=viuap962htiebwtedabhlqhqo&st=hsgp61ks&dl=0)',
 	'Matsuken': 'url(https://dl.dropboxusercontent.com/scl/fi/b65vbfjcxpu1umwlveyvr/matsuken.png?rlkey=qke57i0bm368zguk1mckcijqt&st=nj54ifmf&dl=0)',
-    'Jun': 'url(https://dl.dropboxusercontent.com/scl/fi/e6fr3cer9ffeupz5a7whn/jun.png?rlkey=nnj5cmdckkl6mcygxma7110u9&st=k1wg625t&dl=0)'
+    'Jun': 'url(https://dl.dropboxusercontent.com/scl/fi/e6fr3cer9ffeupz5a7whn/jun.png?rlkey=nnj5cmdckkl6mcygxma7110u9&st=k1wg625t&dl=0)',
+	'Fernandeath': 'url(https://dl.dropboxusercontent.com/scl/fi/blpynt85z9futg2fnlak0/fernandeath.png?rlkey=2ctc45gsnl1x9k6xmmgv6tc83&st=klvds179&dl=0)'
 }
 
 var userColors = {
@@ -200,7 +203,8 @@ var userColors = {
 	"k1": "#af4d5a",
 	"takuji": "#6beeff",
 	"matsuken": "#e2bd18",
-    "jun": "#89b6da"
+    "jun": "#89b6da",
+	"fernandeath": "#c8c8c8"
 }
 
 var ScheduleTabs_Array = [
@@ -2950,7 +2954,7 @@ if (USEROPTS.hidevid) {
 }
 
 //Team Color
-var teamList_4cc = ["azusa", "tsukiko", "akane", "aoi", "zundamon", "kiritan", "akari", "yukari", "usagi", "shinobu", "hachikuji", "nadeko", "ougi", "yotsugi", "hachiroku", "rika", "hanyuu", "arisu", "murasame","sora", "lum", "liru", "dokuro", "sabato", "komugi", "koyori", "dejiko", "puchiko", "usada", "k1", "takuji", "matsuken", "jun"];
+var teamList_4cc = ["azusa", "tsukiko", "akane", "aoi", "zundamon", "kiritan", "akari", "yukari", "usagi", "shinobu", "hachikuji", "nadeko", "ougi", "yotsugi", "hachiroku", "rika", "hanyuu", "arisu", "murasame","sora", "lum", "liru", "dokuro", "sabato", "komugi", "koyori", "dejiko", "puchiko", "usada", "k1", "takuji", "matsuken", "jun", "fernandeath"];
 
 //Format messages upon page load because they're handled differently and I can't find the function
 (function() {
@@ -3178,7 +3182,6 @@ $(document).ready(function () {
                         '<h4>' + CustomThemeMenu_Title + '</h4>' +
                     '</div>' +
                     '<div class="modal-body">' +
-                        // Current theme display
                         '<div id="currentThemeDisplay" style="display:flex; align-items:center; justify-content:center; margin-bottom:10px;"></div>' +
                         '<div id="customthemeWrap"></div>' +
                     '</div>' +
@@ -3219,7 +3222,7 @@ $(document).ready(function () {
             const color = userColors[title.toLowerCase()] || '#fff';
             $currentThemeDisplay.html(`
                 <div style="display:flex; align-items:center; gap:5px;">
-                    <span style="font-weight:normal; color:#c8c8c8;">Current Theme: </span>
+                    <span style="font-weight:normal; color:#c8c8c8;">Current Icon: </span>
                     <div style="width:20px; height:20px; background-image:${iconUrl}; background-size:cover; background-position:center; border-radius:3px;"></div>
                     <div style="color:${color}; font-weight:bold;">${title}</div>
                 </div>
@@ -3227,7 +3230,7 @@ $(document).ready(function () {
         }
 
         CustomThemeMenu_Items.forEach((item, i) => {
-            let [title, link] = item;
+            let title = item;
             let team = teamList_4cc[i] || '';
             let iconUrl = UserIcons[title] || '';
             let color = userColors[title.toLowerCase()] || '#fff';
@@ -3239,25 +3242,18 @@ $(document).ready(function () {
             `).appendTo($wrap);
 
             $item.click(function () {
-                if (link) {
-                    $('body').css('background-image', `url('${link}')`);
-                    localStorage.setItem('selectedBg', link);
-                    localStorage.setItem('selectedTheme', title);
-                    if (UserlistBackgrounds[title]) {
-                        $('#userlist').css('background-image', UserlistBackgrounds[title]);
-                        localStorage.setItem('userlistBg', UserlistBackgrounds[title]);
-                    }
-                    applyThemeClass(title);
+                if (UserlistBackgrounds[title]) {
+                    $('#userlist').css('background-image', UserlistBackgrounds[title]);
+                    localStorage.setItem('userlistBg', UserlistBackgrounds[title]);
                 } else {
-                    $('body').css('background-image', '');
-                    localStorage.removeItem('selectedBg');
                     $('#userlist').css('background-image', '');
                     localStorage.removeItem('userlistBg');
-                    $('body').removeClass(function (index, className) {
-                        return (className.match(/(^|\s)theme-\S+/g) || []).join(' ');
-                    });
-                    localStorage.removeItem('selectedTheme');
                 }
+
+                applyThemeClass(title);
+
+                localStorage.setItem('selectedTheme', title);
+
                 if (team) {
                     TEAMCOLOR = team;
                     setOpt(CHANNEL.name + "_TEAMCOLOR", TEAMCOLOR);
@@ -3276,16 +3272,14 @@ $(document).ready(function () {
             $('body').addClass(className);
         }
 
-        const savedBg = localStorage.getItem('selectedBg');
         const savedTheme = localStorage.getItem('selectedTheme');
-        const savedTeamColor = getOrDefault(CHANNEL.name + "_TEAMCOLOR", 'jun');
+        const savedUserlistBg = localStorage.getItem('userlistBg');
+        const savedTeamColor = getOrDefault(CHANNEL.name + "_TEAMCOLOR", 'fernandeath');
 
-        if (savedBg) $('body').css('background-image', `url('${savedBg}')`);
         if (savedTheme) {
             applyThemeClass(savedTheme);
             updateCurrentThemeDisplay(savedTheme);
         }
-        const savedUserlistBg = localStorage.getItem('userlistBg');
         if (savedUserlistBg) $('#userlist').css('background-image', savedUserlistBg);
 
         TEAMCOLOR = savedTeamColor;
