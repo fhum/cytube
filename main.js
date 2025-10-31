@@ -59,7 +59,7 @@ var ChannelName_Caption = 'Loliconia';
 
 var CustomThemeMenu_Title = 'Change Icon';
 
-var CustomThemeMenu_Items = [  // Fernandeath is the default one
+var CustomThemeMenu_Items = [  // Nonowa is the default one
     'Azusa',
     'Tsukiko',
     'Akane',
@@ -93,7 +93,9 @@ var CustomThemeMenu_Items = [  // Fernandeath is the default one
     'Takuji',
     'Matsuken',
     'Jun',
-    'Fernandeath'
+    'Fernandeath',
+	'DokuganP',
+	'Nonowa'
 ];
 
 var UserlistBackgrounds = {
@@ -130,7 +132,9 @@ var UserlistBackgrounds = {
 	'Takuji': 'url(https://dl.dropboxusercontent.com/scl/fi/aspib28olmcigbt7pirix/tkj-chatbox.png?rlkey=ni5p7u79sna91u7n08mver5b5&st=zysm9ihd&dl=0)',
 	'Matsuken': 'url(https://dl.dropboxusercontent.com/scl/fi/h1dbqte0h2j8wfq6hdi41/matsuken-chatbox.png?rlkey=vevcx6of1i42dudboyp6vr3qu&st=mfic7u0w&dl=0)',
     'Jun': 'url(https://dl.dropboxusercontent.com/scl/fi/lo48sbm2triv5b84x7r5x/jun.png?rlkey=287w0ev2wcbjts7lxji7as847&st=2hdqqxbm&dl=0)',
-	'Fernandeath': 'url(https://dl.dropboxusercontent.com/scl/fi/jy8gcfgzjsnjxsmw7j3vh/f-chatbox.png?rlkey=g57r9omivi4gkir5hznze8esp&st=z71dllfh&dl=0)'
+	'Fernandeath': 'url(https://dl.dropboxusercontent.com/scl/fi/jy8gcfgzjsnjxsmw7j3vh/f-chatbox.png?rlkey=g57r9omivi4gkir5hznze8esp&st=z71dllfh&dl=0)',
+	'DokuganP': 'url(https://dl.dropboxusercontent.com/scl/fi/r2f8sctyw463tbrv1z4jc/masamune-chatbox.png?rlkey=kmabeciiz7buvrqz83jvkpj6g&st=a39pwpn1&dl=0)',
+	'Nonowa': 'url(https://dl.dropboxusercontent.com/scl/fi/a0wq3era6auip9f3aa1s7/nnw-chatbox.png?rlkey=wkoqsr9zppjvjqsxkiuhb02e0&st=91f6rhjg&dl=0)'
 };
 
 var UserIcons = {
@@ -167,7 +171,9 @@ var UserIcons = {
 	'Takuji': 'url(https://dl.dropboxusercontent.com/scl/fi/afkukfly6a2mfa5ckqqnc/takuji.png?rlkey=viuap962htiebwtedabhlqhqo&st=hsgp61ks&dl=0)',
 	'Matsuken': 'url(https://dl.dropboxusercontent.com/scl/fi/b65vbfjcxpu1umwlveyvr/matsuken.png?rlkey=qke57i0bm368zguk1mckcijqt&st=nj54ifmf&dl=0)',
     'Jun': 'url(https://dl.dropboxusercontent.com/scl/fi/e6fr3cer9ffeupz5a7whn/jun.png?rlkey=nnj5cmdckkl6mcygxma7110u9&st=k1wg625t&dl=0)',
-	'Fernandeath': 'url(https://dl.dropboxusercontent.com/scl/fi/blpynt85z9futg2fnlak0/fernandeath.png?rlkey=2ctc45gsnl1x9k6xmmgv6tc83&st=klvds179&dl=0)'
+	'Fernandeath': 'url(https://dl.dropboxusercontent.com/scl/fi/blpynt85z9futg2fnlak0/fernandeath.png?rlkey=2ctc45gsnl1x9k6xmmgv6tc83&st=klvds179&dl=0)',
+	'DokuganP': 'url(https://dl.dropboxusercontent.com/scl/fi/yaouih80pwz4zf3or2j5c/dokuganP.png?rlkey=7hkgwcnphgb0k7hu07zxccw2v&st=qgrz8tyk&dl=0)',
+	'Nonowa': 'url(https://dl.dropboxusercontent.com/scl/fi/fkgf9lmurzg7qe3h9hsgs/nonowa.png?rlkey=kbi5yd5alukj27fi54wtw4ob5&st=2y1lxdky&dl=0)'
 }
 
 var userColors = {
@@ -204,7 +210,9 @@ var userColors = {
 	"takuji": "#6beeff",
 	"matsuken": "#e2bd18",
     "jun": "#89b6da",
-	"fernandeath": "#c8c8c8"
+	"fernandeath": "#000000",
+	"dokuganp": "#f6f7ff",
+	"nonowa": "#e33830"
 }
 
 var ScheduleTabs_Array = [
@@ -2954,7 +2962,7 @@ if (USEROPTS.hidevid) {
 }
 
 //Team Color
-var teamList_4cc = ["azusa", "tsukiko", "akane", "aoi", "zundamon", "kiritan", "akari", "yukari", "usagi", "shinobu", "hachikuji", "nadeko", "ougi", "yotsugi", "hachiroku", "rika", "hanyuu", "arisu", "murasame","sora", "lum", "liru", "dokuro", "sabato", "komugi", "koyori", "dejiko", "puchiko", "usada", "k1", "takuji", "matsuken", "jun", "fernandeath"];
+var teamList_4cc = ["azusa", "tsukiko", "akane", "aoi", "zundamon", "kiritan", "akari", "yukari", "usagi", "shinobu", "hachikuji", "nadeko", "ougi", "yotsugi", "hachiroku", "rika", "hanyuu", "arisu", "murasame","sora", "lum", "liru", "dokuro", "sabato", "komugi", "koyori", "dejiko", "puchiko", "usada", "k1", "takuji", "matsuken", "jun", "fernandeath","dokuganp","nonowa"];
 
 //Format messages upon page load because they're handled differently and I can't find the function
 (function() {
@@ -3274,7 +3282,7 @@ $(document).ready(function () {
 
         const savedTheme = localStorage.getItem('selectedTheme');
         const savedUserlistBg = localStorage.getItem('userlistBg');
-        const savedTeamColor = getOrDefault(CHANNEL.name + "_TEAMCOLOR", 'fernandeath');
+        const savedTeamColor = getOrDefault(CHANNEL.name + "_TEAMCOLOR", 'nonowa');
 
         if (savedTheme) {
             applyThemeClass(savedTheme);

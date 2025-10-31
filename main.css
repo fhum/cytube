@@ -92,7 +92,7 @@
 
 .username {
 	box-sizing: border-box;
-	color: #c8c8c8 !important;
+	color: #ffa500 !important;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	font-weight: 700;
@@ -176,7 +176,7 @@ border-color: white !important;
 #userlist {
             font-size: 10pt;
             background-color: #1C1E22;
-            background-image: url(https://dl.dropboxusercontent.com/scl/fi/jy8gcfgzjsnjxsmw7j3vh/f-chatbox.png?rlkey=g57r9omivi4gkir5hznze8esp&st=z71dllfh&dl=0);
+            background-image: url(https://dl.dropboxusercontent.com/scl/fi/a0wq3era6auip9f3aa1s7/nnw-chatbox.png?rlkey=wkoqsr9zppjvjqsxkiuhb02e0&st=91f6rhjg&dl=0);
             background-position: bottom center;
             background-repeat: no-repeat;}
  
@@ -261,7 +261,7 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
 }
 
 /*Chat Icons*/
-.username::before{background:url('https://dl.dropboxusercontent.com/scl/fi/blpynt85z9futg2fnlak0/fernandeath.png?rlkey=2ctc45gsnl1x9k6xmmgv6tc83&st=klvds179&dl=0');}
+.username::before{background:url('https://dl.dropboxusercontent.com/scl/fi/euq02eep9dray34f88c41/command.png?rlkey=pkjlpv8n6g6wgmj4299xidfac&st=gwfemgan&dl=0');}
 .teamazusa::before{background:url('https://dl.dropboxusercontent.com/scl/fi/187l9yqa7079bstz0kn5o/azusa.png?rlkey=eu8h4tvc76mgpgqt6vvzzaxfh&st=nfiil482&dl=0');}
 .teamtsukiko::before{background:url('https://dl.dropboxusercontent.com/scl/fi/psemdq0wpvgwr29a3cuap/tsukiko.png?rlkey=0w575urf18s5pfgi4vruhwerz&st=ncdigwvw&dl=0');}
 .teamakane::before{background:url('https://dl.dropboxusercontent.com/scl/fi/btu2ruzppvvwsct2by9w4/akane.png?rlkey=tu5ofsnr7wup5umowmlribn6e&st=tbeknrtg&dl=0');}
@@ -296,6 +296,8 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
 .teammatsuken::before{background:url('https://dl.dropboxusercontent.com/scl/fi/b65vbfjcxpu1umwlveyvr/matsuken.png?rlkey=qke57i0bm368zguk1mckcijqt&st=nj54ifmf&dl=0');}
 .teamjun::before{background:url('https://dl.dropboxusercontent.com/scl/fi/e6fr3cer9ffeupz5a7whn/jun.png?rlkey=nnj5cmdckkl6mcygxma7110u9&st=k1wg625t&dl=0');}
 .teamfernandeath::before{background:url('https://dl.dropboxusercontent.com/scl/fi/blpynt85z9futg2fnlak0/fernandeath.png?rlkey=2ctc45gsnl1x9k6xmmgv6tc83&st=klvds179&dl=0');}
+.teamdokuganp::before{background:url('https://dl.dropboxusercontent.com/scl/fi/yaouih80pwz4zf3or2j5c/dokuganP.png?rlkey=7hkgwcnphgb0k7hu07zxccw2v&st=qf6ngypu&dl=0');}
+.teamnonowa::before{background:url('https://dl.dropboxusercontent.com/scl/fi/fkgf9lmurzg7qe3h9hsgs/nonowa.png?rlkey=kbi5yd5alukj27fi54wtw4ob5&st=v2vbzy8g&dl=0');}
 .username::before{
     content:"AA";
 	display: inline-block;
@@ -438,7 +440,15 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
 }
 
 .username.teamfernandeath {
-    color: #c8c8c8 !important;
+    color: #000000 !important;
+}
+
+.username.teamdokuganp {
+    color: #f6f7ff !important;
+}
+
+.username.teamnonowa {
+    color: #e33830 !important;
 }
  
 /*For the spinning images*/
