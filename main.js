@@ -3570,6 +3570,7 @@ function restoreVideo() {
 	fitChat();
 }
 
+/*
 showbgbtn = $('<p id="showbg" class="navbar-text" title="Show background" style="cursor:pointer !important;">Show BG</p>')
 	.insertAfter("#layout-link")
 	.on("click", function() {
@@ -3582,7 +3583,8 @@ showbgbtn = $('<p id="showbg" class="navbar-text" title="Show background" style=
 				});
 			},50);
 		}
-});
+});*/
+
 // changing title bar description
 UI_TitleBarDescription === 1 ? changeTitle() : '';
 

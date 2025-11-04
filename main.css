@@ -1,16 +1,40 @@
-/*.username::before{
-	content:"AA";
-	background:url('https://files.catbox.moe/rowfl7.png');
-	background-size:16px !important;
-	background-repeat:no-repeat !important;
-	color:rgba(0,0,0,0);
-	text-shadow: none !important;
-}*/
+.navbar,
+.navbar-inverse,
+.navbar-fixed-top {
+  background-color: rgb(40, 42 , 46) !important;
+  background-image: none !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  box-shadow: none !important;
+  border: none !important;
+}
 
-#chatwrap{padding-bottom:0; padding-top:0; padding-right:15px; padding-left:15px; margin:0; opacity:0.975;}
-#videowrap{padding-bottom:10px; padding-top:0; padding-right:15px; padding-left:15px; margin:0;}
+.navbar-brand,
+.navbar-nav > li > a,
+.navbar-text,
+#logoutform input[type="submit"],
+#logoutform span {
+  color: #c8c8c8 !important;
+  transition: color 0.2s ease;
+}
+
+.navbar-brand:hover,
+.navbar-nav > li > a:hover,
+.navbar-text:hover,
+.dropdown-menu > li > a:hover {
+  color: #89b6da !important;
+  background: none !important;
+}
+
+.dropdown-menu {border: 0px !important}
+
+#chatwrap{padding-bottom:0; padding-top:0; padding-right:10px; padding-left:10px; margin:0; opacity:0.975;}
+#videowrap{padding-bottom:10px; padding-top:0; padding-right:10px; padding-left:0px; margin:0;}
 #videowrap-header{background-color: #1C1E22; border-color: #444444;}
 #motdwrap{display: none! important;}
+
+#leftpane{padding-left: 10px; padding-right: 10px;}
+#rightpane{padding-left: 0px; padding-right: 10px;}
 
 .glyphicon.glyphicon-star-empty {
 	animation: leader 1s infinite;
@@ -25,8 +49,8 @@
 
 /* Scrollbars (Firefox) */
 * {
-  scrollbar-width: thin; /* options: auto, thin, none */
-  scrollbar-color: rgb(70, 70, 70) #161a20; /* thumb color, track color */
+  scrollbar-width: thin;
+  scrollbar-color: rgb(70, 70, 70) #161a20;
 }
 
 /* Scrollbars (Chrome, Edge, Safari) */
@@ -209,7 +233,7 @@ body {
 /*Footer*/
 P.text-muted.credit {font-size: 0px;} /*This part removes the previous text*/
 P.text-muted.credit:after {content: "In Memorial of Xebec (1995-2019) ;-;"; font-size: 14px;} /*Footer Text*/
-FOOTER#footer {opacity: 0.9;}
+FOOTER#footer {background-color: rgb(40, 42 , 46) !important}
  
 /*Adds suffix to messages*/
 /*#messagebuffer div:after{content: "~de arimasu";}*/
@@ -484,7 +508,7 @@ transform: scale(1, -1);
 }
 
 #snowContainer {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100vw;
