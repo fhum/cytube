@@ -41,7 +41,7 @@ var UI_Shortcuts = 0;			// [&] keyboard shortcuts to insert text
 
 /* ----- DETAILED BASIC CONFIGURATION ----- */
 
-var Usercount_Text = "John Stewart";
+var Usercount_Text = "Jon Stewart";
 
 var Mod_HexColor = ' #33FFB2';
 
@@ -3200,19 +3200,70 @@ $(document).ready(function () {
             '</div>' +
         '</div>').insertBefore('#pmbar');
 
-        if ($("#customtheme-btn").length <= 0) {
-            $('#emotelistbtn').after(
-                $('<button/>', {
+        function insertCustomIconInsideChat() {
+            const $chatline = $('#chatline');
+            if ($chatline.length && $chatline.height() > 0 && $('#customtheme-btn').length === 0) {
+                const $form = $chatline.closest('form');
+                if ($form.css('position') === 'static') {
+                    $form.css('position', 'relative');
+                }
+
+                const savedTheme = localStorage.getItem('selectedTheme') || 'default';
+                const iconUrl = UserIcons[savedTheme] || UserIcons['Nonowa'];
+
+                const $iconBtn = $('<div/>', {
                     id: 'customtheme-btn',
-                    class: 'btn btn-default btn-sm',
-                    html: CustomThemeMenu_Title,
+					title: 'Change chat icon',
                     click: () => $('#customthemeModal').modal()
-                })
-            );
+                }).css({
+                    width: '20px',
+                    height: '20px',
+                    position: 'absolute',
+                    left: '8px',
+                    top: '50%',
+                    transform: 'translateY(-50%)',
+                    backgroundImage: iconUrl,
+                    backgroundSize: '20px 20px',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center',
+                    cursor: 'pointer',
+                    transition: 'background-color 0.2s ease, transform 0.2s ease',
+                    backgroundColor: 'transparent',
+                    padding: '0',
+                    zIndex: 5
+                });
+
+                $iconBtn.on('mouseenter', function () {
+                    $(this).css({
+                        backgroundColor: 'rgba(0, 102, 255, 0.5)',
+						boxShadow: '0 0 0 4px rgba(0, 102, 255, 0.3)'
+                    });
+                }).on('mouseleave', function () {
+                    $(this).css({
+                        backgroundColor: 'transparent',
+						boxShadow: 'none'
+                    });
+                });
+
+                const currentPadding = parseInt($chatline.css('padding-left')) || 8;
+                $chatline.css('padding-left', `${currentPadding + 28}px`);
+
+                $form.append($iconBtn);
+            }
         }
 
-        if (!CustomThemeMenu_Items || CustomThemeMenu_Items.length < 1) {
-            CustomThemeMenu_Items = [['No menu available', '']];
+        insertCustomIconInsideChat();
+        const watcher = setInterval(() => {
+            const $chatline = $('#chatline');
+            if ($chatline.length && $chatline.height() > 0) {
+                insertCustomIconInsideChat();
+                clearInterval(watcher);
+            }
+        }, 500);
+
+        function updateIcon(themeName) {
+            const newIcon = UserIcons[themeName] || UserIcons['Nonowa'];
+            $('#customtheme-btn').css('background-image', newIcon);
         }
 
         const $wrap = $('#customthemeWrap').css({
@@ -3226,11 +3277,11 @@ $(document).ready(function () {
         const $currentThemeDisplay = $('#currentThemeDisplay');
 
         function updateCurrentThemeDisplay(title) {
-            const iconUrl = UserIcons[title] || '';
+            const iconUrl = UserIcons[title] || UserIcons['Nonowa'];
             const color = userColors[title.toLowerCase()] || '#fff';
             $currentThemeDisplay.html(`
                 <div style="display:flex; align-items:center; gap:5px;">
-                    <span style="font-weight:normal; color:#c8c8c8;">Current Icon: </span>
+                    <span style="color:#c8c8c8;">Current Icon:</span>
                     <div style="width:20px; height:20px; background-image:${iconUrl}; background-size:cover; background-position:center; border-radius:3px;"></div>
                     <div style="color:${color}; font-weight:bold;">${title}</div>
                 </div>
@@ -3240,11 +3291,11 @@ $(document).ready(function () {
         CustomThemeMenu_Items.forEach((item, i) => {
             let title = item;
             let team = teamList_4cc[i] || '';
-            let iconUrl = UserIcons[title] || '';
+            let iconUrl = UserIcons[title] || UserIcons['Nonowa'];
             let color = userColors[title.toLowerCase()] || '#fff';
 
             const $item = $(`
-                <div class="theme-item" style="background-image: ${iconUrl}; --border-color:${color}">
+                <div class="theme-item" style="background-image:${iconUrl}; --border-color:${color}">
                     <div class="theme-overlay">${title}</div>
                 </div>
             `).appendTo($wrap);
@@ -3259,7 +3310,6 @@ $(document).ready(function () {
                 }
 
                 applyThemeClass(title);
-
                 localStorage.setItem('selectedTheme', title);
 
                 if (team) {
@@ -3268,6 +3318,7 @@ $(document).ready(function () {
                 }
 
                 updateCurrentThemeDisplay(title);
+                updateIcon(title);
                 $('#customthemeModal').modal('hide');
             });
         });
@@ -3276,8 +3327,7 @@ $(document).ready(function () {
             $('body').removeClass(function (index, className) {
                 return (className.match(/(^|\s)theme-\S+/g) || []).join(' ');
             });
-            let className = 'theme-' + themeName.toLowerCase().replace(/\s+/g, '-');
-            $('body').addClass(className);
+            $('body').addClass('theme-' + themeName.toLowerCase().replace(/\s+/g, '-'));
         }
 
         const savedTheme = localStorage.getItem('selectedTheme');
@@ -3294,8 +3344,6 @@ $(document).ready(function () {
         setOpt(CHANNEL.name + "_TEAMCOLOR", TEAMCOLOR);
     }
 });
-
-
 
 function setPanelProperties(div) {
 	height = $("#userlist").height();

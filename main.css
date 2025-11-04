@@ -36,6 +36,9 @@
 #leftpane{padding-left: 10px; padding-right: 10px;}
 #rightpane{padding-left: 0px; padding-right: 10px;}
 
+#chatline{padding-left: 32px !important}
+.input-group-addon{position:relative; z-index: 10;}
+
 .glyphicon.glyphicon-star-empty {
 	animation: leader 1s infinite;
 }
