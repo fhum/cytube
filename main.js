@@ -2449,7 +2449,7 @@ function unPin() {
 function showChatHelp() {
 	createModal('Chat Commands');
 	if (UI_FontsBtn === 1) {
-		body.append('<strong>Fonts commands</strong><br /><br />');
+		body.append('<strong>Message formatting</strong><br /><br />');
 		html='<li><code>[untz]</code>, <code>[white]</code>, <code>[yellow]</code>, <code>[orange]</code>, <code>[pink]</code>, '
 			+ '<code>[red]</code>, <code>[lime]</code>, <code>[g]</code>, <code>[green]</code>, <code>[aqua]</code>, '
 			+ '<code>[blue]</code>, <code>[violet]</code>, <code>[brown]</code>, <code>[silver]</code>, '
@@ -2460,7 +2460,7 @@ function showChatHelp() {
 			+ '<li><code>[d]</code> - Distinguished text. (red on yelllow background)</li>'
 			+ '<li><code>[f]</code> - Text with a fire effect.</li>'
 			+ '<li><code>[shit]</code> - Text with a shit effect.</li>'
-			+ '<li><code>[spoiler]</code> - An inline spoiler.</li>'
+			+ '<li><code>[spoiler]</code> - An inline spoiler. <b>(Shortcut is ctrl + s)</b></li>'
 			+ '<li><code>[float]</code> - Float text to the right.</li>'
 			+ '<li><code>[lf]</code> - Float text to the left.</li>'
 			+ '<li><code>[m<span style="background-color:yellow">#</span>]</code> - Move text side to side. Speed dependent on the number after <code>[m</code>.</li>'
@@ -2483,18 +2483,35 @@ function showChatHelp() {
 			'roll':'Rolls a number. (<i>!roll</i>)',
 			'stat': 'Displays user chat statistics for the current session. (<i>!stat</i>)',
 			'time':'Displays current local time. (<i>!time</i>)',
-			'vskip':'Voteskips the current item. (<i>!skip</i>)'
+			'vskip':'Voteskips the current item. (<i>!skip</i>)',
+			'food':'Random food quote. (<i>!food</i>)',
+			'azukiazusa':'Random Azuki Azusa image. (<i>!azukiazusa</i>)',
+			'jun':'??? (<i>!jun</i>)'
 		};
-		body.append('<br /><strong>New chat commands</strong><br /><br />');
+		body.append('<br /><strong>Custom commands</strong><br /><br />');
 		cmdlist = $('<ul />').appendTo(body);
 		for (cmd in scrcmd) {
 			cmdlist.append('<li><code>!' + cmd + '</code> - ' + scrcmd[cmd] + '</li>');
 		}
 	}
+	if (UI_EmbeddingMedia === 1) {
+		imgcmd = {
+			'pic':'Add at the end of an image link to embed it. (e.g. <i>http://www.imgur.com/gayshit.png:pic</i>)',
+			'webm':'Add at the end of webm link to embed it. (e.g. <i>http://www.imgur.com/gayshit.webm:webm</i>)',
+			'@':'Add at the end of an image link to embed it spinning. (e.g. <i>http://www.imgur.com/gayshit.png:@</i>)'
+		};
+		body.append('<br /><strong>Image embedding</strong><br /><br />');
+		imglist = $('<ul />').appendTo(body);
+		for (cmd in imgcmd) {
+			imglist.append('<li><code>:' + cmd + '</code> - ' + imgcmd[cmd] + '</li>');
+		}
+	}
 	defcmd = {
 		'me':'Shows an action-style message. (username does something, e.g. <i>/me is dancing</i>)',
 		'sp':'Hides a message in a hover-to-show spoiler box. (e.g. <i>/sp This message is hidden</i>)',
-		'afk':'Toggles AFK (Away From Keyboard) status. (<i>/afk</i>)'
+		'afk':'Toggles AFK (Away From Keyboard) status. (<i>/afk</i>)',
+		'clear':'Clears chat. (Admin only)',
+		'reload':'Reloads page for all users. (Admin only)'
 	};
 	body.append('<br /><strong>Default CyTube commands</strong><br /><br />');
 	cmdlist2=$('<ul />').appendTo(body);
@@ -3618,20 +3635,11 @@ function restoreVideo() {
 	fitChat();
 }
 
-/*
-showbgbtn = $('<p id="showbg" class="navbar-text" title="Show background" style="cursor:pointer !important;">Show BG</p>')
+const tipsBtn = $('<p id="tipsbtn" class="navbar-text" style="cursor:pointer !important;">Tips</p>')
 	.insertAfter("#layout-link")
 	.on("click", function() {
-		if ($("#showbgcss").length === 0) {
-			$("<style id=\"showbgcss\">body, .nav, #logoutform, #streamtimewrap, div{visibility:hidden !important;}#showbg{visibility:visible !important;}</style>").appendTo("head");
-			setTimeout(function() {
-				$(document).on("click.showbg", function() {
-					$("#showbgcss").remove();
-					$(this).unbind("click.showbg");
-				});
-			},50);
-		}
-});*/
+		showChatHelp();
+	});
 
 // changing title bar description
 UI_TitleBarDescription === 1 ? changeTitle() : '';
