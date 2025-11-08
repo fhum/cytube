@@ -97,6 +97,8 @@
 
 .nick-highlight {
     background-color: #272B30;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .userlist_owner, .userlist_op, .userlist_item, .userlist_guest{
