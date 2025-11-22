@@ -5510,8 +5510,11 @@ const snowContainer = document.createElement('div');
 snowContainer.id = 'snowContainer';
 document.body.appendChild(snowContainer);
 
-let snowEnabled = false;
+let snowEnabled = true;
 let snowflakes = [];
+
+// Winter mode
+for (let i = 0; i < 100; i++) createSnowflake();
 
 function getSnowStyleVars() {
   const xStart = Math.random();
@@ -5548,7 +5551,7 @@ function createSnowflake() {
 }
 
 if ($("#toggleSnow").length <= 0) {
-	let snowEnabled = false;
+	//let snowEnabled = false;
 
 	const toggleSnow = () => {
 		snowEnabled = !snowEnabled;
@@ -5589,6 +5592,8 @@ if ($("#toggleSnow").length <= 0) {
 				click: toggleSnow
 			})
 		);
+		//Winter mode
+		$('#toggleSnow').addClass('btn-success active').html('Snow');
 	}
 }
 
