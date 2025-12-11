@@ -176,6 +176,38 @@ var UserIcons = {
 	'Nonowa': 'url(https://dl.dropboxusercontent.com/scl/fi/fkgf9lmurzg7qe3h9hsgs/nonowa.png?rlkey=kbi5yd5alukj27fi54wtw4ob5&st=2y1lxdky&dl=0)'
 }
 
+var CustomBackgrounds = [
+	['Checkers (Blue)', 'https://dl.dropboxusercontent.com/scl/fi/z6ambmuuwx0fv9b3uksti/hm2.png?rlkey=mrt88r6lp9zjvtywgqz226d9k&st=nbukqohj&dl=0'],
+	['Checkers (Brown)', 'https://dl.dropboxusercontent.com/scl/fi/2z1nq34u46q6hu2mhjrbz/hm1.png?rlkey=03po5gxdtrfb887pywy3ks18h&st=zkgnxc0d&dl=0'],
+    ['Henneko', 'https://dl.dropboxusercontent.com/scl/fi/ob1nan7rm7vcbxfmxdn0i/henneko.jpg?rlkey=jkj0ssrvrr4xypwluivq32m41&st=u4bzg8ct&dl=0'],
+    ['Odorobo', 'https://dl.dropboxusercontent.com/scl/fi/g8n9x4h6oguzirvnr6wvj/odorobo.jpg?rlkey=8k18y5a7kn5vb0f1w5le13slq&st=tie5rx1u&dl=0'],
+    ['Kiritan', 'https://dl.dropboxusercontent.com/scl/fi/ils51xfl3oosp428b4u74/kiritan.jpg?rlkey=kjd8znuta2p67qyqipwrb8xb0&st=9xnclbuy&dl=0'],
+    ['Yukari & Akari', 'https://dl.dropboxusercontent.com/scl/fi/y055xenesfglpvobl8moa/yuzuaka.jpg?rlkey=a298bquqew8580lrmh9198m3l&st=pqojwg4l&dl=0'],
+    ['Monogatari (Summer)', 'https://dl.dropboxusercontent.com/scl/fi/03f2ymhu185wlzor7gp70/monogatari.jpg?rlkey=2f3m89dk5t9t8789zkwqs56dg&st=58oyldxv&dl=0'],
+    ['Nadeko', 'https://dl.dropboxusercontent.com/scl/fi/3s59slz04tftivr7dn2nw/nadeko.jpg?rlkey=dpthdfccn8pe6dqlzrwfzb2ji&st=s9p7q87p&dl=0'],
+    ['Yotsugi', 'https://dl.dropboxusercontent.com/scl/fi/dlgxovegiczeuru9o70k2/yotsugi.jpg?rlkey=tvbqcb3zotcqw7zjuveeri2f7&st=xcimoskk&dl=0'],
+    ['Hachiroku', 'https://dl.dropboxusercontent.com/scl/fi/pjjeloomclysdflkntuvw/86.png?rlkey=0v6nspkwable94wssoap162qz&st=6xmxi1jx&dl=0'],
+    ['Rika', 'https://dl.dropboxusercontent.com/scl/fi/0e84ggwvfrol54ee1m2lu/rika.png?rlkey=at0f475q78yo5thbb7ov978m8&st=h83w7pw0&dl=0'],
+    ['Hanyuu', 'https://dl.dropboxusercontent.com/scl/fi/pih0t5zrs0sd5iu388btf/hanyuu.jpg?rlkey=rgk3lzlp3k51616h1do6ruts4&st=tpvjsqtp&dl=0'],
+    ['Arisu', 'https://dl.dropboxusercontent.com/scl/fi/s2wahvgrm48v8zgu1kf6l/arisu.jpg?rlkey=20urnrj7kyo2yv983vl13858w&st=ksihmxoe&dl=0'],
+    ['Murasame', 'https://dl.dropboxusercontent.com/scl/fi/u7kt4fs02bvn9wbod7oj8/murasame.jpg?rlkey=1jk2t8bhhrcxy1rzz7j50br3y&st=80uxnlky&dl=0'],
+    ['Sora', 'https://dl.dropboxusercontent.com/scl/fi/9bhdq3gxxu27emsbuwn6x/sora.png?rlkey=pjn2h0auz8ttmkmi2c1cupi3n&st=g8m6o3jc&dl=0'],
+	['Yoshinoya', 'https://dl.dropboxusercontent.com/scl/fi/9qo9aw5rdomv75zbw7ha9/yoshinoya.jpg?rlkey=71pg0jy255lb8z4kaqhuocx1q&st=pleta8gd&dl=0'],
+    ['Lum', 'https://dl.dropboxusercontent.com/scl/fi/40zuia2yhvipl5gabg6px/lum.jpg?rlkey=8weroos9k3545ajjl3i74p19w&st=h4ccdc95&dl=0'],
+    ['Liru', 'https://dl.dropboxusercontent.com/scl/fi/4hkxy4wy3qv2awho92whg/liru2.png?rlkey=dc6gvn7jahjgody821spaesrq&st=nrxcit1z&dl=0'],
+	['Dokuro', 'https://dl.dropboxusercontent.com/scl/fi/s5h97tk6fuo51eocl0hft/dokuro.jpg?rlkey=t67w8od3cccxwtm9mmmwi6fq6&st=c3s5j672&dl=0'],
+    ['Komugi & Koyori', 'https://dl.dropboxusercontent.com/scl/fi/uqjk9q6h7tv385zoqrydl/komugi.jpg?rlkey=2tzdl428z4cggm7r719ujhemb&st=cndd09j5&dl=0'],
+    ['Di Gi Charat', 'https://dl.dropboxusercontent.com/scl/fi/v73pwx5nr0c3d6rgwxdel/digicharat.png?rlkey=v1ivq9khyjcdlcthtpy2lirzz&st=eqwa3s5u&dl=0'],
+    ['Hinamizawa (Sunset)', 'https://dl.dropboxusercontent.com/scl/fi/8lnp6kg86nf6scihitx53/k1.png?rlkey=iy7wj2unxok6hyo22axu822o9&st=ocyz9eig&dl=0'],
+    ['Last Supper (Subahibi)', 'https://dl.dropboxusercontent.com/scl/fi/h5rc8kyx1s2q1stsb8inj/takuji.jpg?rlkey=u8dom40q6tsesf6dalhix4drl&st=hjvdpo4g&dl=0'],
+    ['Matsuken Samba II', 'https://dl.dropboxusercontent.com/scl/fi/theyvsggomomr17okvm1m/matuken.jpg?rlkey=if06f3rw64uqsatxs5umnpunh&st=r7h7dprd&dl=0'],
+    ['Jun', 'https://dl.dropboxusercontent.com/scl/fi/l4ib85kakvgb3zy3ybhgd/jun_bg.jpg?rlkey=15nl9a52rpsilme38t25hrmdg&st=u3kl3evt&dl=0'],
+	['Gensokyo (Day)','https://dl.dropboxusercontent.com/scl/fi/wt7j3m0s27wh4dmnwofq7/sanae2.jpg?rlkey=tt6c9qvahdl03uow9teh2kksi&st=p5rgwqkd&dl=0'],
+	['Gensokyo (Night)', 'https://dl.dropboxusercontent.com/scl/fi/m70djdpjjspalqr2d5s3t/gensokyo_night.jpg?rlkey=3ihpfo5mns6fhokt1fb2nb0mb&st=ce64pwwz&dl=0'],
+	['Udonge', 'https://dl.dropboxusercontent.com/scl/fi/1a244y2qh80jtse1samid/gensokyo.jpg?rlkey=1w5tqlllq19z8meg5tz6uy058&st=dmh2ku4s&dl=0'],
+	['Cave Story', 'https://dl.dropboxusercontent.com/scl/fi/vuz59y9b7u7j17ta921th/doumon.png?rlkey=iiwv3ale12jvfdndhlo4l86d9&st=beypbl0z&dl=0']
+];
+
 var userColors = {
     "azusa": "#30e7a1",
     "tsukiko": "#30cce7",
@@ -3362,6 +3394,125 @@ $(document).ready(function () {
     }
 });
 
+$(document).ready(function () {
+
+    const ExtendedBackgrounds = [
+        ['None', '#1c1e22'],
+        ...CustomBackgrounds
+    ];
+
+    $('<div class="fade modal" id="customBgModal" aria-hidden="true" role="dialog" style="display:none" tabindex="-1">' +
+        '<div class="modal-dialog" style="max-width:900px;">' +
+            '<div class="modal-content">' +
+                '<div class="modal-header">' +
+                    '<button class="close" data-dismiss="modal" aria-hidden="true">×</button>' +
+                    '<h4>Change Background</h4>' +
+                '</div>' +
+                '<div class="modal-body">' +
+                    '<div id="customBgWrap" style="display:flex; flex-wrap:wrap; justify-content:center; gap:25px;"></div>' +
+                '</div>' +
+                '<div class="modal-footer">' +
+                    '<button class="btn btn-primary" data-dismiss="modal" type="button">Close</button>' +
+                '</div>' +
+            '</div>' +
+        '</div>' +
+    '</div>').insertBefore('#pmbar');
+
+    if ($("#custombg-btn").length === 0) {
+        $('#emotelistbtn').after(
+            $('<button/>', {
+                id: 'custombg-btn',
+                class: 'btn btn-default btn-sm',
+                html: "Change Background",
+                click: () => $('#customBgModal').modal()
+            })
+        );
+    }
+
+    const $wrap = $('#customBgWrap');
+
+    const hoverStyle = `
+        <style>
+            .bgItem {
+                transition: transform 0.18s ease, box-shadow 0.18s ease;
+            }
+            .bgItem:hover {
+                transform: scale(1.06);
+                box-shadow: 0 0 14px rgba(255,255,255,0.45);
+            }
+        </style>
+    `;
+    $('head').append(hoverStyle);
+
+    ExtendedBackgrounds.forEach(([title, data]) => {
+        const previewBg = data.startsWith('#') ? data : `url('${data}')`;
+
+        const item = $(`
+            <div class="bgItem" style="display:flex; flex-direction:column; align-items:center; cursor:pointer;">
+                <div style="
+                    width:260px; 
+                    height:146px;
+                    background:${previewBg};
+                    background-size:cover;
+                    background-position:center;
+                    border-radius:6px;
+                    box-shadow:0 0 8px rgba(0,0,0,0.35);
+                "></div>
+                <div style="
+                    margin-top:6px; 
+                    text-align:center; 
+                    font-size:14px; 
+                    color:#e2e2e2;
+                ">${title}</div>
+            </div>
+        `);
+
+        item.click(() => {
+            if (data.startsWith('#')) {
+                $('body').css({
+                    'background': data,
+                    'background-image': 'none',
+                    'background-position': 'bottom right',
+                    'background-attachment': 'fixed',
+                    'background-size': 'cover'
+                });
+                localStorage.setItem('selectedBg', data);
+            } else {
+                $('body').css({
+                    'background-image': `url('${data}')`,
+                    'background-position': 'top left',
+                    'background-attachment': 'fixed',
+                    'background-size': 'cover'
+                });
+                localStorage.setItem('selectedBg', data);
+            }
+            $('#customBgModal').modal('hide');
+        });
+
+        $wrap.append(item);
+    });
+
+    const savedBg = localStorage.getItem('selectedBg');
+    if (savedBg) {
+        if (savedBg.startsWith('#')) {
+            $('body').css({
+                'background': savedBg,
+                'background-image': 'none',
+                'background-position': 'bottom right',
+                'background-attachment': 'fixed',
+                'background-size': 'cover'
+            });
+        } else {
+            $('body').css({
+                'background-image': `url('${savedBg}')`,
+                'background-position': 'bottom right',
+                'background-attachment': 'fixed',
+                'background-size': 'cover'
+            });
+        }
+    }
+});
+
 function setPanelProperties(div) {
 	height = $("#userlist").height();
 	width = $("#userlist").width();
@@ -3635,11 +3786,32 @@ function restoreVideo() {
 	fitChat();
 }
 
-const tipsBtn = $('<p id="tipsbtn" class="navbar-text" style="cursor:pointer !important;">Tips</p>')
-	.insertAfter("#layout-link")
-	.on("click", function() {
-		showChatHelp();
-	});
+const tipsBtn = $(`
+    <li id="tipsbtn" title="Cheat codes">
+        <a href="javascript:void(0)">Tips</a>
+    </li>
+`).insertAfter("#layout-link")
+  .on("click", function() {
+      showChatHelp();
+  });
+
+const showbgbtn = $(`
+    <li id="showbg" title="Show background">
+        <a href="javascript:void(0)">Show BG</a>
+    </li>
+`).insertAfter("#tipsbtn")
+  .on("click", function() {
+      if ($("#showbgcss").length === 0) {
+          $("<style id=\"showbgcss\">body, .nav, #logoutform, #streamtimewrap, div{visibility:hidden !important;}#showbg{visibility:visible !important;}</style>")
+              .appendTo("head");
+          setTimeout(function() {
+              $(document).on("click.showbg", function() {
+                  $("#showbgcss").remove();
+                  $(this).unbind("click.showbg");
+              });
+          },50);
+      }
+});
 
 // changing title bar description
 UI_TitleBarDescription === 1 ? changeTitle() : '';
