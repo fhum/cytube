@@ -541,7 +541,8 @@ RandomImages =
 	'https://dl.dropboxusercontent.com/scl/fi/33vealpzwh72hfrtbh7mm/3441383.5_ed2667e3318dd46d8e014080dfa70fed.jpg?rlkey=7pp5q39flo42x8vd7ccci47io&st=nf9bmg24&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/k54wcfh5lme5c4jcatb67/4c1vcx.png?rlkey=eewq6yg1meee9o2cokz4qkj0b&st=6oaa7tjx&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/effx2oyf80e8ekyj0hein/__liru_pachira_uma_and_aiko_renkin_san_kyuu_magical_pokaan_drawn_by_okamura_masahiro__a19c68ece3b2413025c5b5638b193cb4.jpg?rlkey=xknbxl52jv1pf6h16uwiqyn5c&st=j05fwke8&dl=0',
-	'https://dl.dropboxusercontent.com/scl/fi/op6gbcnhytnb53byt2zv5/3563632.8999999985_58f639460a03e16ceb77369836ce5109.jpg?rlkey=ydory96ovkvmsptxp0d0mh16y&st=rs53vf20&dl=0'
+	'https://dl.dropboxusercontent.com/scl/fi/op6gbcnhytnb53byt2zv5/3563632.8999999985_58f639460a03e16ceb77369836ce5109.jpg?rlkey=ydory96ovkvmsptxp0d0mh16y&st=rs53vf20&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/lrlyg7giamwbdkuf3d8h7/38349344.7_image.png?rlkey=lg5hfymz8nlln8klaqpzi67jh&st=6ko8osgd&dl=0'
   ]
 
 var AskAnswers = [
