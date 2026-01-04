@@ -252,7 +252,7 @@ var ScheduleTabs_Array = [
 	['Full Schedule', '<iframe id="scheduleBox" src="https://docs.google.com/spreadsheets/d/1Ye0mzOVODl2IAo3MWjvZOtqSXq-KK_JR5RYbzjUmOY4/pubhtml?gid=9190525&single=true" width="100%" height="' + $(window).height() + '"></iframe>']
 ];
 
-var TitleBarDescription_Caption = '>Streaming:';
+var TitleBarDescription_Caption = 'Playing:';
 
 var RandomQuotes = [
 	'Always trying to take all the cocks for themselves. They are so selfish and rude.',
