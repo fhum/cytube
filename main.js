@@ -540,6 +540,11 @@ RandomImages =
 	'https://dl.dropboxusercontent.com/scl/fi/p3739g7021n8k8l5jlidb/2777780.099999994_-_2021-02-18_060638.png?rlkey=8ucj9hi6mowopcqxe6ixcq5cb&st=fgtbk1bp&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/33vealpzwh72hfrtbh7mm/3441383.5_ed2667e3318dd46d8e014080dfa70fed.jpg?rlkey=7pp5q39flo42x8vd7ccci47io&st=nf9bmg24&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/k54wcfh5lme5c4jcatb67/4c1vcx.png?rlkey=eewq6yg1meee9o2cokz4qkj0b&st=6oaa7tjx&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/kxepepc1na281r8xhuwyh/ro_ro_sh-2005989555040837802_p0.jpg?rlkey=qasam2soxt4dv64c5xg306mqq&st=uma9t1vi&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/qoxuv6xllyd9k97ymeef8/__arle_nadja_and_carbuncle_puyopuyo_and_1_more_drawn_by_namori__3b7bc1d816a8849f5aeaac8ed4d2c584.jpg?rlkey=ssa20y7e4xieyrl1zqqbl7fsm&st=sef7lqhj&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/cslzx6ga6qnqqdiqkoonk/__arle_nadja_puyopuyo_and_1_more_drawn_by_unagiman__afd0f44150d72a96b46d21b05cbef219.jpg?rlkey=1z1kbk6pmxbda3pry9qc1q0yp&st=s5klcu6h&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/6kx1k9qw4xi6vao9ieq13/__hasegawa_kobato_boku_wa_tomodachi_ga_sukunai_drawn_by_sooon__93d1bafeda1aa7cfd168cb190e8261b3.jpg?rlkey=4x4saib0rv3r9vm5kwvxcq219&st=iqvcq8dx&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/381vmcvm4agc2gb6b95xu/nWDzJhtGl1Ys2TM3ZmPiSMjF.jpeg?rlkey=2j7u3iohhvjfmil2i21vebphl&st=edtco43z&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/effx2oyf80e8ekyj0hein/__liru_pachira_uma_and_aiko_renkin_san_kyuu_magical_pokaan_drawn_by_okamura_masahiro__a19c68ece3b2413025c5b5638b193cb4.jpg?rlkey=xknbxl52jv1pf6h16uwiqyn5c&st=j05fwke8&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/op6gbcnhytnb53byt2zv5/3563632.8999999985_58f639460a03e16ceb77369836ce5109.jpg?rlkey=ydory96ovkvmsptxp0d0mh16y&st=rs53vf20&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/lrlyg7giamwbdkuf3d8h7/38349344.7_image.png?rlkey=lg5hfymz8nlln8klaqpzi67jh&st=6ko8osgd&dl=0'
