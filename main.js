@@ -5892,17 +5892,12 @@ if ($('#toggleNonowa').length <= 0) {
 
 // Clock above chat
 let clockInterval = 0;
-const chatHeader = document.getElementById('chatheader');
-const chatClock = document.createElement('div');
+const chatClock = document.createElement('p');
 chatClock.id = 'chatClock';
-
 chatClock.style.flexGrow = '2';
 chatClock.style.fontFamily = 'system-ui';
-chatClock.style.textAlign = 'center';
+document.getElementById("usercount").insertAdjacentElement('afterend', chatClock);
 
-
-
-document.getElementById("chatheader").insertAdjacentElement('beforebegin', chatClock);
 const setChatClock = () => {
 	const clockDate = new Date();
 	const localTime = clockDate.toLocaleTimeString("JPN");
