@@ -560,8 +560,10 @@ AskAnswers = [
 var FoodArray = [
 	'Through the Dark Lord, Amen.',
     'Eat a duck I must?',
-    'Rub a dub grub!', 
-	'メンカタカラメヤサイダブルニンニクアブラマシマシ。',
+    'Rub a dub, thanks for the grub!', 
+	'DOWN THE HATCH',
+	"Don't be a chicken and eat this chicken katsu! This one's on the house. Eat this chicken today and don't be a chicken tomorrow! Hoho! Chicken katsu is awesome!",
+	'メンカタカラメヤサイダブルニンニクアブラマシマシ',
 	'https://dl.dropboxusercontent.com/scl/fi/s34cqral6xpvf2hxj6y0r/averageblackmiddleschoolmeal.png?rlkey=kalxs2bueaqi3dl2l55xj31kn&st=i3t2l43g&dl=0:pic'
 ];
 
@@ -5683,11 +5685,12 @@ const snowContainer = document.createElement('div');
 snowContainer.id = 'snowContainer';
 document.body.appendChild(snowContainer);
 
-let snowEnabled = true;
+//Winter mode
+//let snowEnabled = true;
 let snowflakes = [];
 
 // Winter mode
-for (let i = 0; i < 100; i++) createSnowflake();
+//for (let i = 0; i < 100; i++) createSnowflake();
 
 function getSnowStyleVars() {
   const xStart = Math.random();
@@ -5724,7 +5727,7 @@ function createSnowflake() {
 }
 
 if ($("#toggleSnow").length <= 0) {
-	//let snowEnabled = false;
+	let snowEnabled = false;
 
 	const toggleSnow = () => {
 		snowEnabled = !snowEnabled;
@@ -5766,7 +5769,7 @@ if ($("#toggleSnow").length <= 0) {
 			})
 		);
 		//Winter mode
-		$('#toggleSnow').addClass('btn-success active').html('Snow');
+		//$('#toggleSnow').addClass('btn-success active').html('Snow');
 	}
 }
 
