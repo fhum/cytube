@@ -261,7 +261,7 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
 	justify-content: left;
     flex-wrap: wrap;
 
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     font-size: 14px;
     line-height: 20px;
 
@@ -269,8 +269,8 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
 }
 
 #chatheader {
-	border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+	border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 	border-top: none;
 }
 
