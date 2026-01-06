@@ -4131,7 +4131,7 @@ $(document).ready(function () {
             const description = row[2]?.trim();
 
             const content = `
-                <img src="${image}" style="border-radius: 4px; max-height: 300px; height: auto; width: auto;" />
+                <img src="${image}" style="border-radius: 0px; max-height: 300px; height: auto; width: auto;" />
                 <h3 class="fw-bold" style="margin-top: 10px;">${title}</h3>
                 <p style="margin-top: 5px; margin-bottom: 5px">${description}</p>
             `;
