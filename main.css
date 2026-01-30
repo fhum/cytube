@@ -26,6 +26,15 @@
   background: none !important;
 }
 
+#chatwrap a[href] {
+  color: #89b6da !important;
+  text-decoration: underline;
+}
+
+#chatwrap a[href]:visited {
+  color: #8995da !important;
+}
+
 .dropdown-menu {border: 0px !important}
 
 #chatwrap{padding-bottom:0; padding-top:0; padding-right:10px; padding-left:10px; margin:0; opacity:0.975;}
