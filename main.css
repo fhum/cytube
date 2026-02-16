@@ -316,6 +316,7 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
 .teamusada::before{background:url('https://dl.dropboxusercontent.com/scl/fi/13g4gdgim2ktswvflkg22/usada.png?rlkey=f5mtvdot9wcr914npwrv2es1e&st=wj40m5tk&dl=0');}
 .teamsusanna::before{background:url('https://dl.dropboxusercontent.com/scl/fi/ikqcjyvlo56ed9qlyt0wl/susanna.png?rlkey=x247uhe4j8iqdllheexc8a2ic&st=wqc3lo7i&dl=0');}
 .teamruri::before{background:url('https://dl.dropboxusercontent.com/scl/fi/0wj49pu8mv0mnciv1bhbp/ruri.png?rlkey=wkm7fhj77wjdfr5xfv6sk7xfy&st=xxlj6g62&dl=0');}
+.teamchiyu::before{background:url('https://dl.dropboxusercontent.com/scl/fi/f4khsl4r8qaicfndsdscm/chiyu.png?rlkey=480i9gal8mgzr6oykmsxd9dds&st=bsu8sg18&dl=0');}
 .teamk1::before{background:url('https://dl.dropboxusercontent.com/scl/fi/zjfdxmt2eqriyarrkkb7p/k1.png?rlkey=kzqcap96apzbdea1078zvmegd&st=2suvmlmv&dl=0');}
 .teamtakuji::before{background:url('https://dl.dropboxusercontent.com/scl/fi/afkukfly6a2mfa5ckqqnc/takuji.png?rlkey=viuap962htiebwtedabhlqhqo&st=hsgp61ks&dl=0');}
 .teammatsuken::before{background:url('https://dl.dropboxusercontent.com/scl/fi/b65vbfjcxpu1umwlveyvr/matsuken.png?rlkey=qke57i0bm368zguk1mckcijqt&st=nj54ifmf&dl=0');}
@@ -456,6 +457,10 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
 
 .username.teamruri {
     color: #cec8ec !important;
+}
+
+.username.teamchiyu {
+    color: #ff849e !important;
 }
 
 .username.teamk1 {
