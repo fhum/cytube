@@ -567,7 +567,12 @@ RandomImages =
 	'https://dl.dropboxusercontent.com/scl/fi/381vmcvm4agc2gb6b95xu/nWDzJhtGl1Ys2TM3ZmPiSMjF.jpeg?rlkey=2j7u3iohhvjfmil2i21vebphl&st=edtco43z&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/effx2oyf80e8ekyj0hein/__liru_pachira_uma_and_aiko_renkin_san_kyuu_magical_pokaan_drawn_by_okamura_masahiro__a19c68ece3b2413025c5b5638b193cb4.jpg?rlkey=xknbxl52jv1pf6h16uwiqyn5c&st=j05fwke8&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/op6gbcnhytnb53byt2zv5/3563632.8999999985_58f639460a03e16ceb77369836ce5109.jpg?rlkey=ydory96ovkvmsptxp0d0mh16y&st=rs53vf20&dl=0',
-	'https://dl.dropboxusercontent.com/scl/fi/lrlyg7giamwbdkuf3d8h7/38349344.7_image.png?rlkey=lg5hfymz8nlln8klaqpzi67jh&st=6ko8osgd&dl=0'
+	'https://dl.dropboxusercontent.com/scl/fi/lrlyg7giamwbdkuf3d8h7/38349344.7_image.png?rlkey=lg5hfymz8nlln8klaqpzi67jh&st=6ko8osgd&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/szkyw1chocysd1bi53ece/booool125747-2019355035545792608_p0.jpg?rlkey=zqhlyb2tkv2l62ktp91b68ip7&st=qpukjxgl&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/btxn5bnpybtz6bkv0qrle/0002.jpg?rlkey=87zyhuhmqua1n5hcczjf2wkt2&st=5ekqciyg&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/16pbayqg8km4iwjqf684l/potacure0920-2017493127603622233_p0.jpg?rlkey=abklvemx914tnyb3xrjw8ockc&st=s4pgyakd&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/ijll74d8s4l43fhk0n71q/9a53a50d14f032b59bb0f9e7aac79e98.jpg?rlkey=hecyx3u0qymqc6dvlto9f2gkk&st=kgyi20g3&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/x3t178wkbxzivz04ne3yl/d1cf96626c2d4ca34651a3d0213c76c9.jpg?rlkey=rz8ouov12s0rdevxgbj51o3hi&st=8x4l8xvb&dl=0'
   ]
 
 var AskAnswers = [
@@ -589,7 +594,9 @@ var FoodArray = [
 	'DOWN THE HATCH',
 	"Don't be a chicken and eat this chicken katsu! This one's on the house. Eat this chicken today and don't be a chicken tomorrow! Hoho! Chicken katsu is awesome!",
 	'メンカタカラメヤサイダブルニンニクアブラマシマシ',
-	'https://dl.dropboxusercontent.com/scl/fi/s34cqral6xpvf2hxj6y0r/averageblackmiddleschoolmeal.png?rlkey=kalxs2bueaqi3dl2l55xj31kn&st=i3t2l43g&dl=0:pic'
+	'https://dl.dropboxusercontent.com/scl/fi/s34cqral6xpvf2hxj6y0r/averageblackmiddleschoolmeal.png?rlkey=kalxs2bueaqi3dl2l55xj31kn&st=i3t2l43g&dl=0:pic',
+	'Thanks!',
+	'Bon Appétit!'
 ];
 
 var AzukiAzusa = [
@@ -1952,6 +1959,7 @@ function prepareMessage(msg) {
 		}
 		msg = msg.join(" ");
 	}
+	/*
 	if (msg.search(/ :|: |^:/g) > -1) {
 		msg = msg.split(" ");
 		for (w in msg) {
@@ -1961,7 +1969,7 @@ function prepareMessage(msg) {
 			}
 		}
 		msg = msg.join(" ");
-	}
+	}*/
 	for (iR in RedditChange_Links) {
 		if (msg.search(iR) > -1) {
 			msg = msg.split(" ");
