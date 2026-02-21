@@ -2680,8 +2680,6 @@ function showChatHelp() {
 function showEncodingModal() {
     createModal('Encoding Tips');
 
-	$('body').css('overflow', 'hidden');
-
 	modal.find('.modal-dialog').css({
 		'max-height': '90vh',
 		'margin': '5vh auto'
