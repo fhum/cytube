@@ -2512,10 +2512,99 @@ function unPin() {
 	$("#mode-sel").find("option[value='chMode'], option[value='sMode']").show();
 	PINNED=false;
 }
+//tips menu
+function showTipsMenu() {
+    createModal('Tips');
+
+    const modal = $('.modal').last();
+    const dialog = modal.find('.modal-dialog');
+    const content = modal.find('.modal-content');
+    const header = modal.find('.modal-header');
+    const modalBody = modal.find('.modal-body');
+	modal.find('.modal-footer').remove();
+
+    dialog.attr('style', 'width:220px !important; max-width:220px !important; margin:40px auto !important;');
+
+    content.css({
+        'padding': '10px'
+    });
+
+    header.css({
+        'padding': '8px',
+        'text-align': 'center'
+    });
+
+    modalBody.css({
+        'padding': '5px',
+        'text-align': 'center'
+    });
+
+    modalBody.append(`
+        <div style="margin-top:10px; margin-bottom:10px;">
+            <img src="https://dl.dropboxusercontent.com/scl/fi/1mre4up4ox1o6jhcnolhb/tips.png?rlkey=go0cdzly5xb4yf6huaqi3l3ar&st=8jr1mcjd&dl=0"
+                 style="max-width:300px; display:block; margin:0 auto;">
+        </div>
+    `);
+
+    const menu = $('<ul style="list-style:none;padding:0;margin:0;"></ul>');
+
+    const items = [
+		{
+			label: "Chat Commands",
+			action: function() {
+				closeModal(modal);
+				showChatHelp();
+			}
+		},
+		{
+			label: "Encoding Tips",
+			action: function() {
+				closeModal(modal);
+				showEncodingModal();
+			}
+		},
+		{
+			label: "Hosting Sites",
+			action: function() {
+				closeModal(modal);
+				showHostsModal();
+			}
+		},
+		{
+			label: "Embedding Custom Frames",
+			action: function() {
+				closeModal(modal);
+				showFramesModal();
+			}
+		}
+	];
+
+    items.forEach(item => {
+        const li = $('<li style="margin:8px 0;"></li>');
+
+        const link = $('<a href="javascript:void(0)"></a>')
+            .text(item.label)
+            .css({
+                'font-weight': 'bold',
+                'text-decoration': 'underline',
+                'display': 'inline-block',
+                'cursor': 'pointer'
+            })
+            .on("click", item.action);
+
+        li.append(link);
+        menu.append(li);
+    });
+
+    modalBody.append(menu);
+}
 
 // show chat commands modal window
 function showChatHelp() {
 	createModal('Chat Commands');
+	const modal = $('.modal').last();
+    modal.find('.modal-footer').remove();
+
 	if (UI_FontsBtn === 1) {
 		body.append('<strong>Message formatting</strong><br /><br />');
 		html='<li><code>[untz]</code>, <code>[white]</code>, <code>[yellow]</code>, <code>[orange]</code>, <code>[pink]</code>, '
@@ -2586,6 +2675,115 @@ function showChatHelp() {
 	for (cmd in defcmd) {
 		cmdlist2.append('<li><code>/' + cmd + '</code> - ' + defcmd[cmd] + '</li>');
 	}
+}
+
+function showEncodingModal() {
+    createModal('Encoding Tips');
+
+	$('body').css('overflow', 'hidden');
+
+	modal.find('.modal-dialog').css({
+		'max-height': '90vh',
+		'margin': '5vh auto'
+	});
+
+	modal.find('.modal-content').css({
+		'max-height': '90vh',
+		'overflow': 'hidden'
+	});
+
+	modal.find('.modal-body').css({
+		'overflow-y': 'auto',
+		'max-height': '75vh'
+	});
+
+    body.append(`
+        <p>When encoding, make sure your video is:</p>
+        <ul>
+			<li>720p</li>
+			<li>mp4</li>
+			<li>h264</li>
+			<li>8bit</li>
+		</ul>
+		<p>For a ~24 minute episode, aim for a size of 150-250 MB so people with shit internet 
+		aren't stuck buffering forever, and to make the upload to hosting sites faster. 
+		For a ~90 minute movie, aim for around 600-980 MB. For the bitrate, around 800-1400kb/s should be good.</p> 
+		<p>There are many programs that you can use to encode but the easiest ones are Handbrake and ffmpeg for CLI fags.</p>
+		<p>Here are some settings that you can use:</p>
+
+		<br /><strong>For Handbrake:</strong><br /><br />
+		<ul>
+			<li><b>Summary</b></br><img src="https://dl.dropboxusercontent.com/scl/fi/dwmuaoi1mzary29hwa3rb/01.jpg?rlkey=wzxhc4719mtvbgmhfd4lfswhb&st=2q4191tu&dl=0" alt="01"><p>Just check Web Optimized here. You can also come to this tab before starting the encode to make sure everything is correct.</p></li>
+			<li><b>Dimensions</b></br><img src="https://dl.dropboxusercontent.com/scl/fi/j31gxz8eeh6p74qe07q76/02.jpg?rlkey=etw4yxpymevcn3oojnrais8kj&st=sojgqv24&dl=0" alt="02"><p>Just change the resolution to 720p here</p></li>
+			<li><b>Filters</b><p>Doesn't matter.</p></li>
+			<li><b>Video</b></br><img src="https://dl.dropboxusercontent.com/scl/fi/pkswjfm4x017yarccdr4z/03.jpg?rlkey=1mn2n3uwij99wu6zblhe3homn&st=32p6m5ya&dl=0" alt="03"><p>Set the encoder to H.264 and fps same as source and variable. For Quality, constant 23 RF works for most videos. You can try to lower it for older stuff or increase it for newer media. 
+			For Encoder Preset, try to use the slowest one for a smaller high quality encode.</p></li>
+			<li><b>Audio</b></br><img src="https://dl.dropboxusercontent.com/scl/fi/9z3bg8ixvelk2f0gzlpkq/04.jpg?rlkey=t4et2dt4422b4nanzafl1fwkt&st=83t267kf&dl=0" alt="04"><p>If your video is dual-audio make sure to pick the right track here.</p></li>
+			<li><b>Subtitles</b></br><img src="https://dl.dropboxusercontent.com/scl/fi/nnvkt2nhhbxfdomnuvwx2/05.jpg?rlkey=ev1nlfw0c524tnh6fy4kylnte&st=slpwa43b&dl=0" alt="05"><p>Pick the track that has the right subtitles then check burn in to hardsub it.</p></li>
+			<li><b>Chapters</b><p>Doesn't matter.</p></li>
+			<p>Now you can save this into a custom preset to use anytime, or just use the Fast 720p30 preset if you're a lazy fuck.</p>
+		</ul>
+
+		<br /><strong>For ffmpeg nerds:</strong><br /><br />
+		<ul>
+		<li><p>Put all your videos and subtitle files in one folder and run these two batch commands:</p>
+		<code>for %f in (*.mkv) do ffmpeg -i "%f" -vcodec copy -acodec copy -map 0:v:0 -map 0:a:0 -map 0:s:0 "%~nf_SingleSubAudio.mkv"</code>
+		<p>("-map 0:a:0" and "-map 0:s:0" use the first audio/subtitle track respectively, so change the second "0" to whatever track you need. For example, "-map 0:a:1" uses the second audio track)</p>
+		<code>for %f in (*.mkv) do ffmpeg -i "%f" -pix_fmt yuv420p -speed 2 -crf 25 -vf subtitles='"%f"',scale=-2:720 "%~nf_HardSubbed_H264.mp4"</code>
+		<p>(Delete the ",scale=-2:720" if you want the original resolution)</p></li>
+		</ul>
+
+		<br /><strong>Ffmpeg to turn mp3/flacs to mp4 videos with the album cover:</strong><br /><br />
+		<ul>
+		<li><p>Put all of your shitty music in one folder and run this (make sure they have a cover first):</p>
+		<code>for %f in (*.mp3) do ffmpeg -i "%f" -an "%~nf.png" && ffmpeg -loop 1 -i "%~nf.png" -i "%f" -c:a aac -ab 256k -c:v libx264 -vf "scale=720:720:force_original_aspect_ratio=decrease,pad=720:720:-1:-1:color=black,setsar=1,format=yuv420p" -filter:a "volume=0.3" -shortest -fflags +shortest "%~nf.mp4"</code>
+		<p>(Make sure to change the *.mp3 to the format you are using)</p>
+		</li>
+		</ul>
+
+    `);
+}
+
+function showHostsModal() {
+    createModal('Hosting Sites');
+	const modal = $('.modal').last();
+    modal.find('.modal-footer').remove();
+
+    hostSites = {
+		'Desu':'https://desu.si/',
+		'Madhammer':'https://files.madhammer.club/',
+		'Litter':'https://litterbox.catbox.moe/',
+		'Fileditch':'https://fileditch.com/',
+		'Pomf':'https://pomf.anon-k9.synology.me/',
+		'Patchouli':'https://box.patchouli.moe/'
+	};
+	hostList=$('<ul />').appendTo(body);
+	for (site in hostSites) {
+		hostList.append('<li><b>' + site + '</b> - ' + `<a href="${hostSites[site]}" target="_blank">${hostSites[site]}</a>` + '</li>');
+	}
+}
+
+function showFramesModal() {
+    createModal('How to embed a custom frame');
+	const modal = $('.modal').last();
+    modal.find('.modal-footer').remove();
+
+    body.append(`
+        <p>Get the raw source for a livestream and then add it to this iframe block. For most streaming sites, there is an embed button with it. For example, r/a/dio is <b>stream.r-a-d.io/main.mp3</b></p>
+		<p><b>Note:</b> Twitch doesn't work with Cytube.</p>
+        <pre><code>&lt;iframe
+  src="YOUR STREAM HERE"
+  width="300"
+  height="80"
+  frameborder="0"
+  allow="autoplay"
+&gt;&lt;/iframe&gt;</code></pre>
+    `);
+}
+
+function closeModal(modal) {
+    modal.modal('hide');
+    modal.remove();
 }
 
 // show contributors list
@@ -3828,7 +4026,7 @@ const tipsBtn = $(`
     </li>
 `).insertAfter("#layout-link")
   .on("click", function() {
-      showChatHelp();
+      showTipsMenu();
   });
 
 const showbgbtn = $(`
