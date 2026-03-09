@@ -580,7 +580,12 @@ RandomImages =
 	'https://dl.dropboxusercontent.com/scl/fi/btxn5bnpybtz6bkv0qrle/0002.jpg?rlkey=87zyhuhmqua1n5hcczjf2wkt2&st=5ekqciyg&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/16pbayqg8km4iwjqf684l/potacure0920-2017493127603622233_p0.jpg?rlkey=abklvemx914tnyb3xrjw8ockc&st=s4pgyakd&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/ijll74d8s4l43fhk0n71q/9a53a50d14f032b59bb0f9e7aac79e98.jpg?rlkey=hecyx3u0qymqc6dvlto9f2gkk&st=kgyi20g3&dl=0',
-	'https://dl.dropboxusercontent.com/scl/fi/x3t178wkbxzivz04ne3yl/d1cf96626c2d4ca34651a3d0213c76c9.jpg?rlkey=rz8ouov12s0rdevxgbj51o3hi&st=8x4l8xvb&dl=0'
+	'https://dl.dropboxusercontent.com/scl/fi/x3t178wkbxzivz04ne3yl/d1cf96626c2d4ca34651a3d0213c76c9.jpg?rlkey=rz8ouov12s0rdevxgbj51o3hi&st=8x4l8xvb&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/fuhlcsfuyu7cvn9nsrpdh/R-_20260309040543.jpg?rlkey=896nigegt3fglumj13fw9xk4a&st=of87uw9u&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/ez2mtgt6u9tq72gxdblhf/Yotsunoha_20251203164816.png?rlkey=5qzqauceu8qfkiwaaqcj5a7a7&st=cnashilf&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/pzqdz8yspfly2n15q7ai1/fries.gif?rlkey=47pdicessh5yx51ggt23mh7fg&st=b72wfong&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/3nb970ms2iz9k7t3ojhna/pingpongpendulum.gif?rlkey=52dnxqtjn7fypogb43bscp3pq&st=wxryp5zj&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/zbuzsyg5jh2fnt3a1ptbf/mrt0m6.jpg?rlkey=iqq1gnz7p16ecd1pynyaimtmw&st=n68ytfdw&dl=0'
   ]
 
 var AskAnswers = [
