@@ -5885,7 +5885,8 @@ $("#mediaurl").on("paste", function() {
         if (IGNORED.indexOf(data.username) > -1) return;
         if (window.nnd.enabled &&
             ((data.meta && !data.meta.action) || !data.meta) &&
-            data.time >= Date.now() - 2000 &&
+			//dst fucked this time comparison, might remove condition in the future
+            data.time >= Date.now() - 30000 &&
             data.username.toLowerCase() !== '[server]' &&
             data.username.toLowerCase() !== '[voteskip]' &&
             (!CHANNEL.hasOwnProperty("bots") || (Array.isArray(CHANNEL.bots) && !~CHANNEL.bots.indexOf(data.username)))) {
