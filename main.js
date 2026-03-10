@@ -592,7 +592,15 @@ RandomImages =
 	'https://dl.dropboxusercontent.com/scl/fi/qpiepjibh6eypuaz9fqcc/__torikabuto_flower_knight_girl_drawn_by_arikawa_satoru__sample-d8d715e7534aae32bd87cfd3f3ce8cd8.jpg?rlkey=xrst09d9znm1pjlft3xkr5h1i&st=xp2d9cq8&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/xzoadbcmapeu0kr3k0gg7/__torikabuto_flower_knight_girl_drawn_by_arikawa_satoru__4d0a7ea3caf003a3f877828ccb6c1fc4.jpg?rlkey=jcvq4t73jt6ftnz4vnmxh6nn0&st=7io0md1l&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/f975n68lvs5zcec8njsfp/__torikabuto_flower_knight_girl_drawn_by_umi_suzume__275f68a204eb9448a06880f9a3f8b359.jpg?rlkey=lwy4hrl24md7aybrv2to7jeqf&st=cb4ib7wh&dl=0',
-	'https://dl.dropboxusercontent.com/scl/fi/rmtfjzz8l9in7r1gkmtvk/__torikabuto_flower_knight_girl_drawn_by_arikawa_satoru__8b13f2bffa85891b4e79606396ea0879.jpg?rlkey=sq1r74ctknak10zl16hllf3gh&st=fou2mcqv&dl=0'
+	'https://dl.dropboxusercontent.com/scl/fi/rmtfjzz8l9in7r1gkmtvk/__torikabuto_flower_knight_girl_drawn_by_arikawa_satoru__8b13f2bffa85891b4e79606396ea0879.jpg?rlkey=sq1r74ctknak10zl16hllf3gh&st=fou2mcqv&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/es8l4vy20yesdpi4zha8k/asatsukimint-2031315200964702475_p0.jpg?rlkey=1v43rt1dyhwvrp6qb3xswoce4&st=ziqblkk6&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/5v17y214x9im6dcm7ca9x/98986656_p0.jpg?rlkey=ew6logo8f334ypy1xmvf71g89&st=4uuagxd9&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/zgegtakul5vb2hqhcztbs/__daidouji_tomoyo_cardcaptor_sakura_and_1_more_drawn_by_sak_lemondisk__080f050b64ddb3bf3961f6e3f0ac5dcf.jpg?rlkey=d4lcn12ec9j52w2i6d8ecz1md&st=bqwx5t6z&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/vcxlrfpf7t39qe67xnf0y/__daidouji_tomoyo_cardcaptor_sakura_drawn_by_sak_lemondisk__d21ea82b92ac451183a56ef01169678b.jpg?rlkey=8yr6b5nf7ggnkhy1kebc1r9z2&st=pri0g4mu&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/kmkzawa2ruqhzd0bcvjr5/mimmi_sak-2023283999419015650_p0.jpg?rlkey=wr913higznqx6g9xvvz4v6ciw&st=3qul3vlu&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/w2wck0zjrjrz8r0dwrn2l/ro_ro_sh-2020765981141008537_p0.jpg?rlkey=93c1rlgcplz88yivlgf0kg37w&st=ykq6im8i&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/anheg5yl2k1d1ikxta56p/nakotorinko-1966787301326942290_p0.jpg?rlkey=d30odjidpu48zwrrgg7zq9504&st=6teoik42&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/wcws0l0sxlmxlqsz3ebyq/__arle_nadja_and_carbuncle_puyopuyo_and_1_more_drawn_by_kibisake__a67c9f1a288477cf94e806d71c4110b6.png?rlkey=5few358hhxe28oa8j500tuhjl&st=8rrcnqg6&dl=0'
   ]
 
 var AskAnswers = [
