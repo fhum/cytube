@@ -93,6 +93,7 @@ var CustomThemeMenu_Items = [  // Nonowa is the default one
 	'Ruri',
 	'Chiyu',
 	'Umi',
+	'Flower',
     'K1',
     'Takuji',
     'Matsuken',
@@ -139,6 +140,7 @@ var UserlistBackgrounds = {
 	'Ruri': 'url(https://dl.dropboxusercontent.com/scl/fi/2exez0edmvc5whwmrj4d8/ruri-chatbox.png?rlkey=kw8aslanqxdab4vkx1r4q81hj&st=vg1o2ww6&dl=0)',
 	'Chiyu': 'url(https://dl.dropboxusercontent.com/scl/fi/n7dy54czjj6n3zj5qqk8p/c12-chatbox.png?rlkey=9gg98qj4rbo1e192bw2wbz7v0&st=esrahq5o&dl=0)',
 	'Umi': 'url(https://dl.dropboxusercontent.com/scl/fi/fwq5ns0wos1cocnhpl8s4/umi-chatbox.png?rlkey=ozgw37b7t4dqxrv4gft7q5cgi&st=wm55iem7&dl=0)',
+	'Flower': 'url(https://dl.dropboxusercontent.com/scl/fi/th5ogzylfftepsg56hq83/flower-chatbox.png?rlkey=2nt2e4lu70fliy4bi0bmmovt0&st=56akc0jx&dl=0)',
 	'K1': 'url(https://dl.dropboxusercontent.com/scl/fi/ke4krkaoq5nft6iwa7liu/k1-chatbox.png?rlkey=0ysk8jco1k5j7v5mdjq232rgo&st=fedzfcle&dl=0)',
 	'Takuji': 'url(https://dl.dropboxusercontent.com/scl/fi/aspib28olmcigbt7pirix/tkj-chatbox.png?rlkey=ni5p7u79sna91u7n08mver5b5&st=zysm9ihd&dl=0)',
 	'Matsuken': 'url(https://dl.dropboxusercontent.com/scl/fi/h1dbqte0h2j8wfq6hdi41/matsuken-chatbox.png?rlkey=vevcx6of1i42dudboyp6vr3qu&st=mfic7u0w&dl=0)',
@@ -185,6 +187,7 @@ var UserIcons = {
 	'Ruri': 'url(https://dl.dropboxusercontent.com/scl/fi/0wj49pu8mv0mnciv1bhbp/ruri.png?rlkey=wkm7fhj77wjdfr5xfv6sk7xfy&st=xxlj6g62&dl=0)',
 	'Chiyu': 'url(https://dl.dropboxusercontent.com/scl/fi/f4khsl4r8qaicfndsdscm/chiyu.png?rlkey=480i9gal8mgzr6oykmsxd9dds&st=bsu8sg18&dl=0)',
 	'Umi': 'url(https://dl.dropboxusercontent.com/scl/fi/sb9qdpigh7iq07bt7urjq/umi.png?rlkey=0wzx93ilpdic4wcfi8v6ps5z4&st=0c5x3oel&dl=0)',
+	'Flower': 'url(https://dl.dropboxusercontent.com/scl/fi/55bk0ul6ev9fvj5zt27n4/flower.png?rlkey=b7fak4iq3h6o5e0m83ps16wym&st=i56hv3fh&dl=0)',
 	'K1': 'url(https://dl.dropboxusercontent.com/scl/fi/zjfdxmt2eqriyarrkkb7p/k1.png?rlkey=kzqcap96apzbdea1078zvmegd&st=2suvmlmv&dl=0)',
 	'Takuji': 'url(https://dl.dropboxusercontent.com/scl/fi/afkukfly6a2mfa5ckqqnc/takuji.png?rlkey=viuap962htiebwtedabhlqhqo&st=hsgp61ks&dl=0)',
 	'Matsuken': 'url(https://dl.dropboxusercontent.com/scl/fi/b65vbfjcxpu1umwlveyvr/matsuken.png?rlkey=qke57i0bm368zguk1mckcijqt&st=nj54ifmf&dl=0)',
@@ -263,6 +266,7 @@ var userColors = {
 	"ruri": "#cec8ec",
 	"chiyu": "#ff849e",
 	"umi": "#82c0fa",
+	"flower": "#c1e7ec",
 	"k1": "#af4d5a",
 	"takuji": "#6beeff",
 	"matsuken": "#e2bd18",
@@ -3271,7 +3275,7 @@ if (USEROPTS.hidevid) {
 }
 
 //Team Color
-var teamList_4cc = ["azusa", "tsukiko", "akane", "aoi", "zundamon", "kiritan", "akari", "yukari", "usagi", "shinobu", "hachikuji", "nadeko", "ougi", "yotsugi", "hachiroku", "rika", "hanyuu", "arisu", "murasame","sora", "lum", "liru", "dokuro", "sabato", "komugi", "koyori", "dejiko", "puchiko", "usada", "susanna", "ruri", "chiyu", "umi", "k1", "takuji", "matsuken", "jun", "madarame", "yajuu", "payatan","fernandeath","dokuganp","nonowa"];
+var teamList_4cc = ["azusa", "tsukiko", "akane", "aoi", "zundamon", "kiritan", "akari", "yukari", "usagi", "shinobu", "hachikuji", "nadeko", "ougi", "yotsugi", "hachiroku", "rika", "hanyuu", "arisu", "murasame","sora", "lum", "liru", "dokuro", "sabato", "komugi", "koyori", "dejiko", "puchiko", "usada", "susanna", "ruri", "chiyu", "umi", "flower", "k1", "takuji", "matsuken", "jun", "madarame", "yajuu", "payatan","fernandeath","dokuganp","nonowa"];
 
 //Format messages upon page load because they're handled differently and I can't find the function
 (function() {
