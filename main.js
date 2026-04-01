@@ -2608,6 +2608,13 @@ function showTipsMenu() {
 				closeModal(modal);
 				showFramesModal();
 			}
+		},
+		{
+			label: "Shit keeps buffering",
+			action: function() {
+				closeModal(modal);
+				window.open("https://animepahe.com/", "_blank");
+			}
 		}
 	];
 
