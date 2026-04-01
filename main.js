@@ -2613,6 +2613,11 @@ function showTipsMenu() {
 			label: "Shit keeps buffering",
 			action: function() {
 				closeModal(modal);
+				document.body.classList.remove("modal-open");
+				document.body.style.overflow = "";
+				document.body.style.paddingRight = "";
+
+				document.querySelectorAll(".modal-backdrop").forEach(el => el.remove());
 				window.open("https://animepahe.com/", "_blank");
 			}
 		}
