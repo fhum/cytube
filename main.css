@@ -326,6 +326,7 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
 .teammadarame::before{background:url('https://dl.dropboxusercontent.com/scl/fi/whjjxxfr08h8ep9xpva78/madarame.png?rlkey=mtreo7zvpgssqmi57tinxis1h&st=7ygyj1be&dl=0');}
 .teamyajuu::before{background:url('https://dl.dropboxusercontent.com/scl/fi/1srwnw4h0dxnu9pkkbkqi/yajuu.png?rlkey=8bqiuqk4us4shry93nu3s7ngr&st=m6esc14t&dl=0');}
 .teampayatan::before{background:url('https://dl.dropboxusercontent.com/scl/fi/t9tpib38mzaxc71qygkdk/payatan.png?rlkey=we3q4tffcghonwjaa2cpbgcdb&st=0vl0jyjk&dl=0');}
+.teamunagi::before{background:url('https://dl.dropboxusercontent.com/scl/fi/5ve8704pevh0ydjofsl1s/unagi.png?rlkey=n11c0voehj7378o8jx5hwmxis&st=zya7ufft&dl=0');}
 .teamfernandeath::before{background:url('https://dl.dropboxusercontent.com/scl/fi/blpynt85z9futg2fnlak0/fernandeath.png?rlkey=2ctc45gsnl1x9k6xmmgv6tc83&st=klvds179&dl=0');}
 .teamdokuganp::before{background:url('https://dl.dropboxusercontent.com/scl/fi/yaouih80pwz4zf3or2j5c/dokuganP.png?rlkey=7hkgwcnphgb0k7hu07zxccw2v&st=qf6ngypu&dl=0');}
 .teamnonowa::before{background:url('https://dl.dropboxusercontent.com/scl/fi/fkgf9lmurzg7qe3h9hsgs/nonowa.png?rlkey=kbi5yd5alukj27fi54wtw4ob5&st=v2vbzy8g&dl=0');}
@@ -500,6 +501,10 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
 
 .username.teampayatan {
     color: #f0dea6 !important;
+}
+
+.username.teamunagi {
+    color: #bd3345 !important;
 }
 
 .username.teamfernandeath {
