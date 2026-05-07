@@ -7,8 +7,8 @@ var UI_CustomThemeMenu = 1;		// [&] enable custom themes
 var UI_RemoveHomeMenu = 1;		// removing 'Home' menu from the header
 var UI_TitleBarDescription = 1;	// [&] custom title bar description
 var UI_UserCommands = 1;		// [&] additional commands in the chat window
-var UI_Func = 1;				// anti-AFK and auto chat clearing panel
-var UI_AutoScroll = 1;			// auto scroll chat
+var UI_Func = 0;				// anti-AFK and auto chat clearing panel
+var UI_AutoScroll = 0;			// auto scroll chat
 var UI_WC = 0;					// [&] random background image for empty playlist row corner
 					// [ REQUIRES: UI_Pixel enabled ]
 var UI_Pixel = 0;				// [&] special signs preceding messages in the chat window for selected users
@@ -94,11 +94,15 @@ var CustomThemeMenu_Items = [  // Nonowa is the default one
 	'Chiyu',
 	'Umi',
 	'Flower',
+	'Hazuki',
+	'Pengin',
+	'Binchou',
     'K1',
     'Takuji',
     'Matsuken',
     'Jun',
 	'Madarame',
+	'Kirei',
 	'Yajuu',
 	'Payatan',
 	'Unagi',
@@ -142,11 +146,15 @@ var UserlistBackgrounds = {
 	'Chiyu': 'url(https://dl.dropboxusercontent.com/scl/fi/n7dy54czjj6n3zj5qqk8p/c12-chatbox.png?rlkey=9gg98qj4rbo1e192bw2wbz7v0&st=esrahq5o&dl=0)',
 	'Umi': 'url(https://dl.dropboxusercontent.com/scl/fi/fwq5ns0wos1cocnhpl8s4/umi-chatbox.png?rlkey=ozgw37b7t4dqxrv4gft7q5cgi&st=wm55iem7&dl=0)',
 	'Flower': 'url(https://dl.dropboxusercontent.com/scl/fi/th5ogzylfftepsg56hq83/flower-chatbox.png?rlkey=2nt2e4lu70fliy4bi0bmmovt0&st=56akc0jx&dl=0)',
+	'Hazuki': 'url(https://dl.dropboxusercontent.com/scl/fi/o3i0ohwgeepp6ekaozg2i/haz-chatbox.png?rlkey=qoipa3aablosdawwqwxur261a&st=23faqumn&dl=0)',
+	'Pengin': 'url(https://dl.dropboxusercontent.com/scl/fi/qbkr46r1xgt2w6u0r2cck/pen-chatbox.png?rlkey=bcxvee20mtfvja48twf8zr9ul&st=4jw36k3s&dl=0)',
+	'Binchou': 'url(https://dl.dropboxusercontent.com/scl/fi/4xl8qnusq3i2i1fmbh1ek/b-chatbox.png?rlkey=qu095hjki5pcqq3snp1l4w5e8&st=ynxlioxo&dl=0)',
 	'K1': 'url(https://dl.dropboxusercontent.com/scl/fi/ke4krkaoq5nft6iwa7liu/k1-chatbox.png?rlkey=0ysk8jco1k5j7v5mdjq232rgo&st=fedzfcle&dl=0)',
 	'Takuji': 'url(https://dl.dropboxusercontent.com/scl/fi/aspib28olmcigbt7pirix/tkj-chatbox.png?rlkey=ni5p7u79sna91u7n08mver5b5&st=zysm9ihd&dl=0)',
 	'Matsuken': 'url(https://dl.dropboxusercontent.com/scl/fi/h1dbqte0h2j8wfq6hdi41/matsuken-chatbox.png?rlkey=vevcx6of1i42dudboyp6vr3qu&st=mfic7u0w&dl=0)',
     'Jun': 'url(https://dl.dropboxusercontent.com/scl/fi/lo48sbm2triv5b84x7r5x/jun.png?rlkey=287w0ev2wcbjts7lxji7as847&st=2hdqqxbm&dl=0)',
 	'Madarame': 'url(https://dl.dropboxusercontent.com/scl/fi/xxm1p650yx8pswgkyh0ub/mdrm-chatbox.png?rlkey=6gda8f27e2nlgft6q88xa29n7&st=2ck9cwbj&dl=0)',
+	'Kirei': 'url(https://dl.dropboxusercontent.com/scl/fi/2y36ox8tducw50xjutzhu/g-chatbox.png?rlkey=uynkbhjaf1jukmk6gap61srpz&st=bt4lgouo&dl=0)',
 	'Yajuu': 'url(https://dl.dropboxusercontent.com/scl/fi/r643b05ermjedlkc6jwlv/y-chatbox.png?rlkey=8bk89au35fa54dj3samyg2kne&st=nu5qp4nq&dl=0)',
 	'Payatan': 'url(https://dl.dropboxusercontent.com/scl/fi/8q7xge64xvg5vmiapmufg/py-chatbox.png?rlkey=rk7zeq45qnoebsnogrqx8mirm&st=srp5k9r2&dl=0)',
 	'Unagi': 'url(https://dl.dropboxusercontent.com/scl/fi/x1nznea4nga0ro93po0fb/una-chatbox.png?rlkey=z4eau5xwcxb43x1wrccud0n45&st=fq6meh7e&dl=0)',
@@ -190,11 +198,15 @@ var UserIcons = {
 	'Chiyu': 'url(https://dl.dropboxusercontent.com/scl/fi/f4khsl4r8qaicfndsdscm/chiyu.png?rlkey=480i9gal8mgzr6oykmsxd9dds&st=bsu8sg18&dl=0)',
 	'Umi': 'url(https://dl.dropboxusercontent.com/scl/fi/sb9qdpigh7iq07bt7urjq/umi.png?rlkey=0wzx93ilpdic4wcfi8v6ps5z4&st=0c5x3oel&dl=0)',
 	'Flower': 'url(https://dl.dropboxusercontent.com/scl/fi/55bk0ul6ev9fvj5zt27n4/flower.png?rlkey=b7fak4iq3h6o5e0m83ps16wym&st=i56hv3fh&dl=0)',
+	'Hazuki': 'url(https://dl.dropboxusercontent.com/scl/fi/aludk8ba3yrzq3el2bmto/hazuki.png?rlkey=8bthxbszt9oekgk211t70o786&st=kvgeme51&dl=0)',
+	'Pengin': 'url(https://dl.dropboxusercontent.com/scl/fi/auz1kxa19ha0d9o6aivxq/pengin.png?rlkey=wy3ame3q28wm9ski9pf70v941&st=74kopm57&dl=0)',
+	'Binchou': 'url(https://dl.dropboxusercontent.com/scl/fi/ta9nbm3b07fqjalii7ikh/binchou.png?rlkey=d3ccjjtdcdw1vgc5ihkg4bqai&st=q5hva04m&dl=0)',
 	'K1': 'url(https://dl.dropboxusercontent.com/scl/fi/zjfdxmt2eqriyarrkkb7p/k1.png?rlkey=kzqcap96apzbdea1078zvmegd&st=2suvmlmv&dl=0)',
 	'Takuji': 'url(https://dl.dropboxusercontent.com/scl/fi/afkukfly6a2mfa5ckqqnc/takuji.png?rlkey=viuap962htiebwtedabhlqhqo&st=hsgp61ks&dl=0)',
 	'Matsuken': 'url(https://dl.dropboxusercontent.com/scl/fi/b65vbfjcxpu1umwlveyvr/matsuken.png?rlkey=qke57i0bm368zguk1mckcijqt&st=nj54ifmf&dl=0)',
     'Jun': 'url(https://dl.dropboxusercontent.com/scl/fi/e6fr3cer9ffeupz5a7whn/jun.png?rlkey=nnj5cmdckkl6mcygxma7110u9&st=k1wg625t&dl=0)',
 	'Madarame': 'url(https://dl.dropboxusercontent.com/scl/fi/whjjxxfr08h8ep9xpva78/madarame.png?rlkey=mtreo7zvpgssqmi57tinxis1h&st=7ygyj1be&dl=0)',
+	'Kirei': 'url(https://dl.dropboxusercontent.com/scl/fi/1rzozwz3w3efuh3wspke9/kirei.png?rlkey=iylmqtrm0ht1hiv01ywm8bc1b&st=n0ophw7k&dl=0)',
 	'Yajuu': 'url(https://dl.dropboxusercontent.com/scl/fi/1srwnw4h0dxnu9pkkbkqi/yajuu.png?rlkey=8bqiuqk4us4shry93nu3s7ngr&st=m6esc14t&dl=0)',
 	'Payatan': 'url(https://dl.dropboxusercontent.com/scl/fi/t9tpib38mzaxc71qygkdk/payatan.png?rlkey=we3q4tffcghonwjaa2cpbgcdb&st=0vl0jyjk&dl=0)',
 	'Unagi': 'url(https://dl.dropboxusercontent.com/scl/fi/5ve8704pevh0ydjofsl1s/unagi.png?rlkey=n11c0voehj7378o8jx5hwmxis&st=zya7ufft&dl=0)',
@@ -270,11 +282,15 @@ var userColors = {
 	"chiyu": "#ff849e",
 	"umi": "#82c0fa",
 	"flower": "#c1e7ec",
+	"hazuki": "#9e5ab3",
+	"pengin": "#306388",
+	"binchou": "#8dcaf6",
 	"k1": "#af4d5a",
 	"takuji": "#6beeff",
 	"matsuken": "#e2bd18",
     "jun": "#89b6da",
 	"madarame": "#9c9c9c",
+	"kirei": "#525bad",
 	"yajuu": "#d8a89c",
 	"payatan": "#f0dea6",
 	'unagi': "#bd3345",
@@ -612,13 +628,13 @@ RandomImages =
   ]
 
 var AskAnswers = [
-	'100% for sure.', 'Definitely yes.', 'Yes.', 'Probably.', 'Not any chance.', 'Definitely no.', 
+	'100% not possible.', 'I think not.', 'Yes.', 'Probably.', 'Not any chance.', 'Definitely no.', 
 	'A little chance.', 'No.', '50/50', 'Maybe.', 'I refuse to answer.', 'Your question is so stupid that you should just leave.',
 	'...', 'What was the question?', 'Fuck you.'
 ];
 
 AskAnswers = [
-	'100% for sure.', 'Definitely yes.', 'Yes.', 'Probably.', 'Not any chance.', 'Definitely no.', 
+	'100% not possible.', 'I think not.', 'Yes.', 'Probably.', 'Not any chance.', 'Definitely no.', 
 	'A little chance.', 'No.', '50/50', 'Maybe.', 'I refuse to answer.', 'Your question is so stupid that you should just leave.',
 	'...', 'What was the question?', 'Fuck you.'
 ];
@@ -3291,7 +3307,7 @@ if (USEROPTS.hidevid) {
 }
 
 //Team Color
-var teamList_4cc = ["azusa", "tsukiko", "akane", "aoi", "zundamon", "kiritan", "akari", "yukari", "usagi", "shinobu", "hachikuji", "nadeko", "ougi", "yotsugi", "hachiroku", "rika", "hanyuu", "arisu", "murasame","sora", "lum", "liru", "dokuro", "sabato", "komugi", "koyori", "dejiko", "puchiko", "usada", "susanna", "ruri", "chiyu", "umi", "flower", "k1", "takuji", "matsuken", "jun", "madarame", "yajuu", "payatan", "unagi","fernandeath","dokuganp","nonowa"];
+var teamList_4cc = ["azusa", "tsukiko", "akane", "aoi", "zundamon", "kiritan", "akari", "yukari", "usagi", "shinobu", "hachikuji", "nadeko", "ougi", "yotsugi", "hachiroku", "rika", "hanyuu", "arisu", "murasame","sora", "lum", "liru", "dokuro", "sabato", "komugi", "koyori", "dejiko", "puchiko", "usada", "susanna", "ruri", "chiyu", "umi", "flower", "hazuki", "pengin", "binchou", "k1", "takuji", "matsuken", "jun", "madarame", "kirei", "yajuu", "payatan", "unagi","fernandeath","dokuganp","nonowa"];
 
 //Format messages upon page load because they're handled differently and I can't find the function
 (function() {
@@ -5462,6 +5478,7 @@ function removeProfile(rdiv) {
 	rdiv.children().eq(0).removeAttr("style");
 	rdiv.children().eq(1).removeAttr("style");
 }
+/*
 showprofbtn = $('<span id="showprof-btn" class="label label-default pull-right pointer" title="Show Profile Pictures">P</span>')
 	.insertAfter("#modflair")
 	.on("click", function() {
@@ -5483,7 +5500,7 @@ showprofbtn = $('<span id="showprof-btn" class="label label-default pull-right p
 if (SHOWPROF) {
 	showprofbtn.addClass('btn-success');
 	showProfiles();
-}
+}*/
 
 LOADED = true;
 
