@@ -624,7 +624,15 @@ RandomImages =
 	'https://dl.dropboxusercontent.com/scl/fi/kmkzawa2ruqhzd0bcvjr5/mimmi_sak-2023283999419015650_p0.jpg?rlkey=wr913higznqx6g9xvvz4v6ciw&st=3qul3vlu&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/w2wck0zjrjrz8r0dwrn2l/ro_ro_sh-2020765981141008537_p0.jpg?rlkey=93c1rlgcplz88yivlgf0kg37w&st=ykq6im8i&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/anheg5yl2k1d1ikxta56p/nakotorinko-1966787301326942290_p0.jpg?rlkey=d30odjidpu48zwrrgg7zq9504&st=6teoik42&dl=0',
-	'https://dl.dropboxusercontent.com/scl/fi/wcws0l0sxlmxlqsz3ebyq/__arle_nadja_and_carbuncle_puyopuyo_and_1_more_drawn_by_kibisake__a67c9f1a288477cf94e806d71c4110b6.png?rlkey=5few358hhxe28oa8j500tuhjl&st=8rrcnqg6&dl=0'
+	'https://dl.dropboxusercontent.com/scl/fi/wcws0l0sxlmxlqsz3ebyq/__arle_nadja_and_carbuncle_puyopuyo_and_1_more_drawn_by_kibisake__a67c9f1a288477cf94e806d71c4110b6.png?rlkey=5few358hhxe28oa8j500tuhjl&st=8rrcnqg6&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/fwh4o2a1an6gjk4fb6c1t/896d9278311baf9d70dd1f9518d39f77.jpg?rlkey=jsjrl4tet1jd0jxxlftfoliu3&st=48r2p524&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/7yrrruvbjv5rq02tvlk9z/yuai_004.png?rlkey=wt9oazko5agr9ph5yj13zmjet&st=3s74x47d&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/c28gusdesouargk0ow6qj/sintancostan-2059055487442895111_p0.jpg?rlkey=qko7o1dh82jemtkxiq742zjxt&st=r74aabw4&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/f299o87th012kyxcqj2y9/ActanCyaga-2047303957006147815_p0.jpg?rlkey=b2gw7itb43qkmwgbkei1h2e2e&st=pxgfuspz&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/y6f8jcm64yhbx0d8k9w2u/ActanCyaga-2059305393013334361_p0.jpg?rlkey=2hcjvlydum2ay37lhq3z8w79z&st=x36vcndv&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/k6yfiy2hw62h47sw40xil/__kotonoha_akane_and_kotonoha_aoi_voiceroid_drawn_by_nekomo_yumenkmc__a2dde836083152037201da866b19c050.jpg?rlkey=ysqcxktlos2u9eqa3x64fkjxx&st=3dcpotdx&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/cngekcm3vqgvh2jg2qzpk/47defcf5516782937267c50f06283f9b.png?rlkey=u4qf9kncvi09ek21ldzxnn2dr&st=ykq5mojx&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/0oo37ys3r24ege3i0uyc9/ActanCyaga-2048215616948158627_p0.jpg?rlkey=h1371ah5d2xrkb5v6v0r39yxv&st=ztzh7nx4&dl=0'
   ]
 
 var AskAnswers = [
