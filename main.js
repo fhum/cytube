@@ -295,7 +295,7 @@ var userColors = {
 	"pengin": "#306388",
 	"binchou": "#8dcaf6",
 	"holo": "#eea060",
-	"tama": "#776e8c",
+	"tama": "#8c80ac",
 	"kokoro": "#d4585e",
 	"k1": "#af4d5a",
 	"takuji": "#6beeff",
