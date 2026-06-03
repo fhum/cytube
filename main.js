@@ -97,6 +97,9 @@ var CustomThemeMenu_Items = [  // Nonowa is the default one
 	'Hazuki',
 	'Pengin',
 	'Binchou',
+	'Holo',
+	'Tama',
+	'Kokoro',
     'K1',
     'Takuji',
     'Matsuken',
@@ -149,6 +152,9 @@ var UserlistBackgrounds = {
 	'Hazuki': 'url(https://dl.dropboxusercontent.com/scl/fi/o3i0ohwgeepp6ekaozg2i/haz-chatbox.png?rlkey=qoipa3aablosdawwqwxur261a&st=23faqumn&dl=0)',
 	'Pengin': 'url(https://dl.dropboxusercontent.com/scl/fi/qbkr46r1xgt2w6u0r2cck/pen-chatbox.png?rlkey=bcxvee20mtfvja48twf8zr9ul&st=4jw36k3s&dl=0)',
 	'Binchou': 'url(https://dl.dropboxusercontent.com/scl/fi/4xl8qnusq3i2i1fmbh1ek/b-chatbox.png?rlkey=qu095hjki5pcqq3snp1l4w5e8&st=ynxlioxo&dl=0)',
+	'Holo': 'url(https://dl.dropboxusercontent.com/scl/fi/g47i7ufqk08bdfa57j6s7/holo-chatbox.png?rlkey=xsv7wo1vgmu27dshqfukhm0ly&st=1smqf1iq&dl=0)',
+	'Tama': 'url(https://dl.dropboxusercontent.com/scl/fi/ao0ym139086f08h2zv1p4/tama-chatbox.png?rlkey=ernd0d4y7pqi9a5sq4fb96wld&st=jnmr0jjd&dl=0)',
+	'Kokoro': 'url(https://dl.dropboxusercontent.com/scl/fi/vbnldznvnzc2f81yea2k4/kkr-chatbox.png?rlkey=pz4bpn2d8fk8g0r9cpwsx8335&st=11iisdrs&dl=0)',
 	'K1': 'url(https://dl.dropboxusercontent.com/scl/fi/ke4krkaoq5nft6iwa7liu/k1-chatbox.png?rlkey=0ysk8jco1k5j7v5mdjq232rgo&st=fedzfcle&dl=0)',
 	'Takuji': 'url(https://dl.dropboxusercontent.com/scl/fi/aspib28olmcigbt7pirix/tkj-chatbox.png?rlkey=ni5p7u79sna91u7n08mver5b5&st=zysm9ihd&dl=0)',
 	'Matsuken': 'url(https://dl.dropboxusercontent.com/scl/fi/h1dbqte0h2j8wfq6hdi41/matsuken-chatbox.png?rlkey=vevcx6of1i42dudboyp6vr3qu&st=mfic7u0w&dl=0)',
@@ -201,6 +207,9 @@ var UserIcons = {
 	'Hazuki': 'url(https://dl.dropboxusercontent.com/scl/fi/aludk8ba3yrzq3el2bmto/hazuki.png?rlkey=8bthxbszt9oekgk211t70o786&st=kvgeme51&dl=0)',
 	'Pengin': 'url(https://dl.dropboxusercontent.com/scl/fi/auz1kxa19ha0d9o6aivxq/pengin.png?rlkey=wy3ame3q28wm9ski9pf70v941&st=74kopm57&dl=0)',
 	'Binchou': 'url(https://dl.dropboxusercontent.com/scl/fi/ta9nbm3b07fqjalii7ikh/binchou.png?rlkey=d3ccjjtdcdw1vgc5ihkg4bqai&st=q5hva04m&dl=0)',
+	'Holo': 'url(https://dl.dropboxusercontent.com/scl/fi/v5pt4tzh11e9s0kyxw9rl/holo.png?rlkey=zmp7hrr7bt1d48utt9mln5obx&st=lp34lx6n&dl=0)',
+	'Tama': 'url(https://dl.dropboxusercontent.com/scl/fi/40xqjmsncwrgumhrx1r40/tama.png?rlkey=yh4rq891y0zf9rcnqbk7shsrr&st=ycp9nbzd&dl=0)',
+	'Kokoro': 'url(https://dl.dropboxusercontent.com/scl/fi/e0eewv8wghhac79lvdr4x/kokoro.png?rlkey=1vcenlvkvk472srzppth8plsa&st=kczn3qjn&dl=0)',
 	'K1': 'url(https://dl.dropboxusercontent.com/scl/fi/zjfdxmt2eqriyarrkkb7p/k1.png?rlkey=kzqcap96apzbdea1078zvmegd&st=2suvmlmv&dl=0)',
 	'Takuji': 'url(https://dl.dropboxusercontent.com/scl/fi/afkukfly6a2mfa5ckqqnc/takuji.png?rlkey=viuap962htiebwtedabhlqhqo&st=hsgp61ks&dl=0)',
 	'Matsuken': 'url(https://dl.dropboxusercontent.com/scl/fi/b65vbfjcxpu1umwlveyvr/matsuken.png?rlkey=qke57i0bm368zguk1mckcijqt&st=nj54ifmf&dl=0)',
@@ -285,6 +294,9 @@ var userColors = {
 	"hazuki": "#9e5ab3",
 	"pengin": "#306388",
 	"binchou": "#8dcaf6",
+	"holo": "#eea060",
+	"tama": "#776e8c",
+	"kokoro": "#d4585e",
 	"k1": "#af4d5a",
 	"takuji": "#6beeff",
 	"matsuken": "#e2bd18",
@@ -632,7 +644,8 @@ RandomImages =
 	'https://dl.dropboxusercontent.com/scl/fi/y6f8jcm64yhbx0d8k9w2u/ActanCyaga-2059305393013334361_p0.jpg?rlkey=2hcjvlydum2ay37lhq3z8w79z&st=x36vcndv&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/k6yfiy2hw62h47sw40xil/__kotonoha_akane_and_kotonoha_aoi_voiceroid_drawn_by_nekomo_yumenkmc__a2dde836083152037201da866b19c050.jpg?rlkey=ysqcxktlos2u9eqa3x64fkjxx&st=3dcpotdx&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/cngekcm3vqgvh2jg2qzpk/47defcf5516782937267c50f06283f9b.png?rlkey=u4qf9kncvi09ek21ldzxnn2dr&st=ykq5mojx&dl=0',
-	'https://dl.dropboxusercontent.com/scl/fi/0oo37ys3r24ege3i0uyc9/ActanCyaga-2048215616948158627_p0.jpg?rlkey=h1371ah5d2xrkb5v6v0r39yxv&st=ztzh7nx4&dl=0'
+	'https://dl.dropboxusercontent.com/scl/fi/0oo37ys3r24ege3i0uyc9/ActanCyaga-2048215616948158627_p0.jpg?rlkey=h1371ah5d2xrkb5v6v0r39yxv&st=ztzh7nx4&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/pju09cvsb3xm8m0b6tnye/2.jpg?rlkey=0gb9pep6mvql4l91hu0cjyyl6&st=gx3t14gw&dl=0'
   ]
 
 var AskAnswers = [
@@ -3315,7 +3328,7 @@ if (USEROPTS.hidevid) {
 }
 
 //Team Color
-var teamList_4cc = ["azusa", "tsukiko", "akane", "aoi", "zundamon", "kiritan", "akari", "yukari", "usagi", "shinobu", "hachikuji", "nadeko", "ougi", "yotsugi", "hachiroku", "rika", "hanyuu", "arisu", "murasame","sora", "lum", "liru", "dokuro", "sabato", "komugi", "koyori", "dejiko", "puchiko", "usada", "susanna", "ruri", "chiyu", "umi", "flower", "hazuki", "pengin", "binchou", "k1", "takuji", "matsuken", "jun", "madarame", "kirei", "yajuu", "payatan", "unagi","fernandeath","dokuganp","nonowa"];
+var teamList_4cc = ["azusa", "tsukiko", "akane", "aoi", "zundamon", "kiritan", "akari", "yukari", "usagi", "shinobu", "hachikuji", "nadeko", "ougi", "yotsugi", "hachiroku", "rika", "hanyuu", "arisu", "murasame","sora", "lum", "liru", "dokuro", "sabato", "komugi", "koyori", "dejiko", "puchiko", "usada", "susanna", "ruri", "chiyu", "umi", "flower", "hazuki", "pengin", "binchou", "holo", "tama", "kokoro", "k1", "takuji", "matsuken", "jun", "madarame", "kirei", "yajuu", "payatan", "unagi","fernandeath","dokuganp","nonowa"];
 
 //Format messages upon page load because they're handled differently and I can't find the function
 (function() {

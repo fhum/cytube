@@ -322,6 +322,9 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
 .teamhazuki::before{background:url('https://dl.dropboxusercontent.com/scl/fi/aludk8ba3yrzq3el2bmto/hazuki.png?rlkey=8bthxbszt9oekgk211t70o786&st=kvgeme51&dl=0');}
 .teampengin::before{background:url('https://dl.dropboxusercontent.com/scl/fi/auz1kxa19ha0d9o6aivxq/pengin.png?rlkey=wy3ame3q28wm9ski9pf70v941&st=74kopm57&dl=0');}
 .teambinchou::before{background:url('https://dl.dropboxusercontent.com/scl/fi/ta9nbm3b07fqjalii7ikh/binchou.png?rlkey=d3ccjjtdcdw1vgc5ihkg4bqai&st=q5hva04m&dl=0');}
+.teamholo::before{background:url('https://dl.dropboxusercontent.com/scl/fi/v5pt4tzh11e9s0kyxw9rl/holo.png?rlkey=zmp7hrr7bt1d48utt9mln5obx&st=d3f6x8xw&dl=0');}
+.teamtama::before{background:url('https://dl.dropboxusercontent.com/scl/fi/40xqjmsncwrgumhrx1r40/tama.png?rlkey=yh4rq891y0zf9rcnqbk7shsrr&st=v8g720du&dl=0');}
+.teamkokoro::before{background:url('https://dl.dropboxusercontent.com/scl/fi/e0eewv8wghhac79lvdr4x/kokoro.png?rlkey=1vcenlvkvk472srzppth8plsa&st=cjzobdbn&dl=0');}
 .teamk1::before{background:url('https://dl.dropboxusercontent.com/scl/fi/zjfdxmt2eqriyarrkkb7p/k1.png?rlkey=kzqcap96apzbdea1078zvmegd&st=2suvmlmv&dl=0');}
 .teamtakuji::before{background:url('https://dl.dropboxusercontent.com/scl/fi/afkukfly6a2mfa5ckqqnc/takuji.png?rlkey=viuap962htiebwtedabhlqhqo&st=hsgp61ks&dl=0');}
 .teammatsuken::before{background:url('https://dl.dropboxusercontent.com/scl/fi/b65vbfjcxpu1umwlveyvr/matsuken.png?rlkey=qke57i0bm368zguk1mckcijqt&st=nj54ifmf&dl=0');}
@@ -489,6 +492,18 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
 
 .username.teamflower {
     color: #c1e7ec !important
+}
+
+.username.teamholo {
+    color: #eea060 !important
+}
+
+.username.teamtama {
+    color: #776e8c !important
+}
+
+.username.teamkokoro {
+    color: #d4585e !important
 }
 
 .username.teamk1 {
