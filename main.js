@@ -2756,7 +2756,7 @@ function showChatHelp() {
 	}
 	defcmd = {
 		'me':'Shows an action-style message. (username does something, e.g. <i>/me is dancing</i>)',
-		'sp':'Hides a message in a hover-to-show spoiler box. (e.g. <i>/sp This message is hidden</i>)',
+		'sp':'<s>Hides a message in a hover-to-show spoiler box. (e.g. <i>/sp This message is hidden</i>)</s> Doesn\'t work, just use ctrl+s instead.',
 		'afk':'Toggles AFK (Away From Keyboard) status. (<i>/afk</i>)',
 		'clear':'Clears chat. (Admin only)',
 		'reload':'Reloads page for all users. (Admin only)'
