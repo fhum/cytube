@@ -325,6 +325,7 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
 .teamholo::before{background:url('https://dl.dropboxusercontent.com/scl/fi/v5pt4tzh11e9s0kyxw9rl/holo.png?rlkey=zmp7hrr7bt1d48utt9mln5obx&st=d3f6x8xw&dl=0');}
 .teamtama::before{background:url('https://dl.dropboxusercontent.com/scl/fi/40xqjmsncwrgumhrx1r40/tama.png?rlkey=yh4rq891y0zf9rcnqbk7shsrr&st=v8g720du&dl=0');}
 .teamkokoro::before{background:url('https://dl.dropboxusercontent.com/scl/fi/e0eewv8wghhac79lvdr4x/kokoro.png?rlkey=1vcenlvkvk472srzppth8plsa&st=cjzobdbn&dl=0');}
+.teamnono::before{background:url('https://dl.dropboxusercontent.com/scl/fi/cpz71u58lnre9v81dbwg6/nono.png?rlkey=ydlkveo60mcjp4hg9kp59otpq&st=a0l0yvbt&dl=0');}
 .teamk1::before{background:url('https://dl.dropboxusercontent.com/scl/fi/zjfdxmt2eqriyarrkkb7p/k1.png?rlkey=kzqcap96apzbdea1078zvmegd&st=2suvmlmv&dl=0');}
 .teamtakuji::before{background:url('https://dl.dropboxusercontent.com/scl/fi/afkukfly6a2mfa5ckqqnc/takuji.png?rlkey=viuap962htiebwtedabhlqhqo&st=hsgp61ks&dl=0');}
 .teammatsuken::before{background:url('https://dl.dropboxusercontent.com/scl/fi/b65vbfjcxpu1umwlveyvr/matsuken.png?rlkey=qke57i0bm368zguk1mckcijqt&st=nj54ifmf&dl=0');}
@@ -504,6 +505,10 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
 
 .username.teamkokoro {
     color: #d4585e !important
+}
+
+.username.teamnono {
+    color: #8be919 !important
 }
 
 .username.teamk1 {
