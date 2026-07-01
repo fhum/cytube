@@ -655,7 +655,8 @@ RandomImages =
 	'https://dl.dropboxusercontent.com/scl/fi/k6yfiy2hw62h47sw40xil/__kotonoha_akane_and_kotonoha_aoi_voiceroid_drawn_by_nekomo_yumenkmc__a2dde836083152037201da866b19c050.jpg?rlkey=ysqcxktlos2u9eqa3x64fkjxx&st=3dcpotdx&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/cngekcm3vqgvh2jg2qzpk/47defcf5516782937267c50f06283f9b.png?rlkey=u4qf9kncvi09ek21ldzxnn2dr&st=ykq5mojx&dl=0',
 	'https://dl.dropboxusercontent.com/scl/fi/0oo37ys3r24ege3i0uyc9/ActanCyaga-2048215616948158627_p0.jpg?rlkey=h1371ah5d2xrkb5v6v0r39yxv&st=ztzh7nx4&dl=0',
-	'https://dl.dropboxusercontent.com/scl/fi/pju09cvsb3xm8m0b6tnye/2.jpg?rlkey=0gb9pep6mvql4l91hu0cjyyl6&st=gx3t14gw&dl=0'
+	'https://dl.dropboxusercontent.com/scl/fi/pju09cvsb3xm8m0b6tnye/2.jpg?rlkey=0gb9pep6mvql4l91hu0cjyyl6&st=gx3t14gw&dl=0',
+	'https://dl.dropboxusercontent.com/scl/fi/y0ytrd8nkvhpjzbxdsv5g/Ren256_-2071918173822275888_p0.jpg?rlkey=wo7iccu5d4r9rvwab1oyhpagm&st=v9c1cgkm&dl=0'
   ]
 
 var AskAnswers = [
