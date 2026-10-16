@@ -3919,14 +3919,14 @@ $(document).ready(function () {
             $('body').css({
                 'background': savedBg,
                 'background-image': 'none',
-                'background-position': 'bottom right',
+                'background-position': 'top left',
                 'background-attachment': 'fixed',
                 'background-size': 'cover'
             });
         } else {
             $('body').css({
                 'background-image': `url('${savedBg}')`,
-                'background-position': 'bottom right',
+                'background-position': 'top left',
                 'background-attachment': 'fixed',
                 'background-size': 'cover'
             });
