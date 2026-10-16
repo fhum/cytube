@@ -2694,7 +2694,7 @@ function showTipsMenu() {
 			}
 		},
 		{
-			label: "Shit keeps buffering",
+			label: "Shit keeps buffering (Opens new tab)",
 			action: function() {
 				closeModal(modal);
 				document.body.classList.remove("modal-open");
@@ -2793,7 +2793,7 @@ function showChatHelp() {
 	}
 	defcmd = {
 		'me':'Shows an action-style message. (username does something, e.g. <i>/me is dancing</i>)',
-		'sp':'<s>Hides a message in a hover-to-show spoiler box. (e.g. <i>/sp This message is hidden</i>)</s> Doesn\'t work, just use ctrl+s instead.',
+		'sp':'<s>Hides a message in a hover-to-show spoiler box. (e.g. <i>/sp This message is hidden</i>)</s> Use ctrl+S.',
 		'afk':'Toggles AFK (Away From Keyboard) status. (<i>/afk</i>)',
 		'clear':'Clears chat. (Admin only)',
 		'reload':'Reloads page for all users. (Admin only)'
@@ -2880,6 +2880,7 @@ function showHostsModal() {
 		'Madhammer':'https://files.madhammer.club/',
 		'Litter':'https://litterbox.catbox.moe/',
 		'Fileditch':'https://fileditch.com/',
+		'Pomf Lain':'https://pomf.lain.la/',
 		'Pomf':'https://pomf.anon-k9.synology.me/',
 		'Patchouli':'https://box.patchouli.moe/'
 	};
