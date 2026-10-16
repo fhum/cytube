@@ -228,7 +228,7 @@ border-color: white !important;
 /* halloween cuteness http://puu.sh/c2Uxe.png */
 body {
 background-image:url(https://dl.dropboxusercontent.com/scl/fi/z6ambmuuwx0fv9b3uksti/hm2.png?rlkey=mrt88r6lp9zjvtywgqz226d9k&st=fpczyxor&dl=0);
-background-position: bottom right; background-attachment: fixed; background-size: cover;         
+background-position: left top; background-attachment: fixed; background-size: cover;         
 /*background-position: bottom left;*/
             /*background-attachment: fixed;*/
             /*background-size: fit;*/
@@ -327,6 +327,12 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
 .teamkokoro::before{background:url('https://dl.dropboxusercontent.com/scl/fi/e0eewv8wghhac79lvdr4x/kokoro.png?rlkey=1vcenlvkvk472srzppth8plsa&st=cjzobdbn&dl=0');}
 .teamnono::before{background:url('https://dl.dropboxusercontent.com/scl/fi/cpz71u58lnre9v81dbwg6/nono.png?rlkey=ydlkveo60mcjp4hg9kp59otpq&st=a0l0yvbt&dl=0');}
 .teamillya::before{background:url('https://dl.dropboxusercontent.com/scl/fi/wyj7d2zxdlb9epw4xurnh/illya.png?rlkey=3jzgm675condgtldpjcm9f523&st=da0231wd&dl=0');}
+.teamnoriko::before{background:url('https://dl.dropboxusercontent.com/scl/fi/h21de32pq34m73xvpbkf3/noriko.png?rlkey=5deg8vjepstbqyxxiw3rk4b84&st=ezjgkjd8&dl=0');}
+.teamsakura::before{background:url('https://dl.dropboxusercontent.com/scl/fi/x2b8y6wa7vdmlnl7kd8sj/sakura.png?rlkey=1qn0orpx6qjn8wv43ig3th0jb&st=xhzn5l2g&dl=0');}
+.teamtomoyo::before{background:url('https://dl.dropboxusercontent.com/scl/fi/m48vmp4x8fekwu8dktxub/tomoyo.png?rlkey=cgl5fq3jm7155zwzkkrts0cup&st=hjb621hg&dl=0');}
+.teamchii::before{background:url('https://dl.dropboxusercontent.com/scl/fi/jjcqtmxeawsjbx9sfzfvd/chii.png?rlkey=oe2gtkcvy75qdf3wvqzo0w1fb&st=t4f42913&dl=0');}
+.teamsumomo::before{background:url('https://dl.dropboxusercontent.com/scl/fi/hc27tqw13l1qdq73x44d4/sumomo.png?rlkey=bkhxqqnjmen0h41dsp5bwxpjb&st=ozzr81vo&dl=0');}
+.teamkotoko::before{background:url('https://dl.dropboxusercontent.com/scl/fi/i1odmxg23xa6sln4cf0dt/kotoko.png?rlkey=chhy0q03nn9qdwnzjg95eekea&st=raxtvsqj&dl=0');}
 .teamk1::before{background:url('https://dl.dropboxusercontent.com/scl/fi/zjfdxmt2eqriyarrkkb7p/k1.png?rlkey=kzqcap96apzbdea1078zvmegd&st=2suvmlmv&dl=0');}
 .teamtakuji::before{background:url('https://dl.dropboxusercontent.com/scl/fi/afkukfly6a2mfa5ckqqnc/takuji.png?rlkey=viuap962htiebwtedabhlqhqo&st=hsgp61ks&dl=0');}
 .teammatsuken::before{background:url('https://dl.dropboxusercontent.com/scl/fi/b65vbfjcxpu1umwlveyvr/matsuken.png?rlkey=qke57i0bm368zguk1mckcijqt&st=nj54ifmf&dl=0');}
@@ -514,6 +520,30 @@ DIV#plmeta, DIV#chatheader, P#currenttitle, DIV#plmeta {background-color: #1C1E2
 
 .username.teamillya {
     color: #ffcbcb !important
+}
+
+.username.teamnoriko {
+    color: #c04f62 !important
+}
+
+.username.teamsakura {
+    color: #ff89a7 !important
+}
+
+.username.teamtomoyo {
+    color: #ac7ab1 !important
+}
+
+.username.teamchii {
+    color: #fff7d3 !important
+}
+
+.username.teamsumomo {
+    color: #dd6da1 !important
+}
+
+.username.teamkotoko {
+    color: #5c639c !important
 }
 
 .username.teamk1 {
