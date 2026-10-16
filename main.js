@@ -3892,7 +3892,7 @@ $(document).ready(function () {
                 $('body').css({
                     'background': data,
                     'background-image': 'none',
-                    'background-position': 'bottom right',
+                    'background-position': 'top left',
                     'background-attachment': 'fixed',
                     'background-size': 'cover'
                 });
