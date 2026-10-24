@@ -2862,7 +2862,7 @@ function showEncodingModal() {
 		<br /><strong>Ffmpeg to turn mp3/flacs to mp4 videos with the album cover:</strong><br /><br />
 		<ul>
 		<li><p>Put all of your shitty music in one folder and run this (make sure they have a cover first):</p>
-		<code>for %f in (*.mp3) do ffmpeg -i "%f" -an "%~nf.png" && ffmpeg -loop 1 -i "%~nf.png" -i "%f" -c:a aac -ab 256k -c:v libx264 -vf "scale=720:720:force_original_aspect_ratio=decrease,pad=720:720:-1:-1:color=black,setsar=1,format=yuv420p" -filter:a "volume=0.3" -shortest -fflags +shortest "%~nf.mp4"</code>
+		<code>for %f in (*.mp3) do ffmpeg -i "%f" -an "%~nf.png" && ffmpeg -loop 1 -i "%~nf.png" -i "%f" -c:a aac -ab 256k -c:v libx264 -vf "scale=720:720:force_original_aspect_ratio=decrease,pad=720:720:-1:-1:color=black,setsar=1,format=yuv420p" -filter:a "volume=0.9" -shortest -fflags +shortest "%~nf.mp4"</code>
 		<p>(Make sure to change the *.mp3 to the format you are using)</p>
 		</li>
 		</ul>
