@@ -6106,11 +6106,21 @@ snowContainer.id = 'snowContainer';
 document.body.appendChild(snowContainer);
 
 //Winter mode
-//let snowEnabled = true;
+const winterCheck = new Date();
+const winterMonth = winterCheck.getUTCMonth();
+const winterDay = winterCheck.getUTCDate();
+
+let isWinter =
+    (winterMonth === 10 && winterDay >= 10) ||
+    winterMonth === 11 ||
+    (winterMonth === 0 && winterDay <= 15);
+
 let snowflakes = [];
 
 // Winter mode
-//for (let i = 0; i < 100; i++) createSnowflake();
+if (isWinter) {
+    for (let i = 0; i < 100; i++) createSnowflake();
+}
 
 function getSnowStyleVars() {
   const xStart = Math.random();
@@ -6148,6 +6158,9 @@ function createSnowflake() {
 
 if ($("#toggleSnow").length <= 0) {
 	let snowEnabled = false;
+	if (isWinter) {
+		snowEnabled = true;
+	}
 
 	const toggleSnow = () => {
 		snowEnabled = !snowEnabled;
@@ -6189,7 +6202,9 @@ if ($("#toggleSnow").length <= 0) {
 			})
 		);
 		//Winter mode
-		//$('#toggleSnow').addClass('btn-success active').html('Snow');
+		if (isWinter) {
+			$('#toggleSnow').addClass('btn-success active').html('Snow');
+		}
 	}
 }
 
