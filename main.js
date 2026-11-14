@@ -51,7 +51,7 @@ var FruitBowl = {};
 
 var SpoilerImg = 'http://i.imgur.com/xzD4vqc.png';
 
-var Favicon_URL = 'https://dl.dropboxusercontent.com/scl/fi/43t6yg71ym0kflp7i8rs7/aa-icon.png?rlkey=jtmd2nxkluagboblb6x4qh5sv&st=bccztpxl&dl=0';
+var Favicon_URL = 'https://dl.dropboxusercontent.com/scl/fi/3so9lz8caqel3kt05cim5/lc-icon.png?rlkey=qvneoyo9linef6pmy3g8xmvml&st=zypgr8o4&dl=0';
 
 var MiniLogo_URL = 'http://i.imgur.com/OCidf8n.gif';
 
